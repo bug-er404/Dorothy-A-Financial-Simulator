@@ -1,0 +1,4 @@
+<map id="TradingStock::RecordPNL" name="TradingStock::RecordPNL">
+<area shape="rect" id="node1" title="Record day&#39;s PNL." alt="" coords="5,13,180,39"/>
+<area shape="rect" id="node2" href="$class_trading_stock.html#a08f0c522a18efec82f4c272e0d03fe7c" title="Recard day&#39;s daily return." alt="" coords="228,5,407,47"/>
+</map>

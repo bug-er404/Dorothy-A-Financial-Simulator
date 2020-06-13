@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="_prefix_header_8pch" kind="file" language="C++">
+    <compoundname>PrefixHeader.pch</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">unordered_map</includes>
+    <includes local="no">cassert</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">typeinfo</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">map</includes>
+    <includedby refid="_config_8h" local="yes">Config.h</includedby>
+    <includedby refid="_data_access_8h" local="yes">DataAccess.h</includedby>
+    <includedby refid="_date_time_8h" local="yes">DateTime.h</includedby>
+    <includedby refid="_ticker_data_8h" local="yes">TickerData.h</includedby>
+    <includedby refid="_date_time_8cpp" local="yes">DateTime.cpp</includedby>
+    <includedby refid="_simulator_8h" local="yes">Simulator.h</includedby>
+    <includedby refid="_trading_stock_8h" local="yes">TradingStock.h</includedby>
+    <includedby refid="_transaction_8h" local="yes">Transaction.h</includedby>
+    <includedby refid="_utilities_8h" local="yes">Utilities.h</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>cassert</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="12">
+        <label>map</label>
+      </node>
+      <node id="8">
+        <label>fstream</label>
+      </node>
+      <node id="1">
+        <label>PrefixHeader.pch</label>
+        <link refid="_prefix_header_8pch"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>string.h</label>
+      </node>
+      <node id="10">
+        <label>typeinfo</label>
+      </node>
+      <node id="11">
+        <label>vector</label>
+      </node>
+      <node id="9">
+        <label>sstream</label>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="6">
+        <label>unordered_map</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="11">
+        <label>TickerData.cpp</label>
+        <link refid="_ticker_data_8cpp"/>
+      </node>
+      <node id="7">
+        <label>DataAccess.h</label>
+        <link refid="_data_access_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>DataAccess.cpp</label>
+        <link refid="_data_access_8cpp"/>
+      </node>
+      <node id="9">
+        <label>DateTime.h</label>
+        <link refid="_date_time_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Transaction.h</label>
+        <link refid="_transaction_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>TickerData.h</label>
+        <link refid="_ticker_data_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>TradingStock.h</label>
+        <link refid="_trading_stock_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Transaction.cpp</label>
+        <link refid="_transaction_8cpp"/>
+      </node>
+      <node id="1">
+        <label>PrefixHeader.pch</label>
+        <link refid="_prefix_header_8pch"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>TradingStock.cpp</label>
+        <link refid="_trading_stock_8cpp"/>
+      </node>
+      <node id="4">
+        <label>Simulator.h</label>
+        <link refid="_simulator_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>Utilities.cpp</label>
+        <link refid="_utilities_8cpp"/>
+      </node>
+      <node id="5">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="2">
+        <label>Config.h</label>
+        <link refid="_config_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>Utilities.h</label>
+        <link refid="_utilities_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Simulator.cpp</label>
+        <link refid="_simulator_8cpp"/>
+      </node>
+      <node id="12">
+        <label>DateTime.cpp</label>
+        <link refid="_date_time_8cpp"/>
+      </node>
+      <node id="3">
+        <label>Config.cpp</label>
+        <link refid="_config_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/><sp/>PrefixHeader.pch</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/><sp/>Precompiled<sp/>headers.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/><sp/>Created<sp/>by<sp/>Salil<sp/>Maharjan<sp/>on<sp/>3/22/20.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/><sp/>Copyright<sp/>©<sp/>2020<sp/>Salil<sp/>Maharjan.<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline><highlight class="normal">*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#ifndef<sp/>PrefixHeader_pch</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>PrefixHeader_pch</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Include<sp/>any<sp/>system<sp/>framework<sp/>and<sp/>library<sp/>headers<sp/>here<sp/>that<sp/>should<sp/>be<sp/>included<sp/>in<sp/>all<sp/>compilation<sp/>units.</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;stdio.h&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;iostream&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;string&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;string.h&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;unordered_map&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;cassert&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;fstream&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;sstream&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;typeinfo&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;vector&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;map&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#endif<sp/>/*<sp/>PrefixHeader_pch<sp/>*/</highlight></codeline>
+    </programlisting>
+    <location file="PrefixHeader.pch"/>
+  </compounddef>
+</doxygen>

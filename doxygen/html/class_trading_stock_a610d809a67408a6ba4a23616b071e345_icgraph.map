@@ -1,0 +1,9 @@
+<map id="TradingStock::GetTransactionCount" name="TradingStock::GetTransactionCount">
+<area shape="rect" id="node1" title="Method to get current completed transaction count (Does not consider incomplete transactions...." alt="" coords="1200,23,1396,65"/>
+<area shape="rect" id="node2" href="$class_simulator.html#a56638656f8e85aec70ba6c2680025279" title="Function to record transactions to a file." alt="" coords="963,31,1152,57"/>
+<area shape="rect" id="node3" href="$class_simulator.html#a20a56ab01d34b348fe22129caa44df09" title="Close positions for a trading stock." alt="" coords="744,5,915,32"/>
+<area shape="rect" id="node4" href="$class_simulator.html#adc8821db9e85da458f9a6e8b1912ac86" title="Function to open or close positions according to the signal by checking current position." alt="" coords="545,31,696,57"/>
+<area shape="rect" id="node5" href="$class_simulator.html#a9a703ddcca1a802b3df9a9dc921927ae" title="Main method to run simulation." alt="" coords="327,31,497,57"/>
+<area shape="rect" id="node6" href="$class_simulator.html#ab899d33750e674079de022d269c6bf9c" title="Interface method to start the simulation." alt="" coords="104,31,279,57"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,31,56,57"/>
+</map>

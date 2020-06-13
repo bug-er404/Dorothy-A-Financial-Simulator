@@ -1,0 +1,2300 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_simulator" kind="class" language="C++" prot="public">
+    <compoundname>Simulator</compoundname>
+    <includes refid="_simulator_8h" local="no">Simulator.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_simulator_1a8d54012cdf3478b20f8d792b84de129c" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string Simulator::UNIVERSE_PATH_PARAM</definition>
+        <argsstring></argsstring>
+        <name>UNIVERSE_PATH_PARAM</name>
+        <initializer>= &quot;UNIVERSE_DIRECTORY&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<sect1 id="class_simulator_1autotoc_md0">
+<title>[DIRECTORY DATA]</title>
+</sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="49" column="23" bodyfile="Simulator.h" bodystart="49" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a5b96a3d0c4c330d2b49be7dd7930c510" compoundref="_simulator_8cpp" startline="337" endline="364">checkParameters</referencedby>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1af7743ff89da2d5a70380d89cf93517cd" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string Simulator::TICKER_PATH_PARAM</definition>
+        <argsstring></argsstring>
+        <name>TICKER_PATH_PARAM</name>
+        <initializer>= &quot;TICKER_DATA_DIRECTORY&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="50" column="23" bodyfile="Simulator.h" bodystart="50" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a5b96a3d0c4c330d2b49be7dd7930c510" compoundref="_simulator_8cpp" startline="337" endline="364">checkParameters</referencedby>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a4f33098635f757e2a31bfbb76ce7dfe9" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string Simulator::PORTFOLIO_CAPITAL</definition>
+        <argsstring></argsstring>
+        <name>PORTFOLIO_CAPITAL</name>
+        <initializer>= &quot;PORTFOLIO_CAPITAL&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<sect1 id="class_simulator_1autotoc_md1">
+<title>[PORTFOLIO DATA]</title>
+</sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="52" column="23" bodyfile="Simulator.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a5b96a3d0c4c330d2b49be7dd7930c510" compoundref="_simulator_8cpp" startline="337" endline="364">checkParameters</referencedby>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a3a536c742457453e2d3e96b97d91629a" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string Simulator::MAX_CAPITAL_PER_STOCK_PARAM</definition>
+        <argsstring></argsstring>
+        <name>MAX_CAPITAL_PER_STOCK_PARAM</name>
+        <initializer>= &quot;MAX_CAPITAL_PER_STOCK&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="53" column="23" bodyfile="Simulator.h" bodystart="53" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a5b96a3d0c4c330d2b49be7dd7930c510" compoundref="_simulator_8cpp" startline="337" endline="364">checkParameters</referencedby>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1aa0bac330691bf03dbf8716be787cad45" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string Simulator::PERIOD_START_DATE</definition>
+        <argsstring></argsstring>
+        <name>PERIOD_START_DATE</name>
+        <initializer>= &quot;START_DATE&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<sect1 id="class_simulator_1autotoc_md2">
+<title>[SIMULATION PERIOD]</title>
+</sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="55" column="23" bodyfile="Simulator.h" bodystart="55" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a5b96a3d0c4c330d2b49be7dd7930c510" compoundref="_simulator_8cpp" startline="337" endline="364">checkParameters</referencedby>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1aa39d4d9502abf412d78b50d1f15f811b" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string Simulator::PERIOD_END_DATE</definition>
+        <argsstring></argsstring>
+        <name>PERIOD_END_DATE</name>
+        <initializer>= &quot;END_DATE&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="56" column="23" bodyfile="Simulator.h" bodystart="56" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a5b96a3d0c4c330d2b49be7dd7930c510" compoundref="_simulator_8cpp" startline="337" endline="364">checkParameters</referencedby>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a5f3cd0a9c644e7548a0424556b03e627" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string Simulator::ENTRY_SIGNAL_PARAM</definition>
+        <argsstring></argsstring>
+        <name>ENTRY_SIGNAL_PARAM</name>
+        <initializer>= &quot;ENTRY_THRESHOLD&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<sect1 id="class_simulator_1autotoc_md3">
+<title>[SIGNAL THRESHOLDS]</title>
+</sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="58" column="23" bodyfile="Simulator.h" bodystart="58" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a5b96a3d0c4c330d2b49be7dd7930c510" compoundref="_simulator_8cpp" startline="337" endline="364">checkParameters</referencedby>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a39b11ae9b5e07c049444d568f800e11e" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string Simulator::EXIT_SIGNAL_PARAM</definition>
+        <argsstring></argsstring>
+        <name>EXIT_SIGNAL_PARAM</name>
+        <initializer>= &quot;EXIT_THRESHOLD&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="59" column="23" bodyfile="Simulator.h" bodystart="59" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a5b96a3d0c4c330d2b49be7dd7930c510" compoundref="_simulator_8cpp" startline="337" endline="364">checkParameters</referencedby>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1afeaec183962d21c49fefb01dd671ea33" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string Simulator::MAX_POS_PER_STOCK</definition>
+        <argsstring></argsstring>
+        <name>MAX_POS_PER_STOCK</name>
+        <initializer>= &quot;MAX_POSITIONS_PER_STOCK&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<sect1 id="class_simulator_1autotoc_md4">
+<title>[TRADING PARAMETERS]</title>
+</sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="61" column="23" bodyfile="Simulator.h" bodystart="61" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a5b96a3d0c4c330d2b49be7dd7930c510" compoundref="_simulator_8cpp" startline="337" endline="364">checkParameters</referencedby>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1adb8c5bb4e289a14b706a3803c50a5643" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string Simulator::DAYS_IN_POS_PARAM</definition>
+        <argsstring></argsstring>
+        <name>DAYS_IN_POS_PARAM</name>
+        <initializer>= &quot;MAX_DAYS_IN_POSITION&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="62" column="23" bodyfile="Simulator.h" bodystart="62" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a5b96a3d0c4c330d2b49be7dd7930c510" compoundref="_simulator_8cpp" startline="337" endline="364">checkParameters</referencedby>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a4f727299fa4922e4b1a817983fe228dd" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string Simulator::STOP_LOSS_PARAM</definition>
+        <argsstring></argsstring>
+        <name>STOP_LOSS_PARAM</name>
+        <initializer>= &quot;STOP_LOSS&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="63" column="23" bodyfile="Simulator.h" bodystart="63" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a5b96a3d0c4c330d2b49be7dd7930c510" compoundref="_simulator_8cpp" startline="337" endline="364">checkParameters</referencedby>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a97f519a765ab449b62be329d9b1eddc6" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string Simulator::DAILY_PUB_PARAM</definition>
+        <argsstring></argsstring>
+        <name>DAILY_PUB_PARAM</name>
+        <initializer>= &quot;DAILY&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<sect1 id="class_simulator_1autotoc_md5">
+<title>[PUBLICATION PARAMETERS]</title>
+</sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="65" column="23" bodyfile="Simulator.h" bodystart="65" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a5b96a3d0c4c330d2b49be7dd7930c510" compoundref="_simulator_8cpp" startline="337" endline="364">checkParameters</referencedby>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a8743b3779eb9eae58768e408176483ac" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string Simulator::MONTHLY_PUB_PARAM</definition>
+        <argsstring></argsstring>
+        <name>MONTHLY_PUB_PARAM</name>
+        <initializer>= &quot;MONTHLY&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="66" column="23" bodyfile="Simulator.h" bodystart="66" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a5b96a3d0c4c330d2b49be7dd7930c510" compoundref="_simulator_8cpp" startline="337" endline="364">checkParameters</referencedby>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1afd3e6d193653a3642067721af2b6ed38" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string Simulator::TRANSACTION_PUB_PARAM</definition>
+        <argsstring></argsstring>
+        <name>TRANSACTION_PUB_PARAM</name>
+        <initializer>= &quot;TRANSACTION&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="67" column="23" bodyfile="Simulator.h" bodystart="67" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a5b96a3d0c4c330d2b49be7dd7930c510" compoundref="_simulator_8cpp" startline="337" endline="364">checkParameters</referencedby>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a51929ed4f5640f5d2644b3dfd0628329" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string Simulator::SIGNAL_PUB_PARAM</definition>
+        <argsstring></argsstring>
+        <name>SIGNAL_PUB_PARAM</name>
+        <initializer>= &quot;SIGNAL&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="68" column="23" bodyfile="Simulator.h" bodystart="68" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a5b96a3d0c4c330d2b49be7dd7930c510" compoundref="_simulator_8cpp" startline="337" endline="364">checkParameters</referencedby>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a9f9825e7abbefadd90cd260af723f362" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Simulator::m_universePath</definition>
+        <argsstring></argsstring>
+        <name>m_universePath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Member variables from the configuration file </para>
+<sect1 id="class_simulator_1autotoc_md6">
+<title>[DIRECTORY DATA]</title>
+</sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="79" column="17" bodyfile="Simulator.h" bodystart="79" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a0e2d73d3f5c09acdcac93e22a95b721d" compoundref="_simulator_8cpp" startline="212" endline="238">initializeSimulator</referencedby>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1ae9617ea33ba0f08b1fa26be1777eee58" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Simulator::m_tickerPath</definition>
+        <argsstring></argsstring>
+        <name>m_tickerPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="80" column="17" bodyfile="Simulator.h" bodystart="80" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a0e2d73d3f5c09acdcac93e22a95b721d" compoundref="_simulator_8cpp" startline="212" endline="238">initializeSimulator</referencedby>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1ac63f13d5fc10eb815958703a859f2761" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Simulator::m_portfolioCapital</definition>
+        <argsstring></argsstring>
+        <name>m_portfolioCapital</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<sect1 id="class_simulator_1autotoc_md7">
+<title>[PORTFOLIO DATA]</title>
+</sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="82" column="12" bodyfile="Simulator.h" bodystart="82" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+        <referencedby refid="class_simulator_1a3752d08182992d06e6dc5783ed82cafc" compoundref="_simulator_8cpp" startline="410" endline="438">initializeTradingTickers</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a6d29b66f23f025901b41cdb4b8b54d85" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Simulator::m_capitalLimitPerStock</definition>
+        <argsstring></argsstring>
+        <name>m_capitalLimitPerStock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="83" column="12" bodyfile="Simulator.h" bodystart="83" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+        <referencedby refid="class_simulator_1a3752d08182992d06e6dc5783ed82cafc" compoundref="_simulator_8cpp" startline="410" endline="438">initializeTradingTickers</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a3cb05c9f9cc50bed5f7c284140dd3228" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Simulator::m_entrySignal</definition>
+        <argsstring></argsstring>
+        <name>m_entrySignal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<sect1 id="class_simulator_1autotoc_md8">
+<title>[SIGNAL THRESHOLDS]</title>
+</sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="85" column="12" bodyfile="Simulator.h" bodystart="85" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+        <referencedby refid="class_simulator_1adc8821db9e85da458f9a6e8b1912ac86" compoundref="_simulator_8cpp" startline="485" endline="548">makeTrade</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a8245a5e2736adcf414f737d1501f846f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Simulator::m_exitSignal</definition>
+        <argsstring></argsstring>
+        <name>m_exitSignal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="86" column="12" bodyfile="Simulator.h" bodystart="86" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+        <referencedby refid="class_simulator_1adc8821db9e85da458f9a6e8b1912ac86" compoundref="_simulator_8cpp" startline="485" endline="548">makeTrade</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a1808159b6db7cc8cb1fde241b3ca1a63" prot="private" static="no" mutable="no">
+        <type><ref refid="class_date_time" kindref="compound">DateTime</ref> *</type>
+        <definition>DateTime* Simulator::m_startDate</definition>
+        <argsstring></argsstring>
+        <name>m_startDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<sect1 id="class_simulator_1autotoc_md9">
+<title>[SIMULATION PERIOD]</title>
+</sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="88" column="14" bodyfile="Simulator.h" bodystart="88" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+        <referencedby refid="class_simulator_1ac66d4a8840edc51e1fda473d677ccce2" compoundref="_simulator_8cpp" startline="447" endline="458">verifyDateParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a5418c16b656f3e90fe909c2cea9a7b26" prot="private" static="no" mutable="no">
+        <type><ref refid="class_date_time" kindref="compound">DateTime</ref> *</type>
+        <definition>DateTime* Simulator::m_endDate</definition>
+        <argsstring></argsstring>
+        <name>m_endDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="89" column="14" bodyfile="Simulator.h" bodystart="89" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+        <referencedby refid="class_simulator_1ac66d4a8840edc51e1fda473d677ccce2" compoundref="_simulator_8cpp" startline="447" endline="458">verifyDateParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a762c9da4d9b398b70e4a5fcf8084693a" prot="private" static="no" mutable="no">
+        <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>int Simulator::m_maxPositionsPerStock</definition>
+        <argsstring></argsstring>
+        <name>m_maxPositionsPerStock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<sect1 id="class_simulator_1autotoc_md10">
+<title>[TRADING PARAMETERS]</title>
+</sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="91" column="9" bodyfile="Simulator.h" bodystart="91" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+        <referencedby refid="class_simulator_1ad24c99fbfd5808aba7f5c9de11cc23f0" compoundref="_simulator_8cpp" startline="588" endline="620">openPositions</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a465d97fd2465e1e8fbbf12d9a8ad4294" prot="private" static="no" mutable="no">
+        <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>int Simulator::m_maxDaysPerPosition</definition>
+        <argsstring></argsstring>
+        <name>m_maxDaysPerPosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="92" column="9" bodyfile="Simulator.h" bodystart="92" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+        <referencedby refid="class_simulator_1adc8821db9e85da458f9a6e8b1912ac86" compoundref="_simulator_8cpp" startline="485" endline="548">makeTrade</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1aa51155015b9738f8dcb0815271144ac1" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Simulator::m_stopLoss</definition>
+        <argsstring></argsstring>
+        <name>m_stopLoss</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="93" column="12" bodyfile="Simulator.h" bodystart="93" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a554d967210680039cb8f8c9590275d62" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Simulator::m_dailyPublication</definition>
+        <argsstring></argsstring>
+        <name>m_dailyPublication</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<sect1 id="class_simulator_1autotoc_md11">
+<title>[PUBLICATION PARAMETERS]</title>
+</sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="95" column="10" bodyfile="Simulator.h" bodystart="95" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+        <referencedby refid="class_simulator_1af45eb4ca17242683290fbf5c54af13f2" compoundref="_simulator_8cpp" startline="278" endline="328">initializePublications</referencedby>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+        <referencedby refid="class_simulator_1ae77749f93581b683330f30726f5aaffb" compoundref="_simulator_8cpp" startline="742" endline="760">recordDailyStatistics</referencedby>
+        <referencedby refid="class_simulator_1a2ae468429b6e8eedc5c1744891e36346" compoundref="_simulator_8cpp" startline="922" endline="930">closeDailyPublication</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1ab5eee5366d5945ba1c047183c99140d5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Simulator::m_monthlyPublication</definition>
+        <argsstring></argsstring>
+        <name>m_monthlyPublication</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="96" column="10" bodyfile="Simulator.h" bodystart="96" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+        <referencedby refid="class_simulator_1af45eb4ca17242683290fbf5c54af13f2" compoundref="_simulator_8cpp" startline="278" endline="328">initializePublications</referencedby>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+        <referencedby refid="class_simulator_1a9bf890f96b97a53f5beac15581689b18" compoundref="_simulator_8cpp" startline="940" endline="951">closeMonthlyPublication</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a147bb76a9bd3662868ada07ce810c1e9" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Simulator::m_transactionPublication</definition>
+        <argsstring></argsstring>
+        <name>m_transactionPublication</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="97" column="10" bodyfile="Simulator.h" bodystart="97" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+        <referencedby refid="class_simulator_1af45eb4ca17242683290fbf5c54af13f2" compoundref="_simulator_8cpp" startline="278" endline="328">initializePublications</referencedby>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+        <referencedby refid="class_simulator_1adc8821db9e85da458f9a6e8b1912ac86" compoundref="_simulator_8cpp" startline="485" endline="548">makeTrade</referencedby>
+        <referencedby refid="class_simulator_1a20a56ab01d34b348fe22129caa44df09" compoundref="_simulator_8cpp" startline="631" endline="658">closePositions</referencedby>
+        <referencedby refid="class_simulator_1a8de16aac7f0616e43ee45e895d15b67a" compoundref="_simulator_8cpp" startline="959" endline="967">closeTransactionPublication</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1aec6e5c383d7b6b366716fb62194d8a02" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Simulator::m_signalPublication</definition>
+        <argsstring></argsstring>
+        <name>m_signalPublication</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="98" column="10" bodyfile="Simulator.h" bodystart="98" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+        <referencedby refid="class_simulator_1af45eb4ca17242683290fbf5c54af13f2" compoundref="_simulator_8cpp" startline="278" endline="328">initializePublications</referencedby>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+        <referencedby refid="class_simulator_1a5a78edbf904b54bb6f66a5c3b8c87cd9" compoundref="_simulator_8cpp" startline="730" endline="734">recordSignalInfo</referencedby>
+        <referencedby refid="class_simulator_1a9c907c7e0a1a2fdd334cb51dd5ff47c6" compoundref="_simulator_8cpp" startline="976" endline="984">closeSignalPublication</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a163d168daf7ddb30c31a34084fdd56cd" prot="private" static="no" mutable="no">
+        <type>std::ofstream</type>
+        <definition>std::ofstream Simulator::m_dailyInfoFile</definition>
+        <argsstring></argsstring>
+        <name>m_dailyInfoFile</name>
+        <briefdescription>
+<para>Output streams to write publications. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="108" column="19" bodyfile="Simulator.h" bodystart="108" bodyend="-1"/>
+        <referencedby refid="class_simulator_1af45eb4ca17242683290fbf5c54af13f2" compoundref="_simulator_8cpp" startline="278" endline="328">initializePublications</referencedby>
+        <referencedby refid="class_simulator_1accf533fb22ca8261dce0830daa5945f1" compoundref="_simulator_8cpp" startline="683" endline="695">recordSharpeRatio</referencedby>
+        <referencedby refid="class_simulator_1ae77749f93581b683330f30726f5aaffb" compoundref="_simulator_8cpp" startline="742" endline="760">recordDailyStatistics</referencedby>
+        <referencedby refid="class_simulator_1a2ae468429b6e8eedc5c1744891e36346" compoundref="_simulator_8cpp" startline="922" endline="930">closeDailyPublication</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a03b15dcf1a5ebd34356a2c013ba95190" prot="private" static="no" mutable="no">
+        <type>std::ofstream</type>
+        <definition>std::ofstream Simulator::m_monthlyInfoFile</definition>
+        <argsstring></argsstring>
+        <name>m_monthlyInfoFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="109" column="19" bodyfile="Simulator.h" bodystart="109" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+        <referencedby refid="class_simulator_1af45eb4ca17242683290fbf5c54af13f2" compoundref="_simulator_8cpp" startline="278" endline="328">initializePublications</referencedby>
+        <referencedby refid="class_simulator_1ae9b8b2ffbef1ba49bd8a9dc5fad5a1b2" compoundref="_simulator_8cpp" startline="770" endline="914">recordMonthlyStatistics</referencedby>
+        <referencedby refid="class_simulator_1a9bf890f96b97a53f5beac15581689b18" compoundref="_simulator_8cpp" startline="940" endline="951">closeMonthlyPublication</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a1f7936d90aa2ee50df1d41f336a2db80" prot="private" static="no" mutable="no">
+        <type>std::ofstream</type>
+        <definition>std::ofstream Simulator::m_transactionInfoFile</definition>
+        <argsstring></argsstring>
+        <name>m_transactionInfoFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="110" column="19" bodyfile="Simulator.h" bodystart="110" bodyend="-1"/>
+        <referencedby refid="class_simulator_1af45eb4ca17242683290fbf5c54af13f2" compoundref="_simulator_8cpp" startline="278" endline="328">initializePublications</referencedby>
+        <referencedby refid="class_simulator_1a56638656f8e85aec70ba6c2680025279" compoundref="_simulator_8cpp" startline="704" endline="721">recordTransaction</referencedby>
+        <referencedby refid="class_simulator_1a8de16aac7f0616e43ee45e895d15b67a" compoundref="_simulator_8cpp" startline="959" endline="967">closeTransactionPublication</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1ac1f4b274af12359ab1359d48cb793633" prot="private" static="no" mutable="no">
+        <type>std::ofstream</type>
+        <definition>std::ofstream Simulator::m_signalInfoFile</definition>
+        <argsstring></argsstring>
+        <name>m_signalInfoFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="111" column="19" bodyfile="Simulator.h" bodystart="111" bodyend="-1"/>
+        <referencedby refid="class_simulator_1af45eb4ca17242683290fbf5c54af13f2" compoundref="_simulator_8cpp" startline="278" endline="328">initializePublications</referencedby>
+        <referencedby refid="class_simulator_1a5a78edbf904b54bb6f66a5c3b8c87cd9" compoundref="_simulator_8cpp" startline="730" endline="734">recordSignalInfo</referencedby>
+        <referencedby refid="class_simulator_1a9c907c7e0a1a2fdd334cb51dd5ff47c6" compoundref="_simulator_8cpp" startline="976" endline="984">closeSignalPublication</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1af8b9686a07f4801d903c03ba06f10b6c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Simulator::m_ROR</definition>
+        <argsstring></argsstring>
+        <name>m_ROR</name>
+        <briefdescription>
+<para>Daily return. The profit for the day divided by the capital committed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="121" column="12" bodyfile="Simulator.h" bodystart="121" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+        <referencedby refid="class_simulator_1ae77749f93581b683330f30726f5aaffb" compoundref="_simulator_8cpp" startline="742" endline="760">recordDailyStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a2ad80992205bb876c7aec067760fd380" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Simulator::m_totalPNL</definition>
+        <argsstring></argsstring>
+        <name>m_totalPNL</name>
+        <briefdescription>
+<para>Cumulative PNL from the beginning of the simulation to the current date. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="123" column="12" bodyfile="Simulator.h" bodystart="123" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+        <referencedby refid="class_simulator_1ae77749f93581b683330f30726f5aaffb" compoundref="_simulator_8cpp" startline="742" endline="760">recordDailyStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a874ad8839e8a4625d556126136df86b0" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Simulator::m_dailyPNL</definition>
+        <argsstring></argsstring>
+        <name>m_dailyPNL</name>
+        <briefdescription>
+<para>The profit or loss in dollars for the day. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="125" column="12" bodyfile="Simulator.h" bodystart="125" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+        <referencedby refid="class_simulator_1ae77749f93581b683330f30726f5aaffb" compoundref="_simulator_8cpp" startline="742" endline="760">recordDailyStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1ade008ef893f45012690935775c11b744" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Simulator::m_longPosCount</definition>
+        <argsstring></argsstring>
+        <name>m_longPosCount</name>
+        <briefdescription>
+<para>Daily long position counter variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="127" column="12" bodyfile="Simulator.h" bodystart="127" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+        <referencedby refid="class_simulator_1ae77749f93581b683330f30726f5aaffb" compoundref="_simulator_8cpp" startline="742" endline="760">recordDailyStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a7437688899e7340ff427051e6499b42f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Simulator::m_shortPosCount</definition>
+        <argsstring></argsstring>
+        <name>m_shortPosCount</name>
+        <briefdescription>
+<para>Daily short position counter variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="129" column="12" bodyfile="Simulator.h" bodystart="129" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+        <referencedby refid="class_simulator_1ae77749f93581b683330f30726f5aaffb" compoundref="_simulator_8cpp" startline="742" endline="760">recordDailyStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1ad9bd5da8f745195f8efb7fde07c4b398" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Simulator::m_totalPosCount</definition>
+        <argsstring></argsstring>
+        <name>m_totalPosCount</name>
+        <briefdescription>
+<para>Daily total position counter variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="131" column="12" bodyfile="Simulator.h" bodystart="131" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+        <referencedby refid="class_simulator_1ae77749f93581b683330f30726f5aaffb" compoundref="_simulator_8cpp" startline="742" endline="760">recordDailyStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a75b03660c930f8fabdfa41eccff44f4b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Simulator::m_netMarketValue</definition>
+        <argsstring></argsstring>
+        <name>m_netMarketValue</name>
+        <briefdescription>
+<para>Total amount of capital committed to the model at the end of the day. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="133" column="12" bodyfile="Simulator.h" bodystart="133" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+        <referencedby refid="class_simulator_1ae77749f93581b683330f30726f5aaffb" compoundref="_simulator_8cpp" startline="742" endline="760">recordDailyStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a92a066b5676e453879a884dd047d53aa" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Simulator::m_grossMarketValue</definition>
+        <argsstring></argsstring>
+        <name>m_grossMarketValue</name>
+        <briefdescription>
+<para>Long capital minus the short capital at the end of the day. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="135" column="12" bodyfile="Simulator.h" bodystart="135" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+        <referencedby refid="class_simulator_1ae77749f93581b683330f30726f5aaffb" compoundref="_simulator_8cpp" startline="742" endline="760">recordDailyStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a5df061dcae309d085e48d6aa68f9a0ff" prot="private" static="no" mutable="no">
+        <type><ref refid="class_date_time" kindref="compound">DateTime</ref> *</type>
+        <definition>DateTime* Simulator::m_today</definition>
+        <argsstring></argsstring>
+        <name>m_today</name>
+        <briefdescription>
+<para>Date today. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="137" column="14" bodyfile="Simulator.h" bodystart="137" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+        <referencedby refid="class_simulator_1adc8821db9e85da458f9a6e8b1912ac86" compoundref="_simulator_8cpp" startline="485" endline="548">makeTrade</referencedby>
+        <referencedby refid="class_simulator_1ad24c99fbfd5808aba7f5c9de11cc23f0" compoundref="_simulator_8cpp" startline="588" endline="620">openPositions</referencedby>
+        <referencedby refid="class_simulator_1a20a56ab01d34b348fe22129caa44df09" compoundref="_simulator_8cpp" startline="631" endline="658">closePositions</referencedby>
+        <referencedby refid="class_simulator_1a5a78edbf904b54bb6f66a5c3b8c87cd9" compoundref="_simulator_8cpp" startline="730" endline="734">recordSignalInfo</referencedby>
+        <referencedby refid="class_simulator_1ae77749f93581b683330f30726f5aaffb" compoundref="_simulator_8cpp" startline="742" endline="760">recordDailyStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1ab5aebf9f33c4d351336481d74df87204" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; Simulator::m_dailyPNLRecord</definition>
+        <argsstring></argsstring>
+        <name>m_dailyPNLRecord</name>
+        <briefdescription>
+<para>Daily PNL record. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="145" column="17" bodyfile="Simulator.h" bodystart="145" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a788eddb47b5e2b64ad373e3e16f50e4e" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; Simulator::m_dailyCumulativeROR</definition>
+        <argsstring></argsstring>
+        <name>m_dailyCumulativeROR</name>
+        <briefdescription>
+<para>Daily cumulative ROR record for all trading stocks in simulation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="147" column="17" bodyfile="Simulator.h" bodystart="147" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+        <referencedby refid="class_simulator_1a1176c2f39f71a17dd1c9d669d3a46d15" compoundref="_simulator_8cpp" startline="667" endline="674">calculateSharpeRatio</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1abcf33b93b8230d84d99eb31cd73e3b69" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; Simulator::m_sharpeRecord</definition>
+        <argsstring></argsstring>
+        <name>m_sharpeRecord</name>
+        <briefdescription>
+<para>Sharpe ratio record. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="149" column="17" bodyfile="Simulator.h" bodystart="149" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+        <referencedby refid="class_simulator_1a1176c2f39f71a17dd1c9d669d3a46d15" compoundref="_simulator_8cpp" startline="667" endline="674">calculateSharpeRatio</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1ab0249e8e762a5c5d50263175ca53cbc7" prot="private" static="no" mutable="no">
+        <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>int Simulator::m_configFilesPassed</definition>
+        <argsstring></argsstring>
+        <name>m_configFilesPassed</name>
+        <briefdescription>
+<para>Number of config files passed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="157" column="9" bodyfile="Simulator.h" bodystart="157" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a53cc2e7e6dde4d4893e259b0be2aae9a" compoundref="_simulator_8cpp" startline="26" endline="40">Simulator</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1aaa17fec7cb1219dabc3b67a885148b1e" prot="private" static="no" mutable="no">
+        <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>int Simulator::m_simulationCount</definition>
+        <argsstring></argsstring>
+        <name>m_simulationCount</name>
+        <briefdescription>
+<para>Count of how many config files have been simulated. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="159" column="9" bodyfile="Simulator.h" bodystart="159" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a53cc2e7e6dde4d4893e259b0be2aae9a" compoundref="_simulator_8cpp" startline="26" endline="40">Simulator</referencedby>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+        <referencedby refid="class_simulator_1af45eb4ca17242683290fbf5c54af13f2" compoundref="_simulator_8cpp" startline="278" endline="328">initializePublications</referencedby>
+        <referencedby refid="class_simulator_1ae9b8b2ffbef1ba49bd8a9dc5fad5a1b2" compoundref="_simulator_8cpp" startline="770" endline="914">recordMonthlyStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a22ea6689c8b7f808f101fe3a157338de" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; const <ref refid="_c_make_cache_8txt_1afe71f11dacb15682cdc012f7208e6e09" kindref="member">char</ref> * &gt;</type>
+        <definition>std::vector&lt;const char*&gt; Simulator::m_configFile</definition>
+        <argsstring></argsstring>
+        <name>m_configFile</name>
+        <briefdescription>
+<para>Var with config file name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="161" column="17" bodyfile="Simulator.h" bodystart="161" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a53cc2e7e6dde4d4893e259b0be2aae9a" compoundref="_simulator_8cpp" startline="26" endline="40">Simulator</referencedby>
+        <referencedby refid="class_simulator_1ab899d33750e674079de022d269c6bf9c" compoundref="_simulator_8cpp" startline="52" endline="66">StartSimulation</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a50c85d7f67459a61c525de84f296f696" prot="private" static="no" mutable="no">
+        <type><ref refid="class_config" kindref="compound">Config</ref> *</type>
+        <definition>Config* Simulator::m_config</definition>
+        <argsstring></argsstring>
+        <name>m_config</name>
+        <briefdescription>
+<para>Configuration object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="163" column="12" bodyfile="Simulator.h" bodystart="163" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a0e2d73d3f5c09acdcac93e22a95b721d" compoundref="_simulator_8cpp" startline="212" endline="238">initializeSimulator</referencedby>
+        <referencedby refid="class_simulator_1a0cd976fca52f982a92f2f897a6ddd1de" compoundref="_simulator_8cpp" startline="246" endline="270">rerunSimulator</referencedby>
+        <referencedby refid="class_simulator_1a5b96a3d0c4c330d2b49be7dd7930c510" compoundref="_simulator_8cpp" startline="337" endline="364">checkParameters</referencedby>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a98713f90d7d7ce86cce337f787acf0e0" prot="private" static="no" mutable="no">
+        <type><ref refid="class_data_access" kindref="compound">DataAccess</ref> *</type>
+        <definition>DataAccess* Simulator::m_data</definition>
+        <argsstring></argsstring>
+        <name>m_data</name>
+        <briefdescription>
+<para>Data access object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="165" column="16" bodyfile="Simulator.h" bodystart="165" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+        <referencedby refid="class_simulator_1a0e2d73d3f5c09acdcac93e22a95b721d" compoundref="_simulator_8cpp" startline="212" endline="238">initializeSimulator</referencedby>
+        <referencedby refid="class_simulator_1a3752d08182992d06e6dc5783ed82cafc" compoundref="_simulator_8cpp" startline="410" endline="438">initializeTradingTickers</referencedby>
+        <referencedby refid="class_simulator_1ac66d4a8840edc51e1fda473d677ccce2" compoundref="_simulator_8cpp" startline="447" endline="458">verifyDateParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a1d14636c2b29e1b2ae40ea1264465318" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_trading_stock" kindref="compound">TradingStock</ref> * &gt;</type>
+        <definition>std::vector&lt;TradingStock*&gt; Simulator::m_tradingStocks</definition>
+        <argsstring></argsstring>
+        <name>m_tradingStocks</name>
+        <briefdescription>
+<para>All the trading stocks in the simulation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="167" column="17" bodyfile="Simulator.h" bodystart="167" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+        <referencedby refid="class_simulator_1a0cd976fca52f982a92f2f897a6ddd1de" compoundref="_simulator_8cpp" startline="246" endline="270">rerunSimulator</referencedby>
+        <referencedby refid="class_simulator_1a3752d08182992d06e6dc5783ed82cafc" compoundref="_simulator_8cpp" startline="410" endline="438">initializeTradingTickers</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_simulator_1a53cc2e7e6dde4d4893e259b0be2aae9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Simulator::Simulator</definition>
+        <argsstring>(int argc, const char *argv[])</argsstring>
+        <name>Simulator</name>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_c_make_cache_8txt_1afe71f11dacb15682cdc012f7208e6e09" kindref="member">char</ref> *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>Main simulator constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="_simulator_8cpp" kindref="compound">Simulator.cpp</ref> Implementation of <ref refid="_simulator_8h" kindref="compound">Simulator.h</ref>.</para>
+<para>Created by Salil Maharjan on 4/29/20. Copyright © 2020 Salil Maharjan. All rights reserved. <ref refid="class_simulator_1a53cc2e7e6dde4d4893e259b0be2aae9a" kindref="member">Simulator::Simulator</ref> Parameterized constructor for <ref refid="class_simulator" kindref="compound">Simulator</ref> class. Initializes the <ref refid="class_simulator" kindref="compound">Simulator</ref>. Can handle multiple configuration files. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int Number of command line arguments. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>const char* Array of command line arguments. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="27" column="5" bodyfile="Simulator.cpp" bodystart="26" bodyend="40"/>
+        <references refid="_c_make_cache_8txt_1a7e98b8a17c0aad30ba64d47b74e2a6c1" compoundref="_c_make_cache_8txt" startline="299">i</references>
+        <references refid="class_simulator_1a22ea6689c8b7f808f101fe3a157338de" compoundref="_simulator_8h" startline="161">m_configFile</references>
+        <references refid="class_simulator_1ab0249e8e762a5c5d50263175ca53cbc7" compoundref="_simulator_8h" startline="157">m_configFilesPassed</references>
+        <references refid="class_simulator_1aaa17fec7cb1219dabc3b67a885148b1e" compoundref="_simulator_8h" startline="159">m_simulationCount</references>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1ab899d33750e674079de022d269c6bf9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulator::StartSimulation</definition>
+        <argsstring>()</argsstring>
+        <name>StartSimulation</name>
+        <briefdescription>
+<para>Interface method to start the simulation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_simulator_1ab899d33750e674079de022d269c6bf9c" kindref="member">Simulator::StartSimulation</ref> Interface method to start the simulation <simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="34" column="10" bodyfile="Simulator.cpp" bodystart="52" bodyend="66"/>
+        <references refid="_c_make_cache_8txt_1a7e98b8a17c0aad30ba64d47b74e2a6c1" compoundref="_c_make_cache_8txt" startline="299">i</references>
+        <references refid="class_simulator_1a0e2d73d3f5c09acdcac93e22a95b721d" compoundref="_simulator_8cpp" startline="212" endline="238">initializeSimulator</references>
+        <references refid="class_simulator_1a22ea6689c8b7f808f101fe3a157338de" compoundref="_simulator_8h" startline="161">m_configFile</references>
+        <references refid="class_simulator_1a0cd976fca52f982a92f2f897a6ddd1de" compoundref="_simulator_8cpp" startline="246" endline="270">rerunSimulator</references>
+        <references refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</references>
+        <referencedby refid="main_8cpp_1ac0f2228420376f4db7e1274f2b41667c" compoundref="main_8cpp" startline="15" endline="21">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulator::RunSimulation</definition>
+        <argsstring>()</argsstring>
+        <name>RunSimulation</name>
+        <briefdescription>
+<para>Main method to run simulation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" kindref="member">Simulator::RunSimulation</ref> Main method to run the simulation. <simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="37" column="10" bodyfile="Simulator.cpp" bodystart="75" bodyend="198"/>
+        <references refid="class_simulator_1a1176c2f39f71a17dd1c9d669d3a46d15" compoundref="_simulator_8cpp" startline="667" endline="674">calculateSharpeRatio</references>
+        <references refid="class_simulator_1af2fc928bf40748cf305a1a699746e77d" compoundref="_simulator_8cpp" startline="470" endline="474">calculateSignal</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa685f73194ad125cbc784c3210cdb3449" compoundref="_ticker_data_8h" startline="32">CLOSE</references>
+        <references refid="class_simulator_1a2ae468429b6e8eedc5c1744891e36346" compoundref="_simulator_8cpp" startline="922" endline="930">closeDailyPublication</references>
+        <references refid="class_simulator_1a9bf890f96b97a53f5beac15581689b18" compoundref="_simulator_8cpp" startline="940" endline="951">closeMonthlyPublication</references>
+        <references refid="class_simulator_1a9c907c7e0a1a2fdd334cb51dd5ff47c6" compoundref="_simulator_8cpp" startline="976" endline="984">closeSignalPublication</references>
+        <references refid="class_simulator_1a8de16aac7f0616e43ee45e895d15b67a" compoundref="_simulator_8cpp" startline="959" endline="967">closeTransactionPublication</references>
+        <references refid="class_ticker_data_1a417646c038db3d2c73785a06b2de14c9" compoundref="_ticker_data_8h" startline="77" endline="77">TickerData::GetCurrentDataOf</references>
+        <references refid="class_data_access_1a8fef2d9972260413cc5c949d6ad7f245" compoundref="_data_access_8cpp" startline="105" endline="111">DataAccess::GetTickerData</references>
+        <references refid="class_data_access_1aca25ff0e8ce73d87a8e2f4584ee87149" compoundref="_data_access_8cpp" startline="84" endline="95">DataAccess::GetTradingDatesInRange</references>
+        <references refid="class_data_access_1a3192674ca52329b3db8f0a5f3c0e9141" compoundref="_data_access_8h" startline="27" endline="27">DataAccess::GetUniverse</references>
+        <references refid="class_simulator_1a788eddb47b5e2b64ad373e3e16f50e4e" compoundref="_simulator_8h" startline="147">m_dailyCumulativeROR</references>
+        <references refid="class_simulator_1a874ad8839e8a4625d556126136df86b0" compoundref="_simulator_8h" startline="125">m_dailyPNL</references>
+        <references refid="class_simulator_1ab5aebf9f33c4d351336481d74df87204" compoundref="_simulator_8h" startline="145">m_dailyPNLRecord</references>
+        <references refid="class_simulator_1a554d967210680039cb8f8c9590275d62" compoundref="_simulator_8h" startline="95">m_dailyPublication</references>
+        <references refid="class_simulator_1a98713f90d7d7ce86cce337f787acf0e0" compoundref="_simulator_8h" startline="165">m_data</references>
+        <references refid="class_simulator_1a5418c16b656f3e90fe909c2cea9a7b26" compoundref="_simulator_8h" startline="89">m_endDate</references>
+        <references refid="class_simulator_1a92a066b5676e453879a884dd047d53aa" compoundref="_simulator_8h" startline="135">m_grossMarketValue</references>
+        <references refid="class_simulator_1ade008ef893f45012690935775c11b744" compoundref="_simulator_8h" startline="127">m_longPosCount</references>
+        <references refid="class_simulator_1a03b15dcf1a5ebd34356a2c013ba95190" compoundref="_simulator_8h" startline="109">m_monthlyInfoFile</references>
+        <references refid="class_simulator_1ab5eee5366d5945ba1c047183c99140d5" compoundref="_simulator_8h" startline="96">m_monthlyPublication</references>
+        <references refid="class_simulator_1a75b03660c930f8fabdfa41eccff44f4b" compoundref="_simulator_8h" startline="133">m_netMarketValue</references>
+        <references refid="class_simulator_1af8b9686a07f4801d903c03ba06f10b6c" compoundref="_simulator_8h" startline="121">m_ROR</references>
+        <references refid="class_simulator_1abcf33b93b8230d84d99eb31cd73e3b69" compoundref="_simulator_8h" startline="149">m_sharpeRecord</references>
+        <references refid="class_simulator_1a7437688899e7340ff427051e6499b42f" compoundref="_simulator_8h" startline="129">m_shortPosCount</references>
+        <references refid="class_simulator_1aec6e5c383d7b6b366716fb62194d8a02" compoundref="_simulator_8h" startline="98">m_signalPublication</references>
+        <references refid="class_simulator_1aaa17fec7cb1219dabc3b67a885148b1e" compoundref="_simulator_8h" startline="159">m_simulationCount</references>
+        <references refid="class_simulator_1a1808159b6db7cc8cb1fde241b3ca1a63" compoundref="_simulator_8h" startline="88">m_startDate</references>
+        <references refid="class_simulator_1a5df061dcae309d085e48d6aa68f9a0ff" compoundref="_simulator_8h" startline="137">m_today</references>
+        <references refid="class_simulator_1a2ad80992205bb876c7aec067760fd380" compoundref="_simulator_8h" startline="123">m_totalPNL</references>
+        <references refid="class_simulator_1ad9bd5da8f745195f8efb7fde07c4b398" compoundref="_simulator_8h" startline="131">m_totalPosCount</references>
+        <references refid="class_simulator_1a1d14636c2b29e1b2ae40ea1264465318" compoundref="_simulator_8h" startline="167">m_tradingStocks</references>
+        <references refid="class_simulator_1a147bb76a9bd3662868ada07ce810c1e9" compoundref="_simulator_8h" startline="97">m_transactionPublication</references>
+        <references refid="class_simulator_1adc8821db9e85da458f9a6e8b1912ac86" compoundref="_simulator_8cpp" startline="485" endline="548">makeTrade</references>
+        <references refid="class_ticker_data_1a875fa60f1877615e9ca408b697b27905" compoundref="_ticker_data_8h" startline="63">TickerData::NA_VAL</references>
+        <references refid="class_simulator_1ae77749f93581b683330f30726f5aaffb" compoundref="_simulator_8cpp" startline="742" endline="760">recordDailyStatistics</references>
+        <references refid="class_simulator_1ae9b8b2ffbef1ba49bd8a9dc5fad5a1b2" compoundref="_simulator_8cpp" startline="770" endline="914">recordMonthlyStatistics</references>
+        <references refid="class_simulator_1a4238ab87912e40d99cad5deb558e3a96" compoundref="_simulator_8cpp" startline="571" endline="577">recordNoActivity</references>
+        <references refid="class_simulator_1a5a78edbf904b54bb6f66a5c3b8c87cd9" compoundref="_simulator_8cpp" startline="730" endline="734">recordSignalInfo</references>
+        <references refid="class_ticker_data_1ab7018ea10b33e3e411da4b5d3c50db3b" compoundref="_ticker_data_8cpp" startline="47" endline="67">TickerData::SetTradingDateRange</references>
+        <referencedby refid="class_simulator_1ab899d33750e674079de022d269c6bf9c" compoundref="_simulator_8cpp" startline="52" endline="66">StartSimulation</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_simulator_1a5ee3126b7491cec8402850d5497b817c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Simulator::Simulator</definition>
+        <argsstring>()=default</argsstring>
+        <name>Simulator</name>
+        <briefdescription>
+<para>Private default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="42" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1a0e2d73d3f5c09acdcac93e22a95b721d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulator::initializeSimulator</definition>
+        <argsstring>(const char *a_configFile)</argsstring>
+        <name>initializeSimulator</name>
+        <param>
+          <type>const <ref refid="_c_make_cache_8txt_1afe71f11dacb15682cdc012f7208e6e09" kindref="member">char</ref> *</type>
+          <declname>a_configFile</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the simulator by loading configurations, ticker data and trading stocks. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_simulator_1a0e2d73d3f5c09acdcac93e22a95b721d" kindref="member">Simulator::initializeSimulator</ref> Main method to initialize simulator for run. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>char* <ref refid="class_config" kindref="compound">Config</ref> file to initialize simulator for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="175" column="10" bodyfile="Simulator.cpp" bodystart="212" bodyend="238"/>
+        <references refid="class_simulator_1a5b96a3d0c4c330d2b49be7dd7930c510" compoundref="_simulator_8cpp" startline="337" endline="364">checkParameters</references>
+        <references refid="class_data_access_1abc3ed687ddf164425f4f7c797eddcb55" compoundref="_data_access_8cpp" startline="53" endline="59">DataAccess::GetDbInstance</references>
+        <references refid="class_simulator_1af45eb4ca17242683290fbf5c54af13f2" compoundref="_simulator_8cpp" startline="278" endline="328">initializePublications</references>
+        <references refid="class_simulator_1a3752d08182992d06e6dc5783ed82cafc" compoundref="_simulator_8cpp" startline="410" endline="438">initializeTradingTickers</references>
+        <references refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</references>
+        <references refid="class_simulator_1a50c85d7f67459a61c525de84f296f696" compoundref="_simulator_8h" startline="163">m_config</references>
+        <references refid="class_simulator_1a98713f90d7d7ce86cce337f787acf0e0" compoundref="_simulator_8h" startline="165">m_data</references>
+        <references refid="class_simulator_1ae9617ea33ba0f08b1fa26be1777eee58" compoundref="_simulator_8h" startline="80">m_tickerPath</references>
+        <references refid="class_simulator_1a9f9825e7abbefadd90cd260af723f362" compoundref="_simulator_8h" startline="79">m_universePath</references>
+        <references refid="class_simulator_1ac66d4a8840edc51e1fda473d677ccce2" compoundref="_simulator_8cpp" startline="447" endline="458">verifyDateParameters</references>
+        <referencedby refid="class_simulator_1ab899d33750e674079de022d269c6bf9c" compoundref="_simulator_8cpp" startline="52" endline="66">StartSimulation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1a0cd976fca52f982a92f2f897a6ddd1de" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulator::rerunSimulator</definition>
+        <argsstring>(const char *a_configFile)</argsstring>
+        <name>rerunSimulator</name>
+        <param>
+          <type>const <ref refid="_c_make_cache_8txt_1afe71f11dacb15682cdc012f7208e6e09" kindref="member">char</ref> *</type>
+          <declname>a_configFile</declname>
+        </param>
+        <briefdescription>
+<para>Rerun simulator for consecutive configuration files. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_simulator_1a0cd976fca52f982a92f2f897a6ddd1de" kindref="member">Simulator::rerunSimulator</ref> Rerun simulator for consecutive configuration files <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>char* <ref refid="class_config" kindref="compound">Config</ref> file to initialize simulator for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="178" column="10" bodyfile="Simulator.cpp" bodystart="246" bodyend="270"/>
+        <references refid="class_simulator_1a5b96a3d0c4c330d2b49be7dd7930c510" compoundref="_simulator_8cpp" startline="337" endline="364">checkParameters</references>
+        <references refid="class_simulator_1af45eb4ca17242683290fbf5c54af13f2" compoundref="_simulator_8cpp" startline="278" endline="328">initializePublications</references>
+        <references refid="class_simulator_1a3752d08182992d06e6dc5783ed82cafc" compoundref="_simulator_8cpp" startline="410" endline="438">initializeTradingTickers</references>
+        <references refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">loadParameters</references>
+        <references refid="class_simulator_1a50c85d7f67459a61c525de84f296f696" compoundref="_simulator_8h" startline="163">m_config</references>
+        <references refid="class_simulator_1a1d14636c2b29e1b2ae40ea1264465318" compoundref="_simulator_8h" startline="167">m_tradingStocks</references>
+        <references refid="class_simulator_1ac66d4a8840edc51e1fda473d677ccce2" compoundref="_simulator_8cpp" startline="447" endline="458">verifyDateParameters</references>
+        <referencedby refid="class_simulator_1ab899d33750e674079de022d269c6bf9c" compoundref="_simulator_8cpp" startline="52" endline="66">StartSimulation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1af45eb4ca17242683290fbf5c54af13f2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulator::initializePublications</definition>
+        <argsstring>()</argsstring>
+        <name>initializePublications</name>
+        <briefdescription>
+<para>Initialize file write stream for the publications requested in config. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_simulator_1af45eb4ca17242683290fbf5c54af13f2" kindref="member">Simulator::initializePublications</ref> Initializes file write streams for the publications requested in configurations. <simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="181" column="10" bodyfile="Simulator.cpp" bodystart="278" bodyend="328"/>
+        <references refid="class_simulator_1a163d168daf7ddb30c31a34084fdd56cd" compoundref="_simulator_8h" startline="108">m_dailyInfoFile</references>
+        <references refid="class_simulator_1a554d967210680039cb8f8c9590275d62" compoundref="_simulator_8h" startline="95">m_dailyPublication</references>
+        <references refid="class_simulator_1a03b15dcf1a5ebd34356a2c013ba95190" compoundref="_simulator_8h" startline="109">m_monthlyInfoFile</references>
+        <references refid="class_simulator_1ab5eee5366d5945ba1c047183c99140d5" compoundref="_simulator_8h" startline="96">m_monthlyPublication</references>
+        <references refid="class_simulator_1ac1f4b274af12359ab1359d48cb793633" compoundref="_simulator_8h" startline="111">m_signalInfoFile</references>
+        <references refid="class_simulator_1aec6e5c383d7b6b366716fb62194d8a02" compoundref="_simulator_8h" startline="98">m_signalPublication</references>
+        <references refid="class_simulator_1aaa17fec7cb1219dabc3b67a885148b1e" compoundref="_simulator_8h" startline="159">m_simulationCount</references>
+        <references refid="class_simulator_1a1f7936d90aa2ee50df1d41f336a2db80" compoundref="_simulator_8h" startline="110">m_transactionInfoFile</references>
+        <references refid="class_simulator_1a147bb76a9bd3662868ada07ce810c1e9" compoundref="_simulator_8h" startline="97">m_transactionPublication</references>
+        <referencedby refid="class_simulator_1a0e2d73d3f5c09acdcac93e22a95b721d" compoundref="_simulator_8cpp" startline="212" endline="238">initializeSimulator</referencedby>
+        <referencedby refid="class_simulator_1a0cd976fca52f982a92f2f897a6ddd1de" compoundref="_simulator_8cpp" startline="246" endline="270">rerunSimulator</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1a5b96a3d0c4c330d2b49be7dd7930c510" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Simulator::checkParameters</definition>
+        <argsstring>()</argsstring>
+        <name>checkParameters</name>
+        <briefdescription>
+<para>Checks if all required parameters are passed for simulator to run. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_simulator_1a5b96a3d0c4c330d2b49be7dd7930c510" kindref="member">Simulator::checkParameters</ref> Checks if all required parameters are passed for simulator to run. <simplesect kind="return"><para>bool If all required parameters are in configuration file. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="184" column="10" bodyfile="Simulator.cpp" bodystart="337" bodyend="364"/>
+        <references refid="class_config_1aaee87de753014e9dfd1a5a88c13d51f0" compoundref="_config_8h" startline="55" endline="59">Config::ContainsParameter</references>
+        <references refid="class_simulator_1a97f519a765ab449b62be329d9b1eddc6" compoundref="_simulator_8h" startline="65">DAILY_PUB_PARAM</references>
+        <references refid="class_simulator_1adb8c5bb4e289a14b706a3803c50a5643" compoundref="_simulator_8h" startline="62">DAYS_IN_POS_PARAM</references>
+        <references refid="class_simulator_1a5f3cd0a9c644e7548a0424556b03e627" compoundref="_simulator_8h" startline="58">ENTRY_SIGNAL_PARAM</references>
+        <references refid="class_simulator_1a39b11ae9b5e07c049444d568f800e11e" compoundref="_simulator_8h" startline="59">EXIT_SIGNAL_PARAM</references>
+        <references refid="class_simulator_1a50c85d7f67459a61c525de84f296f696" compoundref="_simulator_8h" startline="163">m_config</references>
+        <references refid="class_simulator_1a3a536c742457453e2d3e96b97d91629a" compoundref="_simulator_8h" startline="53">MAX_CAPITAL_PER_STOCK_PARAM</references>
+        <references refid="class_simulator_1afeaec183962d21c49fefb01dd671ea33" compoundref="_simulator_8h" startline="61">MAX_POS_PER_STOCK</references>
+        <references refid="class_simulator_1a8743b3779eb9eae58768e408176483ac" compoundref="_simulator_8h" startline="66">MONTHLY_PUB_PARAM</references>
+        <references refid="class_simulator_1aa39d4d9502abf412d78b50d1f15f811b" compoundref="_simulator_8h" startline="56">PERIOD_END_DATE</references>
+        <references refid="class_simulator_1aa0bac330691bf03dbf8716be787cad45" compoundref="_simulator_8h" startline="55">PERIOD_START_DATE</references>
+        <references refid="class_simulator_1a4f33098635f757e2a31bfbb76ce7dfe9" compoundref="_simulator_8h" startline="52">PORTFOLIO_CAPITAL</references>
+        <references refid="class_simulator_1a51929ed4f5640f5d2644b3dfd0628329" compoundref="_simulator_8h" startline="68">SIGNAL_PUB_PARAM</references>
+        <references refid="class_simulator_1a4f727299fa4922e4b1a817983fe228dd" compoundref="_simulator_8h" startline="63">STOP_LOSS_PARAM</references>
+        <references refid="class_simulator_1af7743ff89da2d5a70380d89cf93517cd" compoundref="_simulator_8h" startline="50">TICKER_PATH_PARAM</references>
+        <references refid="class_simulator_1afd3e6d193653a3642067721af2b6ed38" compoundref="_simulator_8h" startline="67">TRANSACTION_PUB_PARAM</references>
+        <references refid="class_simulator_1a8d54012cdf3478b20f8d792b84de129c" compoundref="_simulator_8h" startline="49">UNIVERSE_PATH_PARAM</references>
+        <referencedby refid="class_simulator_1a0e2d73d3f5c09acdcac93e22a95b721d" compoundref="_simulator_8cpp" startline="212" endline="238">initializeSimulator</referencedby>
+        <referencedby refid="class_simulator_1a0cd976fca52f982a92f2f897a6ddd1de" compoundref="_simulator_8cpp" startline="246" endline="270">rerunSimulator</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulator::loadParameters</definition>
+        <argsstring>()</argsstring>
+        <name>loadParameters</name>
+        <briefdescription>
+<para>Loads parameters required for the simulator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" kindref="member">Simulator::loadParameters</ref> Loads parameters from configuration file that are required for the simulation. <simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="187" column="10" bodyfile="Simulator.cpp" bodystart="372" bodyend="402"/>
+        <references refid="class_simulator_1a97f519a765ab449b62be329d9b1eddc6" compoundref="_simulator_8h" startline="65">DAILY_PUB_PARAM</references>
+        <references refid="class_simulator_1adb8c5bb4e289a14b706a3803c50a5643" compoundref="_simulator_8h" startline="62">DAYS_IN_POS_PARAM</references>
+        <references refid="class_simulator_1a5f3cd0a9c644e7548a0424556b03e627" compoundref="_simulator_8h" startline="58">ENTRY_SIGNAL_PARAM</references>
+        <references refid="class_simulator_1a39b11ae9b5e07c049444d568f800e11e" compoundref="_simulator_8h" startline="59">EXIT_SIGNAL_PARAM</references>
+        <references refid="class_config_1ad4154541cb9dc550527551a736862578" compoundref="_config_8h" startline="115" endline="132">Config::GetParameter</references>
+        <references refid="class_simulator_1a6d29b66f23f025901b41cdb4b8b54d85" compoundref="_simulator_8h" startline="83">m_capitalLimitPerStock</references>
+        <references refid="class_simulator_1a50c85d7f67459a61c525de84f296f696" compoundref="_simulator_8h" startline="163">m_config</references>
+        <references refid="class_simulator_1a554d967210680039cb8f8c9590275d62" compoundref="_simulator_8h" startline="95">m_dailyPublication</references>
+        <references refid="class_simulator_1a5418c16b656f3e90fe909c2cea9a7b26" compoundref="_simulator_8h" startline="89">m_endDate</references>
+        <references refid="class_simulator_1a3cb05c9f9cc50bed5f7c284140dd3228" compoundref="_simulator_8h" startline="85">m_entrySignal</references>
+        <references refid="class_simulator_1a8245a5e2736adcf414f737d1501f846f" compoundref="_simulator_8h" startline="86">m_exitSignal</references>
+        <references refid="class_simulator_1a465d97fd2465e1e8fbbf12d9a8ad4294" compoundref="_simulator_8h" startline="92">m_maxDaysPerPosition</references>
+        <references refid="class_simulator_1a762c9da4d9b398b70e4a5fcf8084693a" compoundref="_simulator_8h" startline="91">m_maxPositionsPerStock</references>
+        <references refid="class_simulator_1ab5eee5366d5945ba1c047183c99140d5" compoundref="_simulator_8h" startline="96">m_monthlyPublication</references>
+        <references refid="class_simulator_1ac63f13d5fc10eb815958703a859f2761" compoundref="_simulator_8h" startline="82">m_portfolioCapital</references>
+        <references refid="class_simulator_1aec6e5c383d7b6b366716fb62194d8a02" compoundref="_simulator_8h" startline="98">m_signalPublication</references>
+        <references refid="class_simulator_1a1808159b6db7cc8cb1fde241b3ca1a63" compoundref="_simulator_8h" startline="88">m_startDate</references>
+        <references refid="class_simulator_1aa51155015b9738f8dcb0815271144ac1" compoundref="_simulator_8h" startline="93">m_stopLoss</references>
+        <references refid="class_simulator_1ae9617ea33ba0f08b1fa26be1777eee58" compoundref="_simulator_8h" startline="80">m_tickerPath</references>
+        <references refid="class_simulator_1a147bb76a9bd3662868ada07ce810c1e9" compoundref="_simulator_8h" startline="97">m_transactionPublication</references>
+        <references refid="class_simulator_1a9f9825e7abbefadd90cd260af723f362" compoundref="_simulator_8h" startline="79">m_universePath</references>
+        <references refid="class_simulator_1a3a536c742457453e2d3e96b97d91629a" compoundref="_simulator_8h" startline="53">MAX_CAPITAL_PER_STOCK_PARAM</references>
+        <references refid="class_simulator_1afeaec183962d21c49fefb01dd671ea33" compoundref="_simulator_8h" startline="61">MAX_POS_PER_STOCK</references>
+        <references refid="class_simulator_1a8743b3779eb9eae58768e408176483ac" compoundref="_simulator_8h" startline="66">MONTHLY_PUB_PARAM</references>
+        <references refid="class_simulator_1aa39d4d9502abf412d78b50d1f15f811b" compoundref="_simulator_8h" startline="56">PERIOD_END_DATE</references>
+        <references refid="class_simulator_1aa0bac330691bf03dbf8716be787cad45" compoundref="_simulator_8h" startline="55">PERIOD_START_DATE</references>
+        <references refid="class_simulator_1a4f33098635f757e2a31bfbb76ce7dfe9" compoundref="_simulator_8h" startline="52">PORTFOLIO_CAPITAL</references>
+        <references refid="class_simulator_1a51929ed4f5640f5d2644b3dfd0628329" compoundref="_simulator_8h" startline="68">SIGNAL_PUB_PARAM</references>
+        <references refid="class_simulator_1a4f727299fa4922e4b1a817983fe228dd" compoundref="_simulator_8h" startline="63">STOP_LOSS_PARAM</references>
+        <references refid="class_simulator_1af7743ff89da2d5a70380d89cf93517cd" compoundref="_simulator_8h" startline="50">TICKER_PATH_PARAM</references>
+        <references refid="class_simulator_1afd3e6d193653a3642067721af2b6ed38" compoundref="_simulator_8h" startline="67">TRANSACTION_PUB_PARAM</references>
+        <references refid="class_simulator_1a8d54012cdf3478b20f8d792b84de129c" compoundref="_simulator_8h" startline="49">UNIVERSE_PATH_PARAM</references>
+        <referencedby refid="class_simulator_1a0e2d73d3f5c09acdcac93e22a95b721d" compoundref="_simulator_8cpp" startline="212" endline="238">initializeSimulator</referencedby>
+        <referencedby refid="class_simulator_1a0cd976fca52f982a92f2f897a6ddd1de" compoundref="_simulator_8cpp" startline="246" endline="270">rerunSimulator</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1a3752d08182992d06e6dc5783ed82cafc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulator::initializeTradingTickers</definition>
+        <argsstring>()</argsstring>
+        <name>initializeTradingTickers</name>
+        <briefdescription>
+<para>Initialize stocks that the simulator will be trading. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_simulator_1a3752d08182992d06e6dc5783ed82cafc" kindref="member">Simulator::initializeTradingTickers</ref> Initialize stock tickers from constituents file that the simulator will be trading. <simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="190" column="10" bodyfile="Simulator.cpp" bodystart="410" bodyend="438"/>
+        <references refid="class_data_access_1a3192674ca52329b3db8f0a5f3c0e9141" compoundref="_data_access_8h" startline="27" endline="27">DataAccess::GetUniverse</references>
+        <references refid="class_simulator_1a6d29b66f23f025901b41cdb4b8b54d85" compoundref="_simulator_8h" startline="83">m_capitalLimitPerStock</references>
+        <references refid="class_simulator_1a98713f90d7d7ce86cce337f787acf0e0" compoundref="_simulator_8h" startline="165">m_data</references>
+        <references refid="class_simulator_1ac63f13d5fc10eb815958703a859f2761" compoundref="_simulator_8h" startline="82">m_portfolioCapital</references>
+        <references refid="class_simulator_1a1d14636c2b29e1b2ae40ea1264465318" compoundref="_simulator_8h" startline="167">m_tradingStocks</references>
+        <referencedby refid="class_simulator_1a0e2d73d3f5c09acdcac93e22a95b721d" compoundref="_simulator_8cpp" startline="212" endline="238">initializeSimulator</referencedby>
+        <referencedby refid="class_simulator_1a0cd976fca52f982a92f2f897a6ddd1de" compoundref="_simulator_8cpp" startline="246" endline="270">rerunSimulator</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1ac66d4a8840edc51e1fda473d677ccce2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulator::verifyDateParameters</definition>
+        <argsstring>()</argsstring>
+        <name>verifyDateParameters</name>
+        <briefdescription>
+<para>Verify date range. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_simulator_1ac66d4a8840edc51e1fda473d677ccce2" kindref="member">Simulator::verifyDateParameters</ref> Verify date range in configuration file to assert if data is available for that range. If not, the simulation will run for all available data instead of stopping. <simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="193" column="10" bodyfile="Simulator.cpp" bodystart="447" bodyend="458"/>
+        <references refid="class_data_access_1a999d5066dde617c2b244606d57f003ed" compoundref="_data_access_8cpp" startline="70" endline="73">DataAccess::CheckDateRange</references>
+        <references refid="class_data_access_1a515ad86dcb1b7dded8aabb7400b1609d" compoundref="_data_access_8h" startline="36" endline="36">DataAccess::GetLatestTradingDate</references>
+        <references refid="class_data_access_1a9e9db2cee4493ae998b9abaa17fe6be6" compoundref="_data_access_8h" startline="33" endline="33">DataAccess::GetOldestTradingDate</references>
+        <references refid="class_simulator_1a98713f90d7d7ce86cce337f787acf0e0" compoundref="_simulator_8h" startline="165">m_data</references>
+        <references refid="class_simulator_1a5418c16b656f3e90fe909c2cea9a7b26" compoundref="_simulator_8h" startline="89">m_endDate</references>
+        <references refid="class_simulator_1a1808159b6db7cc8cb1fde241b3ca1a63" compoundref="_simulator_8h" startline="88">m_startDate</references>
+        <referencedby refid="class_simulator_1a0e2d73d3f5c09acdcac93e22a95b721d" compoundref="_simulator_8cpp" startline="212" endline="238">initializeSimulator</referencedby>
+        <referencedby refid="class_simulator_1a0cd976fca52f982a92f2f897a6ddd1de" compoundref="_simulator_8cpp" startline="246" endline="270">rerunSimulator</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1af2fc928bf40748cf305a1a699746e77d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Simulator::calculateSignal</definition>
+        <argsstring>(TickerData &amp;a_stockData)</argsstring>
+        <name>calculateSignal</name>
+        <param>
+          <type><ref refid="class_ticker_data" kindref="compound">TickerData</ref> &amp;</type>
+          <declname>a_stockData</declname>
+        </param>
+        <briefdescription>
+<para>Calculate trade signal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_simulator_1af2fc928bf40748cf305a1a699746e77d" kindref="member">Simulator::calculateSignal</ref> Function to calculate trade signal. Currently uses MACD indicator to get signal. If not, the simulation will run for all available data instead of stopping. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_stockData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_ticker_data" kindref="compound">TickerData</ref>&amp; The data of the trading stock in the specified date range. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double Trading signal. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="196" column="12" bodyfile="Simulator.cpp" bodystart="470" bodyend="474"/>
+        <references refid="class_ticker_data_1aaf1f6539e8da61af8091c72dcfd39e0d" compoundref="_ticker_data_8cpp" startline="76" endline="91">TickerData::GetMACDSignal</references>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1adc8821db9e85da458f9a6e8b1912ac86" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulator::makeTrade</definition>
+        <argsstring>(TradingStock &amp;a_stock, double &amp;a_currentPrice, double &amp;a_signalToday)</argsstring>
+        <name>makeTrade</name>
+        <param>
+          <type><ref refid="class_trading_stock" kindref="compound">TradingStock</ref> &amp;</type>
+          <declname>a_stock</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>a_currentPrice</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>a_signalToday</declname>
+        </param>
+        <briefdescription>
+<para>Function to open or close positions according to the signal by checking current position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_simulator_1adc8821db9e85da458f9a6e8b1912ac86" kindref="member">Simulator::makeTrade</ref> Function to make trade according to the signal. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_stock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_trading_stock" kindref="compound">TradingStock</ref>&amp; The stock that is being traded. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_currentPrice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double&amp; Current price of the stock. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_signalToday</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double&amp; Signal calculated for the day. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="199" column="10" bodyfile="Simulator.cpp" bodystart="485" bodyend="548"/>
+        <references refid="class_trading_stock_1a8610312df44fd64d9ff6fc4b7057b0b4" compoundref="_trading_stock_8cpp" startline="324" endline="334">TradingStock::CheckLongSignal</references>
+        <references refid="class_trading_stock_1aec7895ca3d924226dc25ef2d961ed181" compoundref="_trading_stock_8cpp" startline="304" endline="314">TradingStock::CheckShortSignal</references>
+        <references refid="class_simulator_1a20a56ab01d34b348fe22129caa44df09" compoundref="_simulator_8cpp" startline="631" endline="658">closePositions</references>
+        <references refid="class_trading_stock_1aad5057092b58a0ed625be05cfcef3c3e" compoundref="_trading_stock_8cpp" startline="371" endline="427">TradingStock::CloseStalePositions</references>
+        <references refid="class_trading_stock_1a3f01e1cee2b7b6ae685351266850a723" compoundref="_trading_stock_8h" startline="36" endline="36">TradingStock::GetSignalRecord</references>
+        <references refid="class_simulator_1a4dbbe2a4cbd784dff5a9bdc4ee913b08" compoundref="_simulator_8cpp" startline="559" endline="562">hasEnoughCapital</references>
+        <references refid="class_trading_stock_1a0f34b4c03fc00907a9ab21c76450ca6f" compoundref="_trading_stock_8h" startline="34" endline="34">TradingStock::IsLong</references>
+        <references refid="class_trading_stock_1a70adc544aeb365d69f4dfa3a99ac3d18" compoundref="_trading_stock_8h" startline="35" endline="35">TradingStock::IsShort</references>
+        <references refid="class_simulator_1a3cb05c9f9cc50bed5f7c284140dd3228" compoundref="_simulator_8h" startline="85">m_entrySignal</references>
+        <references refid="class_simulator_1a8245a5e2736adcf414f737d1501f846f" compoundref="_simulator_8h" startline="86">m_exitSignal</references>
+        <references refid="class_simulator_1a465d97fd2465e1e8fbbf12d9a8ad4294" compoundref="_simulator_8h" startline="92">m_maxDaysPerPosition</references>
+        <references refid="class_simulator_1a5df061dcae309d085e48d6aa68f9a0ff" compoundref="_simulator_8h" startline="137">m_today</references>
+        <references refid="class_simulator_1a147bb76a9bd3662868ada07ce810c1e9" compoundref="_simulator_8h" startline="97">m_transactionPublication</references>
+        <references refid="class_simulator_1ad24c99fbfd5808aba7f5c9de11cc23f0" compoundref="_simulator_8cpp" startline="588" endline="620">openPositions</references>
+        <references refid="class_simulator_1a4238ab87912e40d99cad5deb558e3a96" compoundref="_simulator_8cpp" startline="571" endline="577">recordNoActivity</references>
+        <references refid="class_trading_stock_1a82ea8bcd2b94eef82bb100c929c519e0" compoundref="_trading_stock_8cpp" startline="145" endline="160">TradingStock::RecordPNL</references>
+        <references refid="class_simulator_1a56638656f8e85aec70ba6c2680025279" compoundref="_simulator_8cpp" startline="704" endline="721">recordTransaction</references>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1a4dbbe2a4cbd784dff5a9bdc4ee913b08" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Simulator::hasEnoughCapital</definition>
+        <argsstring>(TradingStock &amp;a_stock, double a_price)</argsstring>
+        <name>hasEnoughCapital</name>
+        <param>
+          <type><ref refid="class_trading_stock" kindref="compound">TradingStock</ref> &amp;</type>
+          <declname>a_stock</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_price</declname>
+        </param>
+        <briefdescription>
+<para>Check if available capital for a stock is enough to purchase more equities at a_price. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_simulator_1a4dbbe2a4cbd784dff5a9bdc4ee913b08" kindref="member">Simulator::hasEnoughCapital</ref> Check if available capital for a stock is enough to purchase more equities at a_price <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_stock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_trading_stock" kindref="compound">TradingStock</ref>&amp; The stock that is being traded. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_currentPrice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double&amp; Current price of the stock. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool If there is sufficient capital to buy positions of a_stock at a_price. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="202" column="10" bodyfile="Simulator.cpp" bodystart="559" bodyend="562"/>
+        <references refid="class_trading_stock_1a9d6e882e90f88a6dce91cc6d08f0847a" compoundref="_trading_stock_8h" startline="38" endline="38">TradingStock::GetAvailableCapital</references>
+        <referencedby refid="class_simulator_1adc8821db9e85da458f9a6e8b1912ac86" compoundref="_simulator_8cpp" startline="485" endline="548">makeTrade</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1a20a56ab01d34b348fe22129caa44df09" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulator::closePositions</definition>
+        <argsstring>(TradingStock &amp;a_stock, double &amp;a_currentPrice, double &amp;a_signal)</argsstring>
+        <name>closePositions</name>
+        <param>
+          <type><ref refid="class_trading_stock" kindref="compound">TradingStock</ref> &amp;</type>
+          <declname>a_stock</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>a_currentPrice</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>a_signal</declname>
+        </param>
+        <briefdescription>
+<para>Close positions for a trading stock. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_simulator_1a20a56ab01d34b348fe22129caa44df09" kindref="member">Simulator::closePositions</ref> Method to close positions for a trading stock. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_stock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_trading_stock" kindref="compound">TradingStock</ref>&amp; The stock that is being traded. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_currentPrice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double&amp; Current price of the stock. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_signalToday</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double&amp; Signal calculated for the day. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="205" column="10" bodyfile="Simulator.cpp" bodystart="631" bodyend="658"/>
+        <references refid="class_trading_stock_1a8b890a05cb0536bbca53e6c341196158" compoundref="_trading_stock_8cpp" startline="63" endline="70">TradingStock::BuyShares</references>
+        <references refid="class_trading_stock_1a60478a78a694204f99b6ac01e5f61258" compoundref="_trading_stock_8cpp" startline="215" endline="247">TradingStock::CloseLongPositions</references>
+        <references refid="class_trading_stock_1a32ad16346c6c9bf2ffd9cc6a68f01325" compoundref="_trading_stock_8cpp" startline="262" endline="294">TradingStock::CloseShortPositions</references>
+        <references refid="class_simulator_1a5df061dcae309d085e48d6aa68f9a0ff" compoundref="_simulator_8h" startline="137">m_today</references>
+        <references refid="class_simulator_1a147bb76a9bd3662868ada07ce810c1e9" compoundref="_simulator_8h" startline="97">m_transactionPublication</references>
+        <references refid="class_trading_stock_1a82ea8bcd2b94eef82bb100c929c519e0" compoundref="_trading_stock_8cpp" startline="145" endline="160">TradingStock::RecordPNL</references>
+        <references refid="class_simulator_1a56638656f8e85aec70ba6c2680025279" compoundref="_simulator_8cpp" startline="704" endline="721">recordTransaction</references>
+        <references refid="class_trading_stock_1abf15f389461393974e58d973a7a4f593" compoundref="_trading_stock_8cpp" startline="46" endline="53">TradingStock::SellShares</references>
+        <references refid="class_trading_stock_1ac32c8930adc0a8ad8611209ea9cf0fe8" compoundref="_trading_stock_8cpp" startline="342" endline="359">TradingStock::UpdateStockPosition</references>
+        <referencedby refid="class_simulator_1adc8821db9e85da458f9a6e8b1912ac86" compoundref="_simulator_8cpp" startline="485" endline="548">makeTrade</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1ad24c99fbfd5808aba7f5c9de11cc23f0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulator::openPositions</definition>
+        <argsstring>(TradingStock &amp;a_stock, double &amp;a_currentPrice, double &amp;a_signal)</argsstring>
+        <name>openPositions</name>
+        <param>
+          <type><ref refid="class_trading_stock" kindref="compound">TradingStock</ref> &amp;</type>
+          <declname>a_stock</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>a_currentPrice</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>a_signal</declname>
+        </param>
+        <briefdescription>
+<para>Open positions for a trading stock. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_simulator_1ad24c99fbfd5808aba7f5c9de11cc23f0" kindref="member">Simulator::openPositions</ref> Method to open positions for a trading stock. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_stock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_trading_stock" kindref="compound">TradingStock</ref>&amp; The stock that is being traded. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_currentPrice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double&amp; Current price of the stock. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_signalToday</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double&amp; Signal calculated for the day. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="208" column="10" bodyfile="Simulator.cpp" bodystart="588" bodyend="620"/>
+        <references refid="class_trading_stock_1a8b890a05cb0536bbca53e6c341196158" compoundref="_trading_stock_8cpp" startline="63" endline="70">TradingStock::BuyShares</references>
+        <references refid="class_trading_stock_1a9d6e882e90f88a6dce91cc6d08f0847a" compoundref="_trading_stock_8h" startline="38" endline="38">TradingStock::GetAvailableCapital</references>
+        <references refid="class_trading_stock_1a7fe5dbc6b3d6bf08c8b1520cf669a9ca" compoundref="_trading_stock_8cpp" startline="507" endline="519">TradingStock::GetLongSharesHeld</references>
+        <references refid="class_trading_stock_1ac87efd94107349785d32cdf7ea6541d7" compoundref="_trading_stock_8cpp" startline="486" endline="498">TradingStock::GetShortSharesHeld</references>
+        <references refid="class_simulator_1a762c9da4d9b398b70e4a5fcf8084693a" compoundref="_simulator_8h" startline="91">m_maxPositionsPerStock</references>
+        <references refid="class_simulator_1a5df061dcae309d085e48d6aa68f9a0ff" compoundref="_simulator_8h" startline="137">m_today</references>
+        <references refid="class_trading_stock_1a4398bf190fdf2e8f089e929b60fe2e6d" compoundref="_trading_stock_8cpp" startline="197" endline="200">TradingStock::OpenPosition</references>
+        <references refid="namespace_utilities_1a0257a93580460c13c4af232704caa0dc" compoundref="_utilities_8cpp" startline="22" endline="26">Utilities::RoundOff</references>
+        <references refid="class_trading_stock_1abf15f389461393974e58d973a7a4f593" compoundref="_trading_stock_8cpp" startline="46" endline="53">TradingStock::SellShares</references>
+        <references refid="class_trading_stock_1a0b8e6cd751ccac4691b33e9b3a50f8d1" compoundref="_trading_stock_8h" startline="63" endline="63">TradingStock::SetLong</references>
+        <references refid="class_trading_stock_1a1e3d0dc8a813cf51bf10dd7cc1ca8175" compoundref="_trading_stock_8h" startline="64" endline="64">TradingStock::SetShort</references>
+        <referencedby refid="class_simulator_1adc8821db9e85da458f9a6e8b1912ac86" compoundref="_simulator_8cpp" startline="485" endline="548">makeTrade</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1a56638656f8e85aec70ba6c2680025279" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulator::recordTransaction</definition>
+        <argsstring>(TradingStock &amp;a_stock)</argsstring>
+        <name>recordTransaction</name>
+        <param>
+          <type><ref refid="class_trading_stock" kindref="compound">TradingStock</ref> &amp;</type>
+          <declname>a_stock</declname>
+        </param>
+        <briefdescription>
+<para>Function to record transactions to a file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_simulator_1a56638656f8e85aec70ba6c2680025279" kindref="member">Simulator::recordTransaction</ref> Function to record closed transactions to the transaction report file. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_stock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_trading_stock" kindref="compound">TradingStock</ref>&amp; The stock that is being traded. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="211" column="10" bodyfile="Simulator.cpp" bodystart="704" bodyend="721"/>
+        <references refid="class_trading_stock_1ae5b6f96bb1b51aa1d0e5144eeaf7fea1" compoundref="_trading_stock_8cpp" startline="570" endline="585">TradingStock::GetClosedTransactions</references>
+        <references refid="class_trading_stock_1a5cf4ad5ac772ed5bd2861097299e08f3" compoundref="_trading_stock_8h" startline="33" endline="33">TradingStock::GetStockName</references>
+        <references refid="class_trading_stock_1a610d809a67408a6ba4a23616b071e345" compoundref="_trading_stock_8cpp" startline="594" endline="598">TradingStock::GetTransactionCount</references>
+        <references refid="_c_make_cache_8txt_1a7e98b8a17c0aad30ba64d47b74e2a6c1" compoundref="_c_make_cache_8txt" startline="299">i</references>
+        <references refid="class_simulator_1a1f7936d90aa2ee50df1d41f336a2db80" compoundref="_simulator_8h" startline="110">m_transactionInfoFile</references>
+        <referencedby refid="class_simulator_1a20a56ab01d34b348fe22129caa44df09" compoundref="_simulator_8cpp" startline="631" endline="658">closePositions</referencedby>
+        <referencedby refid="class_simulator_1adc8821db9e85da458f9a6e8b1912ac86" compoundref="_simulator_8cpp" startline="485" endline="548">makeTrade</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1a5a78edbf904b54bb6f66a5c3b8c87cd9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulator::recordSignalInfo</definition>
+        <argsstring>(double a_signal)</argsstring>
+        <name>recordSignalInfo</name>
+        <param>
+          <type>double</type>
+          <declname>a_signal</declname>
+        </param>
+        <briefdescription>
+<para>Function to record signals to a file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_simulator_1a5a78edbf904b54bb6f66a5c3b8c87cd9" kindref="member">Simulator::recordSignalInfo</ref> Function to record signals to a file. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_signal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The day&apos;s signal </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="214" column="10" bodyfile="Simulator.cpp" bodystart="730" bodyend="734"/>
+        <references refid="class_date_time_1ac717768ad9a7a31af9be09c4296ac470" compoundref="_date_time_8h" startline="90" endline="90">DateTime::GetASCIIDate</references>
+        <references refid="class_simulator_1ac1f4b274af12359ab1359d48cb793633" compoundref="_simulator_8h" startline="111">m_signalInfoFile</references>
+        <references refid="class_simulator_1aec6e5c383d7b6b366716fb62194d8a02" compoundref="_simulator_8h" startline="98">m_signalPublication</references>
+        <references refid="class_simulator_1a5df061dcae309d085e48d6aa68f9a0ff" compoundref="_simulator_8h" startline="137">m_today</references>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1ae77749f93581b683330f30726f5aaffb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulator::recordDailyStatistics</definition>
+        <argsstring>()</argsstring>
+        <name>recordDailyStatistics</name>
+        <briefdescription>
+<para>Function to record daily statistics to a file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_simulator_1ae77749f93581b683330f30726f5aaffb" kindref="member">Simulator::recordDailyStatistics</ref> Function to record daily statistics to daily stats file. <simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="217" column="10" bodyfile="Simulator.cpp" bodystart="742" bodyend="760"/>
+        <references refid="class_date_time_1a93795a4f6217325cb348f113f3dcf85a" compoundref="_date_time_8h" startline="79" endline="79">DateTime::Get</references>
+        <references refid="class_date_time_1ac717768ad9a7a31af9be09c4296ac470" compoundref="_date_time_8h" startline="90" endline="90">DateTime::GetASCIIDate</references>
+        <references refid="class_simulator_1a163d168daf7ddb30c31a34084fdd56cd" compoundref="_simulator_8h" startline="108">m_dailyInfoFile</references>
+        <references refid="class_simulator_1a874ad8839e8a4625d556126136df86b0" compoundref="_simulator_8h" startline="125">m_dailyPNL</references>
+        <references refid="class_simulator_1a554d967210680039cb8f8c9590275d62" compoundref="_simulator_8h" startline="95">m_dailyPublication</references>
+        <references refid="class_simulator_1a92a066b5676e453879a884dd047d53aa" compoundref="_simulator_8h" startline="135">m_grossMarketValue</references>
+        <references refid="class_simulator_1ade008ef893f45012690935775c11b744" compoundref="_simulator_8h" startline="127">m_longPosCount</references>
+        <references refid="class_simulator_1a75b03660c930f8fabdfa41eccff44f4b" compoundref="_simulator_8h" startline="133">m_netMarketValue</references>
+        <references refid="class_simulator_1af8b9686a07f4801d903c03ba06f10b6c" compoundref="_simulator_8h" startline="121">m_ROR</references>
+        <references refid="class_simulator_1a7437688899e7340ff427051e6499b42f" compoundref="_simulator_8h" startline="129">m_shortPosCount</references>
+        <references refid="class_simulator_1a5df061dcae309d085e48d6aa68f9a0ff" compoundref="_simulator_8h" startline="137">m_today</references>
+        <references refid="class_simulator_1a2ad80992205bb876c7aec067760fd380" compoundref="_simulator_8h" startline="123">m_totalPNL</references>
+        <references refid="class_simulator_1ad9bd5da8f745195f8efb7fde07c4b398" compoundref="_simulator_8h" startline="131">m_totalPosCount</references>
+        <references refid="class_simulator_1accf533fb22ca8261dce0830daa5945f1" compoundref="_simulator_8cpp" startline="683" endline="695">recordSharpeRatio</references>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1ae9b8b2ffbef1ba49bd8a9dc5fad5a1b2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulator::recordMonthlyStatistics</definition>
+        <argsstring>()</argsstring>
+        <name>recordMonthlyStatistics</name>
+        <briefdescription>
+<para>Function to record monthly statistics to a file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_simulator_1ae9b8b2ffbef1ba49bd8a9dc5fad5a1b2" kindref="member">Simulator::recordMonthlyStatistics</ref> Function to record monthly statistics to a file. Uses the generated daily publication to generate a monthly report. <simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="220" column="10" bodyfile="Simulator.cpp" bodystart="770" bodyend="914"/>
+        <references refid="class_date_time_1a5c592250b3cfea8314e39d6ceb55dda6" compoundref="_date_time_8h" startline="75" endline="75">DateTime::GetMonth</references>
+        <references refid="class_date_time_1a3fdecb31c8bb977b15c8296a69afa76e" compoundref="_date_time_8h" startline="74" endline="74">DateTime::GetYear</references>
+        <references refid="_c_make_cache_8txt_1a7e98b8a17c0aad30ba64d47b74e2a6c1" compoundref="_c_make_cache_8txt" startline="299">i</references>
+        <references refid="class_simulator_1a03b15dcf1a5ebd34356a2c013ba95190" compoundref="_simulator_8h" startline="109">m_monthlyInfoFile</references>
+        <references refid="class_simulator_1aaa17fec7cb1219dabc3b67a885148b1e" compoundref="_simulator_8h" startline="159">m_simulationCount</references>
+        <references refid="namespace_utilities_1a0ab4e4bfac17a04ab38640746aba42fe" compoundref="_utilities_8cpp" startline="73" endline="77">Utilities::trimBlanks</references>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1a2ae468429b6e8eedc5c1744891e36346" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulator::closeDailyPublication</definition>
+        <argsstring>()</argsstring>
+        <name>closeDailyPublication</name>
+        <briefdescription>
+<para>Method to close daily publication record file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_simulator_1a2ae468429b6e8eedc5c1744891e36346" kindref="member">Simulator::closeDailyPublication</ref> Method to close daily publication record file. <simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="223" column="10" bodyfile="Simulator.cpp" bodystart="922" bodyend="930"/>
+        <references refid="class_simulator_1a163d168daf7ddb30c31a34084fdd56cd" compoundref="_simulator_8h" startline="108">m_dailyInfoFile</references>
+        <references refid="class_simulator_1a554d967210680039cb8f8c9590275d62" compoundref="_simulator_8h" startline="95">m_dailyPublication</references>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1a9bf890f96b97a53f5beac15581689b18" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulator::closeMonthlyPublication</definition>
+        <argsstring>(bool a_flag)</argsstring>
+        <name>closeMonthlyPublication</name>
+        <param>
+          <type>bool</type>
+          <declname>a_flag</declname>
+        </param>
+        <briefdescription>
+<para>Method to close monthly publication record file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_simulator_1a9bf890f96b97a53f5beac15581689b18" kindref="member">Simulator::closeMonthlyPublication</ref> Method to close monthly publication record file. Monthly statistics use daily statistics, so daily must be set to write monthly publications. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_flag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag if monthly statistics can be generated. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="226" column="10" bodyfile="Simulator.cpp" bodystart="940" bodyend="951"/>
+        <references refid="class_simulator_1a03b15dcf1a5ebd34356a2c013ba95190" compoundref="_simulator_8h" startline="109">m_monthlyInfoFile</references>
+        <references refid="class_simulator_1ab5eee5366d5945ba1c047183c99140d5" compoundref="_simulator_8h" startline="96">m_monthlyPublication</references>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1a8de16aac7f0616e43ee45e895d15b67a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulator::closeTransactionPublication</definition>
+        <argsstring>()</argsstring>
+        <name>closeTransactionPublication</name>
+        <briefdescription>
+<para>Method to close transaction publication record file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_simulator_1a8de16aac7f0616e43ee45e895d15b67a" kindref="member">Simulator::closeTransactionPublication</ref> Method to close transaction publication record file. <simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="229" column="10" bodyfile="Simulator.cpp" bodystart="959" bodyend="967"/>
+        <references refid="class_simulator_1a1f7936d90aa2ee50df1d41f336a2db80" compoundref="_simulator_8h" startline="110">m_transactionInfoFile</references>
+        <references refid="class_simulator_1a147bb76a9bd3662868ada07ce810c1e9" compoundref="_simulator_8h" startline="97">m_transactionPublication</references>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1a9c907c7e0a1a2fdd334cb51dd5ff47c6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulator::closeSignalPublication</definition>
+        <argsstring>()</argsstring>
+        <name>closeSignalPublication</name>
+        <briefdescription>
+<para>Method to close signal publication record file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_simulator_1a9c907c7e0a1a2fdd334cb51dd5ff47c6" kindref="member">Simulator::closeSignalPublication</ref> Method to close signal publication record file. <simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="232" column="10" bodyfile="Simulator.cpp" bodystart="976" bodyend="984"/>
+        <references refid="class_simulator_1ac1f4b274af12359ab1359d48cb793633" compoundref="_simulator_8h" startline="111">m_signalInfoFile</references>
+        <references refid="class_simulator_1aec6e5c383d7b6b366716fb62194d8a02" compoundref="_simulator_8h" startline="98">m_signalPublication</references>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1accf533fb22ca8261dce0830daa5945f1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulator::recordSharpeRatio</definition>
+        <argsstring>()</argsstring>
+        <name>recordSharpeRatio</name>
+        <briefdescription>
+<para>Function to record sharpe ratio to daily statistics file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_simulator_1accf533fb22ca8261dce0830daa5945f1" kindref="member">Simulator::recordSharpeRatio</ref> Method to record sharpe ratio to statistics file. Uses calculateSharpeRatio function to calculate sharpe ratio for the entire model. <simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="235" column="10" bodyfile="Simulator.cpp" bodystart="683" bodyend="695"/>
+        <references refid="class_simulator_1a1176c2f39f71a17dd1c9d669d3a46d15" compoundref="_simulator_8cpp" startline="667" endline="674">calculateSharpeRatio</references>
+        <references refid="class_simulator_1a163d168daf7ddb30c31a34084fdd56cd" compoundref="_simulator_8h" startline="108">m_dailyInfoFile</references>
+        <referencedby refid="class_simulator_1ae77749f93581b683330f30726f5aaffb" compoundref="_simulator_8cpp" startline="742" endline="760">recordDailyStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1a4238ab87912e40d99cad5deb558e3a96" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulator::recordNoActivity</definition>
+        <argsstring>(TradingStock &amp;a_stock)</argsstring>
+        <name>recordNoActivity</name>
+        <param>
+          <type><ref refid="class_trading_stock" kindref="compound">TradingStock</ref> &amp;</type>
+          <declname>a_stock</declname>
+        </param>
+        <briefdescription>
+<para>Method to record necessary elements for no activity (code reuse purposes). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_simulator_1a4238ab87912e40d99cad5deb558e3a96" kindref="member">Simulator::recordNoActivity</ref> Method to record necessary elements for no activity (code reuse purposes). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_stock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_trading_stock" kindref="compound">TradingStock</ref>&amp; The stock that is being traded. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="238" column="10" bodyfile="Simulator.cpp" bodystart="571" bodyend="577"/>
+        <references refid="class_trading_stock_1aa8181ddc5cc8c9e978393112563bf504" compoundref="_trading_stock_8cpp" startline="118" endline="122">TradingStock::IncreaseCapitalBy</references>
+        <references refid="class_trading_stock_1a6dd461322fe1bf432705e4be521654af" compoundref="_trading_stock_8cpp" startline="92" endline="96">TradingStock::IncreaseSharesBy</references>
+        <references refid="class_trading_stock_1a82ea8bcd2b94eef82bb100c929c519e0" compoundref="_trading_stock_8cpp" startline="145" endline="160">TradingStock::RecordPNL</references>
+        <references refid="class_trading_stock_1af0ebb1d62314db9844a05255605fc47a" compoundref="_trading_stock_8cpp" startline="169" endline="173">TradingStock::RecordTransactionsCount</references>
+        <referencedby refid="class_simulator_1adc8821db9e85da458f9a6e8b1912ac86" compoundref="_simulator_8cpp" startline="485" endline="548">makeTrade</referencedby>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1a1176c2f39f71a17dd1c9d669d3a46d15" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Simulator::calculateSharpeRatio</definition>
+        <argsstring>()</argsstring>
+        <name>calculateSharpeRatio</name>
+        <briefdescription>
+<para>Function to calculate sharpe ratio. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_simulator_1a1176c2f39f71a17dd1c9d669d3a46d15" kindref="member">Simulator::calculateSharpeRatio</ref> Method to calculate sharpe ratio. <simplesect kind="return"><para>double Daily sharpe ratio of the model. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Simulator.h" line="241" column="12" bodyfile="Simulator.cpp" bodystart="667" bodyend="674"/>
+        <references refid="namespace_utilities_1a80b350cec72abbcf34ad7e28405d531c" compoundref="_utilities_8cpp" startline="36" endline="42">Utilities::GetAverage</references>
+        <references refid="namespace_utilities_1a175ab95f5c509ccc3d4b571e8963f22e" compoundref="_utilities_8cpp" startline="53" endline="64">Utilities::GetStandardDeviation</references>
+        <references refid="class_simulator_1a788eddb47b5e2b64ad373e3e16f50e4e" compoundref="_simulator_8h" startline="147">m_dailyCumulativeROR</references>
+        <references refid="class_simulator_1abcf33b93b8230d84d99eb31cd73e3b69" compoundref="_simulator_8h" startline="149">m_sharpeRecord</references>
+        <referencedby refid="class_simulator_1accf533fb22ca8261dce0830daa5945f1" compoundref="_simulator_8cpp" startline="683" endline="695">recordSharpeRatio</referencedby>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">RunSimulation</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="_simulator_8h" kindref="compound">Simulator.h</ref> Main container class for the simulator. Uses member classes for financial simulation.</para>
+<para>Created by Salil Maharjan on 4/29/20. Copyright © 2020 Salil Maharjan. All rights reserved. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="13">
+        <label>DateTime</label>
+        <link refid="class_date_time"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-m_date</edgelabel>
+          <edgelabel>-dayPreMonth</edgelabel>
+          <edgelabel>-m_FakeTodayValue</edgelabel>
+          <edgelabel>-daysInMonth</edgelabel>
+          <edgelabel>+BlankDate</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>std::vector&lt; Transaction * &gt;</label>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>std::vector&lt; const char * &gt;</label>
+        <childnode refid="18" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>std::vector&lt; double &gt;</label>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::unordered_map&lt; std::string, Config::ConfigValue &gt;</label>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>std::basic_ofstream&lt; char &gt;</label>
+        <childnode refid="21" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Config::ConfigValue</label>
+        <link refid="struct_config_1_1_config_value"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+isAccessed</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+value</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>std::ofstream</label>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>std::map&lt; std::string, TickerData * &gt;</label>
+        <childnode refid="26" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>std::vector&lt; TradingStock * &gt;</label>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="14">
+        <label>int</label>
+      </node>
+      <node id="10">
+        <label>double</label>
+      </node>
+      <node id="9">
+        <label>TradingStock</label>
+        <link refid="class_trading_stock"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-m_availableCapital</edgelabel>
+          <edgelabel>-m_totalSharesCount</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-m_transactions</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-m_transactionCounter</edgelabel>
+          <edgelabel>-m_transactionsTotalCount</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-m_shortPosFlag</edgelabel>
+          <edgelabel>-m_longPosFlag</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-m_tickerName</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>-m_TransactionsCountRecord</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>-m_cumulativePNLRecord</edgelabel>
+          <edgelabel>-m_shareActivityRecord</edgelabel>
+          <edgelabel>-m_sharpeRatioRecord</edgelabel>
+          <edgelabel>-m_capitalActivityRecord</edgelabel>
+          <edgelabel>-m_signalActivityRecord</edgelabel>
+          <edgelabel>-m_dailyPNLRecord</edgelabel>
+          <edgelabel>-m_dailyReturnRecord</edgelabel>
+        </childnode>
+      </node>
+      <node id="28">
+        <label>std::vector&lt; std::string &gt;</label>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Transaction</label>
+        <link refid="class_transaction"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-m_currentSharesCount</edgelabel>
+          <edgelabel>-m_TACloseSignal</edgelabel>
+          <edgelabel>-m_TAOpenPrice</edgelabel>
+          <edgelabel>-m_TAOpenSignal</edgelabel>
+          <edgelabel>-m_TAClosePrice</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-m_TAOpenDate</edgelabel>
+          <edgelabel>-m_TACloseDate</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-m_inPosition</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-m_closedFlag</edgelabel>
+          <edgelabel>-m_longFlag</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>const char *</label>
+      </node>
+      <node id="21">
+        <label>std::basic_ostream&lt; Char &gt;</label>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>std::basic_ios&lt; Char &gt;</label>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Config</label>
+        <link refid="class_config"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-m_ConfigData</edgelabel>
+        </childnode>
+      </node>
+      <node id="23">
+        <label>std::ios_base</label>
+      </node>
+      <node id="7">
+        <label>bool</label>
+      </node>
+      <node id="26">
+        <label>TickerData</label>
+        <link refid="class_ticker_data"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+NA_VAL</edgelabel>
+          <edgelabel>-m_tradingDateIndexEnd</edgelabel>
+          <edgelabel>-m_tradingDateIndexStart</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-m_tickerName</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>-m_tickerDates</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>-m_tickerData</edgelabel>
+        </childnode>
+      </node>
+      <node id="27">
+        <label>std::vector&lt; DateTime * &gt;</label>
+        <childnode refid="13" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>std::vector&lt; int &gt;</label>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="24">
+        <label>DataAccess</label>
+        <link refid="class_data_access"/>
+        <childnode refid="25" relation="usage">
+          <edgelabel>-m_tickerData</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-m_tradingDatesRefTicker</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>-m_tradingDates</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>-m_tickerNames</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>-m_dataInstance</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Simulator</label>
+        <link refid="class_simulator"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-m_config</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-m_tradingStocks</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-m_ROR</edgelabel>
+          <edgelabel>-m_totalPosCount</edgelabel>
+          <edgelabel>-m_totalPNL</edgelabel>
+          <edgelabel>-m_grossMarketValue</edgelabel>
+          <edgelabel>-m_stopLoss</edgelabel>
+          <edgelabel>-m_entrySignal</edgelabel>
+          <edgelabel>-m_shortPosCount</edgelabel>
+          <edgelabel>-m_dailyPNL</edgelabel>
+          <edgelabel>-m_portfolioCapital</edgelabel>
+          <edgelabel>-m_capitalLimitPerStock</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>-m_configFile</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-m_startDate</edgelabel>
+          <edgelabel>-m_endDate</edgelabel>
+          <edgelabel>-m_today</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-m_simulationCount</edgelabel>
+          <edgelabel>-m_maxPositionsPerStock</edgelabel>
+          <edgelabel>-m_maxDaysPerPosition</edgelabel>
+          <edgelabel>-m_configFilesPassed</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-m_signalPublication</edgelabel>
+          <edgelabel>-m_monthlyPublication</edgelabel>
+          <edgelabel>-m_dailyPublication</edgelabel>
+          <edgelabel>-m_transactionPublication</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-MAX_POS_PER_STOCK</edgelabel>
+          <edgelabel>-DAYS_IN_POS_PARAM</edgelabel>
+          <edgelabel>-MAX_CAPITAL_PER_STOCK_PARAM</edgelabel>
+          <edgelabel>-m_universePath</edgelabel>
+          <edgelabel>-PERIOD_END_DATE</edgelabel>
+          <edgelabel>-PERIOD_START_DATE</edgelabel>
+          <edgelabel>-SIGNAL_PUB_PARAM</edgelabel>
+          <edgelabel>-ENTRY_SIGNAL_PARAM</edgelabel>
+          <edgelabel>-UNIVERSE_PATH_PARAM</edgelabel>
+          <edgelabel>-m_tickerPath</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>-m_dailyInfoFile</edgelabel>
+          <edgelabel>-m_transactionInfoFile</edgelabel>
+          <edgelabel>-m_monthlyInfoFile</edgelabel>
+          <edgelabel>-m_signalInfoFile</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>-m_data</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>-m_dailyCumulativeROR</edgelabel>
+          <edgelabel>-m_sharpeRecord</edgelabel>
+          <edgelabel>-m_dailyPNLRecord</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::string</label>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Simulator.h" line="18" column="1" bodyfile="Simulator.h" bodystart="19" bodyend="243"/>
+    <listofallmembers>
+      <member refid="class_simulator_1a1176c2f39f71a17dd1c9d669d3a46d15" prot="private" virt="non-virtual"><scope>Simulator</scope><name>calculateSharpeRatio</name></member>
+      <member refid="class_simulator_1af2fc928bf40748cf305a1a699746e77d" prot="private" virt="non-virtual"><scope>Simulator</scope><name>calculateSignal</name></member>
+      <member refid="class_simulator_1a5b96a3d0c4c330d2b49be7dd7930c510" prot="private" virt="non-virtual"><scope>Simulator</scope><name>checkParameters</name></member>
+      <member refid="class_simulator_1a2ae468429b6e8eedc5c1744891e36346" prot="private" virt="non-virtual"><scope>Simulator</scope><name>closeDailyPublication</name></member>
+      <member refid="class_simulator_1a9bf890f96b97a53f5beac15581689b18" prot="private" virt="non-virtual"><scope>Simulator</scope><name>closeMonthlyPublication</name></member>
+      <member refid="class_simulator_1a20a56ab01d34b348fe22129caa44df09" prot="private" virt="non-virtual"><scope>Simulator</scope><name>closePositions</name></member>
+      <member refid="class_simulator_1a9c907c7e0a1a2fdd334cb51dd5ff47c6" prot="private" virt="non-virtual"><scope>Simulator</scope><name>closeSignalPublication</name></member>
+      <member refid="class_simulator_1a8de16aac7f0616e43ee45e895d15b67a" prot="private" virt="non-virtual"><scope>Simulator</scope><name>closeTransactionPublication</name></member>
+      <member refid="class_simulator_1a97f519a765ab449b62be329d9b1eddc6" prot="private" virt="non-virtual"><scope>Simulator</scope><name>DAILY_PUB_PARAM</name></member>
+      <member refid="class_simulator_1adb8c5bb4e289a14b706a3803c50a5643" prot="private" virt="non-virtual"><scope>Simulator</scope><name>DAYS_IN_POS_PARAM</name></member>
+      <member refid="class_simulator_1a5f3cd0a9c644e7548a0424556b03e627" prot="private" virt="non-virtual"><scope>Simulator</scope><name>ENTRY_SIGNAL_PARAM</name></member>
+      <member refid="class_simulator_1a39b11ae9b5e07c049444d568f800e11e" prot="private" virt="non-virtual"><scope>Simulator</scope><name>EXIT_SIGNAL_PARAM</name></member>
+      <member refid="class_simulator_1a4dbbe2a4cbd784dff5a9bdc4ee913b08" prot="private" virt="non-virtual"><scope>Simulator</scope><name>hasEnoughCapital</name></member>
+      <member refid="class_simulator_1af45eb4ca17242683290fbf5c54af13f2" prot="private" virt="non-virtual"><scope>Simulator</scope><name>initializePublications</name></member>
+      <member refid="class_simulator_1a0e2d73d3f5c09acdcac93e22a95b721d" prot="private" virt="non-virtual"><scope>Simulator</scope><name>initializeSimulator</name></member>
+      <member refid="class_simulator_1a3752d08182992d06e6dc5783ed82cafc" prot="private" virt="non-virtual"><scope>Simulator</scope><name>initializeTradingTickers</name></member>
+      <member refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" prot="private" virt="non-virtual"><scope>Simulator</scope><name>loadParameters</name></member>
+      <member refid="class_simulator_1a6d29b66f23f025901b41cdb4b8b54d85" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_capitalLimitPerStock</name></member>
+      <member refid="class_simulator_1a50c85d7f67459a61c525de84f296f696" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_config</name></member>
+      <member refid="class_simulator_1a22ea6689c8b7f808f101fe3a157338de" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_configFile</name></member>
+      <member refid="class_simulator_1ab0249e8e762a5c5d50263175ca53cbc7" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_configFilesPassed</name></member>
+      <member refid="class_simulator_1a788eddb47b5e2b64ad373e3e16f50e4e" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_dailyCumulativeROR</name></member>
+      <member refid="class_simulator_1a163d168daf7ddb30c31a34084fdd56cd" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_dailyInfoFile</name></member>
+      <member refid="class_simulator_1a874ad8839e8a4625d556126136df86b0" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_dailyPNL</name></member>
+      <member refid="class_simulator_1ab5aebf9f33c4d351336481d74df87204" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_dailyPNLRecord</name></member>
+      <member refid="class_simulator_1a554d967210680039cb8f8c9590275d62" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_dailyPublication</name></member>
+      <member refid="class_simulator_1a98713f90d7d7ce86cce337f787acf0e0" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_data</name></member>
+      <member refid="class_simulator_1a5418c16b656f3e90fe909c2cea9a7b26" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_endDate</name></member>
+      <member refid="class_simulator_1a3cb05c9f9cc50bed5f7c284140dd3228" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_entrySignal</name></member>
+      <member refid="class_simulator_1a8245a5e2736adcf414f737d1501f846f" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_exitSignal</name></member>
+      <member refid="class_simulator_1a92a066b5676e453879a884dd047d53aa" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_grossMarketValue</name></member>
+      <member refid="class_simulator_1ade008ef893f45012690935775c11b744" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_longPosCount</name></member>
+      <member refid="class_simulator_1a465d97fd2465e1e8fbbf12d9a8ad4294" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_maxDaysPerPosition</name></member>
+      <member refid="class_simulator_1a762c9da4d9b398b70e4a5fcf8084693a" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_maxPositionsPerStock</name></member>
+      <member refid="class_simulator_1a03b15dcf1a5ebd34356a2c013ba95190" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_monthlyInfoFile</name></member>
+      <member refid="class_simulator_1ab5eee5366d5945ba1c047183c99140d5" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_monthlyPublication</name></member>
+      <member refid="class_simulator_1a75b03660c930f8fabdfa41eccff44f4b" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_netMarketValue</name></member>
+      <member refid="class_simulator_1ac63f13d5fc10eb815958703a859f2761" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_portfolioCapital</name></member>
+      <member refid="class_simulator_1af8b9686a07f4801d903c03ba06f10b6c" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_ROR</name></member>
+      <member refid="class_simulator_1abcf33b93b8230d84d99eb31cd73e3b69" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_sharpeRecord</name></member>
+      <member refid="class_simulator_1a7437688899e7340ff427051e6499b42f" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_shortPosCount</name></member>
+      <member refid="class_simulator_1ac1f4b274af12359ab1359d48cb793633" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_signalInfoFile</name></member>
+      <member refid="class_simulator_1aec6e5c383d7b6b366716fb62194d8a02" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_signalPublication</name></member>
+      <member refid="class_simulator_1aaa17fec7cb1219dabc3b67a885148b1e" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_simulationCount</name></member>
+      <member refid="class_simulator_1a1808159b6db7cc8cb1fde241b3ca1a63" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_startDate</name></member>
+      <member refid="class_simulator_1aa51155015b9738f8dcb0815271144ac1" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_stopLoss</name></member>
+      <member refid="class_simulator_1ae9617ea33ba0f08b1fa26be1777eee58" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_tickerPath</name></member>
+      <member refid="class_simulator_1a5df061dcae309d085e48d6aa68f9a0ff" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_today</name></member>
+      <member refid="class_simulator_1a2ad80992205bb876c7aec067760fd380" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_totalPNL</name></member>
+      <member refid="class_simulator_1ad9bd5da8f745195f8efb7fde07c4b398" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_totalPosCount</name></member>
+      <member refid="class_simulator_1a1d14636c2b29e1b2ae40ea1264465318" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_tradingStocks</name></member>
+      <member refid="class_simulator_1a1f7936d90aa2ee50df1d41f336a2db80" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_transactionInfoFile</name></member>
+      <member refid="class_simulator_1a147bb76a9bd3662868ada07ce810c1e9" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_transactionPublication</name></member>
+      <member refid="class_simulator_1a9f9825e7abbefadd90cd260af723f362" prot="private" virt="non-virtual"><scope>Simulator</scope><name>m_universePath</name></member>
+      <member refid="class_simulator_1adc8821db9e85da458f9a6e8b1912ac86" prot="private" virt="non-virtual"><scope>Simulator</scope><name>makeTrade</name></member>
+      <member refid="class_simulator_1a3a536c742457453e2d3e96b97d91629a" prot="private" virt="non-virtual"><scope>Simulator</scope><name>MAX_CAPITAL_PER_STOCK_PARAM</name></member>
+      <member refid="class_simulator_1afeaec183962d21c49fefb01dd671ea33" prot="private" virt="non-virtual"><scope>Simulator</scope><name>MAX_POS_PER_STOCK</name></member>
+      <member refid="class_simulator_1a8743b3779eb9eae58768e408176483ac" prot="private" virt="non-virtual"><scope>Simulator</scope><name>MONTHLY_PUB_PARAM</name></member>
+      <member refid="class_simulator_1ad24c99fbfd5808aba7f5c9de11cc23f0" prot="private" virt="non-virtual"><scope>Simulator</scope><name>openPositions</name></member>
+      <member refid="class_simulator_1aa39d4d9502abf412d78b50d1f15f811b" prot="private" virt="non-virtual"><scope>Simulator</scope><name>PERIOD_END_DATE</name></member>
+      <member refid="class_simulator_1aa0bac330691bf03dbf8716be787cad45" prot="private" virt="non-virtual"><scope>Simulator</scope><name>PERIOD_START_DATE</name></member>
+      <member refid="class_simulator_1a4f33098635f757e2a31bfbb76ce7dfe9" prot="private" virt="non-virtual"><scope>Simulator</scope><name>PORTFOLIO_CAPITAL</name></member>
+      <member refid="class_simulator_1ae77749f93581b683330f30726f5aaffb" prot="private" virt="non-virtual"><scope>Simulator</scope><name>recordDailyStatistics</name></member>
+      <member refid="class_simulator_1ae9b8b2ffbef1ba49bd8a9dc5fad5a1b2" prot="private" virt="non-virtual"><scope>Simulator</scope><name>recordMonthlyStatistics</name></member>
+      <member refid="class_simulator_1a4238ab87912e40d99cad5deb558e3a96" prot="private" virt="non-virtual"><scope>Simulator</scope><name>recordNoActivity</name></member>
+      <member refid="class_simulator_1accf533fb22ca8261dce0830daa5945f1" prot="private" virt="non-virtual"><scope>Simulator</scope><name>recordSharpeRatio</name></member>
+      <member refid="class_simulator_1a5a78edbf904b54bb6f66a5c3b8c87cd9" prot="private" virt="non-virtual"><scope>Simulator</scope><name>recordSignalInfo</name></member>
+      <member refid="class_simulator_1a56638656f8e85aec70ba6c2680025279" prot="private" virt="non-virtual"><scope>Simulator</scope><name>recordTransaction</name></member>
+      <member refid="class_simulator_1a0cd976fca52f982a92f2f897a6ddd1de" prot="private" virt="non-virtual"><scope>Simulator</scope><name>rerunSimulator</name></member>
+      <member refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" prot="public" virt="non-virtual"><scope>Simulator</scope><name>RunSimulation</name></member>
+      <member refid="class_simulator_1a51929ed4f5640f5d2644b3dfd0628329" prot="private" virt="non-virtual"><scope>Simulator</scope><name>SIGNAL_PUB_PARAM</name></member>
+      <member refid="class_simulator_1a53cc2e7e6dde4d4893e259b0be2aae9a" prot="public" virt="non-virtual"><scope>Simulator</scope><name>Simulator</name></member>
+      <member refid="class_simulator_1a5ee3126b7491cec8402850d5497b817c" prot="private" virt="non-virtual"><scope>Simulator</scope><name>Simulator</name></member>
+      <member refid="class_simulator_1ab899d33750e674079de022d269c6bf9c" prot="public" virt="non-virtual"><scope>Simulator</scope><name>StartSimulation</name></member>
+      <member refid="class_simulator_1a4f727299fa4922e4b1a817983fe228dd" prot="private" virt="non-virtual"><scope>Simulator</scope><name>STOP_LOSS_PARAM</name></member>
+      <member refid="class_simulator_1af7743ff89da2d5a70380d89cf93517cd" prot="private" virt="non-virtual"><scope>Simulator</scope><name>TICKER_PATH_PARAM</name></member>
+      <member refid="class_simulator_1afd3e6d193653a3642067721af2b6ed38" prot="private" virt="non-virtual"><scope>Simulator</scope><name>TRANSACTION_PUB_PARAM</name></member>
+      <member refid="class_simulator_1a8d54012cdf3478b20f8d792b84de129c" prot="private" virt="non-virtual"><scope>Simulator</scope><name>UNIVERSE_PATH_PARAM</name></member>
+      <member refid="class_simulator_1ac66d4a8840edc51e1fda473d677ccce2" prot="private" virt="non-virtual"><scope>Simulator</scope><name>verifyDateParameters</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

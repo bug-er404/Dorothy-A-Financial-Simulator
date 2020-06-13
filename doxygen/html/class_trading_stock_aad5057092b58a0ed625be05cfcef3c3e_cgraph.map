@@ -1,0 +1,9 @@
+<map id="TradingStock::CloseStalePositions" name="TradingStock::CloseStalePositions">
+<area shape="rect" id="node1" title="Method to close positions that exceed maximum days limit." alt="" coords="5,86,176,127"/>
+<area shape="rect" id="node2" href="$class_trading_stock.html#a8b890a05cb0536bbca53e6c341196158" title="Method to buys shares." alt="" coords="251,5,421,32"/>
+<area shape="rect" id="node4" href="$class_trading_stock.html#af0ebb1d62314db9844a05255605fc47a" title="Record day&#39;s number of transactions." alt="" coords="224,57,448,98"/>
+<area shape="rect" id="node5" href="$class_trading_stock.html#abf15f389461393974e58d973a7a4f593" title="Method to sell shares." alt="" coords="251,123,421,149"/>
+<area shape="rect" id="node7" href="$class_trading_stock.html#ac32c8930adc0a8ad8611209ea9cf0fe8" title="Method to update long/short position status of the trading stock." alt="" coords="245,174,427,215"/>
+<area shape="rect" id="node3" href="$class_trading_stock.html#ae17abba347d59335fc2f7ebb74c5e6aa" title=" " alt="" coords="496,5,716,32"/>
+<area shape="rect" id="node6" href="$class_trading_stock.html#aa8181ddc5cc8c9e978393112563bf504" title=" " alt="" coords="499,123,713,149"/>
+</map>

@@ -1,0 +1,433 @@
+\doxysection{Transaction Class Reference}
+\label{class_transaction}\index{Transaction@{Transaction}}
+
+
+{\ttfamily \#include $<$Transaction.\+h$>$}
+
+
+
+Collaboration diagram for Transaction\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_transaction__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Transaction} (\textbf{ Date\+Time} $\ast$a\+\_\+date, double a\+\_\+signal, double a\+\_\+share, double a\+\_\+price)
+\begin{DoxyCompactList}\small\item\em Main parameterized \doxyref{Transaction}{p.}{class_transaction} class constructor. \end{DoxyCompactList}\item 
+const double \textbf{ Get\+Opened\+Price} ()
+\item 
+const double \textbf{ Get\+Closed\+Price} ()
+\item 
+const \textbf{ int} \textbf{ Get\+Days\+In\+Position} ()
+\item 
+\textbf{ Date\+Time} $\ast$ \textbf{ Get\+Position\+Open\+Date} ()
+\item 
+\textbf{ Date\+Time} $\ast$ \textbf{ Get\+Position\+Close\+Date} ()
+\item 
+const double \textbf{ Get\+Open\+Signal} ()
+\item 
+const double \textbf{ Get\+Close\+Signal} ()
+\item 
+const double \textbf{ Get\+Num\+Shares\+Held} ()
+\item 
+const bool \textbf{ Is\+Long\+Position} ()
+\item 
+const bool \textbf{ Is\+Closed} ()
+\item 
+double \textbf{ Close\+Transaction} (\textbf{ Date\+Time} $\ast$a\+\_\+date, double a\+\_\+signal, double a\+\_\+price)
+\begin{DoxyCompactList}\small\item\em Method to close constructed transaction objects. \end{DoxyCompactList}\item 
+void \textbf{ Next\+Day\+In\+Position} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{Transaction}{p.}{class_transaction} method to update the number of days in position of a stock on each trading day. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Transaction} ()
+\begin{DoxyCompactList}\small\item\em Empty default constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Date\+Time} $\ast$ \textbf{ m\+\_\+\+T\+A\+Open\+Date}
+\begin{DoxyCompactList}\small\item\em \doxyref{Transaction}{p.}{class_transaction} open date. \end{DoxyCompactList}\item 
+\textbf{ Date\+Time} $\ast$ \textbf{ m\+\_\+\+T\+A\+Close\+Date}
+\begin{DoxyCompactList}\small\item\em \doxyref{Transaction}{p.}{class_transaction} close date. \end{DoxyCompactList}\item 
+double \textbf{ m\+\_\+\+T\+A\+Open\+Signal}
+\begin{DoxyCompactList}\small\item\em \doxyref{Transaction}{p.}{class_transaction} open signal. \end{DoxyCompactList}\item 
+double \textbf{ m\+\_\+\+T\+A\+Close\+Signal}
+\begin{DoxyCompactList}\small\item\em \doxyref{Transaction}{p.}{class_transaction} close signal. \end{DoxyCompactList}\item 
+double \textbf{ m\+\_\+current\+Shares\+Count}
+\begin{DoxyCompactList}\small\item\em Shares in transaction. \end{DoxyCompactList}\item 
+double \textbf{ m\+\_\+\+T\+A\+Open\+Price}
+\begin{DoxyCompactList}\small\item\em \doxyref{Transaction}{p.}{class_transaction} open price. \end{DoxyCompactList}\item 
+double \textbf{ m\+\_\+\+T\+A\+Close\+Price}
+\begin{DoxyCompactList}\small\item\em \doxyref{Transaction}{p.}{class_transaction} close price. \end{DoxyCompactList}\item 
+\textbf{ int} \textbf{ m\+\_\+in\+Position}
+\item 
+bool \textbf{ m\+\_\+long\+Flag}
+\begin{DoxyCompactList}\small\item\em Flag if the transaction is for a long/short position. \end{DoxyCompactList}\item 
+bool \textbf{ m\+\_\+closed\+Flag}
+\begin{DoxyCompactList}\small\item\em Flag if transaction is closed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxyref{Transaction.\+h}{p.}{_transaction_8h} Class that handles the record details of transactions for trading stocks.
+
+Created by Salil Maharjan on 05/22/20. Copyright © 2020 Salil Maharjan. All rights reserved. 
+
+Definition at line 16 of file Transaction.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_transaction_a9ff3e14de368615046e75ab122caa327}} 
+\index{Transaction@{Transaction}!Transaction@{Transaction}}
+\index{Transaction@{Transaction}!Transaction@{Transaction}}
+\doxysubsubsection{Transaction()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Transaction\+::\+Transaction (\begin{DoxyParamCaption}\item[{\textbf{ Date\+Time} $\ast$}]{a\+\_\+date,  }\item[{double}]{a\+\_\+signal,  }\item[{double}]{a\+\_\+share,  }\item[{double}]{a\+\_\+price }\end{DoxyParamCaption})}
+
+
+
+Main parameterized \doxyref{Transaction}{p.}{class_transaction} class constructor. 
+
+\doxyref{Transaction.\+cpp}{p.}{_transaction_8cpp} Implementation of \doxyref{Transaction.\+h}{p.}{_transaction_8h}.
+
+Created by Salil Maharjan on 05/22/20. Copyright © 2020 Salil Maharjan. All rights reserved. \doxyref{Transaction\+::\+Transaction}{p.}{class_transaction_a9ff3e14de368615046e75ab122caa327} Main parameterized \doxyref{Transaction}{p.}{class_transaction} class constructor. Opens a transaction. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+date} & Date\+Time$\ast$ The transaction open date. \\
+\hline
+{\em a\+\_\+signal} & double The signal while opening transaction. \\
+\hline
+{\em a\+\_\+share} & double The number of shares to open position with. \\
+\hline
+{\em a\+\_\+price} & double The price at which the transaction is opened. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/22/20. 
+\end{DoxyDate}
+
+
+Definition at line 26 of file Transaction.\+cpp.
+
+\mbox{\label{class_transaction_ab47005b855d38bc324bb79fd023baa13}} 
+\index{Transaction@{Transaction}!Transaction@{Transaction}}
+\index{Transaction@{Transaction}!Transaction@{Transaction}}
+\doxysubsubsection{Transaction()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Transaction\+::\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Empty default constructor. 
+
+
+
+Definition at line 55 of file Transaction.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_transaction_ab5150df4457fda64acf329e3b5333f96}} 
+\index{Transaction@{Transaction}!CloseTransaction@{CloseTransaction}}
+\index{CloseTransaction@{CloseTransaction}!Transaction@{Transaction}}
+\doxysubsubsection{CloseTransaction()}
+{\footnotesize\ttfamily double Transaction\+::\+Close\+Transaction (\begin{DoxyParamCaption}\item[{\textbf{ Date\+Time} $\ast$}]{a\+\_\+date,  }\item[{double}]{a\+\_\+signal,  }\item[{double}]{a\+\_\+price }\end{DoxyParamCaption})}
+
+
+
+Method to close constructed transaction objects. 
+
+\doxyref{Transaction\+::\+Close\+Transaction}{p.}{class_transaction_ab5150df4457fda64acf329e3b5333f96} Function to close transaction and return the P\+NL from the completed transaction. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+date} & Date\+Time$\ast$ The transaction close date. \\
+\hline
+{\em a\+\_\+signal} & double The signal while closing transaction. \\
+\hline
+{\em a\+\_\+price} & double The price at which the transaction is closed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double The profit/loss from completing the transaction. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/22/20. 
+\end{DoxyDate}
+
+
+Definition at line 70 of file Transaction.\+cpp.
+
+\mbox{\label{class_transaction_a373d771f5dd603825cdc6a825cc1ffb8}} 
+\index{Transaction@{Transaction}!GetClosedPrice@{GetClosedPrice}}
+\index{GetClosedPrice@{GetClosedPrice}!Transaction@{Transaction}}
+\doxysubsubsection{GetClosedPrice()}
+{\footnotesize\ttfamily const double Transaction\+::\+Get\+Closed\+Price (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 32 of file Transaction.\+h.
+
+\mbox{\label{class_transaction_a31112e042ad4f73b2231f0dde46abce0}} 
+\index{Transaction@{Transaction}!GetCloseSignal@{GetCloseSignal}}
+\index{GetCloseSignal@{GetCloseSignal}!Transaction@{Transaction}}
+\doxysubsubsection{GetCloseSignal()}
+{\footnotesize\ttfamily const double Transaction\+::\+Get\+Close\+Signal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 37 of file Transaction.\+h.
+
+\mbox{\label{class_transaction_a9833cf5e7fae393429914b42919b631b}} 
+\index{Transaction@{Transaction}!GetDaysInPosition@{GetDaysInPosition}}
+\index{GetDaysInPosition@{GetDaysInPosition}!Transaction@{Transaction}}
+\doxysubsubsection{GetDaysInPosition()}
+{\footnotesize\ttfamily const \textbf{ int} Transaction\+::\+Get\+Days\+In\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 33 of file Transaction.\+h.
+
+\mbox{\label{class_transaction_a34399835d523d6b2dc98de51224fd00e}} 
+\index{Transaction@{Transaction}!GetNumSharesHeld@{GetNumSharesHeld}}
+\index{GetNumSharesHeld@{GetNumSharesHeld}!Transaction@{Transaction}}
+\doxysubsubsection{GetNumSharesHeld()}
+{\footnotesize\ttfamily const double Transaction\+::\+Get\+Num\+Shares\+Held (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 38 of file Transaction.\+h.
+
+\mbox{\label{class_transaction_ad323ea3eecce084ab4207216da11aef3}} 
+\index{Transaction@{Transaction}!GetOpenedPrice@{GetOpenedPrice}}
+\index{GetOpenedPrice@{GetOpenedPrice}!Transaction@{Transaction}}
+\doxysubsubsection{GetOpenedPrice()}
+{\footnotesize\ttfamily const double Transaction\+::\+Get\+Opened\+Price (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 31 of file Transaction.\+h.
+
+\mbox{\label{class_transaction_adff7d7d155a838a80fe14d74953bb2b8}} 
+\index{Transaction@{Transaction}!GetOpenSignal@{GetOpenSignal}}
+\index{GetOpenSignal@{GetOpenSignal}!Transaction@{Transaction}}
+\doxysubsubsection{GetOpenSignal()}
+{\footnotesize\ttfamily const double Transaction\+::\+Get\+Open\+Signal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 36 of file Transaction.\+h.
+
+\mbox{\label{class_transaction_af73b2f27a31f8f53246770b3d12162bf}} 
+\index{Transaction@{Transaction}!GetPositionCloseDate@{GetPositionCloseDate}}
+\index{GetPositionCloseDate@{GetPositionCloseDate}!Transaction@{Transaction}}
+\doxysubsubsection{GetPositionCloseDate()}
+{\footnotesize\ttfamily \textbf{ Date\+Time}$\ast$ Transaction\+::\+Get\+Position\+Close\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 35 of file Transaction.\+h.
+
+\mbox{\label{class_transaction_a492d0922c5af8b883981e265b91b66d9}} 
+\index{Transaction@{Transaction}!GetPositionOpenDate@{GetPositionOpenDate}}
+\index{GetPositionOpenDate@{GetPositionOpenDate}!Transaction@{Transaction}}
+\doxysubsubsection{GetPositionOpenDate()}
+{\footnotesize\ttfamily \textbf{ Date\+Time}$\ast$ Transaction\+::\+Get\+Position\+Open\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 34 of file Transaction.\+h.
+
+\mbox{\label{class_transaction_a790efa45756bf2efdb6ba085fa0e3605}} 
+\index{Transaction@{Transaction}!IsClosed@{IsClosed}}
+\index{IsClosed@{IsClosed}!Transaction@{Transaction}}
+\doxysubsubsection{IsClosed()}
+{\footnotesize\ttfamily const bool Transaction\+::\+Is\+Closed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 40 of file Transaction.\+h.
+
+\mbox{\label{class_transaction_a318f40ecb6200373d210ddc63501d7a8}} 
+\index{Transaction@{Transaction}!IsLongPosition@{IsLongPosition}}
+\index{IsLongPosition@{IsLongPosition}!Transaction@{Transaction}}
+\doxysubsubsection{IsLongPosition()}
+{\footnotesize\ttfamily const bool Transaction\+::\+Is\+Long\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 39 of file Transaction.\+h.
+
+\mbox{\label{class_transaction_afba291c3886ecf68a948a012f81ea74d}} 
+\index{Transaction@{Transaction}!NextDayInPosition@{NextDayInPosition}}
+\index{NextDayInPosition@{NextDayInPosition}!Transaction@{Transaction}}
+\doxysubsubsection{NextDayInPosition()}
+{\footnotesize\ttfamily void Transaction\+::\+Next\+Day\+In\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxyref{Transaction}{p.}{class_transaction} method to update the number of days in position of a stock on each trading day. 
+
+\doxyref{Transaction\+::\+Next\+Day\+In\+Position}{p.}{class_transaction_afba291c3886ecf68a948a012f81ea74d} Method to update the number of days in position in each trading day. \begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/22/20. 
+\end{DoxyDate}
+
+
+Definition at line 53 of file Transaction.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{class_transaction_aad0ee036f4dc0bc615156ac6ee471104}} 
+\index{Transaction@{Transaction}!m\_closedFlag@{m\_closedFlag}}
+\index{m\_closedFlag@{m\_closedFlag}!Transaction@{Transaction}}
+\doxysubsubsection{m\_closedFlag}
+{\footnotesize\ttfamily bool Transaction\+::m\+\_\+closed\+Flag\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flag if transaction is closed. 
+
+
+
+Definition at line 80 of file Transaction.\+h.
+
+\mbox{\label{class_transaction_aab337c995879abb44ca3cb75df646ffd}} 
+\index{Transaction@{Transaction}!m\_currentSharesCount@{m\_currentSharesCount}}
+\index{m\_currentSharesCount@{m\_currentSharesCount}!Transaction@{Transaction}}
+\doxysubsubsection{m\_currentSharesCount}
+{\footnotesize\ttfamily double Transaction\+::m\+\_\+current\+Shares\+Count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Shares in transaction. 
+
+
+
+Definition at line 70 of file Transaction.\+h.
+
+\mbox{\label{class_transaction_a067ff7356df3a4bbec5b41d4dbaa5ea4}} 
+\index{Transaction@{Transaction}!m\_inPosition@{m\_inPosition}}
+\index{m\_inPosition@{m\_inPosition}!Transaction@{Transaction}}
+\doxysubsubsection{m\_inPosition}
+{\footnotesize\ttfamily \textbf{ int} Transaction\+::m\+\_\+in\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+\doxysubsection{of days in position}\label{class_transaction_autotoc_md12}
+
+
+Definition at line 76 of file Transaction.\+h.
+
+\mbox{\label{class_transaction_ad9aa1638c1d5239def95ea7022165337}} 
+\index{Transaction@{Transaction}!m\_longFlag@{m\_longFlag}}
+\index{m\_longFlag@{m\_longFlag}!Transaction@{Transaction}}
+\doxysubsubsection{m\_longFlag}
+{\footnotesize\ttfamily bool Transaction\+::m\+\_\+long\+Flag\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flag if the transaction is for a long/short position. 
+
+
+
+Definition at line 78 of file Transaction.\+h.
+
+\mbox{\label{class_transaction_aae306db338fafc30d10238889e712898}} 
+\index{Transaction@{Transaction}!m\_TACloseDate@{m\_TACloseDate}}
+\index{m\_TACloseDate@{m\_TACloseDate}!Transaction@{Transaction}}
+\doxysubsubsection{m\_TACloseDate}
+{\footnotesize\ttfamily \textbf{ Date\+Time}$\ast$ Transaction\+::m\+\_\+\+T\+A\+Close\+Date\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxyref{Transaction}{p.}{class_transaction} close date. 
+
+
+
+Definition at line 64 of file Transaction.\+h.
+
+\mbox{\label{class_transaction_a61b7a25cb9489c3c65aad25b8c4d3d2b}} 
+\index{Transaction@{Transaction}!m\_TAClosePrice@{m\_TAClosePrice}}
+\index{m\_TAClosePrice@{m\_TAClosePrice}!Transaction@{Transaction}}
+\doxysubsubsection{m\_TAClosePrice}
+{\footnotesize\ttfamily double Transaction\+::m\+\_\+\+T\+A\+Close\+Price\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxyref{Transaction}{p.}{class_transaction} close price. 
+
+
+
+Definition at line 74 of file Transaction.\+h.
+
+\mbox{\label{class_transaction_a7d42563bbe4a16b408dbcbaf813613df}} 
+\index{Transaction@{Transaction}!m\_TACloseSignal@{m\_TACloseSignal}}
+\index{m\_TACloseSignal@{m\_TACloseSignal}!Transaction@{Transaction}}
+\doxysubsubsection{m\_TACloseSignal}
+{\footnotesize\ttfamily double Transaction\+::m\+\_\+\+T\+A\+Close\+Signal\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxyref{Transaction}{p.}{class_transaction} close signal. 
+
+
+
+Definition at line 68 of file Transaction.\+h.
+
+\mbox{\label{class_transaction_ac2d7eda4299c0c7dee9ed7f457b1102c}} 
+\index{Transaction@{Transaction}!m\_TAOpenDate@{m\_TAOpenDate}}
+\index{m\_TAOpenDate@{m\_TAOpenDate}!Transaction@{Transaction}}
+\doxysubsubsection{m\_TAOpenDate}
+{\footnotesize\ttfamily \textbf{ Date\+Time}$\ast$ Transaction\+::m\+\_\+\+T\+A\+Open\+Date\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxyref{Transaction}{p.}{class_transaction} open date. 
+
+
+
+Definition at line 62 of file Transaction.\+h.
+
+\mbox{\label{class_transaction_a7c92a75529ae077fb8d76d4969b61048}} 
+\index{Transaction@{Transaction}!m\_TAOpenPrice@{m\_TAOpenPrice}}
+\index{m\_TAOpenPrice@{m\_TAOpenPrice}!Transaction@{Transaction}}
+\doxysubsubsection{m\_TAOpenPrice}
+{\footnotesize\ttfamily double Transaction\+::m\+\_\+\+T\+A\+Open\+Price\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxyref{Transaction}{p.}{class_transaction} open price. 
+
+
+
+Definition at line 72 of file Transaction.\+h.
+
+\mbox{\label{class_transaction_a04e7430d41698ec30100910786673f1f}} 
+\index{Transaction@{Transaction}!m\_TAOpenSignal@{m\_TAOpenSignal}}
+\index{m\_TAOpenSignal@{m\_TAOpenSignal}!Transaction@{Transaction}}
+\doxysubsubsection{m\_TAOpenSignal}
+{\footnotesize\ttfamily double Transaction\+::m\+\_\+\+T\+A\+Open\+Signal\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxyref{Transaction}{p.}{class_transaction} open signal. 
+
+
+
+Definition at line 66 of file Transaction.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Transaction.\+h}\item 
+\textbf{ Transaction.\+cpp}\end{DoxyCompactItemize}

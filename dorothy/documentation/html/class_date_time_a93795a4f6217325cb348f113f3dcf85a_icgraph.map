@@ -1,0 +1,8 @@
+<map id="DateTime::Get" name="DateTime::Get">
+<area shape="rect" id="node1" title="Gets the date as one value." alt="" coords="800,31,908,57"/>
+<area shape="rect" id="node2" href="$class_simulator.html#ae77749f93581b683330f30726f5aaffb" title="Function to record daily statistics to a file." alt="" coords="545,5,752,32"/>
+<area shape="rect" id="node6" href="$class_date_time.html#a12b6862f65c87e7dc483cfd2bd867ea0" title=" " alt="" coords="595,56,702,83"/>
+<area shape="rect" id="node3" href="$class_simulator.html#a9a703ddcca1a802b3df9a9dc921927ae" title="Main method to run simulation." alt="" coords="327,5,497,32"/>
+<area shape="rect" id="node4" href="$class_simulator.html#ab899d33750e674079de022d269c6bf9c" title="Interface method to start the simulation." alt="" coords="104,5,279,32"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,5,56,32"/>
+</map>

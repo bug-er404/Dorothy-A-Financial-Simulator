@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="link_8txt" kind="file" language="C++">
+    <compoundname>link.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="link_8txt_1aa22be3607643ab24752945d8ba812329" prot="public" static="no" mutable="no">
+        <type>Library Developer CommandLineTools usr bin c g isysroot Library Developer CommandLineTools SDKs MacOSX10 sdk</type>
+        <definition>Library Developer CommandLineTools usr bin c g isysroot Library Developer CommandLineTools SDKs MacOSX10 sdk search_paths_first Wl</definition>
+        <argsstring></argsstring>
+        <name>Wl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cmake-build-debug/CMakeFiles/dorothy.dir/link.txt" line="1" column="101" bodyfile="cmake-build-debug/CMakeFiles/dorothy.dir/link.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="link_8txt_1aa22be3607643ab24752945d8ba812329" refkind="member"><highlight class="normal">/Library/Developer/CommandLineTools/usr/bin/c++<sp/><sp/>-g<sp/>-isysroot<sp/>/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk<sp/>-<ref refid="link_8txt_1aa22be3607643ab24752945d8ba812329" kindref="member">Wl</ref>,-search_paths_first<sp/>-<ref refid="link_8txt_1aa22be3607643ab24752945d8ba812329" kindref="member">Wl</ref>,-headerpad_max_install_names<sp/><sp/>CMakeFiles/dorothy.dir/<ref refid="_c_make_c_compiler_id_8c_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>.cpp.o<sp/>CMakeFiles/dorothy.dir/<ref refid="class_date_time" kindref="compound">DateTime</ref>.cpp.o<sp/>CMakeFiles/dorothy.dir/<ref refid="class_config" kindref="compound">Config</ref>.cpp.o<sp/>CMakeFiles/dorothy.dir/<ref refid="class_data_access" kindref="compound">DataAccess</ref>.cpp.o<sp/>CMakeFiles/dorothy.dir/<ref refid="class_ticker_data" kindref="compound">TickerData</ref>.cpp.o<sp/>CMakeFiles/dorothy.dir/<ref refid="class_simulator" kindref="compound">Simulator</ref>.cpp.o<sp/>CMakeFiles/dorothy.dir/<ref refid="class_trading_stock" kindref="compound">TradingStock</ref>.cpp.o<sp/>CMakeFiles/dorothy.dir/<ref refid="namespace_utilities" kindref="compound">Utilities</ref>.cpp.o<sp/>CMakeFiles/dorothy.dir/<ref refid="class_transaction" kindref="compound">Transaction</ref>.cpp.o<sp/><sp/>-<ref refid="_c_make_cache_8txt_1ae47ca7a09cf6781e29634502345930a7" kindref="member">o</ref><sp/>dorothy<sp/></highlight></codeline>
+    </programlisting>
+    <location file="cmake-build-debug/CMakeFiles/dorothy.dir/link.txt"/>
+  </compounddef>
+</doxygen>

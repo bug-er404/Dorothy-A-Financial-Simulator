@@ -1,0 +1,6 @@
+<map id="Simulator::verifyDateParameters" name="Simulator::verifyDateParameters">
+<area shape="rect" id="node1" title="Verify date range." alt="" coords="5,56,217,83"/>
+<area shape="rect" id="node2" href="$class_data_access.html#a999d5066dde617c2b244606d57f003ed" title="Check date range with available data&#39;s date range." alt="" coords="278,5,485,32"/>
+<area shape="rect" id="node3" href="$class_data_access.html#a515ad86dcb1b7dded8aabb7400b1609d" title="Get most recent trading date for which data is available." alt="" coords="266,56,497,83"/>
+<area shape="rect" id="node4" href="$class_data_access.html#a9e9db2cee4493ae998b9abaa17fe6be6" title="Get oldest trading date for which data is available." alt="" coords="265,107,497,133"/>
+</map>

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="struct_config_1_1_config_value" kind="struct" language="C++" prot="private">
+    <compoundname>Config::ConfigValue</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_config_1_1_config_value_1a21d975cc43e2320733c2da4dde3bbeee" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Config::ConfigValue::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Config.h" line="79" column="21" bodyfile="Config.h" bodystart="79" bodyend="-1"/>
+        <referencedby refid="class_config_1af25db79b5adc8c8aceb76344809552a4" compoundref="_config_8cpp" startline="25" endline="59">Config::Load</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_config_1_1_config_value_1a342c628d10c1792ee72a28093bbe03a9" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Config::ConfigValue::isAccessed</definition>
+        <argsstring></argsstring>
+        <name>isAccessed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Config.h" line="81" column="14" bodyfile="Config.h" bodystart="81" bodyend="-1"/>
+        <referencedby refid="struct_config_1_1_config_value_1ad746084225579330b3eaf81e3a6fa0b6" compoundref="_config_8h" startline="83" endline="83">ConfigValue</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_config_1_1_config_value_1ad746084225579330b3eaf81e3a6fa0b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Config::ConfigValue::ConfigValue</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Config.h" line="83" column="9" bodyfile="Config.h" bodystart="83" bodyend="83"/>
+        <references refid="struct_config_1_1_config_value_1a342c628d10c1792ee72a28093bbe03a9" compoundref="_config_8h" startline="81">isAccessed</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Struct to hold configuration values and access flag. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Config::ConfigValue</label>
+        <link refid="struct_config_1_1_config_value"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+isAccessed</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+value</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="2">
+        <label>bool</label>
+      </node>
+      <node id="3">
+        <label>std::string</label>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Config.h" line="77" column="5" bodyfile="Config.h" bodystart="78" bodyend="84"/>
+    <listofallmembers>
+      <member refid="struct_config_1_1_config_value_1ad746084225579330b3eaf81e3a6fa0b6" prot="public" virt="non-virtual"><scope>Config::ConfigValue</scope><name>ConfigValue</name></member>
+      <member refid="struct_config_1_1_config_value_1a342c628d10c1792ee72a28093bbe03a9" prot="public" virt="non-virtual"><scope>Config::ConfigValue</scope><name>isAccessed</name></member>
+      <member refid="struct_config_1_1_config_value_1a21d975cc43e2320733c2da4dde3bbeee" prot="public" virt="non-virtual"><scope>Config::ConfigValue</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

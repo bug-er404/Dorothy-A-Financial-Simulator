@@ -1,0 +1,1070 @@
+.TH "TradingStock" 3 "Sat Jun 6 2020" "Version Version 1.0" "DOROTHY" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TradingStock
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <TradingStock\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTradingStock\fP (std::string a_tickerName, double a_startingCapital)"
+.br
+.RI "Class parameterized constructor\&. "
+.ti -1c
+.RI "const std::string \fBGetStockName\fP ()"
+.br
+.ti -1c
+.RI "const bool \fBIsLong\fP ()"
+.br
+.ti -1c
+.RI "const bool \fBIsShort\fP ()"
+.br
+.ti -1c
+.RI "const std::vector< double > \fBGetSignalRecord\fP ()"
+.br
+.ti -1c
+.RI "const double \fBGetTotalShares\fP ()"
+.br
+.ti -1c
+.RI "const double \fBGetAvailableCapital\fP ()"
+.br
+.ti -1c
+.RI "const double \fBGetDailyPnL\fP ()"
+.br
+.ti -1c
+.RI "const double \fBGetDailyROR\fP ()"
+.br
+.ti -1c
+.RI "const std::vector< double > \fBGetROR\fP ()"
+.br
+.ti -1c
+.RI "const double \fBGetLatestShareActivity\fP ()"
+.br
+.ti -1c
+.RI "const double \fBGetSharpeToday\fP ()"
+.br
+.ti -1c
+.RI "double \fBGetTransactionCount\fP ()"
+.br
+.RI "Method to get current completed transaction count (Does not consider incomplete transactions\&.) "
+.ti -1c
+.RI "const double \fBGetShortSharesHeld\fP ()"
+.br
+.RI "Method to get short shares held\&. "
+.ti -1c
+.RI "const double \fBGetLongSharesHeld\fP ()"
+.br
+.RI "Method to get long shares held\&. "
+.ti -1c
+.RI "std::vector< \fBTransaction\fP * > \fBGetClosedTransactions\fP ()"
+.br
+.RI "Method to get closed transactions and remove them from memory\&. "
+.ti -1c
+.RI "const double \fBGetShortCapital\fP ()"
+.br
+.RI "Method to get short capital in investment\&. "
+.ti -1c
+.RI "const double \fBGetLongCapital\fP ()"
+.br
+.RI "Method to get long capital in investment\&. "
+.ti -1c
+.RI "void \fBSetLong\fP (bool a_long)"
+.br
+.ti -1c
+.RI "void \fBSetShort\fP (bool a_short)"
+.br
+.ti -1c
+.RI "void \fBIncreaseSharesBy\fP (double a_share)"
+.br
+.ti -1c
+.RI "void \fBDecreaseSharesBy\fP (double a_share)"
+.br
+.ti -1c
+.RI "void \fBIncreaseCapitalBy\fP (double a_share)"
+.br
+.ti -1c
+.RI "void \fBDecreaseCapitalBy\fP (double a_share)"
+.br
+.ti -1c
+.RI "void \fBSellShares\fP (double a_shares, double a_price)"
+.br
+.RI "Method to sell shares\&. "
+.ti -1c
+.RI "void \fBBuyShares\fP (double a_shares, double a_price)"
+.br
+.RI "Method to buys shares\&. "
+.ti -1c
+.RI "void \fBCloseStalePositions\fP (\fBint\fP a_dayLimit, \fBDateTime\fP *a_date, double a_signal, double a_price)"
+.br
+.RI "Method to close positions that exceed maximum days limit\&. "
+.ti -1c
+.RI "void \fBOpenPosition\fP (\fBDateTime\fP *a_date, double a_signal, double a_share, double a_price)"
+.br
+.RI "Method to open a position for the trading stock\&. "
+.ti -1c
+.RI "double \fBCloseLongPositions\fP (\fBDateTime\fP *a_date, double a_signal, double a_price, double &a_investedCaptial, double &a_numOfShares)"
+.br
+.RI "Method to close all long positions\&. "
+.ti -1c
+.RI "double \fBCloseShortPositions\fP (\fBDateTime\fP *a_date, double a_signal, double a_price, double &a_investedCaptial, double &a_numOfShares)"
+.br
+.RI "Method to close all short positions\&. "
+.ti -1c
+.RI "bool \fBCheckShortSignal\fP (double a_price)"
+.br
+.RI "Method to check if signal is profitable for short positions\&. "
+.ti -1c
+.RI "bool \fBCheckLongSignal\fP (double a_price)"
+.br
+.RI "Method to check if signal is profitable for long positions\&. "
+.ti -1c
+.RI "void \fBUpdateStockPosition\fP ()"
+.br
+.RI "Method to update long/short position status of the trading stock\&. "
+.ti -1c
+.RI "void \fBRecordSignal\fP (double a_signal)"
+.br
+.RI "Record day's signal\&. "
+.ti -1c
+.RI "void \fBRecordPNL\fP (double a_pnl, double a_investedCapital)"
+.br
+.RI "Record day's PNL\&. "
+.ti -1c
+.RI "void \fBRecordTransactionsCount\fP (\fBint\fP a_count)"
+.br
+.RI "Record day's number of transactions\&. "
+.ti -1c
+.RI "void \fBRecordDailyReturn\fP (double a_amount)"
+.br
+.RI "Recard day's daily return\&. "
+.ti -1c
+.RI "double \fBGetInvestedCapital\fP ()"
+.br
+.RI "Get latest committed capital in an investment\&. "
+.ti -1c
+.RI "void \fBCalculateDailySharpeRatio\fP ()"
+.br
+.RI "Calculate daily sharpe ratio for individual stock\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTradingStock\fP ()=default"
+.br
+.RI "Private default constructor\&. "
+.ti -1c
+.RI "void \fBnewTradingDay\fP ()"
+.br
+.RI "Method to update days in position of all held shares\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBm_tickerName\fP"
+.br
+.RI "Ticker name\&. "
+.ti -1c
+.RI "double \fBm_availableCapital\fP"
+.br
+.RI "Available capital for trading stock\&. "
+.ti -1c
+.RI "\fBint\fP \fBm_transactionsTotalCount\fP"
+.br
+.RI "Total transactions count\&. "
+.ti -1c
+.RI "\fBint\fP \fBm_transactionCounter\fP"
+.br
+.RI "Current complete transaction counter\&. "
+.ti -1c
+.RI "double \fBm_totalSharesCount\fP"
+.br
+.RI "Total shares held for stock\&. "
+.ti -1c
+.RI "bool \fBm_longPosFlag\fP"
+.br
+.RI "Long position flag\&. "
+.ti -1c
+.RI "bool \fBm_shortPosFlag\fP"
+.br
+.RI "Short position flag\&. "
+.ti -1c
+.RI "std::vector< \fBTransaction\fP * > \fBm_transactions\fP"
+.br
+.RI "Records all transactions\&. "
+.ti -1c
+.RI "std::vector< double > \fBm_signalActivityRecord\fP"
+.br
+.RI "Records daily signals\&. "
+.ti -1c
+.RI "std::vector< double > \fBm_capitalActivityRecord\fP"
+.br
+.RI "Records daily capital activities\&. "
+.ti -1c
+.RI "std::vector< double > \fBm_shareActivityRecord\fP"
+.br
+.RI "Records daily position changes\&. "
+.ti -1c
+.RI "std::vector< double > \fBm_dailyPNLRecord\fP"
+.br
+.RI "Records daily PNL\&. "
+.ti -1c
+.RI "std::vector< double > \fBm_dailyReturnRecord\fP"
+.br
+.RI "Records daily rate of return (ROR) "
+.ti -1c
+.RI "std::vector< double > \fBm_cumulativePNLRecord\fP"
+.br
+.RI "Records daily cumulative PNL\&. "
+.ti -1c
+.RI "std::vector< \fBint\fP > \fBm_TransactionsCountRecord\fP"
+.br
+.RI "Records daily transaction counts\&. "
+.ti -1c
+.RI "std::vector< double > \fBm_sharpeRatioRecord\fP"
+.br
+.RI "Records daily sharpe ratio\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBTradingStock\&.h\fP Class that handles the investment portfolio of a trading stock in the simulator\&. Handles trading details for each ticker used in the simulator\&.
+.PP
+Created by Salil Maharjan on 05/03/20\&. Copyright © 2020 Salil Maharjan\&. All rights reserved\&. 
+.PP
+Definition at line 18 of file TradingStock\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TradingStock::TradingStock (std::string a_tickerName, double a_startingCapital)"
+
+.PP
+Class parameterized constructor\&. \fBTradingStock\&.cpp\fP Implementation of \fBTradingStock\&.h\fP
+.PP
+Created by Salil Maharjan on 05/03/20\&. Copyright © 2020 Salil Maharjan\&. All rights reserved\&. \fBTradingStock::TradingStock\fP Class parameterized constructor to create a trading stock object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_tickerName\fP string Trading stock's ticker name\&. 
+.br
+\fIa_startingCapital\fP double Initial capital to invest for the stock\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 26 of file TradingStock\&.cpp\&.
+.SS "TradingStock::TradingStock ()\fC [private]\fP, \fC [default]\fP"
+
+.PP
+Private default constructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void TradingStock::BuyShares (double a_shares, double a_price)"
+
+.PP
+Method to buys shares\&. \fBTradingStock::BuyShares\fP Method to buy shares\&. Updates capital and record variables\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_shares\fP double Number of shares to buy\&. 
+.br
+\fIa_price\fP double Price at which to buy shares\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 63 of file TradingStock\&.cpp\&.
+.SS "void TradingStock::CalculateDailySharpeRatio ()"
+
+.PP
+Calculate daily sharpe ratio for individual stock\&. \fBTradingStock::CalculateDailySharpeRatio\fP Calculate daily sharpe ratio for individual stock\&. Can be used to get individual stock's Sharpe ratio instead of the complete model's Sharpe\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 456 of file TradingStock\&.cpp\&.
+.SS "bool TradingStock::CheckLongSignal (double a_price)"
+
+.PP
+Method to check if signal is profitable for long positions\&. \fBTradingStock::CheckLongSignal\fP Method to check if signal is profitable for long positions\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_price\fP double Current price of shares\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool If signal will be profitable\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 324 of file TradingStock\&.cpp\&.
+.SS "bool TradingStock::CheckShortSignal (double a_price)"
+
+.PP
+Method to check if signal is profitable for short positions\&. \fBTradingStock::CheckShortSignal\fP Method to check if signal is profitable for short positions\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_price\fP double Current price of shares\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool If signal will be profitable\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 304 of file TradingStock\&.cpp\&.
+.SS "double TradingStock::CloseLongPositions (\fBDateTime\fP * a_date, double a_signal, double a_price, double & a_investedCaptial, double & a_numOfShares)"
+
+.PP
+Method to close all long positions\&. \fBTradingStock::CloseLongPositions\fP Method to close profiting long positions\&. Returns profit/loss generated from closing long positions\&. Updates invested capital in closing long positions and number of long positions that are variables passed by reference\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_date\fP DateTime* Today's date\&. 
+.br
+\fIa_signal\fP double Current day's signal\&. 
+.br
+\fIa_price\fP double Price of shares at the time of closing\&. 
+.br
+\fIa_investedCaptial\fP double& Invested capital placeholder to return the invested capital in long positions\&. 
+.br
+\fIa_numOfShares\fP double& Placeholder to return number of shares in long position that were closed\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+double Profit or loss generated from closing long positions\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 215 of file TradingStock\&.cpp\&.
+.SS "double TradingStock::CloseShortPositions (\fBDateTime\fP * a_date, double a_signal, double a_price, double & a_investedCaptial, double & a_numOfShares)"
+
+.PP
+Method to close all short positions\&. \fBTradingStock::CloseShortPositions\fP Method to close profiting short positions\&. Returns profit/loss generated from closing short positions\&. Updates invested capital in closing short positions and number of short positions that are variables passed by reference\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_date\fP DateTime* Today's date\&. 
+.br
+\fIa_signal\fP double Current day's signal\&. 
+.br
+\fIa_price\fP double Price of shares at the time of closing\&. 
+.br
+\fIa_investedCaptial\fP double& Invested capital placeholder to return the invested capital in long positions\&. 
+.br
+\fIa_numOfShares\fP double& Placeholder to return number of shares in long position that were closed\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+double Profit or loss generated from closing long positions\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 262 of file TradingStock\&.cpp\&.
+.SS "void TradingStock::CloseStalePositions (\fBint\fP a_dayLimit, \fBDateTime\fP * a_date, double a_signal, double a_price)"
+
+.PP
+Method to close positions that exceed maximum days limit\&. \fBTradingStock::CloseStalePositions\fP Method to close positions that exceed maximum days limit\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_dayLimit\fP int Maximum days in position limit\&. 
+.br
+\fIa_date\fP DateTime* Today's date\&. 
+.br
+\fIa_signal\fP double Current day's signal\&. 
+.br
+\fIa_price\fP double Current price of shares\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 371 of file TradingStock\&.cpp\&.
+.SS "void TradingStock::DecreaseCapitalBy (double a_share)"
+\fBTradingStock::DecreaseCapitalBy\fP Function to decrease available capital in the stock and record it\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_capital\fP double Capital to decrease\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 131 of file TradingStock\&.cpp\&.
+.SS "void TradingStock::DecreaseSharesBy (double a_share)"
+\fBTradingStock::DecreaseSharesBy\fP Function to decrease shares owned in the stock\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_share\fP double Number of shares to remove\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 105 of file TradingStock\&.cpp\&.
+.SS "const double TradingStock::GetAvailableCapital ()\fC [inline]\fP"
+
+.PP
+Definition at line 38 of file TradingStock\&.h\&.
+.SS "std::vector< \fBTransaction\fP * > TradingStock::GetClosedTransactions ()"
+
+.PP
+Method to get closed transactions and remove them from memory\&. \fBTradingStock::GetClosedTransactions\fP Method to get closed transactions\&. Once returned, they are removed from the record\&. 
+.PP
+\fBReturns\fP
+.RS 4
+double Total capital in long positions\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 570 of file TradingStock\&.cpp\&.
+.SS "const double TradingStock::GetDailyPnL ()\fC [inline]\fP"
+
+.PP
+Definition at line 39 of file TradingStock\&.h\&.
+.SS "const double TradingStock::GetDailyROR ()\fC [inline]\fP"
+
+.PP
+Definition at line 40 of file TradingStock\&.h\&.
+.SS "double TradingStock::GetInvestedCapital ()"
+
+.PP
+Get latest committed capital in an investment\&. \fBTradingStock::GetInvestedCapital\fP Get latest committed capital in an investment 
+.PP
+\fBReturns\fP
+.RS 4
+double Latest committed capital activity\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 436 of file TradingStock\&.cpp\&.
+.SS "const double TradingStock::GetLatestShareActivity ()\fC [inline]\fP"
+
+.PP
+Definition at line 43 of file TradingStock\&.h\&.
+.SS "const double TradingStock::GetLongCapital ()"
+
+.PP
+Method to get long capital in investment\&. \fBTradingStock::GetLongCapital\fP Accessor method to get capital invested in long positions in trading stock\&. 
+.PP
+\fBReturns\fP
+.RS 4
+double Total capital in long positions\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 549 of file TradingStock\&.cpp\&.
+.SS "const double TradingStock::GetLongSharesHeld ()"
+
+.PP
+Method to get long shares held\&. \fBTradingStock::GetLongSharesHeld\fP Accessor method to get long shares held in the trading stock\&. 
+.PP
+\fBReturns\fP
+.RS 4
+double Number of short positions held\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 507 of file TradingStock\&.cpp\&.
+.SS "const std::vector<double> TradingStock::GetROR ()\fC [inline]\fP"
+
+.PP
+Definition at line 42 of file TradingStock\&.h\&.
+.SS "const double TradingStock::GetSharpeToday ()"
+\fBTradingStock::GetSharpeToday\fP Accessor method to get the Sharpe ratio of the current day of an individual stock\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 471 of file TradingStock\&.cpp\&.
+.SS "const double TradingStock::GetShortCapital ()"
+
+.PP
+Method to get short capital in investment\&. \fBTradingStock::GetShortCapital\fP Accessor method to get capital invested in short positions in trading stock\&. 
+.PP
+\fBReturns\fP
+.RS 4
+double Total capital in short positions\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 528 of file TradingStock\&.cpp\&.
+.SS "const double TradingStock::GetShortSharesHeld ()"
+
+.PP
+Method to get short shares held\&. \fBTradingStock::GetShortSharesHeld\fP Accessor method to get short shares held in the trading stock\&. 
+.PP
+\fBReturns\fP
+.RS 4
+double Number of short positions held\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 486 of file TradingStock\&.cpp\&.
+.SS "const std::vector<double> TradingStock::GetSignalRecord ()\fC [inline]\fP"
+
+.PP
+Definition at line 36 of file TradingStock\&.h\&.
+.SS "const std::string TradingStock::GetStockName ()\fC [inline]\fP"
+
+.PP
+Definition at line 33 of file TradingStock\&.h\&.
+.SS "const double TradingStock::GetTotalShares ()\fC [inline]\fP"
+
+.PP
+Definition at line 37 of file TradingStock\&.h\&.
+.SS "double TradingStock::GetTransactionCount ()"
+
+.PP
+Method to get current completed transaction count (Does not consider incomplete transactions\&.) \fBTradingStock::GetTransactionCount\fP Function to get current closed transaction counter\&. 
+.PP
+\fBReturns\fP
+.RS 4
+double Number of current completed transactions\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 594 of file TradingStock\&.cpp\&.
+.SS "void TradingStock::IncreaseCapitalBy (double a_capital)"
+\fBTradingStock::IncreaseCapitalBy\fP Function to increase available capital in the stock and record it\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_capital\fP double Capital to increase\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 118 of file TradingStock\&.cpp\&.
+.SS "void TradingStock::IncreaseSharesBy (double a_share)"
+\fBTradingStock::IncreaseSharesBy\fP Function to increase shares owned in the stock\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_share\fP double Number of shares to add\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 92 of file TradingStock\&.cpp\&.
+.SS "const bool TradingStock::IsLong ()\fC [inline]\fP"
+
+.PP
+Definition at line 34 of file TradingStock\&.h\&.
+.SS "const bool TradingStock::IsShort ()\fC [inline]\fP"
+
+.PP
+Definition at line 35 of file TradingStock\&.h\&.
+.SS "void TradingStock::newTradingDay ()\fC [private]\fP"
+
+.PP
+Method to update days in position of all held shares\&. \fBTradingStock::newTradingDay\fP Method to update days in position of all held shares 
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 610 of file TradingStock\&.cpp\&.
+.SS "void TradingStock::OpenPosition (\fBDateTime\fP * a_date, double a_signal, double a_share, double a_price)"
+
+.PP
+Method to open a position for the trading stock\&. \fBTradingStock::OpenPosition\fP Open a new position for the trading stock\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_date\fP DateTime* Today's date\&. 
+.br
+\fIa_signal\fP double Current day's signal\&. 
+.br
+\fIa_share\fP double Number of shares to open\&. 
+.br
+\fIa_price\fP double Price of shares at the time of opening\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 197 of file TradingStock\&.cpp\&.
+.SS "void TradingStock::RecordDailyReturn (double a_amount)"
+
+.PP
+Recard day's daily return\&. \fBTradingStock::RecordDailyReturn\fP Record daily rate of return (ROR)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_amount\fP double Daily ROR\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 182 of file TradingStock\&.cpp\&.
+.SS "void TradingStock::RecordPNL (double a_pnl, double a_investedCapital)"
+
+.PP
+Record day's PNL\&. \fBTradingStock::RecordPNL\fP Records PNL and calls RecordDailyReturn to record ROR\&. (coupled functions) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_pnl\fP double Profit or loss for the day\&. 
+.br
+\fIa_investedCapital\fP double Invested capital in the position generating profit or loss\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 145 of file TradingStock\&.cpp\&.
+.SS "void TradingStock::RecordSignal (double a_signal)"
+
+.PP
+Record day's signal\&. \fBTradingStock::RecordSignal\fP Function to record the trading day signal and update the days in position of the stocks held\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_signal\fP double Day's trading signal\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 79 of file TradingStock\&.cpp\&.
+.SS "void TradingStock::RecordTransactionsCount (\fBint\fP a_count)"
+
+.PP
+Record day's number of transactions\&. \fBTradingStock::RecordTransactionsCount\fP Record daily transaction count\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_count\fP int Daily transactions count\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 169 of file TradingStock\&.cpp\&.
+.SS "void TradingStock::SellShares (double a_shares, double a_price)"
+
+.PP
+Method to sell shares\&. \fBTradingStock::SellShares\fP Method to sell shares\&. Updates capital and record variables\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_shares\fP double Number of shares to sell\&. 
+.br
+\fIa_price\fP double Price at which to sell shares\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 46 of file TradingStock\&.cpp\&.
+.SS "void TradingStock::SetLong (bool a_long)\fC [inline]\fP"
+
+.PP
+Definition at line 63 of file TradingStock\&.h\&.
+.SS "void TradingStock::SetShort (bool a_short)\fC [inline]\fP"
+
+.PP
+Definition at line 64 of file TradingStock\&.h\&.
+.SS "void TradingStock::UpdateStockPosition ()"
+
+.PP
+Method to update long/short position status of the trading stock\&. \fBTradingStock::UpdateStockPosition\fP Method to update long/short position flags of the trading stock\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/14/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 342 of file TradingStock\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "double TradingStock::m_availableCapital\fC [private]\fP"
+
+.PP
+Available capital for trading stock\&. 
+.PP
+Definition at line 129 of file TradingStock\&.h\&.
+.SS "std::vector<double> TradingStock::m_capitalActivityRecord\fC [private]\fP"
+
+.PP
+Records daily capital activities\&. 
+.PP
+Definition at line 151 of file TradingStock\&.h\&.
+.SS "std::vector<double> TradingStock::m_cumulativePNLRecord\fC [private]\fP"
+
+.PP
+Records daily cumulative PNL\&. 
+.PP
+Definition at line 159 of file TradingStock\&.h\&.
+.SS "std::vector<double> TradingStock::m_dailyPNLRecord\fC [private]\fP"
+
+.PP
+Records daily PNL\&. 
+.PP
+Definition at line 155 of file TradingStock\&.h\&.
+.SS "std::vector<double> TradingStock::m_dailyReturnRecord\fC [private]\fP"
+
+.PP
+Records daily rate of return (ROR) 
+.PP
+Definition at line 157 of file TradingStock\&.h\&.
+.SS "bool TradingStock::m_longPosFlag\fC [private]\fP"
+
+.PP
+Long position flag\&. 
+.PP
+Definition at line 137 of file TradingStock\&.h\&.
+.SS "std::vector<double> TradingStock::m_shareActivityRecord\fC [private]\fP"
+
+.PP
+Records daily position changes\&. 
+.PP
+Definition at line 153 of file TradingStock\&.h\&.
+.SS "std::vector<double> TradingStock::m_sharpeRatioRecord\fC [private]\fP"
+
+.PP
+Records daily sharpe ratio\&. 
+.PP
+Definition at line 163 of file TradingStock\&.h\&.
+.SS "bool TradingStock::m_shortPosFlag\fC [private]\fP"
+
+.PP
+Short position flag\&. 
+.PP
+Definition at line 139 of file TradingStock\&.h\&.
+.SS "std::vector<double> TradingStock::m_signalActivityRecord\fC [private]\fP"
+
+.PP
+Records daily signals\&. 
+.PP
+Definition at line 149 of file TradingStock\&.h\&.
+.SS "std::string TradingStock::m_tickerName\fC [private]\fP"
+
+.PP
+Ticker name\&. 
+.PP
+Definition at line 127 of file TradingStock\&.h\&.
+.SS "double TradingStock::m_totalSharesCount\fC [private]\fP"
+
+.PP
+Total shares held for stock\&. 
+.PP
+Definition at line 135 of file TradingStock\&.h\&.
+.SS "\fBint\fP TradingStock::m_transactionCounter\fC [private]\fP"
+
+.PP
+Current complete transaction counter\&. 
+.PP
+Definition at line 133 of file TradingStock\&.h\&.
+.SS "std::vector<\fBTransaction\fP*> TradingStock::m_transactions\fC [private]\fP"
+
+.PP
+Records all transactions\&. 
+.PP
+Definition at line 147 of file TradingStock\&.h\&.
+.SS "std::vector<\fBint\fP> TradingStock::m_TransactionsCountRecord\fC [private]\fP"
+
+.PP
+Records daily transaction counts\&. 
+.PP
+Definition at line 161 of file TradingStock\&.h\&.
+.SS "\fBint\fP TradingStock::m_transactionsTotalCount\fC [private]\fP"
+
+.PP
+Total transactions count\&. 
+.PP
+Definition at line 131 of file TradingStock\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DOROTHY from the source code\&.

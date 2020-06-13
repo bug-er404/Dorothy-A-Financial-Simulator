@@ -1,0 +1,8 @@
+<map id="DateTime::GetYear" name="DateTime::GetYear">
+<area shape="rect" id="node1" title=" " alt="" coords="760,35,895,61"/>
+<area shape="rect" id="node2" href="$class_date_time.html#afb927ab9f6d028b3998153689bca57c3" title="Gets the date as component values." alt="" coords="575,5,683,32"/>
+<area shape="rect" id="node3" href="$class_simulator.html#ae9b8b2ffbef1ba49bd8a9dc5fad5a1b2" title="Function to record monthly statistics to a file." alt="" coords="545,57,712,98"/>
+<area shape="rect" id="node4" href="$class_simulator.html#a9a703ddcca1a802b3df9a9dc921927ae" title="Main method to run simulation." alt="" coords="327,64,497,91"/>
+<area shape="rect" id="node5" href="$class_simulator.html#ab899d33750e674079de022d269c6bf9c" title="Interface method to start the simulation." alt="" coords="104,64,279,91"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,64,56,91"/>
+</map>

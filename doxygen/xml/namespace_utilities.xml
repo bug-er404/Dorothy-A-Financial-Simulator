@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="namespace_utilities" kind="namespace" language="C++">
+    <compoundname>Utilities</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_utilities_1a0257a93580460c13c4af232704caa0dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>int Utilities::RoundOff</definition>
+        <argsstring>(double a_value)</argsstring>
+        <name>RoundOff</name>
+        <param>
+          <type>double</type>
+          <declname>a_value</declname>
+        </param>
+        <briefdescription>
+<para>Function to round off value to the lower integral value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="_utilities_8cpp" kindref="compound">Utilities.cpp</ref> Implementation of <ref refid="_utilities_8h" kindref="compound">Utilities.h</ref>.</para>
+<para>Created by Salil Maharjan on 5/04/20. Copyright © 2020 Salil Maharjan. All rights reserved. <ref refid="namespace_utilities_1a0257a93580460c13c4af232704caa0dc" kindref="member">Utilities::RoundOff</ref> Function to round off value to integer value. Uses floor. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double Value to round off. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int Integral value of a_value left rounded. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/04/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Utilities.h" line="17" column="9" bodyfile="Utilities.cpp" bodystart="22" bodyend="26" declfile="Utilities.h" declline="17" declcolumn="9"/>
+        <referencedby refid="class_simulator_1ad24c99fbfd5808aba7f5c9de11cc23f0" compoundref="_simulator_8cpp" startline="588" endline="620">Simulator::openPositions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespace_utilities_1a80b350cec72abbcf34ad7e28405d531c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Utilities::GetAverage</definition>
+        <argsstring>(std::vector&lt; double &gt; a_list)</argsstring>
+        <name>GetAverage</name>
+        <param>
+          <type>std::vector&lt; double &gt;</type>
+          <declname>a_list</declname>
+        </param>
+        <briefdescription>
+<para>Function to get average of a list with doubles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="namespace_utilities_1a80b350cec72abbcf34ad7e28405d531c" kindref="member">Utilities::GetAverage</ref> Function to get average of a list with doubles. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector&lt;double&gt; List of doubles </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double The mean of the list. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/04/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Utilities.h" line="20" column="12" bodyfile="Utilities.cpp" bodystart="36" bodyend="42" declfile="Utilities.h" declline="20" declcolumn="12"/>
+        <referencedby refid="class_trading_stock_1a39cc9a02efc5431a4e150b941a9c7df6" compoundref="_trading_stock_8cpp" startline="456" endline="463">TradingStock::CalculateDailySharpeRatio</referencedby>
+        <referencedby refid="class_simulator_1a1176c2f39f71a17dd1c9d669d3a46d15" compoundref="_simulator_8cpp" startline="667" endline="674">Simulator::calculateSharpeRatio</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespace_utilities_1a175ab95f5c509ccc3d4b571e8963f22e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Utilities::GetStandardDeviation</definition>
+        <argsstring>(std::vector&lt; double &gt; a_list, double a_average)</argsstring>
+        <name>GetStandardDeviation</name>
+        <param>
+          <type>std::vector&lt; double &gt;</type>
+          <declname>a_list</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_average</declname>
+        </param>
+        <briefdescription>
+<para>Function to get the standard deviation of a list with doubles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="namespace_utilities_1a175ab95f5c509ccc3d4b571e8963f22e" kindref="member">Utilities::GetStandardDeviation</ref> Function to get the standard deviation of a list with doubles. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector&lt;double&gt; List of doubles. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_average</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double The mean of the list. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double The standard deviation of the list. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/04/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Utilities.h" line="23" column="12" bodyfile="Utilities.cpp" bodystart="53" bodyend="64" declfile="Utilities.h" declline="23" declcolumn="12"/>
+        <referencedby refid="class_trading_stock_1a39cc9a02efc5431a4e150b941a9c7df6" compoundref="_trading_stock_8cpp" startline="456" endline="463">TradingStock::CalculateDailySharpeRatio</referencedby>
+        <referencedby refid="class_simulator_1a1176c2f39f71a17dd1c9d669d3a46d15" compoundref="_simulator_8cpp" startline="667" endline="674">Simulator::calculateSharpeRatio</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespace_utilities_1a0ab4e4bfac17a04ab38640746aba42fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Utilities::trimBlanks</definition>
+        <argsstring>(std::string &amp;a_str)</argsstring>
+        <name>trimBlanks</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>a_str</declname>
+        </param>
+        <briefdescription>
+<para>Method to trim leading and trailing blanks while reading data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="namespace_utilities_1a0ab4e4bfac17a04ab38640746aba42fe" kindref="member">Utilities::trimBlanks</ref> Method to trim leading and trailing whitespaces. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string Reference to string to trim white spaces. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>4/30/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Utilities.h" line="26" column="10" bodyfile="Utilities.cpp" bodystart="73" bodyend="77" declfile="Utilities.h" declline="26" declcolumn="10"/>
+        <referencedby refid="class_ticker_data_1ae1a96fbae5695797dfa0c6e31960363e" compoundref="_ticker_data_8cpp" startline="105" endline="151">TickerData::parseTickerData</referencedby>
+        <referencedby refid="class_simulator_1ae9b8b2ffbef1ba49bd8a9dc5fad5a1b2" compoundref="_simulator_8cpp" startline="770" endline="914">Simulator::recordMonthlyStatistics</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="_utilities_8h" kindref="compound">Utilities.h</ref> Namespace with utility functions for the simulator.</para>
+<para>Created by Salil Maharjan on 5/04/20. Copyright © 2020 Salil Maharjan. All rights reserved. </para>
+    </detaileddescription>
+    <location file="Utilities.h" line="14" column="1"/>
+  </compounddef>
+</doxygen>

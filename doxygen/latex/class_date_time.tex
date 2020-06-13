@@ -1,0 +1,1338 @@
+\doxysection{Date\+Time Class Reference}
+\label{class_date_time}\index{DateTime@{DateTime}}
+
+
+{\ttfamily \#include $<$Date\+Time.\+h$>$}
+
+
+
+Collaboration diagram for Date\+Time\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{class_date_time__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ D\+A\+Y\+\_\+\+O\+F\+\_\+\+W\+E\+EK} \+: char \{ \newline
+\textbf{ D\+A\+Y\+\_\+\+O\+F\+\_\+\+W\+E\+E\+K\+::\+S\+U\+N\+D\+AY} = 0, 
+\textbf{ D\+A\+Y\+\_\+\+O\+F\+\_\+\+W\+E\+E\+K\+::\+M\+O\+N\+D\+AY}, 
+\textbf{ D\+A\+Y\+\_\+\+O\+F\+\_\+\+W\+E\+E\+K\+::\+T\+U\+E\+S\+D\+AY}, 
+\textbf{ D\+A\+Y\+\_\+\+O\+F\+\_\+\+W\+E\+E\+K\+::\+W\+E\+D\+N\+E\+S\+D\+AY}, 
+\newline
+\textbf{ D\+A\+Y\+\_\+\+O\+F\+\_\+\+W\+E\+E\+K\+::\+T\+H\+U\+R\+S\+D\+AY}, 
+\textbf{ D\+A\+Y\+\_\+\+O\+F\+\_\+\+W\+E\+E\+K\+::\+F\+R\+I\+D\+AY}, 
+\textbf{ D\+A\+Y\+\_\+\+O\+F\+\_\+\+W\+E\+E\+K\+::\+S\+A\+T\+U\+R\+D\+AY}, 
+\textbf{ D\+A\+Y\+\_\+\+O\+F\+\_\+\+W\+E\+E\+K\+::\+U\+N\+D\+E\+F\+\_\+\+D\+OW}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Date\+Time} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\textbf{ Date\+Time} (\textbf{ int} a\+\_\+year, \textbf{ int} a\+\_\+month, \textbf{ int} a\+\_\+day)
+\begin{DoxyCompactList}\small\item\em General date format parameterized constructor (Y\+Y\+YY MM DD) \end{DoxyCompactList}\item 
+\textbf{ Date\+Time} (\textbf{ int} a\+\_\+date)
+\begin{DoxyCompactList}\small\item\em Internal date format parameterized constructor. \end{DoxyCompactList}\item 
+\textbf{ Date\+Time} (const \textbf{ Date\+Time} \&a\+\_\+date)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\textbf{ int} \textbf{ Get\+Year} () const
+\item 
+\textbf{ int} \textbf{ Get\+Month} () const
+\item 
+\textbf{ int} \textbf{ Get\+Day} () const
+\item 
+\textbf{ int} \textbf{ Get} () const
+\begin{DoxyCompactList}\small\item\em Gets the date as one value. \end{DoxyCompactList}\item 
+void \textbf{ Get} (\textbf{ int} \&a\+\_\+year, \textbf{ int} \&a\+\_\+month, \textbf{ int} \&a\+\_\+day) const
+\begin{DoxyCompactList}\small\item\em Gets the date as component values. \end{DoxyCompactList}\item 
+std\+::string \textbf{ Get\+A\+S\+C\+I\+I\+Date} ()
+\begin{DoxyCompactList}\small\item\em Get date as an A\+S\+C\+II string in format \char`\"{}\+M\+M/\+D\+D/\+Y\+Y\+Y\+Y\char`\"{}. \end{DoxyCompactList}\item 
+\textbf{ int} \textbf{ Get\+Day\+Of\+Week} () const
+\begin{DoxyCompactList}\small\item\em Gets the Day of the week as integral value. \end{DoxyCompactList}\item 
+void \textbf{ Set} (\textbf{ int} a\+\_\+year, \textbf{ int} a\+\_\+month, \textbf{ int} a\+\_\+day)
+\item 
+void \textbf{ Set} (\textbf{ int} a\+\_\+date)
+\item 
+void \textbf{ Set} (const \textbf{ Date\+Time} \&a\+\_\+date)
+\item 
+bool \textbf{ check\+Date\+Value\+Ranges} (\textbf{ int} a\+\_\+year, \textbf{ int} a\+\_\+month, \textbf{ int} a\+\_\+day)
+\begin{DoxyCompactList}\small\item\em Function to assert date value ranges. \end{DoxyCompactList}\item 
+void \textbf{ Set\+Today} ()
+\begin{DoxyCompactList}\small\item\em Record today\textquotesingle{}s local date in this object -\/ uses faked today\textquotesingle{}s date if set. \end{DoxyCompactList}\item 
+void \textbf{ Set\+Actual\+Today} ()
+\begin{DoxyCompactList}\small\item\em Record today\textquotesingle{}s local date in this object. Does not use faked today\textquotesingle{}s date. \end{DoxyCompactList}\item 
+bool \textbf{ is\+Leap\+Year} () const
+\begin{DoxyCompactList}\small\item\em Determines if the year recorded here is a leap year. \end{DoxyCompactList}\item 
+\textbf{ int} \textbf{ get\+Julian\+Day} () const
+\begin{DoxyCompactList}\small\item\em Gets the Julian day from this date. Julian day vary from 0 to 365. \end{DoxyCompactList}\item 
+\textbf{ int} \textbf{ Calendar\+Diff\+Dates} (const \textbf{ Date\+Time} \&a\+\_\+near\+Date, const \textbf{ Date\+Time} \&a\+\_\+far\+Date)
+\begin{DoxyCompactList}\small\item\em Computes the calendar difference between two date. \end{DoxyCompactList}\item 
+\textbf{ operator int} () const
+\begin{DoxyCompactList}\small\item\em Conversion operators. \end{DoxyCompactList}\item 
+\textbf{ Date\+Time} \& \textbf{ operator=} (const \textbf{ Date\+Time} \&a\+\_\+date)
+\begin{DoxyCompactList}\small\item\em Assignment operators. \end{DoxyCompactList}\item 
+\textbf{ Date\+Time} \& \textbf{ operator=} (\textbf{ int} a\+\_\+date)
+\item 
+\textbf{ int} \textbf{ operator-\/} (const \textbf{ Date\+Time} \&a\+\_\+date)
+\begin{DoxyCompactList}\small\item\em Finds the difference between two dates. \end{DoxyCompactList}\item 
+\textbf{ Date\+Time} \textbf{ operator-\/} (\textbf{ int} a\+\_\+days)
+\begin{DoxyCompactList}\small\item\em Subtracts a specified number of days to the date. \end{DoxyCompactList}\item 
+\textbf{ Date\+Time} \textbf{ operator+} (\textbf{ int} a\+\_\+days)
+\begin{DoxyCompactList}\small\item\em Adds a specified number of days to the date. \end{DoxyCompactList}\item 
+bool \textbf{ operator==} (const \textbf{ Date\+Time} \&a\+\_\+date)
+\begin{DoxyCompactList}\small\item\em Comparison operator to compare two dates\+: \end{DoxyCompactList}\item 
+bool \textbf{ operator==} (\textbf{ int} a\+\_\+date)
+\item 
+bool \textbf{ operator!=} (const \textbf{ Date\+Time} \&a\+\_\+date)
+\item 
+bool \textbf{ operator!=} (\textbf{ int} a\+\_\+date)
+\item 
+bool \textbf{ operator$<$} (const \textbf{ Date\+Time} \&a\+\_\+date)
+\item 
+bool \textbf{ operator$<$} (\textbf{ int} a\+\_\+date)
+\item 
+bool \textbf{ operator$<$=} (const \textbf{ Date\+Time} \&a\+\_\+date)
+\item 
+bool \textbf{ operator$<$=} (\textbf{ int} a\+\_\+date)
+\item 
+bool \textbf{ operator$>$} (const \textbf{ Date\+Time} \&a\+\_\+date)
+\item 
+bool \textbf{ operator$>$} (\textbf{ int} a\+\_\+date)
+\item 
+bool \textbf{ operator$>$=} (const \textbf{ Date\+Time} \&a\+\_\+date)
+\item 
+bool \textbf{ operator$>$=} (\textbf{ int} a\+\_\+date)
+\item 
+\textbf{ Date\+Time} \& \textbf{ operator-\/-\/} ()
+\begin{DoxyCompactList}\small\item\em Unary minus operators. (P\+R\+E\+F\+IX) \end{DoxyCompactList}\item 
+\textbf{ Date\+Time} \textbf{ operator-\/-\/} (\textbf{ int})
+\begin{DoxyCompactList}\small\item\em Unary minus operators. (P\+O\+S\+T\+F\+IX) \end{DoxyCompactList}\item 
+\textbf{ Date\+Time} \& \textbf{ operator++} ()
+\begin{DoxyCompactList}\small\item\em Unary plus operators. (P\+R\+E\+F\+IX) \end{DoxyCompactList}\item 
+\textbf{ Date\+Time} \textbf{ operator++} (\textbf{ int})
+\begin{DoxyCompactList}\small\item\em Unary plus operators. (P\+O\+S\+T\+F\+IX) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \textbf{ Get\+String\+D\+OW} (\textbf{ D\+A\+Y\+\_\+\+O\+F\+\_\+\+W\+E\+EK} a\+\_\+dow)
+\begin{DoxyCompactList}\small\item\em Get day of the week as a string. \end{DoxyCompactList}\item 
+static void \textbf{ set\+Fake\+Today\+Value} (\textbf{ int} a\+\_\+val)
+\begin{DoxyCompactList}\small\item\em Set the fake today value. This will be used instead of the real today. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \textbf{ int} \textbf{ Blank\+Date} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ int} \textbf{ date\+Offset} (const \textbf{ Date\+Time} \&a\+\_\+date)
+\begin{DoxyCompactList}\small\item\em Get the offset from the year 0. \end{DoxyCompactList}\item 
+\textbf{ Date\+Time} \textbf{ reverse\+Offset} (\textbf{ int} a\+\_\+days)
+\begin{DoxyCompactList}\small\item\em Reverse date offset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ int} \textbf{ m\+\_\+date}
+\begin{DoxyCompactList}\small\item\em Date stored as ( year $\ast$ 10000 + 100 $\ast$ month + day ) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \textbf{ int} \textbf{ m\+\_\+\+Fake\+Today\+Value} = 0
+\begin{DoxyCompactList}\small\item\em Fake date value of today. \end{DoxyCompactList}\item 
+static \textbf{ int} \textbf{ day\+Pre\+Month} [13] = \{ 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365\}
+\begin{DoxyCompactList}\small\item\em The number of days since the beginning of the year to a given month. (non-\/leap year) \end{DoxyCompactList}\item 
+static \textbf{ int} \textbf{ days\+In\+Month} [13] = \{ 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 \}
+\begin{DoxyCompactList}\small\item\em The number of days in a month. (non-\/leap year) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxyref{Date\+Time.\+h}{p.}{_date_time_8h} Interface for the \doxyref{Date\+Time}{p.}{class_date_time} class. General date time class. Dates represented internally as\+: ( year $\ast$ 10000 + 100 $\ast$ month + day )
+
+Created by Salil Maharjan on 3/22/20. Copyright © 2020 Salil Maharjan. All rights reserved. 
+
+Definition at line 17 of file Date\+Time.\+h.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\label{class_date_time_a5f329538b5bd9019e62f11b392a61727}} 
+\index{DateTime@{DateTime}!DAY\_OF\_WEEK@{DAY\_OF\_WEEK}}
+\index{DAY\_OF\_WEEK@{DAY\_OF\_WEEK}!DateTime@{DateTime}}
+\doxysubsubsection{DAY\_OF\_WEEK}
+{\footnotesize\ttfamily enum \textbf{ Date\+Time\+::\+D\+A\+Y\+\_\+\+O\+F\+\_\+\+W\+E\+EK} \+: \textbf{ char}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SUNDAY@{SUNDAY}!DateTime@{DateTime}}\index{DateTime@{DateTime}!SUNDAY@{SUNDAY}}}\mbox{\label{class_date_time_a5f329538b5bd9019e62f11b392a61727a95fa12cb2100ce7081b71f7c44bc12a5}} 
+S\+U\+N\+D\+AY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MONDAY@{MONDAY}!DateTime@{DateTime}}\index{DateTime@{DateTime}!MONDAY@{MONDAY}}}\mbox{\label{class_date_time_a5f329538b5bd9019e62f11b392a61727a98617021b249af0ace0f84ee92ccc7cd}} 
+M\+O\+N\+D\+AY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TUESDAY@{TUESDAY}!DateTime@{DateTime}}\index{DateTime@{DateTime}!TUESDAY@{TUESDAY}}}\mbox{\label{class_date_time_a5f329538b5bd9019e62f11b392a61727a5f5140afce13197a89e848004f292f14}} 
+T\+U\+E\+S\+D\+AY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WEDNESDAY@{WEDNESDAY}!DateTime@{DateTime}}\index{DateTime@{DateTime}!WEDNESDAY@{WEDNESDAY}}}\mbox{\label{class_date_time_a5f329538b5bd9019e62f11b392a61727aaaebdc947e9f7d4ea362e5dc4fe7f825}} 
+W\+E\+D\+N\+E\+S\+D\+AY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{THURSDAY@{THURSDAY}!DateTime@{DateTime}}\index{DateTime@{DateTime}!THURSDAY@{THURSDAY}}}\mbox{\label{class_date_time_a5f329538b5bd9019e62f11b392a61727a7a61b324afb4dd8b2fb4a38afc34f755}} 
+T\+H\+U\+R\+S\+D\+AY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FRIDAY@{FRIDAY}!DateTime@{DateTime}}\index{DateTime@{DateTime}!FRIDAY@{FRIDAY}}}\mbox{\label{class_date_time_a5f329538b5bd9019e62f11b392a61727a86fb6d343289267f3e9edb9b7403d936}} 
+F\+R\+I\+D\+AY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SATURDAY@{SATURDAY}!DateTime@{DateTime}}\index{DateTime@{DateTime}!SATURDAY@{SATURDAY}}}\mbox{\label{class_date_time_a5f329538b5bd9019e62f11b392a61727afd5ae113ac00b67f69541bc8c7f21ef7}} 
+S\+A\+T\+U\+R\+D\+AY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNDEF\_DOW@{UNDEF\_DOW}!DateTime@{DateTime}}\index{DateTime@{DateTime}!UNDEF\_DOW@{UNDEF\_DOW}}}\mbox{\label{class_date_time_a5f329538b5bd9019e62f11b392a61727a9548d97c88b253418049c06cae3d61d1}} 
+U\+N\+D\+E\+F\+\_\+\+D\+OW&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 58 of file Date\+Time.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_date_time_a3ccfb87f7a2e9683b91964e32d907161}} 
+\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\doxysubsubsection{DateTime()\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Date\+Time\+::\+Date\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+
+
+Definition at line 26 of file Date\+Time.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_date_time_a3ccfb87f7a2e9683b91964e32d907161_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_a334c9a427c02a579ad22eb75664cd860}} 
+\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\doxysubsubsection{DateTime()\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Date\+Time\+::\+Date\+Time (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{a\+\_\+year,  }\item[{\textbf{ int}}]{a\+\_\+month,  }\item[{\textbf{ int}}]{a\+\_\+day }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+General date format parameterized constructor (Y\+Y\+YY MM DD) 
+
+
+
+Definition at line 32 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_a334c9a427c02a579ad22eb75664cd860_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_af1ed415fc977c5aae3ae661330c68b45}} 
+\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\doxysubsubsection{DateTime()\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Date\+Time\+::\+Date\+Time (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{a\+\_\+date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Internal date format parameterized constructor. 
+
+
+
+Definition at line 38 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_af1ed415fc977c5aae3ae661330c68b45_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_a406caea25caab1dd8be1bf02db52778d}} 
+\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\doxysubsubsection{DateTime()\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Date\+Time\+::\+Date\+Time (\begin{DoxyParamCaption}\item[{const \textbf{ Date\+Time} \&}]{a\+\_\+date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy constructor. 
+
+
+
+Definition at line 44 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_a406caea25caab1dd8be1bf02db52778d_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_date_time_a9dd76cb1e58691859be3dec826b57445}} 
+\index{DateTime@{DateTime}!CalendarDiffDates@{CalendarDiffDates}}
+\index{CalendarDiffDates@{CalendarDiffDates}!DateTime@{DateTime}}
+\doxysubsubsection{CalendarDiffDates()}
+{\footnotesize\ttfamily \textbf{ int} Date\+Time\+::\+Calendar\+Diff\+Dates (\begin{DoxyParamCaption}\item[{const \textbf{ Date\+Time} \&}]{a\+\_\+near\+Date,  }\item[{const \textbf{ Date\+Time} \&}]{a\+\_\+far\+Date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Computes the calendar difference between two date. 
+
+
+
+Definition at line 152 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_a9dd76cb1e58691859be3dec826b57445_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_a9dd76cb1e58691859be3dec826b57445_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_ae489fe891bb77431da24459e5cca394b}} 
+\index{DateTime@{DateTime}!checkDateValueRanges@{checkDateValueRanges}}
+\index{checkDateValueRanges@{checkDateValueRanges}!DateTime@{DateTime}}
+\doxysubsubsection{checkDateValueRanges()}
+{\footnotesize\ttfamily bool Date\+Time\+::check\+Date\+Value\+Ranges (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{a\+\_\+year,  }\item[{\textbf{ int}}]{a\+\_\+month,  }\item[{\textbf{ int}}]{a\+\_\+day }\end{DoxyParamCaption})}
+
+
+
+Function to assert date value ranges. 
+
+\doxyref{Date\+Time\+::check\+Date\+Value\+Ranges}{p.}{class_date_time_ae489fe891bb77431da24459e5cca394b} Function to assert date value ranges 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+year} & int Year \\
+\hline
+{\em a\+\_\+month} & int Month \\
+\hline
+{\em a\+\_\+day} & int Date \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool If passed values mark a valid date. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/24/20. 
+\end{DoxyDate}
+
+
+Definition at line 68 of file Date\+Time.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_ae489fe891bb77431da24459e5cca394b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_af3cc0803ee4678e9394ba24579d58ac9}} 
+\index{DateTime@{DateTime}!dateOffset@{dateOffset}}
+\index{dateOffset@{dateOffset}!DateTime@{DateTime}}
+\doxysubsubsection{dateOffset()}
+{\footnotesize\ttfamily \textbf{ int} Date\+Time\+::date\+Offset (\begin{DoxyParamCaption}\item[{const \textbf{ Date\+Time} \&}]{a\+\_\+date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Get the offset from the year 0. 
+
+
+
+Definition at line 277 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_af3cc0803ee4678e9394ba24579d58ac9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_af3cc0803ee4678e9394ba24579d58ac9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_a93795a4f6217325cb348f113f3dcf85a}} 
+\index{DateTime@{DateTime}!Get@{Get}}
+\index{Get@{Get}!DateTime@{DateTime}}
+\doxysubsubsection{Get()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \textbf{ int} Date\+Time\+::\+Get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the date as one value. 
+
+
+
+Definition at line 79 of file Date\+Time.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_a93795a4f6217325cb348f113f3dcf85a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_afb927ab9f6d028b3998153689bca57c3}} 
+\index{DateTime@{DateTime}!Get@{Get}}
+\index{Get@{Get}!DateTime@{DateTime}}
+\doxysubsubsection{Get()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Date\+Time\+::\+Get (\begin{DoxyParamCaption}\item[{\textbf{ int} \&}]{a\+\_\+year,  }\item[{\textbf{ int} \&}]{a\+\_\+month,  }\item[{\textbf{ int} \&}]{a\+\_\+day }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the date as component values. 
+
+
+
+Definition at line 82 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{class_date_time_afb927ab9f6d028b3998153689bca57c3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_ac717768ad9a7a31af9be09c4296ac470}} 
+\index{DateTime@{DateTime}!GetASCIIDate@{GetASCIIDate}}
+\index{GetASCIIDate@{GetASCIIDate}!DateTime@{DateTime}}
+\doxysubsubsection{GetASCIIDate()}
+{\footnotesize\ttfamily std\+::string Date\+Time\+::\+Get\+A\+S\+C\+I\+I\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get date as an A\+S\+C\+II string in format \char`\"{}\+M\+M/\+D\+D/\+Y\+Y\+Y\+Y\char`\"{}. 
+
+
+
+Definition at line 90 of file Date\+Time.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_ac717768ad9a7a31af9be09c4296ac470_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_a3a2b40b647625dd64894e1edf49a9440}} 
+\index{DateTime@{DateTime}!GetDay@{GetDay}}
+\index{GetDay@{GetDay}!DateTime@{DateTime}}
+\doxysubsubsection{GetDay()}
+{\footnotesize\ttfamily \textbf{ int} Date\+Time\+::\+Get\+Day (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 76 of file Date\+Time.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{class_date_time_a3a2b40b647625dd64894e1edf49a9440_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_ad967bd42942a643118cda8ff0e387759}} 
+\index{DateTime@{DateTime}!GetDayOfWeek@{GetDayOfWeek}}
+\index{GetDayOfWeek@{GetDayOfWeek}!DateTime@{DateTime}}
+\doxysubsubsection{GetDayOfWeek()}
+{\footnotesize\ttfamily \textbf{ int} Date\+Time\+::\+Get\+Day\+Of\+Week (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the Day of the week as integral value. 
+
+
+
+Definition at line 106 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_ad967bd42942a643118cda8ff0e387759_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_afcf11d770052d54bb91618db6a4e7223}} 
+\index{DateTime@{DateTime}!getJulianDay@{getJulianDay}}
+\index{getJulianDay@{getJulianDay}!DateTime@{DateTime}}
+\doxysubsubsection{getJulianDay()}
+{\footnotesize\ttfamily \textbf{ int} Date\+Time\+::get\+Julian\+Day (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the Julian day from this date. Julian day vary from 0 to 365. 
+
+
+
+Definition at line 142 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_afcf11d770052d54bb91618db6a4e7223_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_afcf11d770052d54bb91618db6a4e7223_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_a5c592250b3cfea8314e39d6ceb55dda6}} 
+\index{DateTime@{DateTime}!GetMonth@{GetMonth}}
+\index{GetMonth@{GetMonth}!DateTime@{DateTime}}
+\doxysubsubsection{GetMonth()}
+{\footnotesize\ttfamily \textbf{ int} Date\+Time\+::\+Get\+Month (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 75 of file Date\+Time.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_a5c592250b3cfea8314e39d6ceb55dda6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_aaa1314c275a2c1f40bcf82f572b08093}} 
+\index{DateTime@{DateTime}!GetStringDOW@{GetStringDOW}}
+\index{GetStringDOW@{GetStringDOW}!DateTime@{DateTime}}
+\doxysubsubsection{GetStringDOW()}
+{\footnotesize\ttfamily static std\+::string Date\+Time\+::\+Get\+String\+D\+OW (\begin{DoxyParamCaption}\item[{\textbf{ D\+A\+Y\+\_\+\+O\+F\+\_\+\+W\+E\+EK}}]{a\+\_\+dow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get day of the week as a string. 
+
+
+
+Definition at line 93 of file Date\+Time.\+h.
+
+\mbox{\label{class_date_time_a3fdecb31c8bb977b15c8296a69afa76e}} 
+\index{DateTime@{DateTime}!GetYear@{GetYear}}
+\index{GetYear@{GetYear}!DateTime@{DateTime}}
+\doxysubsubsection{GetYear()}
+{\footnotesize\ttfamily \textbf{ int} Date\+Time\+::\+Get\+Year (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 74 of file Date\+Time.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_a3fdecb31c8bb977b15c8296a69afa76e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_a3ca8a7d66ec814441db980816cf1ab4c}} 
+\index{DateTime@{DateTime}!isLeapYear@{isLeapYear}}
+\index{isLeapYear@{isLeapYear}!DateTime@{DateTime}}
+\doxysubsubsection{isLeapYear()}
+{\footnotesize\ttfamily bool Date\+Time\+::is\+Leap\+Year (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Determines if the year recorded here is a leap year. 
+
+
+
+Definition at line 139 of file Date\+Time.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_a3ca8a7d66ec814441db980816cf1ab4c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_a64627ec59244ab71e4fab3b021fc1af8}} 
+\index{DateTime@{DateTime}!operator int@{operator int}}
+\index{operator int@{operator int}!DateTime@{DateTime}}
+\doxysubsubsection{operator int()}
+{\footnotesize\ttfamily Date\+Time\+::operator \textbf{ int} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Conversion operators. 
+
+
+
+Definition at line 163 of file Date\+Time.\+h.
+
+\mbox{\label{class_date_time_a3e816351592ec442e04774d108a86612}} 
+\index{DateTime@{DateTime}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!DateTime@{DateTime}}
+\doxysubsubsection{operator"!=()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Date\+Time\+::operator!= (\begin{DoxyParamCaption}\item[{const \textbf{ Date\+Time} \&}]{a\+\_\+date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 190 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_a3e816351592ec442e04774d108a86612_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_abf91e4e2aa566964dc91b84985645f89}} 
+\index{DateTime@{DateTime}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!DateTime@{DateTime}}
+\doxysubsubsection{operator"!=()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Date\+Time\+::operator!= (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{a\+\_\+date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 191 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_abf91e4e2aa566964dc91b84985645f89_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_a698ebe694145c3be698ff0a0588b15da}} 
+\index{DateTime@{DateTime}!operator+@{operator+}}
+\index{operator+@{operator+}!DateTime@{DateTime}}
+\doxysubsubsection{operator+()}
+{\footnotesize\ttfamily \textbf{ Date\+Time} Date\+Time\+::operator+ (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{a\+\_\+days }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a specified number of days to the date. 
+
+
+
+Definition at line 180 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_a698ebe694145c3be698ff0a0588b15da_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_a38c7ae7996e0966e67e13d79866ba409}} 
+\index{DateTime@{DateTime}!operator++@{operator++}}
+\index{operator++@{operator++}!DateTime@{DateTime}}
+\doxysubsubsection{operator++()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \textbf{ Date\+Time}\& Date\+Time\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Unary plus operators. (P\+R\+E\+F\+IX) 
+
+
+
+Definition at line 242 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_a38c7ae7996e0966e67e13d79866ba409_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{class_date_time_a38c7ae7996e0966e67e13d79866ba409_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_a0fe9a32549329c66d6cf58d14ab705df}} 
+\index{DateTime@{DateTime}!operator++@{operator++}}
+\index{operator++@{operator++}!DateTime@{DateTime}}
+\doxysubsubsection{operator++()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \textbf{ Date\+Time} Date\+Time\+::operator++ (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Unary plus operators. (P\+O\+S\+T\+F\+IX) 
+
+
+
+Definition at line 250 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_a0fe9a32549329c66d6cf58d14ab705df_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_a7914e7a4ef2ad2a5729b90c2c07bea3c}} 
+\index{DateTime@{DateTime}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!DateTime@{DateTime}}
+\doxysubsubsection{operator-\/()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \textbf{ int} Date\+Time\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \textbf{ Date\+Time} \&}]{a\+\_\+date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Finds the difference between two dates. 
+
+
+
+Definition at line 174 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_a7914e7a4ef2ad2a5729b90c2c07bea3c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_a2e5295058ae6b112e9bf5b0226456005}} 
+\index{DateTime@{DateTime}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!DateTime@{DateTime}}
+\doxysubsubsection{operator-\/()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \textbf{ Date\+Time} Date\+Time\+::operator-\/ (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{a\+\_\+days }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Subtracts a specified number of days to the date. 
+
+
+
+Definition at line 177 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_a2e5295058ae6b112e9bf5b0226456005_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_afc219149a3d959863c84e3a15530dc54}} 
+\index{DateTime@{DateTime}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!DateTime@{DateTime}}
+\doxysubsubsection{operator-\/-\/()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \textbf{ Date\+Time}\& Date\+Time\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Unary minus operators. (P\+R\+E\+F\+IX) 
+
+
+
+Definition at line 226 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_afc219149a3d959863c84e3a15530dc54_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{class_date_time_afc219149a3d959863c84e3a15530dc54_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_aca232974e8aa4a1608c50f5714a9b961}} 
+\index{DateTime@{DateTime}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!DateTime@{DateTime}}
+\doxysubsubsection{operator-\/-\/()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \textbf{ Date\+Time} Date\+Time\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Unary minus operators. (P\+O\+S\+T\+F\+IX) 
+
+
+
+Definition at line 234 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_aca232974e8aa4a1608c50f5714a9b961_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_a8af0104c406f0c3a13f5e3299af6c203}} 
+\index{DateTime@{DateTime}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!DateTime@{DateTime}}
+\doxysubsubsection{operator$<$()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Date\+Time\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \textbf{ Date\+Time} \&}]{a\+\_\+date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 197 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_a8af0104c406f0c3a13f5e3299af6c203_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_a2241f0caf5a91c94a29c265bfd22baf3}} 
+\index{DateTime@{DateTime}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!DateTime@{DateTime}}
+\doxysubsubsection{operator$<$()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Date\+Time\+::operator$<$ (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{a\+\_\+date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 198 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_a2241f0caf5a91c94a29c265bfd22baf3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_a6b9df88cc66e7e7547931dccf1e1ea51}} 
+\index{DateTime@{DateTime}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!DateTime@{DateTime}}
+\doxysubsubsection{operator$<$=()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Date\+Time\+::operator$<$= (\begin{DoxyParamCaption}\item[{const \textbf{ Date\+Time} \&}]{a\+\_\+date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 204 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_a6b9df88cc66e7e7547931dccf1e1ea51_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_aa208d749051b44abb6e85acf024f0302}} 
+\index{DateTime@{DateTime}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!DateTime@{DateTime}}
+\doxysubsubsection{operator$<$=()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Date\+Time\+::operator$<$= (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{a\+\_\+date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 205 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_aa208d749051b44abb6e85acf024f0302_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_a64da6b1771656edb1e0d44eb3e88deb2}} 
+\index{DateTime@{DateTime}!operator=@{operator=}}
+\index{operator=@{operator=}!DateTime@{DateTime}}
+\doxysubsubsection{operator=()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \textbf{ Date\+Time}\& Date\+Time\+::operator= (\begin{DoxyParamCaption}\item[{const \textbf{ Date\+Time} \&}]{a\+\_\+date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Assignment operators. 
+
+
+
+Definition at line 166 of file Date\+Time.\+h.
+
+\mbox{\label{class_date_time_a75243ae5f1f368ba0d72a9882a934d25}} 
+\index{DateTime@{DateTime}!operator=@{operator=}}
+\index{operator=@{operator=}!DateTime@{DateTime}}
+\doxysubsubsection{operator=()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \textbf{ Date\+Time} \& Date\+Time\+::operator= (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{a\+\_\+date }\end{DoxyParamCaption})}
+
+\doxyref{Date\+Time\+::operator =}{p.}{class_date_time_a64da6b1771656edb1e0d44eb3e88deb2} Assignment operator overload. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+date} & \doxyref{Date\+Time}{p.}{class_date_time} \doxyref{Date\+Time}{p.}{class_date_time} object to assign. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{Date\+Time}{p.}{class_date_time}\& New \doxyref{Date\+Time}{p.}{class_date_time} that is assigned. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 132 of file Date\+Time.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_a75243ae5f1f368ba0d72a9882a934d25_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_ae2f878dfd2243aee2ca2000f58f8fe9a}} 
+\index{DateTime@{DateTime}!operator==@{operator==}}
+\index{operator==@{operator==}!DateTime@{DateTime}}
+\doxysubsubsection{operator==()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Date\+Time\+::operator== (\begin{DoxyParamCaption}\item[{const \textbf{ Date\+Time} \&}]{a\+\_\+date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Comparison operator to compare two dates\+: 
+
+
+
+Definition at line 183 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_ae2f878dfd2243aee2ca2000f58f8fe9a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_a3758612658764a9bf153ea8007dde4ad}} 
+\index{DateTime@{DateTime}!operator==@{operator==}}
+\index{operator==@{operator==}!DateTime@{DateTime}}
+\doxysubsubsection{operator==()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Date\+Time\+::operator== (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{a\+\_\+date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 184 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_a3758612658764a9bf153ea8007dde4ad_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_a2180c1804eecdf469107b7629cabba3d}} 
+\index{DateTime@{DateTime}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!DateTime@{DateTime}}
+\doxysubsubsection{operator$>$()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Date\+Time\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \textbf{ Date\+Time} \&}]{a\+\_\+date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 211 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_a2180c1804eecdf469107b7629cabba3d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_a3ae99354564bfa6c35a34b10b1edd817}} 
+\index{DateTime@{DateTime}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!DateTime@{DateTime}}
+\doxysubsubsection{operator$>$()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Date\+Time\+::operator$>$ (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{a\+\_\+date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 212 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_a3ae99354564bfa6c35a34b10b1edd817_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_a39d825cab864948325623eecf09ef722}} 
+\index{DateTime@{DateTime}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!DateTime@{DateTime}}
+\doxysubsubsection{operator$>$=()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Date\+Time\+::operator$>$= (\begin{DoxyParamCaption}\item[{const \textbf{ Date\+Time} \&}]{a\+\_\+date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 218 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_a39d825cab864948325623eecf09ef722_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_a8293f2faa8e62864b80a42f2ff0ae3e6}} 
+\index{DateTime@{DateTime}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!DateTime@{DateTime}}
+\doxysubsubsection{operator$>$=()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Date\+Time\+::operator$>$= (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{a\+\_\+date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 219 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_a8293f2faa8e62864b80a42f2ff0ae3e6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_aa8a746c7fb47a7034adde3fb83c79dbe}} 
+\index{DateTime@{DateTime}!reverseOffset@{reverseOffset}}
+\index{reverseOffset@{reverseOffset}!DateTime@{DateTime}}
+\doxysubsubsection{reverseOffset()}
+{\footnotesize\ttfamily \textbf{ Date\+Time} Date\+Time\+::reverse\+Offset (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{a\+\_\+days }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reverse date offset. 
+
+\doxyref{Date\+Time\+::reverse\+Offset}{p.}{class_date_time_aa8a746c7fb47a7034adde3fb83c79dbe} Reverse date offset 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+days} & int Number of days to reverse offset. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{Date\+Time}{p.}{class_date_time} The date after reversing a\+\_\+days offset. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+Change the return value!
+
+Definition at line 152 of file Date\+Time.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_aa8a746c7fb47a7034adde3fb83c79dbe_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_aa8a746c7fb47a7034adde3fb83c79dbe_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_a12b6862f65c87e7dc483cfd2bd867ea0}} 
+\index{DateTime@{DateTime}!Set@{Set}}
+\index{Set@{Set}!DateTime@{DateTime}}
+\doxysubsubsection{Set()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Date\+Time\+::\+Set (\begin{DoxyParamCaption}\item[{const \textbf{ Date\+Time} \&}]{a\+\_\+date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 119 of file Date\+Time.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{class_date_time_a12b6862f65c87e7dc483cfd2bd867ea0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_a67f156cc29043569f888f7a0e66ef0dc}} 
+\index{DateTime@{DateTime}!Set@{Set}}
+\index{Set@{Set}!DateTime@{DateTime}}
+\doxysubsubsection{Set()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Date\+Time\+::\+Set (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{a\+\_\+date }\end{DoxyParamCaption})}
+
+\doxyref{Date\+Time\+::\+Set}{p.}{class_date_time_adf643f3779756314d8ac2505f84d5703} Date set function for Internal date format parameterized constructor 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+date} & int Date passed in internal format Y\+Y\+Y\+Y\+M\+M\+DD \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/24/20. 
+\end{DoxyDate}
+
+
+Definition at line 48 of file Date\+Time.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{class_date_time_a67f156cc29043569f888f7a0e66ef0dc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_adf643f3779756314d8ac2505f84d5703}} 
+\index{DateTime@{DateTime}!Set@{Set}}
+\index{Set@{Set}!DateTime@{DateTime}}
+\doxysubsubsection{Set()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Date\+Time\+::\+Set (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{a\+\_\+year,  }\item[{\textbf{ int}}]{a\+\_\+month,  }\item[{\textbf{ int}}]{a\+\_\+day }\end{DoxyParamCaption})}
+
+\doxyref{Date\+Time\+::\+Set}{p.}{class_date_time_adf643f3779756314d8ac2505f84d5703} Date set function for General date format parameterized constructor (Y\+Y\+YY MM DD) 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+year} & int Year \\
+\hline
+{\em a\+\_\+month} & int Month \\
+\hline
+{\em a\+\_\+day} & int Date \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/22/20. 
+\end{DoxyDate}
+
+
+Definition at line 31 of file Date\+Time.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{class_date_time_adf643f3779756314d8ac2505f84d5703_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_adf643f3779756314d8ac2505f84d5703_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_aca52e0e0e2a63e322fa0628c3d78aff9}} 
+\index{DateTime@{DateTime}!SetActualToday@{SetActualToday}}
+\index{SetActualToday@{SetActualToday}!DateTime@{DateTime}}
+\doxysubsubsection{SetActualToday()}
+{\footnotesize\ttfamily void Date\+Time\+::\+Set\+Actual\+Today (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Record today\textquotesingle{}s local date in this object. Does not use faked today\textquotesingle{}s date. 
+
+\doxyref{Date\+Time\+::\+Set\+Today}{p.}{class_date_time_accfe0444e37f0194cba83e69f17c0ba8} Record today\textquotesingle{}s local date in this object. Does not use faked today\textquotesingle{}s date. \begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 117 of file Date\+Time.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_aca52e0e0e2a63e322fa0628c3d78aff9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_date_time_a1bb944d1963fc50c983c92ae39412d3d}} 
+\index{DateTime@{DateTime}!setFakeTodayValue@{setFakeTodayValue}}
+\index{setFakeTodayValue@{setFakeTodayValue}!DateTime@{DateTime}}
+\doxysubsubsection{setFakeTodayValue()}
+{\footnotesize\ttfamily static void Date\+Time\+::set\+Fake\+Today\+Value (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{a\+\_\+val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Set the fake today value. This will be used instead of the real today. 
+
+
+
+Definition at line 125 of file Date\+Time.\+h.
+
+\mbox{\label{class_date_time_accfe0444e37f0194cba83e69f17c0ba8}} 
+\index{DateTime@{DateTime}!SetToday@{SetToday}}
+\index{SetToday@{SetToday}!DateTime@{DateTime}}
+\doxysubsubsection{SetToday()}
+{\footnotesize\ttfamily void Date\+Time\+::\+Set\+Today (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Record today\textquotesingle{}s local date in this object -\/ uses faked today\textquotesingle{}s date if set. 
+
+\doxyref{Date\+Time\+::\+Set\+Today}{p.}{class_date_time_accfe0444e37f0194cba83e69f17c0ba8} Record today\textquotesingle{}s local date in this object -\/ uses faked today\textquotesingle{}s date if set. \begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 99 of file Date\+Time.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_time_accfe0444e37f0194cba83e69f17c0ba8_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{class_date_time_a13c417f101c5254d27117e5a1415d632}} 
+\index{DateTime@{DateTime}!BlankDate@{BlankDate}}
+\index{BlankDate@{BlankDate}!DateTime@{DateTime}}
+\doxysubsubsection{BlankDate}
+{\footnotesize\ttfamily const \textbf{ int} Date\+Time\+::\+Blank\+Date = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 54 of file Date\+Time.\+h.
+
+\mbox{\label{class_date_time_ac94cf0d6e03e06701a0e206be156f01a}} 
+\index{DateTime@{DateTime}!dayPreMonth@{dayPreMonth}}
+\index{dayPreMonth@{dayPreMonth}!DateTime@{DateTime}}
+\doxysubsubsection{dayPreMonth}
+{\footnotesize\ttfamily \textbf{ int} Date\+Time\+::day\+Pre\+Month = \{ 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The number of days since the beginning of the year to a given month. (non-\/leap year) 
+
+
+
+Definition at line 268 of file Date\+Time.\+h.
+
+\mbox{\label{class_date_time_a718762451fb99c14eb5820611cd08a09}} 
+\index{DateTime@{DateTime}!daysInMonth@{daysInMonth}}
+\index{daysInMonth@{daysInMonth}!DateTime@{DateTime}}
+\doxysubsubsection{daysInMonth}
+{\footnotesize\ttfamily \textbf{ int} Date\+Time\+::days\+In\+Month = \{ 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 \}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The number of days in a month. (non-\/leap year) 
+
+
+
+Definition at line 270 of file Date\+Time.\+h.
+
+\mbox{\label{class_date_time_aa69f17bb3f4c14a1cbf186ef6dbc4948}} 
+\index{DateTime@{DateTime}!m\_date@{m\_date}}
+\index{m\_date@{m\_date}!DateTime@{DateTime}}
+\doxysubsubsection{m\_date}
+{\footnotesize\ttfamily \textbf{ int} Date\+Time\+::m\+\_\+date\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Date stored as ( year $\ast$ 10000 + 100 $\ast$ month + day ) 
+
+
+
+Definition at line 264 of file Date\+Time.\+h.
+
+\mbox{\label{class_date_time_a57acb7917c5954948b8755807023444c}} 
+\index{DateTime@{DateTime}!m\_FakeTodayValue@{m\_FakeTodayValue}}
+\index{m\_FakeTodayValue@{m\_FakeTodayValue}!DateTime@{DateTime}}
+\doxysubsubsection{m\_FakeTodayValue}
+{\footnotesize\ttfamily \textbf{ int} Date\+Time\+::m\+\_\+\+Fake\+Today\+Value = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Fake date value of today. 
+
+\doxyref{Date\+Time.\+cpp}{p.}{_date_time_8cpp} Implementation of Date\+Time.\+hpp
+
+Created by Salil Maharjan on 3/22/20. Copyright © 2020 Salil Maharjan. All rights reserved. 
+
+Definition at line 266 of file Date\+Time.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Date\+Time.\+h}\item 
+\textbf{ Date\+Time.\+cpp}\end{DoxyCompactItemize}

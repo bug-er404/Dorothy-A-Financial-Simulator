@@ -1,0 +1,12 @@
+<map id="TradingStock::IncreaseCapitalBy" name="TradingStock::IncreaseCapitalBy">
+<area shape="rect" id="node1" title=" " alt="" coords="1193,60,1408,87"/>
+<area shape="rect" id="node2" href="$class_simulator.html#a4238ab87912e40d99cad5deb558e3a96" title="Method to record necessary elements for no activity (code reuse purposes)." alt="" coords="744,5,927,32"/>
+<area shape="rect" id="node7" href="$class_trading_stock.html#abf15f389461393974e58d973a7a4f593" title="Method to sell shares." alt="" coords="975,85,1145,112"/>
+<area shape="rect" id="node3" href="$class_simulator.html#adc8821db9e85da458f9a6e8b1912ac86" title="Function to open or close positions according to the signal by checking current position." alt="" coords="545,56,696,83"/>
+<area shape="rect" id="node4" href="$class_simulator.html#a9a703ddcca1a802b3df9a9dc921927ae" title="Main method to run simulation." alt="" coords="327,31,497,57"/>
+<area shape="rect" id="node5" href="$class_simulator.html#ab899d33750e674079de022d269c6bf9c" title="Interface method to start the simulation." alt="" coords="104,31,279,57"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,31,56,57"/>
+<area shape="rect" id="node8" href="$class_simulator.html#a20a56ab01d34b348fe22129caa44df09" title="Close positions for a trading stock." alt="" coords="750,56,921,83"/>
+<area shape="rect" id="node9" href="$class_trading_stock.html#aad5057092b58a0ed625be05cfcef3c3e" title="Method to close positions that exceed maximum days limit." alt="" coords="750,107,921,149"/>
+<area shape="rect" id="node10" href="$class_simulator.html#ad24c99fbfd5808aba7f5c9de11cc23f0" title="Open positions for a trading stock." alt="" coords="752,173,919,200"/>
+</map>

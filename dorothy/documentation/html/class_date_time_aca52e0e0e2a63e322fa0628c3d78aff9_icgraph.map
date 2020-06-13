@@ -1,0 +1,4 @@
+<map id="DateTime::SetActualToday" name="DateTime::SetActualToday">
+<area shape="rect" id="node1" title="Record today&#39;s local date in this object. Does not use faked today&#39;s date." alt="" coords="196,5,375,32"/>
+<area shape="rect" id="node2" href="$class_date_time.html#accfe0444e37f0194cba83e69f17c0ba8" title="Record today&#39;s local date in this object &#45; uses faked today&#39;s date if set." alt="" coords="5,5,148,32"/>
+</map>

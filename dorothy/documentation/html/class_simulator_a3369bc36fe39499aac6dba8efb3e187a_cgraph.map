@@ -1,0 +1,5 @@
+<map id="Simulator::loadParameters" name="Simulator::loadParameters">
+<area shape="rect" id="node1" title="Loads parameters required for the simulator." alt="" coords="5,5,181,32"/>
+<area shape="rect" id="node2" href="$class_config.html#ad4154541cb9dc550527551a736862578" title="Template function to access parameters." alt="" coords="229,5,379,32"/>
+<area shape="rect" id="node3" href="$class_config.html#ad028b655f1d586107c638c1b32ad3bae" title="Get the value of a specified parameter." alt="" coords="427,5,605,32"/>
+</map>

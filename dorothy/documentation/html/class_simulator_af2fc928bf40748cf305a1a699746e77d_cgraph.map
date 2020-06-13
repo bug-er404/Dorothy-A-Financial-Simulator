@@ -1,0 +1,4 @@
+<map id="Simulator::calculateSignal" name="Simulator::calculateSignal">
+<area shape="rect" id="node1" title="Calculate trade signal." alt="" coords="5,5,179,32"/>
+<area shape="rect" id="node2" href="$class_ticker_data.html#aaf1f6539e8da61af8091c72dcfd39e0d" title="Get current date&#39;s MACD signal." alt="" coords="227,5,417,32"/>
+</map>

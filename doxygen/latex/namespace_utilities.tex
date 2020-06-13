@@ -1,0 +1,166 @@
+\doxysection{Utilities Namespace Reference}
+\label{namespace_utilities}\index{Utilities@{Utilities}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ int} \textbf{ Round\+Off} (double a\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Function to round off value to the lower integral value. \end{DoxyCompactList}\item 
+double \textbf{ Get\+Average} (std\+::vector$<$ double $>$ a\+\_\+list)
+\begin{DoxyCompactList}\small\item\em Function to get average of a list with doubles. \end{DoxyCompactList}\item 
+double \textbf{ Get\+Standard\+Deviation} (std\+::vector$<$ double $>$ a\+\_\+list, double a\+\_\+average)
+\begin{DoxyCompactList}\small\item\em Function to get the standard deviation of a list with doubles. \end{DoxyCompactList}\item 
+void \textbf{ trim\+Blanks} (std\+::string \&a\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Method to trim leading and trailing blanks while reading data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxyref{Utilities.\+h}{p.}{_utilities_8h} Namespace with utility functions for the simulator.
+
+Created by Salil Maharjan on 5/04/20. Copyright © 2020 Salil Maharjan. All rights reserved. 
+
+\doxysubsection{Function Documentation}
+\mbox{\label{namespace_utilities_a80b350cec72abbcf34ad7e28405d531c}} 
+\index{Utilities@{Utilities}!GetAverage@{GetAverage}}
+\index{GetAverage@{GetAverage}!Utilities@{Utilities}}
+\doxysubsubsection{GetAverage()}
+{\footnotesize\ttfamily double Utilities\+::\+Get\+Average (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{a\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Function to get average of a list with doubles. 
+
+\doxyref{Utilities\+::\+Get\+Average}{p.}{namespace_utilities_a80b350cec72abbcf34ad7e28405d531c} Function to get average of a list with doubles. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+list} & vector$<$double$>$ List of doubles \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double The mean of the list. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/04/20. 
+\end{DoxyDate}
+
+
+Definition at line 36 of file Utilities.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_utilities_a80b350cec72abbcf34ad7e28405d531c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{namespace_utilities_a175ab95f5c509ccc3d4b571e8963f22e}} 
+\index{Utilities@{Utilities}!GetStandardDeviation@{GetStandardDeviation}}
+\index{GetStandardDeviation@{GetStandardDeviation}!Utilities@{Utilities}}
+\doxysubsubsection{GetStandardDeviation()}
+{\footnotesize\ttfamily double Utilities\+::\+Get\+Standard\+Deviation (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{a\+\_\+list,  }\item[{double}]{a\+\_\+average }\end{DoxyParamCaption})}
+
+
+
+Function to get the standard deviation of a list with doubles. 
+
+\doxyref{Utilities\+::\+Get\+Standard\+Deviation}{p.}{namespace_utilities_a175ab95f5c509ccc3d4b571e8963f22e} Function to get the standard deviation of a list with doubles. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+list} & vector$<$double$>$ List of doubles. \\
+\hline
+{\em a\+\_\+average} & double The mean of the list. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double The standard deviation of the list. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/04/20. 
+\end{DoxyDate}
+
+
+Definition at line 53 of file Utilities.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_utilities_a175ab95f5c509ccc3d4b571e8963f22e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{namespace_utilities_a0257a93580460c13c4af232704caa0dc}} 
+\index{Utilities@{Utilities}!RoundOff@{RoundOff}}
+\index{RoundOff@{RoundOff}!Utilities@{Utilities}}
+\doxysubsubsection{RoundOff()}
+{\footnotesize\ttfamily \textbf{ int} Utilities\+::\+Round\+Off (\begin{DoxyParamCaption}\item[{double}]{a\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Function to round off value to the lower integral value. 
+
+\doxyref{Utilities.\+cpp}{p.}{_utilities_8cpp} Implementation of \doxyref{Utilities.\+h}{p.}{_utilities_8h}.
+
+Created by Salil Maharjan on 5/04/20. Copyright © 2020 Salil Maharjan. All rights reserved. \doxyref{Utilities\+::\+Round\+Off}{p.}{namespace_utilities_a0257a93580460c13c4af232704caa0dc} Function to round off value to integer value. Uses floor. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+value} & double Value to round off. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Integral value of a\+\_\+value left rounded. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/04/20. 
+\end{DoxyDate}
+
+
+Definition at line 22 of file Utilities.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_utilities_a0257a93580460c13c4af232704caa0dc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{namespace_utilities_a0ab4e4bfac17a04ab38640746aba42fe}} 
+\index{Utilities@{Utilities}!trimBlanks@{trimBlanks}}
+\index{trimBlanks@{trimBlanks}!Utilities@{Utilities}}
+\doxysubsubsection{trimBlanks()}
+{\footnotesize\ttfamily void Utilities\+::trim\+Blanks (\begin{DoxyParamCaption}\item[{std\+::string \&}]{a\+\_\+str }\end{DoxyParamCaption})}
+
+
+
+Method to trim leading and trailing blanks while reading data. 
+
+\doxyref{Utilities\+::trim\+Blanks}{p.}{namespace_utilities_a0ab4e4bfac17a04ab38640746aba42fe} Method to trim leading and trailing whitespaces. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+str} & string Reference to string to trim white spaces. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/30/20. 
+\end{DoxyDate}
+
+
+Definition at line 73 of file Utilities.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_utilities_a0ab4e4bfac17a04ab38640746aba42fe_icgraph}
+\end{center}
+\end{figure}

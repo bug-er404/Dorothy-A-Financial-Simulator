@@ -1,0 +1,5 @@
+<map id="DateTime::GetDayOfWeek" name="DateTime::GetDayOfWeek">
+<area shape="rect" id="node1" title="Gets the Day of the week as integral value." alt="" coords="5,5,184,32"/>
+<area shape="rect" id="node2" href="$class_date_time.html#afcf11d770052d54bb91618db6a4e7223" title="Gets the Julian day from this date. Julian day vary from 0 to 365." alt="" coords="232,5,395,32"/>
+<area shape="rect" id="node3" href="$class_date_time.html#a3ca8a7d66ec814441db980816cf1ab4c" title="Determines if the year recorded here is a leap year." alt="" coords="443,5,593,32"/>
+</map>

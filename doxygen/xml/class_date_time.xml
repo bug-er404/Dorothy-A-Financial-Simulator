@@ -1,0 +1,1284 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_date_time" kind="class" language="C++" prot="public">
+    <compoundname>DateTime</compoundname>
+    <includes refid="_date_time_8h" local="no">DateTime.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_date_time_1a5f329538b5bd9019e62f11b392a61727" prot="public" static="no" strong="yes">
+        <type><ref refid="_c_make_cache_8txt_1afe71f11dacb15682cdc012f7208e6e09" kindref="member">char</ref></type>
+        <name>DAY_OF_WEEK</name>
+        <enumvalue id="class_date_time_1a5f329538b5bd9019e62f11b392a61727a95fa12cb2100ce7081b71f7c44bc12a5" prot="public">
+          <name>SUNDAY</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_date_time_1a5f329538b5bd9019e62f11b392a61727a98617021b249af0ace0f84ee92ccc7cd" prot="public">
+          <name>MONDAY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_date_time_1a5f329538b5bd9019e62f11b392a61727a5f5140afce13197a89e848004f292f14" prot="public">
+          <name>TUESDAY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_date_time_1a5f329538b5bd9019e62f11b392a61727aaaebdc947e9f7d4ea362e5dc4fe7f825" prot="public">
+          <name>WEDNESDAY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_date_time_1a5f329538b5bd9019e62f11b392a61727a7a61b324afb4dd8b2fb4a38afc34f755" prot="public">
+          <name>THURSDAY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_date_time_1a5f329538b5bd9019e62f11b392a61727a86fb6d343289267f3e9edb9b7403d936" prot="public">
+          <name>FRIDAY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_date_time_1a5f329538b5bd9019e62f11b392a61727afd5ae113ac00b67f69541bc8c7f21ef7" prot="public">
+          <name>SATURDAY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_date_time_1a5f329538b5bd9019e62f11b392a61727a9548d97c88b253418049c06cae3d61d1" prot="public">
+          <name>UNDEF_DOW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="58" column="5" bodyfile="DateTime.h" bodystart="59" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_date_time_1a13c417f101c5254d27117e5a1415d632" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>const int DateTime::BlankDate</definition>
+        <argsstring></argsstring>
+        <name>BlankDate</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="54" column="22" bodyfile="DateTime.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_date_time_1aa69f17bb3f4c14a1cbf186ef6dbc4948" prot="private" static="no" mutable="no">
+        <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>int DateTime::m_date</definition>
+        <argsstring></argsstring>
+        <name>m_date</name>
+        <briefdescription>
+<para>Date stored as ( year * 10000 + 100 * month + day ) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="264" column="9" bodyfile="DateTime.h" bodystart="264" bodyend="-1"/>
+        <referencedby refid="class_date_time_1adf643f3779756314d8ac2505f84d5703" compoundref="_date_time_8cpp" startline="31" endline="39">Set</referencedby>
+        <referencedby refid="class_date_time_1accfe0444e37f0194cba83e69f17c0ba8" compoundref="_date_time_8cpp" startline="99" endline="109">SetToday</referencedby>
+        <referencedby refid="class_date_time_1aca52e0e0e2a63e322fa0628c3d78aff9" compoundref="_date_time_8cpp" startline="117" endline="122">SetActualToday</referencedby>
+        <referencedby refid="class_date_time_1a75243ae5f1f368ba0d72a9882a934d25" compoundref="_date_time_8cpp" startline="132" endline="138">operator=</referencedby>
+        <referencedby refid="class_date_time_1a3ccfb87f7a2e9683b91964e32d907161" compoundref="_date_time_8h" startline="26" endline="29">DateTime</referencedby>
+        <referencedby refid="class_date_time_1a3fdecb31c8bb977b15c8296a69afa76e" compoundref="_date_time_8h" startline="74" endline="74">GetYear</referencedby>
+        <referencedby refid="class_date_time_1a5c592250b3cfea8314e39d6ceb55dda6" compoundref="_date_time_8h" startline="75" endline="75">GetMonth</referencedby>
+        <referencedby refid="class_date_time_1a3a2b40b647625dd64894e1edf49a9440" compoundref="_date_time_8h" startline="76" endline="76">GetDay</referencedby>
+        <referencedby refid="class_date_time_1a93795a4f6217325cb348f113f3dcf85a" compoundref="_date_time_8h" startline="79" endline="79">Get</referencedby>
+        <referencedby refid="class_date_time_1ac717768ad9a7a31af9be09c4296ac470" compoundref="_date_time_8h" startline="90" endline="90">GetASCIIDate</referencedby>
+        <referencedby refid="class_date_time_1ad967bd42942a643118cda8ff0e387759" compoundref="_date_time_8h" startline="106" endline="111">GetDayOfWeek</referencedby>
+        <referencedby refid="class_date_time_1a3ca8a7d66ec814441db980816cf1ab4c" compoundref="_date_time_8h" startline="139" endline="139">isLeapYear</referencedby>
+        <referencedby refid="class_date_time_1afcf11d770052d54bb91618db6a4e7223" compoundref="_date_time_8h" startline="142" endline="148">getJulianDay</referencedby>
+        <referencedby refid="class_date_time_1a64627ec59244ab71e4fab3b021fc1af8" compoundref="_date_time_8h" startline="163" endline="163">operator int</referencedby>
+        <referencedby refid="class_date_time_1af3cc0803ee4678e9394ba24579d58ac9" compoundref="_date_time_8h" startline="277" endline="282">dateOffset</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_date_time_1a57acb7917c5954948b8755807023444c" prot="private" static="yes" mutable="no">
+        <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>int DateTime::m_FakeTodayValue</definition>
+        <argsstring></argsstring>
+        <name>m_FakeTodayValue</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Fake date value of today. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="_date_time_8cpp" kindref="compound">DateTime.cpp</ref> Implementation of DateTime.hpp</para>
+<para>Created by Salil Maharjan on 3/22/20. Copyright © 2020 Salil Maharjan. All rights reserved. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="266" column="16" bodyfile="DateTime.h" bodystart="266" bodyend="-1"/>
+        <referencedby refid="class_date_time_1accfe0444e37f0194cba83e69f17c0ba8" compoundref="_date_time_8cpp" startline="99" endline="109">SetToday</referencedby>
+        <referencedby refid="class_date_time_1a1bb944d1963fc50c983c92ae39412d3d" compoundref="_date_time_8h" startline="125" endline="125">setFakeTodayValue</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_date_time_1ac94cf0d6e03e06701a0e206be156f01a" prot="private" static="yes" mutable="no">
+        <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>int DateTime::dayPreMonth</definition>
+        <argsstring>[13]</argsstring>
+        <name>dayPreMonth</name>
+        <initializer>= { 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365}</initializer>
+        <briefdescription>
+<para>The number of days since the beginning of the year to a given month. (non-leap year) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="268" column="16" bodyfile="DateTime.h" bodystart="268" bodyend="-1"/>
+        <referencedby refid="class_date_time_1afcf11d770052d54bb91618db6a4e7223" compoundref="_date_time_8h" startline="142" endline="148">getJulianDay</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_date_time_1a718762451fb99c14eb5820611cd08a09" prot="private" static="yes" mutable="no">
+        <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>int DateTime::daysInMonth</definition>
+        <argsstring>[13]</argsstring>
+        <name>daysInMonth</name>
+        <initializer>= { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 }</initializer>
+        <briefdescription>
+<para>The number of days in a month. (non-leap year) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="270" column="16" bodyfile="DateTime.h" bodystart="270" bodyend="-1"/>
+        <referencedby refid="class_date_time_1aa8a746c7fb47a7034adde3fb83c79dbe" compoundref="_date_time_8cpp" startline="152" endline="193">reverseOffset</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_date_time_1a3ccfb87f7a2e9683b91964e32d907161" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DateTime::DateTime</definition>
+        <argsstring>()</argsstring>
+        <name>DateTime</name>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="26" column="5" bodyfile="DateTime.h" bodystart="26" bodyend="29"/>
+        <references refid="class_date_time_1aa69f17bb3f4c14a1cbf186ef6dbc4948" compoundref="_date_time_8h" startline="264">m_date</references>
+        <referencedby refid="class_date_time_1abf91e4e2aa566964dc91b84985645f89" compoundref="_date_time_8h" startline="191" endline="195">operator!=</referencedby>
+        <referencedby refid="class_date_time_1a2241f0caf5a91c94a29c265bfd22baf3" compoundref="_date_time_8h" startline="198" endline="202">operator&lt;</referencedby>
+        <referencedby refid="class_date_time_1aa208d749051b44abb6e85acf024f0302" compoundref="_date_time_8h" startline="205" endline="209">operator&lt;=</referencedby>
+        <referencedby refid="class_date_time_1a3758612658764a9bf153ea8007dde4ad" compoundref="_date_time_8h" startline="184" endline="188">operator==</referencedby>
+        <referencedby refid="class_date_time_1a3ae99354564bfa6c35a34b10b1edd817" compoundref="_date_time_8h" startline="212" endline="216">operator&gt;</referencedby>
+        <referencedby refid="class_date_time_1a8293f2faa8e62864b80a42f2ff0ae3e6" compoundref="_date_time_8h" startline="219" endline="223">operator&gt;=</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a334c9a427c02a579ad22eb75664cd860" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DateTime::DateTime</definition>
+        <argsstring>(int a_year, int a_month, int a_day)</argsstring>
+        <name>DateTime</name>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+          <declname>a_year</declname>
+        </param>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+          <declname>a_month</declname>
+        </param>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+          <declname>a_day</declname>
+        </param>
+        <briefdescription>
+<para>General date format parameterized constructor (YYYY MM DD) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="32" column="5" bodyfile="DateTime.h" bodystart="32" bodyend="35"/>
+        <references refid="class_date_time_1adf643f3779756314d8ac2505f84d5703" compoundref="_date_time_8cpp" startline="31" endline="39">Set</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1af1ed415fc977c5aae3ae661330c68b45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DateTime::DateTime</definition>
+        <argsstring>(int a_date)</argsstring>
+        <name>DateTime</name>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+          <declname>a_date</declname>
+        </param>
+        <briefdescription>
+<para>Internal date format parameterized constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="38" column="5" bodyfile="DateTime.h" bodystart="38" bodyend="41"/>
+        <references refid="class_date_time_1adf643f3779756314d8ac2505f84d5703" compoundref="_date_time_8cpp" startline="31" endline="39">Set</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a406caea25caab1dd8be1bf02db52778d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DateTime::DateTime</definition>
+        <argsstring>(const DateTime &amp;a_date)</argsstring>
+        <name>DateTime</name>
+        <param>
+          <type>const <ref refid="class_date_time" kindref="compound">DateTime</ref> &amp;</type>
+          <declname>a_date</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="44" column="5" bodyfile="DateTime.h" bodystart="44" bodyend="47"/>
+        <references refid="class_date_time_1adf643f3779756314d8ac2505f84d5703" compoundref="_date_time_8cpp" startline="31" endline="39">Set</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a3fdecb31c8bb977b15c8296a69afa76e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>int DateTime::GetYear</definition>
+        <argsstring>() const</argsstring>
+        <name>GetYear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="74" column="9" bodyfile="DateTime.h" bodystart="74" bodyend="74"/>
+        <references refid="class_date_time_1aa69f17bb3f4c14a1cbf186ef6dbc4948" compoundref="_date_time_8h" startline="264">m_date</references>
+        <referencedby refid="class_date_time_1afb927ab9f6d028b3998153689bca57c3" compoundref="_date_time_8h" startline="82" endline="87">Get</referencedby>
+        <referencedby refid="class_simulator_1ae9b8b2ffbef1ba49bd8a9dc5fad5a1b2" compoundref="_simulator_8cpp" startline="770" endline="914">Simulator::recordMonthlyStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a5c592250b3cfea8314e39d6ceb55dda6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>int DateTime::GetMonth</definition>
+        <argsstring>() const</argsstring>
+        <name>GetMonth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="75" column="9" bodyfile="DateTime.h" bodystart="75" bodyend="75"/>
+        <references refid="class_date_time_1aa69f17bb3f4c14a1cbf186ef6dbc4948" compoundref="_date_time_8h" startline="264">m_date</references>
+        <referencedby refid="class_date_time_1afb927ab9f6d028b3998153689bca57c3" compoundref="_date_time_8h" startline="82" endline="87">Get</referencedby>
+        <referencedby refid="class_simulator_1ae9b8b2ffbef1ba49bd8a9dc5fad5a1b2" compoundref="_simulator_8cpp" startline="770" endline="914">Simulator::recordMonthlyStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a3a2b40b647625dd64894e1edf49a9440" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>int DateTime::GetDay</definition>
+        <argsstring>() const</argsstring>
+        <name>GetDay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="76" column="9" bodyfile="DateTime.h" bodystart="76" bodyend="76"/>
+        <references refid="class_date_time_1aa69f17bb3f4c14a1cbf186ef6dbc4948" compoundref="_date_time_8h" startline="264">m_date</references>
+        <referencedby refid="class_date_time_1afb927ab9f6d028b3998153689bca57c3" compoundref="_date_time_8h" startline="82" endline="87">Get</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a93795a4f6217325cb348f113f3dcf85a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>int DateTime::Get</definition>
+        <argsstring>() const</argsstring>
+        <name>Get</name>
+        <briefdescription>
+<para>Gets the date as one value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="79" column="9" bodyfile="DateTime.h" bodystart="79" bodyend="79"/>
+        <references refid="class_date_time_1aa69f17bb3f4c14a1cbf186ef6dbc4948" compoundref="_date_time_8h" startline="264">m_date</references>
+        <referencedby refid="class_simulator_1ae77749f93581b683330f30726f5aaffb" compoundref="_simulator_8cpp" startline="742" endline="760">Simulator::recordDailyStatistics</referencedby>
+        <referencedby refid="class_date_time_1a12b6862f65c87e7dc483cfd2bd867ea0" compoundref="_date_time_8h" startline="119" endline="119">Set</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1afb927ab9f6d028b3998153689bca57c3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DateTime::Get</definition>
+        <argsstring>(int &amp;a_year, int &amp;a_month, int &amp;a_day) const</argsstring>
+        <name>Get</name>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref> &amp;</type>
+          <declname>a_year</declname>
+        </param>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref> &amp;</type>
+          <declname>a_month</declname>
+        </param>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref> &amp;</type>
+          <declname>a_day</declname>
+        </param>
+        <briefdescription>
+<para>Gets the date as component values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="82" column="10" bodyfile="DateTime.h" bodystart="82" bodyend="87"/>
+        <references refid="class_date_time_1a3a2b40b647625dd64894e1edf49a9440" compoundref="_date_time_8h" startline="76" endline="76">GetDay</references>
+        <references refid="class_date_time_1a5c592250b3cfea8314e39d6ceb55dda6" compoundref="_date_time_8h" startline="75" endline="75">GetMonth</references>
+        <references refid="class_date_time_1a3fdecb31c8bb977b15c8296a69afa76e" compoundref="_date_time_8h" startline="74" endline="74">GetYear</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1ac717768ad9a7a31af9be09c4296ac470" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string DateTime::GetASCIIDate</definition>
+        <argsstring>()</argsstring>
+        <name>GetASCIIDate</name>
+        <briefdescription>
+<para>Get date as an ASCII string in format &quot;MM/DD/YYYY&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="90" column="17" bodyfile="DateTime.h" bodystart="90" bodyend="90"/>
+        <references refid="class_date_time_1aa69f17bb3f4c14a1cbf186ef6dbc4948" compoundref="_date_time_8h" startline="264">m_date</references>
+        <referencedby refid="class_simulator_1ae77749f93581b683330f30726f5aaffb" compoundref="_simulator_8cpp" startline="742" endline="760">Simulator::recordDailyStatistics</referencedby>
+        <referencedby refid="class_simulator_1a5a78edbf904b54bb6f66a5c3b8c87cd9" compoundref="_simulator_8cpp" startline="730" endline="734">Simulator::recordSignalInfo</referencedby>
+        <referencedby refid="class_ticker_data_1ab7018ea10b33e3e411da4b5d3c50db3b" compoundref="_ticker_data_8cpp" startline="47" endline="67">TickerData::SetTradingDateRange</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1ad967bd42942a643118cda8ff0e387759" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>int DateTime::GetDayOfWeek</definition>
+        <argsstring>() const</argsstring>
+        <name>GetDayOfWeek</name>
+        <briefdescription>
+<para>Gets the Day of the week as integral value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="106" column="9" bodyfile="DateTime.h" bodystart="106" bodyend="111"/>
+        <references refid="class_date_time_1afcf11d770052d54bb91618db6a4e7223" compoundref="_date_time_8h" startline="142" endline="148">getJulianDay</references>
+        <references refid="class_date_time_1aa69f17bb3f4c14a1cbf186ef6dbc4948" compoundref="_date_time_8h" startline="264">m_date</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1adf643f3779756314d8ac2505f84d5703" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DateTime::Set</definition>
+        <argsstring>(int a_year, int a_month, int a_day)</argsstring>
+        <name>Set</name>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+          <declname>a_year</declname>
+        </param>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+          <declname>a_month</declname>
+        </param>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+          <declname>a_day</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_date_time_1adf643f3779756314d8ac2505f84d5703" kindref="member">DateTime::Set</ref> Date set function for General date format parameterized constructor (YYYY MM DD) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_year</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int Year </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_month</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int Month </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_day</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int Date </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>3/22/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="117" column="10" bodyfile="DateTime.cpp" bodystart="31" bodyend="39"/>
+        <references refid="class_date_time_1ae489fe891bb77431da24459e5cca394b" compoundref="_date_time_8cpp" startline="68" endline="91">checkDateValueRanges</references>
+        <references refid="class_date_time_1aa69f17bb3f4c14a1cbf186ef6dbc4948" compoundref="_date_time_8h" startline="264">m_date</references>
+        <referencedby refid="class_date_time_1a334c9a427c02a579ad22eb75664cd860" compoundref="_date_time_8h" startline="32" endline="35">DateTime</referencedby>
+        <referencedby refid="class_date_time_1a38c7ae7996e0966e67e13d79866ba409" compoundref="_date_time_8h" startline="242" endline="247">operator++</referencedby>
+        <referencedby refid="class_date_time_1afc219149a3d959863c84e3a15530dc54" compoundref="_date_time_8h" startline="226" endline="231">operator--</referencedby>
+        <referencedby refid="class_date_time_1aa8a746c7fb47a7034adde3fb83c79dbe" compoundref="_date_time_8cpp" startline="152" endline="193">reverseOffset</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a67f156cc29043569f888f7a0e66ef0dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DateTime::Set</definition>
+        <argsstring>(int a_date)</argsstring>
+        <name>Set</name>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+          <declname>a_date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_date_time_1adf643f3779756314d8ac2505f84d5703" kindref="member">DateTime::Set</ref> Date set function for Internal date format parameterized constructor <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_date</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int Date passed in internal format YYYYMMDD </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>3/24/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="118" column="10" bodyfile="DateTime.cpp" bodystart="48" bodyend="55"/>
+        <references refid="class_date_time_1ae489fe891bb77431da24459e5cca394b" compoundref="_date_time_8cpp" startline="68" endline="91">checkDateValueRanges</references>
+        <references refid="class_date_time_1aa69f17bb3f4c14a1cbf186ef6dbc4948" compoundref="_date_time_8h" startline="264">m_date</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a12b6862f65c87e7dc483cfd2bd867ea0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DateTime::Set</definition>
+        <argsstring>(const DateTime &amp;a_date)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>const <ref refid="class_date_time" kindref="compound">DateTime</ref> &amp;</type>
+          <declname>a_date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="119" column="10" bodyfile="DateTime.h" bodystart="119" bodyend="119"/>
+        <references refid="class_date_time_1a93795a4f6217325cb348f113f3dcf85a" compoundref="_date_time_8h" startline="79" endline="79">Get</references>
+        <references refid="class_date_time_1aa69f17bb3f4c14a1cbf186ef6dbc4948" compoundref="_date_time_8h" startline="264">m_date</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1ae489fe891bb77431da24459e5cca394b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DateTime::checkDateValueRanges</definition>
+        <argsstring>(int a_year, int a_month, int a_day)</argsstring>
+        <name>checkDateValueRanges</name>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+          <declname>a_year</declname>
+        </param>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+          <declname>a_month</declname>
+        </param>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+          <declname>a_day</declname>
+        </param>
+        <briefdescription>
+<para>Function to assert date value ranges. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_date_time_1ae489fe891bb77431da24459e5cca394b" kindref="member">DateTime::checkDateValueRanges</ref> Function to assert date value ranges <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_year</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int Year </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_month</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int Month </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_day</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int Date </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool If passed values mark a valid date. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>3/24/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="122" column="10" bodyfile="DateTime.cpp" bodystart="68" bodyend="91"/>
+        <referencedby refid="class_date_time_1a75243ae5f1f368ba0d72a9882a934d25" compoundref="_date_time_8cpp" startline="132" endline="138">operator=</referencedby>
+        <referencedby refid="class_date_time_1adf643f3779756314d8ac2505f84d5703" compoundref="_date_time_8cpp" startline="31" endline="39">Set</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1accfe0444e37f0194cba83e69f17c0ba8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DateTime::SetToday</definition>
+        <argsstring>()</argsstring>
+        <name>SetToday</name>
+        <briefdescription>
+<para>Record today&apos;s local date in this object - uses faked today&apos;s date if set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_date_time_1accfe0444e37f0194cba83e69f17c0ba8" kindref="member">DateTime::SetToday</ref> Record today&apos;s local date in this object - uses faked today&apos;s date if set. <simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="128" column="10" bodyfile="DateTime.cpp" bodystart="99" bodyend="109"/>
+        <references refid="class_date_time_1aa69f17bb3f4c14a1cbf186ef6dbc4948" compoundref="_date_time_8h" startline="264">m_date</references>
+        <references refid="class_date_time_1a57acb7917c5954948b8755807023444c" compoundref="_date_time_8h" startline="266">m_FakeTodayValue</references>
+        <references refid="class_date_time_1aca52e0e0e2a63e322fa0628c3d78aff9" compoundref="_date_time_8cpp" startline="117" endline="122">SetActualToday</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1aca52e0e0e2a63e322fa0628c3d78aff9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DateTime::SetActualToday</definition>
+        <argsstring>()</argsstring>
+        <name>SetActualToday</name>
+        <briefdescription>
+<para>Record today&apos;s local date in this object. Does not use faked today&apos;s date. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_date_time_1accfe0444e37f0194cba83e69f17c0ba8" kindref="member">DateTime::SetToday</ref> Record today&apos;s local date in this object. Does not use faked today&apos;s date. <simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="131" column="10" bodyfile="DateTime.cpp" bodystart="117" bodyend="122"/>
+        <references refid="class_date_time_1aa69f17bb3f4c14a1cbf186ef6dbc4948" compoundref="_date_time_8h" startline="264">m_date</references>
+        <referencedby refid="class_date_time_1accfe0444e37f0194cba83e69f17c0ba8" compoundref="_date_time_8cpp" startline="99" endline="109">SetToday</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a3ca8a7d66ec814441db980816cf1ab4c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DateTime::isLeapYear</definition>
+        <argsstring>() const</argsstring>
+        <name>isLeapYear</name>
+        <briefdescription>
+<para>Determines if the year recorded here is a leap year. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="139" column="10" bodyfile="DateTime.h" bodystart="139" bodyend="139"/>
+        <references refid="class_date_time_1aa69f17bb3f4c14a1cbf186ef6dbc4948" compoundref="_date_time_8h" startline="264">m_date</references>
+        <referencedby refid="class_date_time_1afcf11d770052d54bb91618db6a4e7223" compoundref="_date_time_8h" startline="142" endline="148">getJulianDay</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1afcf11d770052d54bb91618db6a4e7223" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>int DateTime::getJulianDay</definition>
+        <argsstring>() const</argsstring>
+        <name>getJulianDay</name>
+        <briefdescription>
+<para>Gets the Julian day from this date. Julian day vary from 0 to 365. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="142" column="9" bodyfile="DateTime.h" bodystart="142" bodyend="148"/>
+        <references refid="class_date_time_1ac94cf0d6e03e06701a0e206be156f01a" compoundref="_date_time_8h" startline="268">dayPreMonth</references>
+        <references refid="class_date_time_1a3ca8a7d66ec814441db980816cf1ab4c" compoundref="_date_time_8h" startline="139" endline="139">isLeapYear</references>
+        <references refid="class_date_time_1aa69f17bb3f4c14a1cbf186ef6dbc4948" compoundref="_date_time_8h" startline="264">m_date</references>
+        <referencedby refid="class_date_time_1af3cc0803ee4678e9394ba24579d58ac9" compoundref="_date_time_8h" startline="277" endline="282">dateOffset</referencedby>
+        <referencedby refid="class_date_time_1ad967bd42942a643118cda8ff0e387759" compoundref="_date_time_8h" startline="106" endline="111">GetDayOfWeek</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a9dd76cb1e58691859be3dec826b57445" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>int DateTime::CalendarDiffDates</definition>
+        <argsstring>(const DateTime &amp;a_nearDate, const DateTime &amp;a_farDate)</argsstring>
+        <name>CalendarDiffDates</name>
+        <param>
+          <type>const <ref refid="class_date_time" kindref="compound">DateTime</ref> &amp;</type>
+          <declname>a_nearDate</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_date_time" kindref="compound">DateTime</ref> &amp;</type>
+          <declname>a_farDate</declname>
+        </param>
+        <briefdescription>
+<para>Computes the calendar difference between two date. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="152" column="9" bodyfile="DateTime.h" bodystart="152" bodyend="156"/>
+        <references refid="class_date_time_1af3cc0803ee4678e9394ba24579d58ac9" compoundref="_date_time_8h" startline="277" endline="282">dateOffset</references>
+        <referencedby refid="class_date_time_1a7914e7a4ef2ad2a5729b90c2c07bea3c" compoundref="_date_time_8h" startline="174" endline="174">operator-</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a64627ec59244ab71e4fab3b021fc1af8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DateTime::operator int</definition>
+        <argsstring>() const</argsstring>
+        <name>operator int</name>
+        <briefdescription>
+<para>Conversion operators. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="163" column="5" bodyfile="DateTime.h" bodystart="163" bodyend="163"/>
+        <references refid="class_date_time_1aa69f17bb3f4c14a1cbf186ef6dbc4948" compoundref="_date_time_8h" startline="264">m_date</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a64da6b1771656edb1e0d44eb3e88deb2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_date_time" kindref="compound">DateTime</ref> &amp;</type>
+        <definition>DateTime&amp; DateTime::operator=</definition>
+        <argsstring>(const DateTime &amp;a_date)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="class_date_time" kindref="compound">DateTime</ref> &amp;</type>
+          <declname>a_date</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operators. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="166" column="14" bodyfile="DateTime.h" bodystart="166" bodyend="170"/>
+        <references refid="class_date_time_1aa69f17bb3f4c14a1cbf186ef6dbc4948" compoundref="_date_time_8h" startline="264">m_date</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a75243ae5f1f368ba0d72a9882a934d25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_date_time" kindref="compound">DateTime</ref> &amp;</type>
+        <definition>DateTime &amp; DateTime::operator=</definition>
+        <argsstring>(int a_date)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+          <declname>a_date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_date_time_1a64da6b1771656edb1e0d44eb3e88deb2" kindref="member">DateTime::operator =</ref> Assignment operator overload. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_date</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_date_time" kindref="compound">DateTime</ref> <ref refid="class_date_time" kindref="compound">DateTime</ref> object to assign. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="class_date_time" kindref="compound">DateTime</ref>&amp; New <ref refid="class_date_time" kindref="compound">DateTime</ref> that is assigned. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="171" column="14" bodyfile="DateTime.cpp" bodystart="132" bodyend="138"/>
+        <references refid="class_date_time_1ae489fe891bb77431da24459e5cca394b" compoundref="_date_time_8cpp" startline="68" endline="91">checkDateValueRanges</references>
+        <references refid="class_date_time_1aa69f17bb3f4c14a1cbf186ef6dbc4948" compoundref="_date_time_8h" startline="264">m_date</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a7914e7a4ef2ad2a5729b90c2c07bea3c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>int DateTime::operator-</definition>
+        <argsstring>(const DateTime &amp;a_date)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="class_date_time" kindref="compound">DateTime</ref> &amp;</type>
+          <declname>a_date</declname>
+        </param>
+        <briefdescription>
+<para>Finds the difference between two dates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="174" column="9" bodyfile="DateTime.h" bodystart="174" bodyend="174"/>
+        <references refid="class_date_time_1a9dd76cb1e58691859be3dec826b57445" compoundref="_date_time_8h" startline="152" endline="156">CalendarDiffDates</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a2e5295058ae6b112e9bf5b0226456005" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_date_time" kindref="compound">DateTime</ref></type>
+        <definition>DateTime DateTime::operator-</definition>
+        <argsstring>(int a_days)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+          <declname>a_days</declname>
+        </param>
+        <briefdescription>
+<para>Subtracts a specified number of days to the date. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="177" column="14" bodyfile="DateTime.h" bodystart="177" bodyend="177"/>
+        <references refid="class_date_time_1af3cc0803ee4678e9394ba24579d58ac9" compoundref="_date_time_8h" startline="277" endline="282">dateOffset</references>
+        <references refid="class_date_time_1aa8a746c7fb47a7034adde3fb83c79dbe" compoundref="_date_time_8cpp" startline="152" endline="193">reverseOffset</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a698ebe694145c3be698ff0a0588b15da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_date_time" kindref="compound">DateTime</ref></type>
+        <definition>DateTime DateTime::operator+</definition>
+        <argsstring>(int a_days)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+          <declname>a_days</declname>
+        </param>
+        <briefdescription>
+<para>Adds a specified number of days to the date. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="180" column="14" bodyfile="DateTime.h" bodystart="180" bodyend="180"/>
+        <references refid="class_date_time_1af3cc0803ee4678e9394ba24579d58ac9" compoundref="_date_time_8h" startline="277" endline="282">dateOffset</references>
+        <references refid="class_date_time_1aa8a746c7fb47a7034adde3fb83c79dbe" compoundref="_date_time_8cpp" startline="152" endline="193">reverseOffset</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1ae2f878dfd2243aee2ca2000f58f8fe9a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DateTime::operator==</definition>
+        <argsstring>(const DateTime &amp;a_date)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="class_date_time" kindref="compound">DateTime</ref> &amp;</type>
+          <declname>a_date</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator to compare two dates: </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="183" column="10" bodyfile="DateTime.h" bodystart="183" bodyend="183"/>
+        <references refid="class_date_time_1af3cc0803ee4678e9394ba24579d58ac9" compoundref="_date_time_8h" startline="277" endline="282">dateOffset</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a3758612658764a9bf153ea8007dde4ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DateTime::operator==</definition>
+        <argsstring>(int a_date)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+          <declname>a_date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="184" column="10" bodyfile="DateTime.h" bodystart="184" bodyend="188"/>
+        <references refid="class_date_time_1af3cc0803ee4678e9394ba24579d58ac9" compoundref="_date_time_8h" startline="277" endline="282">dateOffset</references>
+        <references refid="class_date_time_1a3ccfb87f7a2e9683b91964e32d907161" compoundref="_date_time_8h" startline="26" endline="29">DateTime</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a3e816351592ec442e04774d108a86612" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DateTime::operator!=</definition>
+        <argsstring>(const DateTime &amp;a_date)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="class_date_time" kindref="compound">DateTime</ref> &amp;</type>
+          <declname>a_date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="190" column="10" bodyfile="DateTime.h" bodystart="190" bodyend="190"/>
+        <references refid="class_date_time_1af3cc0803ee4678e9394ba24579d58ac9" compoundref="_date_time_8h" startline="277" endline="282">dateOffset</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1abf91e4e2aa566964dc91b84985645f89" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DateTime::operator!=</definition>
+        <argsstring>(int a_date)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+          <declname>a_date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="191" column="10" bodyfile="DateTime.h" bodystart="191" bodyend="195"/>
+        <references refid="class_date_time_1af3cc0803ee4678e9394ba24579d58ac9" compoundref="_date_time_8h" startline="277" endline="282">dateOffset</references>
+        <references refid="class_date_time_1a3ccfb87f7a2e9683b91964e32d907161" compoundref="_date_time_8h" startline="26" endline="29">DateTime</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a8af0104c406f0c3a13f5e3299af6c203" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DateTime::operator&lt;</definition>
+        <argsstring>(const DateTime &amp;a_date)</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="class_date_time" kindref="compound">DateTime</ref> &amp;</type>
+          <declname>a_date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="197" column="5" bodyfile="DateTime.h" bodystart="197" bodyend="197"/>
+        <references refid="class_date_time_1af3cc0803ee4678e9394ba24579d58ac9" compoundref="_date_time_8h" startline="277" endline="282">dateOffset</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a2241f0caf5a91c94a29c265bfd22baf3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DateTime::operator&lt;</definition>
+        <argsstring>(int a_date)</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+          <declname>a_date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="198" column="5" bodyfile="DateTime.h" bodystart="198" bodyend="202"/>
+        <references refid="class_date_time_1af3cc0803ee4678e9394ba24579d58ac9" compoundref="_date_time_8h" startline="277" endline="282">dateOffset</references>
+        <references refid="class_date_time_1a3ccfb87f7a2e9683b91964e32d907161" compoundref="_date_time_8h" startline="26" endline="29">DateTime</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a6b9df88cc66e7e7547931dccf1e1ea51" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DateTime::operator&lt;=</definition>
+        <argsstring>(const DateTime &amp;a_date)</argsstring>
+        <name>operator&lt;=</name>
+        <param>
+          <type>const <ref refid="class_date_time" kindref="compound">DateTime</ref> &amp;</type>
+          <declname>a_date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="204" column="5" bodyfile="DateTime.h" bodystart="204" bodyend="204"/>
+        <references refid="class_date_time_1af3cc0803ee4678e9394ba24579d58ac9" compoundref="_date_time_8h" startline="277" endline="282">dateOffset</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1aa208d749051b44abb6e85acf024f0302" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DateTime::operator&lt;=</definition>
+        <argsstring>(int a_date)</argsstring>
+        <name>operator&lt;=</name>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+          <declname>a_date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="205" column="5" bodyfile="DateTime.h" bodystart="205" bodyend="209"/>
+        <references refid="class_date_time_1af3cc0803ee4678e9394ba24579d58ac9" compoundref="_date_time_8h" startline="277" endline="282">dateOffset</references>
+        <references refid="class_date_time_1a3ccfb87f7a2e9683b91964e32d907161" compoundref="_date_time_8h" startline="26" endline="29">DateTime</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a2180c1804eecdf469107b7629cabba3d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DateTime::operator&gt;</definition>
+        <argsstring>(const DateTime &amp;a_date)</argsstring>
+        <name>operator&gt;</name>
+        <param>
+          <type>const <ref refid="class_date_time" kindref="compound">DateTime</ref> &amp;</type>
+          <declname>a_date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="211" column="10" bodyfile="DateTime.h" bodystart="211" bodyend="211"/>
+        <references refid="class_date_time_1af3cc0803ee4678e9394ba24579d58ac9" compoundref="_date_time_8h" startline="277" endline="282">dateOffset</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a3ae99354564bfa6c35a34b10b1edd817" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DateTime::operator&gt;</definition>
+        <argsstring>(int a_date)</argsstring>
+        <name>operator&gt;</name>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+          <declname>a_date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="212" column="10" bodyfile="DateTime.h" bodystart="212" bodyend="216"/>
+        <references refid="class_date_time_1af3cc0803ee4678e9394ba24579d58ac9" compoundref="_date_time_8h" startline="277" endline="282">dateOffset</references>
+        <references refid="class_date_time_1a3ccfb87f7a2e9683b91964e32d907161" compoundref="_date_time_8h" startline="26" endline="29">DateTime</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a39d825cab864948325623eecf09ef722" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DateTime::operator&gt;=</definition>
+        <argsstring>(const DateTime &amp;a_date)</argsstring>
+        <name>operator&gt;=</name>
+        <param>
+          <type>const <ref refid="class_date_time" kindref="compound">DateTime</ref> &amp;</type>
+          <declname>a_date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="218" column="10" bodyfile="DateTime.h" bodystart="218" bodyend="218"/>
+        <references refid="class_date_time_1af3cc0803ee4678e9394ba24579d58ac9" compoundref="_date_time_8h" startline="277" endline="282">dateOffset</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a8293f2faa8e62864b80a42f2ff0ae3e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DateTime::operator&gt;=</definition>
+        <argsstring>(int a_date)</argsstring>
+        <name>operator&gt;=</name>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+          <declname>a_date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="219" column="10" bodyfile="DateTime.h" bodystart="219" bodyend="223"/>
+        <references refid="class_date_time_1af3cc0803ee4678e9394ba24579d58ac9" compoundref="_date_time_8h" startline="277" endline="282">dateOffset</references>
+        <references refid="class_date_time_1a3ccfb87f7a2e9683b91964e32d907161" compoundref="_date_time_8h" startline="26" endline="29">DateTime</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1afc219149a3d959863c84e3a15530dc54" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_date_time" kindref="compound">DateTime</ref> &amp;</type>
+        <definition>DateTime&amp; DateTime::operator--</definition>
+        <argsstring>()</argsstring>
+        <name>operator--</name>
+        <briefdescription>
+<para>Unary minus operators. (PREFIX) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="226" column="14" bodyfile="DateTime.h" bodystart="226" bodyend="231"/>
+        <references refid="class_date_time_1af3cc0803ee4678e9394ba24579d58ac9" compoundref="_date_time_8h" startline="277" endline="282">dateOffset</references>
+        <references refid="class_date_time_1aa8a746c7fb47a7034adde3fb83c79dbe" compoundref="_date_time_8cpp" startline="152" endline="193">reverseOffset</references>
+        <references refid="class_date_time_1adf643f3779756314d8ac2505f84d5703" compoundref="_date_time_8cpp" startline="31" endline="39">Set</references>
+        <referencedby refid="class_date_time_1aca232974e8aa4a1608c50f5714a9b961" compoundref="_date_time_8h" startline="234" endline="239">operator--</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1aca232974e8aa4a1608c50f5714a9b961" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_date_time" kindref="compound">DateTime</ref></type>
+        <definition>DateTime DateTime::operator--</definition>
+        <argsstring>(int)</argsstring>
+        <name>operator--</name>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        </param>
+        <briefdescription>
+<para>Unary minus operators. (POSTFIX) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="234" column="14" bodyfile="DateTime.h" bodystart="234" bodyend="239"/>
+        <references refid="_c_make_cache_8txt_1a1aabac6d068eef6a7bad3fdf50a05cc8" compoundref="_c_make_cache_8txt" startline="299">d</references>
+        <references refid="class_date_time_1afc219149a3d959863c84e3a15530dc54" compoundref="_date_time_8h" startline="226" endline="231">operator--</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a38c7ae7996e0966e67e13d79866ba409" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_date_time" kindref="compound">DateTime</ref> &amp;</type>
+        <definition>DateTime&amp; DateTime::operator++</definition>
+        <argsstring>()</argsstring>
+        <name>operator++</name>
+        <briefdescription>
+<para>Unary plus operators. (PREFIX) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="242" column="14" bodyfile="DateTime.h" bodystart="242" bodyend="247"/>
+        <references refid="class_date_time_1af3cc0803ee4678e9394ba24579d58ac9" compoundref="_date_time_8h" startline="277" endline="282">dateOffset</references>
+        <references refid="class_date_time_1aa8a746c7fb47a7034adde3fb83c79dbe" compoundref="_date_time_8cpp" startline="152" endline="193">reverseOffset</references>
+        <references refid="class_date_time_1adf643f3779756314d8ac2505f84d5703" compoundref="_date_time_8cpp" startline="31" endline="39">Set</references>
+        <referencedby refid="class_date_time_1a0fe9a32549329c66d6cf58d14ab705df" compoundref="_date_time_8h" startline="250" endline="255">operator++</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a0fe9a32549329c66d6cf58d14ab705df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_date_time" kindref="compound">DateTime</ref></type>
+        <definition>DateTime DateTime::operator++</definition>
+        <argsstring>(int)</argsstring>
+        <name>operator++</name>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        </param>
+        <briefdescription>
+<para>Unary plus operators. (POSTFIX) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="250" column="14" bodyfile="DateTime.h" bodystart="250" bodyend="255"/>
+        <references refid="_c_make_cache_8txt_1a1aabac6d068eef6a7bad3fdf50a05cc8" compoundref="_c_make_cache_8txt" startline="299">d</references>
+        <references refid="class_date_time_1a38c7ae7996e0966e67e13d79866ba409" compoundref="_date_time_8h" startline="242" endline="247">operator++</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_date_time_1aaa1314c275a2c1f40bcf82f572b08093" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string DateTime::GetStringDOW</definition>
+        <argsstring>(DAY_OF_WEEK a_dow)</argsstring>
+        <name>GetStringDOW</name>
+        <param>
+          <type><ref refid="class_date_time_1a5f329538b5bd9019e62f11b392a61727" kindref="member">DAY_OF_WEEK</ref></type>
+          <declname>a_dow</declname>
+        </param>
+        <briefdescription>
+<para>Get day of the week as a string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="93" column="24" bodyfile="DateTime.h" bodystart="93" bodyend="102"/>
+        <references refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" compoundref="_c_make_cache_8txt" startline="299">int</references>
+        <references refid="class_date_time_1a5f329538b5bd9019e62f11b392a61727a9548d97c88b253418049c06cae3d61d1">UNDEF_DOW</references>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1a1bb944d1963fc50c983c92ae39412d3d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void DateTime::setFakeTodayValue</definition>
+        <argsstring>(int a_val)</argsstring>
+        <name>setFakeTodayValue</name>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+          <declname>a_val</declname>
+        </param>
+        <briefdescription>
+<para>Set the fake today value. This will be used instead of the real today. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="125" column="17" bodyfile="DateTime.h" bodystart="125" bodyend="125"/>
+        <references refid="class_date_time_1a57acb7917c5954948b8755807023444c" compoundref="_date_time_8h" startline="266">m_FakeTodayValue</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_date_time_1af3cc0803ee4678e9394ba24579d58ac9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>int DateTime::dateOffset</definition>
+        <argsstring>(const DateTime &amp;a_date)</argsstring>
+        <name>dateOffset</name>
+        <param>
+          <type>const <ref refid="class_date_time" kindref="compound">DateTime</ref> &amp;</type>
+          <declname>a_date</declname>
+        </param>
+        <briefdescription>
+<para>Get the offset from the year 0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DateTime.h" line="277" column="9" bodyfile="DateTime.h" bodystart="277" bodyend="282"/>
+        <references refid="class_date_time_1afcf11d770052d54bb91618db6a4e7223" compoundref="_date_time_8h" startline="142" endline="148">getJulianDay</references>
+        <references refid="class_date_time_1aa69f17bb3f4c14a1cbf186ef6dbc4948" compoundref="_date_time_8h" startline="264">m_date</references>
+        <referencedby refid="class_date_time_1a9dd76cb1e58691859be3dec826b57445" compoundref="_date_time_8h" startline="152" endline="156">CalendarDiffDates</referencedby>
+        <referencedby refid="class_date_time_1a3e816351592ec442e04774d108a86612" compoundref="_date_time_8h" startline="190" endline="190">operator!=</referencedby>
+        <referencedby refid="class_date_time_1a698ebe694145c3be698ff0a0588b15da" compoundref="_date_time_8h" startline="180" endline="180">operator+</referencedby>
+        <referencedby refid="class_date_time_1a38c7ae7996e0966e67e13d79866ba409" compoundref="_date_time_8h" startline="242" endline="247">operator++</referencedby>
+        <referencedby refid="class_date_time_1a2e5295058ae6b112e9bf5b0226456005" compoundref="_date_time_8h" startline="177" endline="177">operator-</referencedby>
+        <referencedby refid="class_date_time_1afc219149a3d959863c84e3a15530dc54" compoundref="_date_time_8h" startline="226" endline="231">operator--</referencedby>
+        <referencedby refid="class_date_time_1a8af0104c406f0c3a13f5e3299af6c203" compoundref="_date_time_8h" startline="197" endline="197">operator&lt;</referencedby>
+        <referencedby refid="class_date_time_1a6b9df88cc66e7e7547931dccf1e1ea51" compoundref="_date_time_8h" startline="204" endline="204">operator&lt;=</referencedby>
+        <referencedby refid="class_date_time_1ae2f878dfd2243aee2ca2000f58f8fe9a" compoundref="_date_time_8h" startline="183" endline="183">operator==</referencedby>
+        <referencedby refid="class_date_time_1a2180c1804eecdf469107b7629cabba3d" compoundref="_date_time_8h" startline="211" endline="211">operator&gt;</referencedby>
+        <referencedby refid="class_date_time_1a39d825cab864948325623eecf09ef722" compoundref="_date_time_8h" startline="218" endline="218">operator&gt;=</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_date_time_1aa8a746c7fb47a7034adde3fb83c79dbe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_date_time" kindref="compound">DateTime</ref></type>
+        <definition>DateTime DateTime::reverseOffset</definition>
+        <argsstring>(int a_days)</argsstring>
+        <name>reverseOffset</name>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+          <declname>a_days</declname>
+        </param>
+        <briefdescription>
+<para>Reverse date offset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_date_time_1aa8a746c7fb47a7034adde3fb83c79dbe" kindref="member">DateTime::reverseOffset</ref> Reverse date offset <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_days</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int Number of days to reverse offset. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="class_date_time" kindref="compound">DateTime</ref> The date after reversing a_days offset. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/12/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Change the return value!</para>
+        </inbodydescription>
+        <location file="DateTime.h" line="284" column="14" bodyfile="DateTime.cpp" bodystart="152" bodyend="193"/>
+        <references refid="class_date_time_1a718762451fb99c14eb5820611cd08a09" compoundref="_date_time_8h" startline="270">daysInMonth</references>
+        <references refid="class_date_time_1adf643f3779756314d8ac2505f84d5703" compoundref="_date_time_8cpp" startline="31" endline="39">Set</references>
+        <referencedby refid="class_date_time_1a698ebe694145c3be698ff0a0588b15da" compoundref="_date_time_8h" startline="180" endline="180">operator+</referencedby>
+        <referencedby refid="class_date_time_1a38c7ae7996e0966e67e13d79866ba409" compoundref="_date_time_8h" startline="242" endline="247">operator++</referencedby>
+        <referencedby refid="class_date_time_1a2e5295058ae6b112e9bf5b0226456005" compoundref="_date_time_8h" startline="177" endline="177">operator-</referencedby>
+        <referencedby refid="class_date_time_1afc219149a3d959863c84e3a15530dc54" compoundref="_date_time_8h" startline="226" endline="231">operator--</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="_date_time_8h" kindref="compound">DateTime.h</ref> Interface for the <ref refid="class_date_time" kindref="compound">DateTime</ref> class. General date time class. Dates represented internally as: ( year * 10000 + 100 * month + day )</para>
+<para>Created by Salil Maharjan on 3/22/20. Copyright © 2020 Salil Maharjan. All rights reserved. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>DateTime</label>
+        <link refid="class_date_time"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-m_date</edgelabel>
+          <edgelabel>-dayPreMonth</edgelabel>
+          <edgelabel>-m_FakeTodayValue</edgelabel>
+          <edgelabel>-daysInMonth</edgelabel>
+          <edgelabel>+BlankDate</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>int</label>
+      </node>
+    </collaborationgraph>
+    <location file="DateTime.h" line="17" column="1" bodyfile="DateTime.h" bodystart="18" bodyend="285"/>
+    <listofallmembers>
+      <member refid="class_date_time_1a13c417f101c5254d27117e5a1415d632" prot="public" virt="non-virtual"><scope>DateTime</scope><name>BlankDate</name></member>
+      <member refid="class_date_time_1a9dd76cb1e58691859be3dec826b57445" prot="public" virt="non-virtual"><scope>DateTime</scope><name>CalendarDiffDates</name></member>
+      <member refid="class_date_time_1ae489fe891bb77431da24459e5cca394b" prot="public" virt="non-virtual"><scope>DateTime</scope><name>checkDateValueRanges</name></member>
+      <member refid="class_date_time_1af3cc0803ee4678e9394ba24579d58ac9" prot="private" virt="non-virtual"><scope>DateTime</scope><name>dateOffset</name></member>
+      <member refid="class_date_time_1a3ccfb87f7a2e9683b91964e32d907161" prot="public" virt="non-virtual"><scope>DateTime</scope><name>DateTime</name></member>
+      <member refid="class_date_time_1a334c9a427c02a579ad22eb75664cd860" prot="public" virt="non-virtual"><scope>DateTime</scope><name>DateTime</name></member>
+      <member refid="class_date_time_1af1ed415fc977c5aae3ae661330c68b45" prot="public" virt="non-virtual"><scope>DateTime</scope><name>DateTime</name></member>
+      <member refid="class_date_time_1a406caea25caab1dd8be1bf02db52778d" prot="public" virt="non-virtual"><scope>DateTime</scope><name>DateTime</name></member>
+      <member refid="class_date_time_1a5f329538b5bd9019e62f11b392a61727" prot="public" virt="non-virtual"><scope>DateTime</scope><name>DAY_OF_WEEK</name></member>
+      <member refid="class_date_time_1ac94cf0d6e03e06701a0e206be156f01a" prot="private" virt="non-virtual"><scope>DateTime</scope><name>dayPreMonth</name></member>
+      <member refid="class_date_time_1a718762451fb99c14eb5820611cd08a09" prot="private" virt="non-virtual"><scope>DateTime</scope><name>daysInMonth</name></member>
+      <member refid="class_date_time_1a93795a4f6217325cb348f113f3dcf85a" prot="public" virt="non-virtual"><scope>DateTime</scope><name>Get</name></member>
+      <member refid="class_date_time_1afb927ab9f6d028b3998153689bca57c3" prot="public" virt="non-virtual"><scope>DateTime</scope><name>Get</name></member>
+      <member refid="class_date_time_1ac717768ad9a7a31af9be09c4296ac470" prot="public" virt="non-virtual"><scope>DateTime</scope><name>GetASCIIDate</name></member>
+      <member refid="class_date_time_1a3a2b40b647625dd64894e1edf49a9440" prot="public" virt="non-virtual"><scope>DateTime</scope><name>GetDay</name></member>
+      <member refid="class_date_time_1ad967bd42942a643118cda8ff0e387759" prot="public" virt="non-virtual"><scope>DateTime</scope><name>GetDayOfWeek</name></member>
+      <member refid="class_date_time_1afcf11d770052d54bb91618db6a4e7223" prot="public" virt="non-virtual"><scope>DateTime</scope><name>getJulianDay</name></member>
+      <member refid="class_date_time_1a5c592250b3cfea8314e39d6ceb55dda6" prot="public" virt="non-virtual"><scope>DateTime</scope><name>GetMonth</name></member>
+      <member refid="class_date_time_1aaa1314c275a2c1f40bcf82f572b08093" prot="public" virt="non-virtual"><scope>DateTime</scope><name>GetStringDOW</name></member>
+      <member refid="class_date_time_1a3fdecb31c8bb977b15c8296a69afa76e" prot="public" virt="non-virtual"><scope>DateTime</scope><name>GetYear</name></member>
+      <member refid="class_date_time_1a3ca8a7d66ec814441db980816cf1ab4c" prot="public" virt="non-virtual"><scope>DateTime</scope><name>isLeapYear</name></member>
+      <member refid="class_date_time_1aa69f17bb3f4c14a1cbf186ef6dbc4948" prot="private" virt="non-virtual"><scope>DateTime</scope><name>m_date</name></member>
+      <member refid="class_date_time_1a57acb7917c5954948b8755807023444c" prot="private" virt="non-virtual"><scope>DateTime</scope><name>m_FakeTodayValue</name></member>
+      <member refid="class_date_time_1a64627ec59244ab71e4fab3b021fc1af8" prot="public" virt="non-virtual"><scope>DateTime</scope><name>operator int</name></member>
+      <member refid="class_date_time_1a3e816351592ec442e04774d108a86612" prot="public" virt="non-virtual"><scope>DateTime</scope><name>operator!=</name></member>
+      <member refid="class_date_time_1abf91e4e2aa566964dc91b84985645f89" prot="public" virt="non-virtual"><scope>DateTime</scope><name>operator!=</name></member>
+      <member refid="class_date_time_1a698ebe694145c3be698ff0a0588b15da" prot="public" virt="non-virtual"><scope>DateTime</scope><name>operator+</name></member>
+      <member refid="class_date_time_1a38c7ae7996e0966e67e13d79866ba409" prot="public" virt="non-virtual"><scope>DateTime</scope><name>operator++</name></member>
+      <member refid="class_date_time_1a0fe9a32549329c66d6cf58d14ab705df" prot="public" virt="non-virtual"><scope>DateTime</scope><name>operator++</name></member>
+      <member refid="class_date_time_1a7914e7a4ef2ad2a5729b90c2c07bea3c" prot="public" virt="non-virtual"><scope>DateTime</scope><name>operator-</name></member>
+      <member refid="class_date_time_1a2e5295058ae6b112e9bf5b0226456005" prot="public" virt="non-virtual"><scope>DateTime</scope><name>operator-</name></member>
+      <member refid="class_date_time_1afc219149a3d959863c84e3a15530dc54" prot="public" virt="non-virtual"><scope>DateTime</scope><name>operator--</name></member>
+      <member refid="class_date_time_1aca232974e8aa4a1608c50f5714a9b961" prot="public" virt="non-virtual"><scope>DateTime</scope><name>operator--</name></member>
+      <member refid="class_date_time_1a8af0104c406f0c3a13f5e3299af6c203" prot="public" virt="non-virtual"><scope>DateTime</scope><name>operator&lt;</name></member>
+      <member refid="class_date_time_1a2241f0caf5a91c94a29c265bfd22baf3" prot="public" virt="non-virtual"><scope>DateTime</scope><name>operator&lt;</name></member>
+      <member refid="class_date_time_1a6b9df88cc66e7e7547931dccf1e1ea51" prot="public" virt="non-virtual"><scope>DateTime</scope><name>operator&lt;=</name></member>
+      <member refid="class_date_time_1aa208d749051b44abb6e85acf024f0302" prot="public" virt="non-virtual"><scope>DateTime</scope><name>operator&lt;=</name></member>
+      <member refid="class_date_time_1a64da6b1771656edb1e0d44eb3e88deb2" prot="public" virt="non-virtual"><scope>DateTime</scope><name>operator=</name></member>
+      <member refid="class_date_time_1a75243ae5f1f368ba0d72a9882a934d25" prot="public" virt="non-virtual"><scope>DateTime</scope><name>operator=</name></member>
+      <member refid="class_date_time_1ae2f878dfd2243aee2ca2000f58f8fe9a" prot="public" virt="non-virtual"><scope>DateTime</scope><name>operator==</name></member>
+      <member refid="class_date_time_1a3758612658764a9bf153ea8007dde4ad" prot="public" virt="non-virtual"><scope>DateTime</scope><name>operator==</name></member>
+      <member refid="class_date_time_1a2180c1804eecdf469107b7629cabba3d" prot="public" virt="non-virtual"><scope>DateTime</scope><name>operator&gt;</name></member>
+      <member refid="class_date_time_1a3ae99354564bfa6c35a34b10b1edd817" prot="public" virt="non-virtual"><scope>DateTime</scope><name>operator&gt;</name></member>
+      <member refid="class_date_time_1a39d825cab864948325623eecf09ef722" prot="public" virt="non-virtual"><scope>DateTime</scope><name>operator&gt;=</name></member>
+      <member refid="class_date_time_1a8293f2faa8e62864b80a42f2ff0ae3e6" prot="public" virt="non-virtual"><scope>DateTime</scope><name>operator&gt;=</name></member>
+      <member refid="class_date_time_1aa8a746c7fb47a7034adde3fb83c79dbe" prot="private" virt="non-virtual"><scope>DateTime</scope><name>reverseOffset</name></member>
+      <member refid="class_date_time_1adf643f3779756314d8ac2505f84d5703" prot="public" virt="non-virtual"><scope>DateTime</scope><name>Set</name></member>
+      <member refid="class_date_time_1a67f156cc29043569f888f7a0e66ef0dc" prot="public" virt="non-virtual"><scope>DateTime</scope><name>Set</name></member>
+      <member refid="class_date_time_1a12b6862f65c87e7dc483cfd2bd867ea0" prot="public" virt="non-virtual"><scope>DateTime</scope><name>Set</name></member>
+      <member refid="class_date_time_1aca52e0e0e2a63e322fa0628c3d78aff9" prot="public" virt="non-virtual"><scope>DateTime</scope><name>SetActualToday</name></member>
+      <member refid="class_date_time_1a1bb944d1963fc50c983c92ae39412d3d" prot="public" virt="non-virtual"><scope>DateTime</scope><name>setFakeTodayValue</name></member>
+      <member refid="class_date_time_1accfe0444e37f0194cba83e69f17c0ba8" prot="public" virt="non-virtual"><scope>DateTime</scope><name>SetToday</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

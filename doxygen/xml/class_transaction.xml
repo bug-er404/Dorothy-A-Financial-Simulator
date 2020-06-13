@@ -1,0 +1,570 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_transaction" kind="class" language="C++" prot="public">
+    <compoundname>Transaction</compoundname>
+    <includes refid="_transaction_8h" local="no">Transaction.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_transaction_1ac2d7eda4299c0c7dee9ed7f457b1102c" prot="private" static="no" mutable="no">
+        <type><ref refid="class_date_time" kindref="compound">DateTime</ref> *</type>
+        <definition>DateTime* Transaction::m_TAOpenDate</definition>
+        <argsstring></argsstring>
+        <name>m_TAOpenDate</name>
+        <briefdescription>
+<para><ref refid="class_transaction" kindref="compound">Transaction</ref> open date. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Transaction.h" line="62" column="14" bodyfile="Transaction.h" bodystart="55" bodyend="-1"/>
+        <referencedby refid="class_transaction_1a9ff3e14de368615046e75ab122caa327" compoundref="_transaction_8cpp" startline="26" endline="41">Transaction</referencedby>
+        <referencedby refid="class_transaction_1a492d0922c5af8b883981e265b91b66d9" compoundref="_transaction_8h" startline="34" endline="34">GetPositionOpenDate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_transaction_1aae306db338fafc30d10238889e712898" prot="private" static="no" mutable="no">
+        <type><ref refid="class_date_time" kindref="compound">DateTime</ref> *</type>
+        <definition>DateTime* Transaction::m_TACloseDate</definition>
+        <argsstring></argsstring>
+        <name>m_TACloseDate</name>
+        <briefdescription>
+<para><ref refid="class_transaction" kindref="compound">Transaction</ref> close date. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Transaction.h" line="64" column="14" bodyfile="Transaction.h" bodystart="64" bodyend="-1"/>
+        <referencedby refid="class_transaction_1ab5150df4457fda64acf329e3b5333f96" compoundref="_transaction_8cpp" startline="70" endline="79">CloseTransaction</referencedby>
+        <referencedby refid="class_transaction_1af73b2f27a31f8f53246770b3d12162bf" compoundref="_transaction_8h" startline="35" endline="35">GetPositionCloseDate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_transaction_1a04e7430d41698ec30100910786673f1f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Transaction::m_TAOpenSignal</definition>
+        <argsstring></argsstring>
+        <name>m_TAOpenSignal</name>
+        <briefdescription>
+<para><ref refid="class_transaction" kindref="compound">Transaction</ref> open signal. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Transaction.h" line="66" column="12" bodyfile="Transaction.h" bodystart="66" bodyend="-1"/>
+        <referencedby refid="class_transaction_1a9ff3e14de368615046e75ab122caa327" compoundref="_transaction_8cpp" startline="26" endline="41">Transaction</referencedby>
+        <referencedby refid="class_transaction_1adff7d7d155a838a80fe14d74953bb2b8" compoundref="_transaction_8h" startline="36" endline="36">GetOpenSignal</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_transaction_1a7d42563bbe4a16b408dbcbaf813613df" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Transaction::m_TACloseSignal</definition>
+        <argsstring></argsstring>
+        <name>m_TACloseSignal</name>
+        <briefdescription>
+<para><ref refid="class_transaction" kindref="compound">Transaction</ref> close signal. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Transaction.h" line="68" column="12" bodyfile="Transaction.h" bodystart="68" bodyend="-1"/>
+        <referencedby refid="class_transaction_1ab5150df4457fda64acf329e3b5333f96" compoundref="_transaction_8cpp" startline="70" endline="79">CloseTransaction</referencedby>
+        <referencedby refid="class_transaction_1a31112e042ad4f73b2231f0dde46abce0" compoundref="_transaction_8h" startline="37" endline="37">GetCloseSignal</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_transaction_1aab337c995879abb44ca3cb75df646ffd" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Transaction::m_currentSharesCount</definition>
+        <argsstring></argsstring>
+        <name>m_currentSharesCount</name>
+        <briefdescription>
+<para>Shares in transaction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Transaction.h" line="70" column="12" bodyfile="Transaction.h" bodystart="70" bodyend="-1"/>
+        <referencedby refid="class_transaction_1a9ff3e14de368615046e75ab122caa327" compoundref="_transaction_8cpp" startline="26" endline="41">Transaction</referencedby>
+        <referencedby refid="class_transaction_1ab5150df4457fda64acf329e3b5333f96" compoundref="_transaction_8cpp" startline="70" endline="79">CloseTransaction</referencedby>
+        <referencedby refid="class_transaction_1a34399835d523d6b2dc98de51224fd00e" compoundref="_transaction_8h" startline="38" endline="38">GetNumSharesHeld</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_transaction_1a7c92a75529ae077fb8d76d4969b61048" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Transaction::m_TAOpenPrice</definition>
+        <argsstring></argsstring>
+        <name>m_TAOpenPrice</name>
+        <briefdescription>
+<para><ref refid="class_transaction" kindref="compound">Transaction</ref> open price. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Transaction.h" line="72" column="12" bodyfile="Transaction.h" bodystart="72" bodyend="-1"/>
+        <referencedby refid="class_transaction_1a9ff3e14de368615046e75ab122caa327" compoundref="_transaction_8cpp" startline="26" endline="41">Transaction</referencedby>
+        <referencedby refid="class_transaction_1ab5150df4457fda64acf329e3b5333f96" compoundref="_transaction_8cpp" startline="70" endline="79">CloseTransaction</referencedby>
+        <referencedby refid="class_transaction_1ad323ea3eecce084ab4207216da11aef3" compoundref="_transaction_8h" startline="31" endline="31">GetOpenedPrice</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_transaction_1a61b7a25cb9489c3c65aad25b8c4d3d2b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Transaction::m_TAClosePrice</definition>
+        <argsstring></argsstring>
+        <name>m_TAClosePrice</name>
+        <briefdescription>
+<para><ref refid="class_transaction" kindref="compound">Transaction</ref> close price. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Transaction.h" line="74" column="12" bodyfile="Transaction.h" bodystart="74" bodyend="-1"/>
+        <referencedby refid="class_transaction_1ab5150df4457fda64acf329e3b5333f96" compoundref="_transaction_8cpp" startline="70" endline="79">CloseTransaction</referencedby>
+        <referencedby refid="class_transaction_1a373d771f5dd603825cdc6a825cc1ffb8" compoundref="_transaction_8h" startline="32" endline="32">GetClosedPrice</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_transaction_1a067ff7356df3a4bbec5b41d4dbaa5ea4" prot="private" static="no" mutable="no">
+        <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>int Transaction::m_inPosition</definition>
+        <argsstring></argsstring>
+        <name>m_inPosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<sect1 id="class_transaction_1autotoc_md12">
+<title>of days in position</title>
+</sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Transaction.h" line="76" column="9" bodyfile="Transaction.h" bodystart="76" bodyend="-1"/>
+        <referencedby refid="class_transaction_1a9ff3e14de368615046e75ab122caa327" compoundref="_transaction_8cpp" startline="26" endline="41">Transaction</referencedby>
+        <referencedby refid="class_transaction_1afba291c3886ecf68a948a012f81ea74d" compoundref="_transaction_8cpp" startline="53" endline="58">NextDayInPosition</referencedby>
+        <referencedby refid="class_transaction_1a9833cf5e7fae393429914b42919b631b" compoundref="_transaction_8h" startline="33" endline="33">GetDaysInPosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_transaction_1ad9aa1638c1d5239def95ea7022165337" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Transaction::m_longFlag</definition>
+        <argsstring></argsstring>
+        <name>m_longFlag</name>
+        <briefdescription>
+<para>Flag if the transaction is for a long/short position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Transaction.h" line="78" column="10" bodyfile="Transaction.h" bodystart="78" bodyend="-1"/>
+        <referencedby refid="class_transaction_1a9ff3e14de368615046e75ab122caa327" compoundref="_transaction_8cpp" startline="26" endline="41">Transaction</referencedby>
+        <referencedby refid="class_transaction_1a318f40ecb6200373d210ddc63501d7a8" compoundref="_transaction_8h" startline="39" endline="39">IsLongPosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_transaction_1aad0ee036f4dc0bc615156ac6ee471104" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Transaction::m_closedFlag</definition>
+        <argsstring></argsstring>
+        <name>m_closedFlag</name>
+        <briefdescription>
+<para>Flag if transaction is closed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Transaction.h" line="80" column="10" bodyfile="Transaction.h" bodystart="80" bodyend="-1"/>
+        <referencedby refid="class_transaction_1a9ff3e14de368615046e75ab122caa327" compoundref="_transaction_8cpp" startline="26" endline="41">Transaction</referencedby>
+        <referencedby refid="class_transaction_1ab5150df4457fda64acf329e3b5333f96" compoundref="_transaction_8cpp" startline="70" endline="79">CloseTransaction</referencedby>
+        <referencedby refid="class_transaction_1a790efa45756bf2efdb6ba085fa0e3605" compoundref="_transaction_8h" startline="40" endline="40">IsClosed</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_transaction_1a9ff3e14de368615046e75ab122caa327" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Transaction::Transaction</definition>
+        <argsstring>(DateTime *a_date, double a_signal, double a_share, double a_price)</argsstring>
+        <name>Transaction</name>
+        <param>
+          <type><ref refid="class_date_time" kindref="compound">DateTime</ref> *</type>
+          <declname>a_date</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_signal</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_share</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_price</declname>
+        </param>
+        <briefdescription>
+<para>Main parameterized <ref refid="class_transaction" kindref="compound">Transaction</ref> class constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="_transaction_8cpp" kindref="compound">Transaction.cpp</ref> Implementation of <ref refid="_transaction_8h" kindref="compound">Transaction.h</ref>.</para>
+<para>Created by Salil Maharjan on 05/22/20. Copyright © 2020 Salil Maharjan. All rights reserved. <ref refid="class_transaction_1a9ff3e14de368615046e75ab122caa327" kindref="member">Transaction::Transaction</ref> Main parameterized <ref refid="class_transaction" kindref="compound">Transaction</ref> class constructor. Opens a transaction. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_date</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DateTime* The transaction open date. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_signal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double The signal while opening transaction. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_share</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double The number of shares to open position with. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_price</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double The price at which the transaction is opened. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/22/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Transaction.h" line="25" column="5" bodyfile="Transaction.cpp" bodystart="26" bodyend="41"/>
+        <references refid="class_transaction_1aad0ee036f4dc0bc615156ac6ee471104" compoundref="_transaction_8h" startline="80">m_closedFlag</references>
+        <references refid="class_transaction_1aab337c995879abb44ca3cb75df646ffd" compoundref="_transaction_8h" startline="70">m_currentSharesCount</references>
+        <references refid="class_transaction_1a067ff7356df3a4bbec5b41d4dbaa5ea4" compoundref="_transaction_8h" startline="76">m_inPosition</references>
+        <references refid="class_transaction_1ad9aa1638c1d5239def95ea7022165337" compoundref="_transaction_8h" startline="78">m_longFlag</references>
+        <references refid="class_transaction_1ac2d7eda4299c0c7dee9ed7f457b1102c" compoundref="_transaction_8h" startline="55">m_TAOpenDate</references>
+        <references refid="class_transaction_1a7c92a75529ae077fb8d76d4969b61048" compoundref="_transaction_8h" startline="72">m_TAOpenPrice</references>
+        <references refid="class_transaction_1a04e7430d41698ec30100910786673f1f" compoundref="_transaction_8h" startline="66">m_TAOpenSignal</references>
+      </memberdef>
+      <memberdef kind="function" id="class_transaction_1ad323ea3eecce084ab4207216da11aef3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double</type>
+        <definition>const double Transaction::GetOpenedPrice</definition>
+        <argsstring>()</argsstring>
+        <name>GetOpenedPrice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Transaction.h" line="31" column="18" bodyfile="Transaction.h" bodystart="31" bodyend="31"/>
+        <references refid="class_transaction_1a7c92a75529ae077fb8d76d4969b61048" compoundref="_transaction_8h" startline="72">m_TAOpenPrice</references>
+      </memberdef>
+      <memberdef kind="function" id="class_transaction_1a373d771f5dd603825cdc6a825cc1ffb8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double</type>
+        <definition>const double Transaction::GetClosedPrice</definition>
+        <argsstring>()</argsstring>
+        <name>GetClosedPrice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Transaction.h" line="32" column="18" bodyfile="Transaction.h" bodystart="32" bodyend="32"/>
+        <references refid="class_transaction_1a61b7a25cb9489c3c65aad25b8c4d3d2b" compoundref="_transaction_8h" startline="74">m_TAClosePrice</references>
+      </memberdef>
+      <memberdef kind="function" id="class_transaction_1a9833cf5e7fae393429914b42919b631b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>const int Transaction::GetDaysInPosition</definition>
+        <argsstring>()</argsstring>
+        <name>GetDaysInPosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Transaction.h" line="33" column="15" bodyfile="Transaction.h" bodystart="33" bodyend="33"/>
+        <references refid="class_transaction_1a067ff7356df3a4bbec5b41d4dbaa5ea4" compoundref="_transaction_8h" startline="76">m_inPosition</references>
+      </memberdef>
+      <memberdef kind="function" id="class_transaction_1a492d0922c5af8b883981e265b91b66d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_date_time" kindref="compound">DateTime</ref> *</type>
+        <definition>DateTime* Transaction::GetPositionOpenDate</definition>
+        <argsstring>()</argsstring>
+        <name>GetPositionOpenDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Transaction.h" line="34" column="15" bodyfile="Transaction.h" bodystart="34" bodyend="34"/>
+        <references refid="class_transaction_1ac2d7eda4299c0c7dee9ed7f457b1102c" compoundref="_transaction_8h" startline="55">m_TAOpenDate</references>
+      </memberdef>
+      <memberdef kind="function" id="class_transaction_1af73b2f27a31f8f53246770b3d12162bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_date_time" kindref="compound">DateTime</ref> *</type>
+        <definition>DateTime* Transaction::GetPositionCloseDate</definition>
+        <argsstring>()</argsstring>
+        <name>GetPositionCloseDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Transaction.h" line="35" column="14" bodyfile="Transaction.h" bodystart="35" bodyend="35"/>
+        <references refid="class_transaction_1aae306db338fafc30d10238889e712898" compoundref="_transaction_8h" startline="64">m_TACloseDate</references>
+      </memberdef>
+      <memberdef kind="function" id="class_transaction_1adff7d7d155a838a80fe14d74953bb2b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double</type>
+        <definition>const double Transaction::GetOpenSignal</definition>
+        <argsstring>()</argsstring>
+        <name>GetOpenSignal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Transaction.h" line="36" column="18" bodyfile="Transaction.h" bodystart="36" bodyend="36"/>
+        <references refid="class_transaction_1a04e7430d41698ec30100910786673f1f" compoundref="_transaction_8h" startline="66">m_TAOpenSignal</references>
+      </memberdef>
+      <memberdef kind="function" id="class_transaction_1a31112e042ad4f73b2231f0dde46abce0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double</type>
+        <definition>const double Transaction::GetCloseSignal</definition>
+        <argsstring>()</argsstring>
+        <name>GetCloseSignal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Transaction.h" line="37" column="18" bodyfile="Transaction.h" bodystart="37" bodyend="37"/>
+        <references refid="class_transaction_1a7d42563bbe4a16b408dbcbaf813613df" compoundref="_transaction_8h" startline="68">m_TACloseSignal</references>
+      </memberdef>
+      <memberdef kind="function" id="class_transaction_1a34399835d523d6b2dc98de51224fd00e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double</type>
+        <definition>const double Transaction::GetNumSharesHeld</definition>
+        <argsstring>()</argsstring>
+        <name>GetNumSharesHeld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Transaction.h" line="38" column="18" bodyfile="Transaction.h" bodystart="38" bodyend="38"/>
+        <references refid="class_transaction_1aab337c995879abb44ca3cb75df646ffd" compoundref="_transaction_8h" startline="70">m_currentSharesCount</references>
+      </memberdef>
+      <memberdef kind="function" id="class_transaction_1a318f40ecb6200373d210ddc63501d7a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const bool</type>
+        <definition>const bool Transaction::IsLongPosition</definition>
+        <argsstring>()</argsstring>
+        <name>IsLongPosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Transaction.h" line="39" column="16" bodyfile="Transaction.h" bodystart="39" bodyend="39"/>
+        <references refid="class_transaction_1ad9aa1638c1d5239def95ea7022165337" compoundref="_transaction_8h" startline="78">m_longFlag</references>
+      </memberdef>
+      <memberdef kind="function" id="class_transaction_1a790efa45756bf2efdb6ba085fa0e3605" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const bool</type>
+        <definition>const bool Transaction::IsClosed</definition>
+        <argsstring>()</argsstring>
+        <name>IsClosed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Transaction.h" line="40" column="16" bodyfile="Transaction.h" bodystart="40" bodyend="40"/>
+        <references refid="class_transaction_1aad0ee036f4dc0bc615156ac6ee471104" compoundref="_transaction_8h" startline="80">m_closedFlag</references>
+      </memberdef>
+      <memberdef kind="function" id="class_transaction_1ab5150df4457fda64acf329e3b5333f96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Transaction::CloseTransaction</definition>
+        <argsstring>(DateTime *a_date, double a_signal, double a_price)</argsstring>
+        <name>CloseTransaction</name>
+        <param>
+          <type><ref refid="class_date_time" kindref="compound">DateTime</ref> *</type>
+          <declname>a_date</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_signal</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_price</declname>
+        </param>
+        <briefdescription>
+<para>Method to close constructed transaction objects. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_transaction_1ab5150df4457fda64acf329e3b5333f96" kindref="member">Transaction::CloseTransaction</ref> Function to close transaction and return the PNL from the completed transaction. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_date</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DateTime* The transaction close date. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_signal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double The signal while closing transaction. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_price</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double The price at which the transaction is closed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double The profit/loss from completing the transaction. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/22/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Transaction.h" line="47" column="12" bodyfile="Transaction.cpp" bodystart="70" bodyend="79"/>
+        <references refid="class_transaction_1aad0ee036f4dc0bc615156ac6ee471104" compoundref="_transaction_8h" startline="80">m_closedFlag</references>
+        <references refid="class_transaction_1aab337c995879abb44ca3cb75df646ffd" compoundref="_transaction_8h" startline="70">m_currentSharesCount</references>
+        <references refid="class_transaction_1aae306db338fafc30d10238889e712898" compoundref="_transaction_8h" startline="64">m_TACloseDate</references>
+        <references refid="class_transaction_1a61b7a25cb9489c3c65aad25b8c4d3d2b" compoundref="_transaction_8h" startline="74">m_TAClosePrice</references>
+        <references refid="class_transaction_1a7d42563bbe4a16b408dbcbaf813613df" compoundref="_transaction_8h" startline="68">m_TACloseSignal</references>
+        <references refid="class_transaction_1a7c92a75529ae077fb8d76d4969b61048" compoundref="_transaction_8h" startline="72">m_TAOpenPrice</references>
+      </memberdef>
+      <memberdef kind="function" id="class_transaction_1afba291c3886ecf68a948a012f81ea74d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Transaction::NextDayInPosition</definition>
+        <argsstring>()</argsstring>
+        <name>NextDayInPosition</name>
+        <briefdescription>
+<para><ref refid="class_transaction" kindref="compound">Transaction</ref> method to update the number of days in position of a stock on each trading day. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_transaction_1afba291c3886ecf68a948a012f81ea74d" kindref="member">Transaction::NextDayInPosition</ref> Method to update the number of days in position in each trading day. <simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/22/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Transaction.h" line="50" column="10" bodyfile="Transaction.cpp" bodystart="53" bodyend="58"/>
+        <references refid="class_transaction_1a067ff7356df3a4bbec5b41d4dbaa5ea4" compoundref="_transaction_8h" startline="76">m_inPosition</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_transaction_1ab47005b855d38bc324bb79fd023baa13" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Transaction::Transaction</definition>
+        <argsstring>()</argsstring>
+        <name>Transaction</name>
+        <briefdescription>
+<para>Empty default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Transaction.h" line="55" column="5" bodyfile="Transaction.h" bodystart="55" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="_transaction_8h" kindref="compound">Transaction.h</ref> Class that handles the record details of transactions for trading stocks.</para>
+<para>Created by Salil Maharjan on 05/22/20. Copyright © 2020 Salil Maharjan. All rights reserved. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>DateTime</label>
+        <link refid="class_date_time"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-m_date</edgelabel>
+          <edgelabel>-dayPreMonth</edgelabel>
+          <edgelabel>-m_FakeTodayValue</edgelabel>
+          <edgelabel>-daysInMonth</edgelabel>
+          <edgelabel>+BlankDate</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>int</label>
+      </node>
+      <node id="2">
+        <label>double</label>
+      </node>
+      <node id="1">
+        <label>Transaction</label>
+        <link refid="class_transaction"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-m_currentSharesCount</edgelabel>
+          <edgelabel>-m_TACloseSignal</edgelabel>
+          <edgelabel>-m_TAOpenPrice</edgelabel>
+          <edgelabel>-m_TAOpenSignal</edgelabel>
+          <edgelabel>-m_TAClosePrice</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-m_TAOpenDate</edgelabel>
+          <edgelabel>-m_TACloseDate</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-m_inPosition</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-m_closedFlag</edgelabel>
+          <edgelabel>-m_longFlag</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>bool</label>
+      </node>
+    </collaborationgraph>
+    <location file="Transaction.h" line="16" column="1" bodyfile="Transaction.h" bodystart="17" bodyend="82"/>
+    <listofallmembers>
+      <member refid="class_transaction_1ab5150df4457fda64acf329e3b5333f96" prot="public" virt="non-virtual"><scope>Transaction</scope><name>CloseTransaction</name></member>
+      <member refid="class_transaction_1a373d771f5dd603825cdc6a825cc1ffb8" prot="public" virt="non-virtual"><scope>Transaction</scope><name>GetClosedPrice</name></member>
+      <member refid="class_transaction_1a31112e042ad4f73b2231f0dde46abce0" prot="public" virt="non-virtual"><scope>Transaction</scope><name>GetCloseSignal</name></member>
+      <member refid="class_transaction_1a9833cf5e7fae393429914b42919b631b" prot="public" virt="non-virtual"><scope>Transaction</scope><name>GetDaysInPosition</name></member>
+      <member refid="class_transaction_1a34399835d523d6b2dc98de51224fd00e" prot="public" virt="non-virtual"><scope>Transaction</scope><name>GetNumSharesHeld</name></member>
+      <member refid="class_transaction_1ad323ea3eecce084ab4207216da11aef3" prot="public" virt="non-virtual"><scope>Transaction</scope><name>GetOpenedPrice</name></member>
+      <member refid="class_transaction_1adff7d7d155a838a80fe14d74953bb2b8" prot="public" virt="non-virtual"><scope>Transaction</scope><name>GetOpenSignal</name></member>
+      <member refid="class_transaction_1af73b2f27a31f8f53246770b3d12162bf" prot="public" virt="non-virtual"><scope>Transaction</scope><name>GetPositionCloseDate</name></member>
+      <member refid="class_transaction_1a492d0922c5af8b883981e265b91b66d9" prot="public" virt="non-virtual"><scope>Transaction</scope><name>GetPositionOpenDate</name></member>
+      <member refid="class_transaction_1a790efa45756bf2efdb6ba085fa0e3605" prot="public" virt="non-virtual"><scope>Transaction</scope><name>IsClosed</name></member>
+      <member refid="class_transaction_1a318f40ecb6200373d210ddc63501d7a8" prot="public" virt="non-virtual"><scope>Transaction</scope><name>IsLongPosition</name></member>
+      <member refid="class_transaction_1aad0ee036f4dc0bc615156ac6ee471104" prot="private" virt="non-virtual"><scope>Transaction</scope><name>m_closedFlag</name></member>
+      <member refid="class_transaction_1aab337c995879abb44ca3cb75df646ffd" prot="private" virt="non-virtual"><scope>Transaction</scope><name>m_currentSharesCount</name></member>
+      <member refid="class_transaction_1a067ff7356df3a4bbec5b41d4dbaa5ea4" prot="private" virt="non-virtual"><scope>Transaction</scope><name>m_inPosition</name></member>
+      <member refid="class_transaction_1ad9aa1638c1d5239def95ea7022165337" prot="private" virt="non-virtual"><scope>Transaction</scope><name>m_longFlag</name></member>
+      <member refid="class_transaction_1aae306db338fafc30d10238889e712898" prot="private" virt="non-virtual"><scope>Transaction</scope><name>m_TACloseDate</name></member>
+      <member refid="class_transaction_1a61b7a25cb9489c3c65aad25b8c4d3d2b" prot="private" virt="non-virtual"><scope>Transaction</scope><name>m_TAClosePrice</name></member>
+      <member refid="class_transaction_1a7d42563bbe4a16b408dbcbaf813613df" prot="private" virt="non-virtual"><scope>Transaction</scope><name>m_TACloseSignal</name></member>
+      <member refid="class_transaction_1ac2d7eda4299c0c7dee9ed7f457b1102c" prot="private" virt="non-virtual"><scope>Transaction</scope><name>m_TAOpenDate</name></member>
+      <member refid="class_transaction_1a7c92a75529ae077fb8d76d4969b61048" prot="private" virt="non-virtual"><scope>Transaction</scope><name>m_TAOpenPrice</name></member>
+      <member refid="class_transaction_1a04e7430d41698ec30100910786673f1f" prot="private" virt="non-virtual"><scope>Transaction</scope><name>m_TAOpenSignal</name></member>
+      <member refid="class_transaction_1afba291c3886ecf68a948a012f81ea74d" prot="public" virt="non-virtual"><scope>Transaction</scope><name>NextDayInPosition</name></member>
+      <member refid="class_transaction_1a9ff3e14de368615046e75ab122caa327" prot="public" virt="non-virtual"><scope>Transaction</scope><name>Transaction</name></member>
+      <member refid="class_transaction_1ab47005b855d38bc324bb79fd023baa13" prot="private" virt="non-virtual"><scope>Transaction</scope><name>Transaction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

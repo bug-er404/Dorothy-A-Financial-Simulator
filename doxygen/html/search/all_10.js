@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['saturday_661',['SATURDAY',['../class_date_time.html#a5f329538b5bd9019e62f11b392a61727afd5ae113ac00b67f69541bc8c7f21ef7',1,'DateTime']]],
+  ['sellshares_662',['SellShares',['../class_trading_stock.html#abf15f389461393974e58d973a7a4f593',1,'TradingStock']]],
+  ['set_663',['Set',['../class_date_time.html#adf643f3779756314d8ac2505f84d5703',1,'DateTime::Set(int a_year, int a_month, int a_day)'],['../class_date_time.html#a67f156cc29043569f888f7a0e66ef0dc',1,'DateTime::Set(int a_date)'],['../class_date_time.html#a12b6862f65c87e7dc483cfd2bd867ea0',1,'DateTime::Set(const DateTime &amp;a_date)']]],
+  ['setactualtoday_664',['SetActualToday',['../class_date_time.html#aca52e0e0e2a63e322fa0628c3d78aff9',1,'DateTime']]],
+  ['setfaketodayvalue_665',['setFakeTodayValue',['../class_date_time.html#a1bb944d1963fc50c983c92ae39412d3d',1,'DateTime']]],
+  ['setlong_666',['SetLong',['../class_trading_stock.html#a0b8e6cd751ccac4691b33e9b3a50f8d1',1,'TradingStock']]],
+  ['setshort_667',['SetShort',['../class_trading_stock.html#a1e3d0dc8a813cf51bf10dd7cc1ca8175',1,'TradingStock']]],
+  ['settoday_668',['SetToday',['../class_date_time.html#accfe0444e37f0194cba83e69f17c0ba8',1,'DateTime']]],
+  ['settradingdaterange_669',['SetTradingDateRange',['../class_ticker_data.html#ab7018ea10b33e3e411da4b5d3c50db3b',1,'TickerData']]],
+  ['share_5foutstanding_670',['SHARE_OUTSTANDING',['../_ticker_data_8h.html#a698cb0bfc890ce6b194caf0f426cafafa822c3fb0a7fbc8057c21c3b16e5a9a72',1,'TickerData.h']]],
+  ['short_671',['short',['../_c_make_cache_8txt.html#a831ae7261cfbc3d10cd36bed891d713a',1,'CMakeCache.txt']]],
+  ['sig_5fline_672',['SIG_LINE',['../_ticker_data_8h.html#a698cb0bfc890ce6b194caf0f426cafafaa5290299e5bf77e1609551751ef1ea58',1,'TickerData.h']]],
+  ['signal_5fpub_5fparam_673',['SIGNAL_PUB_PARAM',['../class_simulator.html#a51929ed4f5640f5d2644b3dfd0628329',1,'Simulator']]],
+  ['simulator_674',['Simulator',['../class_simulator.html',1,'Simulator'],['../class_simulator.html#a53cc2e7e6dde4d4893e259b0be2aae9a',1,'Simulator::Simulator(int argc, const char *argv[])'],['../class_simulator.html#a5ee3126b7491cec8402850d5497b817c',1,'Simulator::Simulator()=default']]],
+  ['simulator_2ecpp_675',['Simulator.cpp',['../_simulator_8cpp.html',1,'']]],
+  ['simulator_2eh_676',['Simulator.h',['../_simulator_8h.html',1,'']]],
+  ['slow_5fema_677',['SLOW_EMA',['../_ticker_data_8h.html#a698cb0bfc890ce6b194caf0f426cafafa97f12d998aa17b72732bd697aa16d8f8',1,'TickerData.h']]],
+  ['split_678',['SPLIT',['../_ticker_data_8h.html#a698cb0bfc890ce6b194caf0f426cafafa7cf1f5924560c2c48f72f6e1a462e9c9',1,'TickerData.h']]],
+  ['start_5fticker_5ffields_679',['START_TICKER_FIELDS',['../_ticker_data_8h.html#a698cb0bfc890ce6b194caf0f426cafafa3ad35f437b4427db031733f716648b1b',1,'TickerData.h']]],
+  ['startsimulation_680',['StartSimulation',['../class_simulator.html#ab899d33750e674079de022d269c6bf9c',1,'Simulator']]],
+  ['stop_5floss_5fparam_681',['STOP_LOSS_PARAM',['../class_simulator.html#a4f727299fa4922e4b1a817983fe228dd',1,'Simulator']]],
+  ['stringify_682',['STRINGIFY',['../_c_make_c_compiler_id_8c.html#a43e1cad902b6477bec893cb6430bd6c8',1,'STRINGIFY():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a43e1cad902b6477bec893cb6430bd6c8',1,'STRINGIFY():&#160;CMakeCXXCompilerId.cpp']]],
+  ['stringify_5fhelper_683',['STRINGIFY_HELPER',['../_c_make_c_compiler_id_8c.html#a2ae9b72bb13abaabfcf2ee0ba7d3fa1d',1,'STRINGIFY_HELPER():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a2ae9b72bb13abaabfcf2ee0ba7d3fa1d',1,'STRINGIFY_HELPER():&#160;CMakeCXXCompilerId.cpp']]],
+  ['sunday_684',['SUNDAY',['../class_date_time.html#a5f329538b5bd9019e62f11b392a61727a95fa12cb2100ce7081b71f7c44bc12a5',1,'DateTime']]]
+];

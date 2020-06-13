@@ -1,0 +1,4 @@
+<map id="TickerData::calculateMACDfields" name="TickerData::calculateMACDfields">
+<area shape="rect" id="node1" title="Calculate MACD fields and append to the ticker data." alt="" coords="212,5,429,32"/>
+<area shape="rect" id="node2" href="$class_ticker_data.html#a9d7b95aba7d6e6f002b8efd39f05f73f" title="Parameterized constructor to create a ticker object." alt="" coords="5,5,164,32"/>
+</map>

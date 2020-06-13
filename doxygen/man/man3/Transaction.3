@@ -1,0 +1,312 @@
+.TH "Transaction" 3 "Sat Jun 6 2020" "Version Version 1.0" "DOROTHY" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Transaction
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Transaction\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTransaction\fP (\fBDateTime\fP *a_date, double a_signal, double a_share, double a_price)"
+.br
+.RI "Main parameterized \fBTransaction\fP class constructor\&. "
+.ti -1c
+.RI "const double \fBGetOpenedPrice\fP ()"
+.br
+.ti -1c
+.RI "const double \fBGetClosedPrice\fP ()"
+.br
+.ti -1c
+.RI "const \fBint\fP \fBGetDaysInPosition\fP ()"
+.br
+.ti -1c
+.RI "\fBDateTime\fP * \fBGetPositionOpenDate\fP ()"
+.br
+.ti -1c
+.RI "\fBDateTime\fP * \fBGetPositionCloseDate\fP ()"
+.br
+.ti -1c
+.RI "const double \fBGetOpenSignal\fP ()"
+.br
+.ti -1c
+.RI "const double \fBGetCloseSignal\fP ()"
+.br
+.ti -1c
+.RI "const double \fBGetNumSharesHeld\fP ()"
+.br
+.ti -1c
+.RI "const bool \fBIsLongPosition\fP ()"
+.br
+.ti -1c
+.RI "const bool \fBIsClosed\fP ()"
+.br
+.ti -1c
+.RI "double \fBCloseTransaction\fP (\fBDateTime\fP *a_date, double a_signal, double a_price)"
+.br
+.RI "Method to close constructed transaction objects\&. "
+.ti -1c
+.RI "void \fBNextDayInPosition\fP ()"
+.br
+.RI "\fBTransaction\fP method to update the number of days in position of a stock on each trading day\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTransaction\fP ()"
+.br
+.RI "Empty default constructor\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDateTime\fP * \fBm_TAOpenDate\fP"
+.br
+.RI "\fBTransaction\fP open date\&. "
+.ti -1c
+.RI "\fBDateTime\fP * \fBm_TACloseDate\fP"
+.br
+.RI "\fBTransaction\fP close date\&. "
+.ti -1c
+.RI "double \fBm_TAOpenSignal\fP"
+.br
+.RI "\fBTransaction\fP open signal\&. "
+.ti -1c
+.RI "double \fBm_TACloseSignal\fP"
+.br
+.RI "\fBTransaction\fP close signal\&. "
+.ti -1c
+.RI "double \fBm_currentSharesCount\fP"
+.br
+.RI "Shares in transaction\&. "
+.ti -1c
+.RI "double \fBm_TAOpenPrice\fP"
+.br
+.RI "\fBTransaction\fP open price\&. "
+.ti -1c
+.RI "double \fBm_TAClosePrice\fP"
+.br
+.RI "\fBTransaction\fP close price\&. "
+.ti -1c
+.RI "\fBint\fP \fBm_inPosition\fP"
+.br
+.ti -1c
+.RI "bool \fBm_longFlag\fP"
+.br
+.RI "Flag if the transaction is for a long/short position\&. "
+.ti -1c
+.RI "bool \fBm_closedFlag\fP"
+.br
+.RI "Flag if transaction is closed\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBTransaction\&.h\fP Class that handles the record details of transactions for trading stocks\&.
+.PP
+Created by Salil Maharjan on 05/22/20\&. Copyright © 2020 Salil Maharjan\&. All rights reserved\&. 
+.PP
+Definition at line 16 of file Transaction\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Transaction::Transaction (\fBDateTime\fP * a_date, double a_signal, double a_share, double a_price)"
+
+.PP
+Main parameterized \fBTransaction\fP class constructor\&. \fBTransaction\&.cpp\fP Implementation of \fBTransaction\&.h\fP\&.
+.PP
+Created by Salil Maharjan on 05/22/20\&. Copyright © 2020 Salil Maharjan\&. All rights reserved\&. \fBTransaction::Transaction\fP Main parameterized \fBTransaction\fP class constructor\&. Opens a transaction\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_date\fP DateTime* The transaction open date\&. 
+.br
+\fIa_signal\fP double The signal while opening transaction\&. 
+.br
+\fIa_share\fP double The number of shares to open position with\&. 
+.br
+\fIa_price\fP double The price at which the transaction is opened\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/22/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 26 of file Transaction\&.cpp\&.
+.SS "Transaction::Transaction ()\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Empty default constructor\&. 
+.PP
+Definition at line 55 of file Transaction\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "double Transaction::CloseTransaction (\fBDateTime\fP * a_date, double a_signal, double a_price)"
+
+.PP
+Method to close constructed transaction objects\&. \fBTransaction::CloseTransaction\fP Function to close transaction and return the PNL from the completed transaction\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_date\fP DateTime* The transaction close date\&. 
+.br
+\fIa_signal\fP double The signal while closing transaction\&. 
+.br
+\fIa_price\fP double The price at which the transaction is closed\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+double The profit/loss from completing the transaction\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/22/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 70 of file Transaction\&.cpp\&.
+.SS "const double Transaction::GetClosedPrice ()\fC [inline]\fP"
+
+.PP
+Definition at line 32 of file Transaction\&.h\&.
+.SS "const double Transaction::GetCloseSignal ()\fC [inline]\fP"
+
+.PP
+Definition at line 37 of file Transaction\&.h\&.
+.SS "const \fBint\fP Transaction::GetDaysInPosition ()\fC [inline]\fP"
+
+.PP
+Definition at line 33 of file Transaction\&.h\&.
+.SS "const double Transaction::GetNumSharesHeld ()\fC [inline]\fP"
+
+.PP
+Definition at line 38 of file Transaction\&.h\&.
+.SS "const double Transaction::GetOpenedPrice ()\fC [inline]\fP"
+
+.PP
+Definition at line 31 of file Transaction\&.h\&.
+.SS "const double Transaction::GetOpenSignal ()\fC [inline]\fP"
+
+.PP
+Definition at line 36 of file Transaction\&.h\&.
+.SS "\fBDateTime\fP* Transaction::GetPositionCloseDate ()\fC [inline]\fP"
+
+.PP
+Definition at line 35 of file Transaction\&.h\&.
+.SS "\fBDateTime\fP* Transaction::GetPositionOpenDate ()\fC [inline]\fP"
+
+.PP
+Definition at line 34 of file Transaction\&.h\&.
+.SS "const bool Transaction::IsClosed ()\fC [inline]\fP"
+
+.PP
+Definition at line 40 of file Transaction\&.h\&.
+.SS "const bool Transaction::IsLongPosition ()\fC [inline]\fP"
+
+.PP
+Definition at line 39 of file Transaction\&.h\&.
+.SS "void Transaction::NextDayInPosition ()"
+
+.PP
+\fBTransaction\fP method to update the number of days in position of a stock on each trading day\&. \fBTransaction::NextDayInPosition\fP Method to update the number of days in position in each trading day\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/22/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 53 of file Transaction\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "bool Transaction::m_closedFlag\fC [private]\fP"
+
+.PP
+Flag if transaction is closed\&. 
+.PP
+Definition at line 80 of file Transaction\&.h\&.
+.SS "double Transaction::m_currentSharesCount\fC [private]\fP"
+
+.PP
+Shares in transaction\&. 
+.PP
+Definition at line 70 of file Transaction\&.h\&.
+.SS "\fBint\fP Transaction::m_inPosition\fC [private]\fP"
+
+.SH "of days in position"
+.PP
+
+.PP
+Definition at line 76 of file Transaction\&.h\&.
+.SS "bool Transaction::m_longFlag\fC [private]\fP"
+
+.PP
+Flag if the transaction is for a long/short position\&. 
+.PP
+Definition at line 78 of file Transaction\&.h\&.
+.SS "\fBDateTime\fP* Transaction::m_TACloseDate\fC [private]\fP"
+
+.PP
+\fBTransaction\fP close date\&. 
+.PP
+Definition at line 64 of file Transaction\&.h\&.
+.SS "double Transaction::m_TAClosePrice\fC [private]\fP"
+
+.PP
+\fBTransaction\fP close price\&. 
+.PP
+Definition at line 74 of file Transaction\&.h\&.
+.SS "double Transaction::m_TACloseSignal\fC [private]\fP"
+
+.PP
+\fBTransaction\fP close signal\&. 
+.PP
+Definition at line 68 of file Transaction\&.h\&.
+.SS "\fBDateTime\fP* Transaction::m_TAOpenDate\fC [private]\fP"
+
+.PP
+\fBTransaction\fP open date\&. 
+.PP
+Definition at line 62 of file Transaction\&.h\&.
+.SS "double Transaction::m_TAOpenPrice\fC [private]\fP"
+
+.PP
+\fBTransaction\fP open price\&. 
+.PP
+Definition at line 72 of file Transaction\&.h\&.
+.SS "double Transaction::m_TAOpenSignal\fC [private]\fP"
+
+.PP
+\fBTransaction\fP open signal\&. 
+.PP
+Definition at line 66 of file Transaction\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DOROTHY from the source code\&.

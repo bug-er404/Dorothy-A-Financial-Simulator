@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="_date_time_8cpp" kind="file" language="C++">
+    <compoundname>DateTime.cpp</compoundname>
+    <includes refid="_date_time_8h" local="yes">DateTime.h</includes>
+    <includes refid="_prefix_header_8pch" local="yes">PrefixHeader.pch</includes>
+    <incdepgraph>
+      <node id="9">
+        <label>cassert</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="2">
+        <label>DateTime.h</label>
+        <link refid="_date_time_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>map</label>
+      </node>
+      <node id="10">
+        <label>fstream</label>
+      </node>
+      <node id="3">
+        <label>PrefixHeader.pch</label>
+        <link refid="_prefix_header_8pch"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+      </node>
+      <node id="12">
+        <label>typeinfo</label>
+      </node>
+      <node id="13">
+        <label>vector</label>
+      </node>
+      <node id="11">
+        <label>sstream</label>
+      </node>
+      <node id="5">
+        <label>iostream</label>
+      </node>
+      <node id="8">
+        <label>unordered_map</label>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+      <node id="1">
+        <label>DateTime.cpp</label>
+        <link refid="_date_time_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_date_time_8h" kindref="compound">DateTime.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_prefix_header_8pch" kindref="compound">PrefixHeader.pch</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Initialize<sp/>static<sp/>variables.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_date_time_1a57acb7917c5954948b8755807023444c" kindref="member">DateTime::m_FakeTodayValue</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_date_time_1ac94cf0d6e03e06701a0e206be156f01a" kindref="member">DateTime::dayPreMonth</ref>[13]<sp/>=<sp/>{<sp/>0,<sp/>31,<sp/>59,<sp/>90,<sp/>120,<sp/>151,<sp/>181,<sp/>212,<sp/>243,<sp/>273,<sp/>304,<sp/>334,<sp/>365};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_date_time_1a718762451fb99c14eb5820611cd08a09" kindref="member">DateTime::daysInMonth</ref>[13]=<sp/>{<sp/>0,<sp/>31,<sp/>28,<sp/>31,<sp/>30,<sp/>31,<sp/>30,<sp/>31,<sp/>31,<sp/>30,<sp/>31,<sp/>30,<sp/>31<sp/>};</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*****************<sp/>PUBLIC<sp/>CLASS<sp/>METHODS<sp/>******************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_date_time_1adf643f3779756314d8ac2505f84d5703" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_date_time_1adf643f3779756314d8ac2505f84d5703" kindref="member">DateTime::Set</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a_year,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a_month,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a_day<sp/>)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Checking<sp/>values<sp/>are<sp/>in<sp/>range</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="class_date_time_1ae489fe891bb77431da24459e5cca394b" kindref="member">checkDateValueRanges</ref>(a_year,<sp/>a_month,<sp/>a_day));</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>date</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_date_time_1aa69f17bb3f4c14a1cbf186ef6dbc4948" kindref="member">m_date</ref><sp/>=<sp/>a_year*10000<sp/>+<sp/>a_month*100<sp/>+<sp/>a_day;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Take<sp/>11<sp/>days<sp/>skipped<sp/>in<sp/>September<sp/>1752<sp/>into<sp/>consideration?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="class_date_time_1a67f156cc29043569f888f7a0e66ef0dc" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_date_time_1adf643f3779756314d8ac2505f84d5703" kindref="member">DateTime::Set</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a_date<sp/>)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Checking<sp/>values<sp/>are<sp/>in<sp/>range</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="class_date_time_1ae489fe891bb77431da24459e5cca394b" kindref="member">checkDateValueRanges</ref>(<sp/>((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)(a_date/10000)),<sp/>((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)((a_date/100)%100)),<sp/>((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)(a_date%100))<sp/>));</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>date</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_date_time_1aa69f17bb3f4c14a1cbf186ef6dbc4948" kindref="member">m_date</ref><sp/>=<sp/>a_date;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="class_date_time_1ae489fe891bb77431da24459e5cca394b" refkind="member"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_date_time_1ae489fe891bb77431da24459e5cca394b" kindref="member">DateTime::checkDateValueRanges</ref><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a_year,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a_month,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a_day<sp/>)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Asserting<sp/>values<sp/>in<sp/>range</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(a_year<sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/>a_year<sp/>&lt;=<sp/>99999);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(a_month<sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/>a_month<sp/>&lt;<sp/>13);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(a_day<sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/>a_day<sp/>&lt;<sp/>32);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Month<sp/>specific<sp/>day<sp/>range<sp/>check:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>February<sp/>and<sp/>leap<sp/>year<sp/>check.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(a_month==2)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Leap<sp/>year<sp/>29<sp/>days<sp/>else<sp/>28<sp/>days<sp/>in<sp/>February.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(a_year%4==0)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(a_day&lt;30);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(a_day&lt;29);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Months<sp/>that<sp/>have<sp/>30<sp/>days.<sp/>(<sp/>4<sp/>6<sp/>9<sp/>11<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(a_month==4<sp/>||<sp/>a_month==6<sp/>||<sp/>a_month==9<sp/>||<sp/>a_month==11)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(a_day&lt;31);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Months<sp/>that<sp/>have<sp/>31<sp/>days.<sp/>(<sp/>1<sp/>3<sp/>5<sp/>7<sp/>8<sp/>10<sp/>12<sp/>)<sp/>*<sp/>Range<sp/>is<sp/>already<sp/>checked<sp/>*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="class_date_time_1accfe0444e37f0194cba83e69f17c0ba8" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_date_time_1accfe0444e37f0194cba83e69f17c0ba8" kindref="member">DateTime::SetToday</ref>(<sp/>)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Not<sp/>set.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_date_time_1a57acb7917c5954948b8755807023444c" kindref="member">m_FakeTodayValue</ref><sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_date_time_1aca52e0e0e2a63e322fa0628c3d78aff9" kindref="member">SetActualToday</ref>();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_date_time_1aa69f17bb3f4c14a1cbf186ef6dbc4948" kindref="member">m_date</ref><sp/>=<sp/><ref refid="class_date_time_1a57acb7917c5954948b8755807023444c" kindref="member">m_FakeTodayValue</ref>;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_date_time_1a57acb7917c5954948b8755807023444c" kindref="member">m_FakeTodayValue</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="class_date_time_1aca52e0e0e2a63e322fa0628c3d78aff9" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_date_time_1aca52e0e0e2a63e322fa0628c3d78aff9" kindref="member">DateTime::SetActualToday</ref>(<sp/><sp/>)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>time_t<sp/>t_now<sp/>=<sp/>time(0);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>tm<sp/>*t_localTime<sp/>=<sp/>localtime(&amp;t_now);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_date_time_1aa69f17bb3f4c14a1cbf186ef6dbc4948" kindref="member">m_date</ref><sp/>=<sp/>(1900<sp/>+<sp/>t_localTime-&gt;tm_year)*10000<sp/>+<sp/>(1<sp/>+<sp/>t_localTime-&gt;tm_mon)*100<sp/>+<sp/>(t_localTime-&gt;tm_mday);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="class_date_time_1a75243ae5f1f368ba0d72a9882a934d25" refkind="member"><highlight class="normal"><ref refid="class_date_time" kindref="compound">DateTime</ref>&amp;<sp/><ref refid="class_date_time_1a64da6b1771656edb1e0d44eb3e88deb2" kindref="member">DateTime::operator =</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a_date<sp/>)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Checking<sp/>values<sp/>are<sp/>in<sp/>range</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="class_date_time_1ae489fe891bb77431da24459e5cca394b" kindref="member">checkDateValueRanges</ref>(<sp/>((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)(a_date/10000)),<sp/>((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)((a_date/100)%100)),<sp/>((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)(a_date%100))<sp/>));</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_date_time_1aa69f17bb3f4c14a1cbf186ef6dbc4948" kindref="member">m_date</ref><sp/>=<sp/>a_date;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="comment">//<sp/>***************<sp/>PRIVATE<sp/>UTILITY<sp/>METHODS<sp/>*****************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="class_date_time_1aa8a746c7fb47a7034adde3fb83c79dbe" refkind="member"><highlight class="normal"><ref refid="class_date_time" kindref="compound">DateTime</ref><sp/><ref refid="class_date_time_1aa8a746c7fb47a7034adde3fb83c79dbe" kindref="member">DateTime::reverseOffset</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a_days<sp/>)</highlight></codeline>
+<codeline lineno="153"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(a_days<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Value<sp/>out<sp/>of<sp/>range<sp/>error!\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_date_time" kindref="compound">DateTime</ref><sp/>t_date;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>temp_day<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>temp_year<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(1)</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(temp_year<sp/>%<sp/>4<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((temp_day<sp/>+<sp/>366)<sp/>&gt;<sp/>a_days)<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_day<sp/>+=<sp/>366;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((temp_day<sp/>+<sp/>365)<sp/>&gt;<sp/>a_days)<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_day<sp/>+=<sp/>365;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_year<sp/>++;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>temp_month<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(1)</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((temp_day<sp/>+<sp/><ref refid="class_date_time_1a718762451fb99c14eb5820611cd08a09" kindref="member">daysInMonth</ref>[temp_month])<sp/>&gt;<sp/>a_days)<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_day<sp/>+=<sp/><ref refid="class_date_time_1a718762451fb99c14eb5820611cd08a09" kindref="member">daysInMonth</ref>[temp_month];</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_month<sp/>++;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>t_date.<ref refid="class_date_time_1adf643f3779756314d8ac2505f84d5703" kindref="member">Set</ref>(temp_year,<sp/>temp_month,<sp/>(a_days<sp/>-<sp/>temp_day));</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>t_date;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="comment">//<sp/>********************<sp/>TRASH<sp/>METHODS<sp/>**********************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*********************************************************</highlight></codeline>
+    </programlisting>
+    <location file="DateTime.cpp"/>
+  </compounddef>
+</doxygen>

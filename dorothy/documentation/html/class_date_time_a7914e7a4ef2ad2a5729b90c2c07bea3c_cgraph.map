@@ -1,0 +1,7 @@
+<map id="DateTime::operator&#45;" name="DateTime::operator&#45;">
+<area shape="rect" id="node1" title="Finds the difference between two dates." alt="" coords="5,5,144,32"/>
+<area shape="rect" id="node2" href="$class_date_time.html#a9dd76cb1e58691859be3dec826b57445" title="Computes the calendar difference between two date." alt="" coords="192,5,387,32"/>
+<area shape="rect" id="node3" href="$class_date_time.html#af3cc0803ee4678e9394ba24579d58ac9" title="Get the offset from the year 0." alt="" coords="435,5,583,32"/>
+<area shape="rect" id="node4" href="$class_date_time.html#afcf11d770052d54bb91618db6a4e7223" title="Gets the Julian day from this date. Julian day vary from 0 to 365." alt="" coords="631,5,793,32"/>
+<area shape="rect" id="node5" href="$class_date_time.html#a3ca8a7d66ec814441db980816cf1ab4c" title="Determines if the year recorded here is a leap year." alt="" coords="841,5,992,32"/>
+</map>

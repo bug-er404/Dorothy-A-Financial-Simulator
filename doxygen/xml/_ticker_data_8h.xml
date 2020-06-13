@@ -1,0 +1,395 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="_ticker_data_8h" kind="file" language="C++">
+    <compoundname>TickerData.h</compoundname>
+    <includes refid="_prefix_header_8pch" local="yes">PrefixHeader.pch</includes>
+    <includes refid="_date_time_8h" local="yes">DateTime.h</includes>
+    <includedby refid="_data_access_8h" local="yes">DataAccess.h</includedby>
+    <includedby refid="_ticker_data_8cpp" local="yes">TickerData.cpp</includedby>
+    <incdepgraph>
+      <node id="8">
+        <label>cassert</label>
+      </node>
+      <node id="14">
+        <label>DateTime.h</label>
+        <link refid="_date_time_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="13">
+        <label>map</label>
+      </node>
+      <node id="1">
+        <label>TickerData.h</label>
+        <link refid="_ticker_data_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>fstream</label>
+      </node>
+      <node id="2">
+        <label>PrefixHeader.pch</label>
+        <link refid="_prefix_header_8pch"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="11">
+        <label>typeinfo</label>
+      </node>
+      <node id="12">
+        <label>vector</label>
+      </node>
+      <node id="10">
+        <label>sstream</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="7">
+        <label>unordered_map</label>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="7">
+        <label>TickerData.cpp</label>
+        <link refid="_ticker_data_8cpp"/>
+      </node>
+      <node id="2">
+        <label>DataAccess.h</label>
+        <link refid="_data_access_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DataAccess.cpp</label>
+        <link refid="_data_access_8cpp"/>
+      </node>
+      <node id="1">
+        <label>TickerData.h</label>
+        <link refid="_ticker_data_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Simulator.h</label>
+        <link refid="_simulator_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="6">
+        <label>Simulator.cpp</label>
+        <link refid="_simulator_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_ticker_data" prot="public">TickerData</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafaf" prot="public" static="no" strong="no">
+        <type></type>
+        <name>TICKER_FIELDS</name>
+        <enumvalue id="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa0e0143636c29971736eab47415868eae" prot="public">
+          <name>OPEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa3ad35f437b4427db031733f716648b1b" prot="public">
+          <name>START_TICKER_FIELDS</name>
+          <initializer>= OPEN</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa208d7742c684795f35b2d90499d04356" prot="public">
+          <name>DATA_FIELD_START</name>
+          <initializer>= OPEN</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa0c3a1dacf94061154b3ee354359c5893" prot="public">
+          <name>HIGH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa6a226f4143ca3b18999551694cdb72a8" prot="public">
+          <name>LOW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa685f73194ad125cbc784c3210cdb3449" prot="public">
+          <name>CLOSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa9d326c2efb1f1ef1840d474c0f9b8a48" prot="public">
+          <name>VOLUME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa3c9301d3b5db85466b68c50332e09d54" prot="public">
+          <name>ADJ_CLOSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa5bb1d61946cf3b388960a86623fdb5e4" prot="public">
+          <name>DIVIDEND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa7cf1f5924560c2c48f72f6e1a462e9c9" prot="public">
+          <name>SPLIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa689cbd84f20f3ce37e7348cef1ff0a49" prot="public">
+          <name>VWAP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa822c3fb0a7fbc8057c21c3b16e5a9a72" prot="public">
+          <name>SHARE_OUTSTANDING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa8725d89a00e29ee0935be179f89db864" prot="public">
+          <name>DATA_FIELD_END</name>
+          <initializer>= SHARE_OUTSTANDING</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa08596ee828503af3aa2e2278a3e414da" prot="public">
+          <name>FAST_EMA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa97f12d998aa17b72732bd697aa16d8f8" prot="public">
+          <name>SLOW_EMA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa02d7b0434a6c73c9dae1d16ff649b980" prot="public">
+          <name>MACD_LINE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafaa5290299e5bf77e1609551751ef1ea58" prot="public">
+          <name>SIG_LINE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa6f1880bb6a3f566a19cbbbfddfb204b8" prot="public">
+          <name>MACD_HIST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa884806b8188679868516f4e19428dd13" prot="public">
+          <name>END_TICKER_FIELDS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="_ticker_data_8h" kindref="compound">TickerData.h</ref> Handles ticker data for the trading stocks.</para>
+<para>Created by Salil Maharjan on 4/30/20. Copyright © 2020 Salil Maharjan. All rights reserved. ENUM of Ticker fields as found in the Ticker data source file. Includes computed fields used in the simulation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TickerData.h" line="22" column="1" bodyfile="TickerData.h" bodystart="23" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#ifndef<sp/>Ticker_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Ticker_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_prefix_header_8pch" kindref="compound">PrefixHeader.pch</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_date_time_8h" kindref="compound">DateTime.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*******************<sp/>TICKER<sp/>DATA<sp/>FIELDS<sp/>******************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafaf" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafaf" kindref="member">TICKER_FIELDS</ref></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>START<sp/>OF<sp/>ALL<sp/>TICKER<sp/>FIELDS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>DATA<sp/>FIELDS:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa0e0143636c29971736eab47415868eae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa0e0143636c29971736eab47415868eae" kindref="member">OPEN</ref>,</highlight></codeline>
+<codeline lineno="28" refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa3ad35f437b4427db031733f716648b1b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa3ad35f437b4427db031733f716648b1b" kindref="member">START_TICKER_FIELDS</ref><sp/>=<sp/><ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa0e0143636c29971736eab47415868eae" kindref="member">OPEN</ref>,<sp/></highlight><highlight class="comment">//<sp/>Reference<sp/>to<sp/>start<sp/>of<sp/>all<sp/>fields</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa208d7742c684795f35b2d90499d04356" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa208d7742c684795f35b2d90499d04356" kindref="member">DATA_FIELD_START</ref><sp/>=<sp/><ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa0e0143636c29971736eab47415868eae" kindref="member">OPEN</ref>,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reference<sp/>to<sp/>start<sp/>of<sp/>data<sp/>fields</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa0c3a1dacf94061154b3ee354359c5893" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa0c3a1dacf94061154b3ee354359c5893" kindref="member">HIGH</ref>,</highlight></codeline>
+<codeline lineno="31" refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa6a226f4143ca3b18999551694cdb72a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa6a226f4143ca3b18999551694cdb72a8" kindref="member">LOW</ref>,</highlight></codeline>
+<codeline lineno="32" refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa685f73194ad125cbc784c3210cdb3449" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa685f73194ad125cbc784c3210cdb3449" kindref="member">CLOSE</ref>,</highlight></codeline>
+<codeline lineno="33" refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa9d326c2efb1f1ef1840d474c0f9b8a48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa9d326c2efb1f1ef1840d474c0f9b8a48" kindref="member">VOLUME</ref>,</highlight></codeline>
+<codeline lineno="34" refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa3c9301d3b5db85466b68c50332e09d54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa3c9301d3b5db85466b68c50332e09d54" kindref="member">ADJ_CLOSE</ref>,</highlight></codeline>
+<codeline lineno="35" refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa5bb1d61946cf3b388960a86623fdb5e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa5bb1d61946cf3b388960a86623fdb5e4" kindref="member">DIVIDEND</ref>,</highlight></codeline>
+<codeline lineno="36" refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa7cf1f5924560c2c48f72f6e1a462e9c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa7cf1f5924560c2c48f72f6e1a462e9c9" kindref="member">SPLIT</ref>,</highlight></codeline>
+<codeline lineno="37" refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa689cbd84f20f3ce37e7348cef1ff0a49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa689cbd84f20f3ce37e7348cef1ff0a49" kindref="member">VWAP</ref>,</highlight></codeline>
+<codeline lineno="38" refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa822c3fb0a7fbc8057c21c3b16e5a9a72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa822c3fb0a7fbc8057c21c3b16e5a9a72" kindref="member">SHARE_OUTSTANDING</ref>,</highlight></codeline>
+<codeline lineno="39" refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa8725d89a00e29ee0935be179f89db864" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa8725d89a00e29ee0935be179f89db864" kindref="member">DATA_FIELD_END</ref><sp/>=<sp/><ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa822c3fb0a7fbc8057c21c3b16e5a9a72" kindref="member">SHARE_OUTSTANDING</ref>,<sp/></highlight><highlight class="comment">//<sp/>Reference<sp/>to<sp/>end<sp/>of<sp/>data<sp/>fields</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*<sp/>END<sp/>OF<sp/>DATA<sp/>FIELDS<sp/>*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CALCULATED<sp/>FIELDS:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>MACD<sp/>FIELDS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa08596ee828503af3aa2e2278a3e414da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa08596ee828503af3aa2e2278a3e414da" kindref="member">FAST_EMA</ref>,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>12day<sp/>EMA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa97f12d998aa17b72732bd697aa16d8f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa97f12d998aa17b72732bd697aa16d8f8" kindref="member">SLOW_EMA</ref>,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>26day<sp/>EMA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa02d7b0434a6c73c9dae1d16ff649b980" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa02d7b0434a6c73c9dae1d16ff649b980" kindref="member">MACD_LINE</ref>,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>FAST_EMA-SLOW_EMA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafaa5290299e5bf77e1609551751ef1ea58" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafaa5290299e5bf77e1609551751ef1ea58" kindref="member">SIG_LINE</ref>,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>9day<sp/>EMA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa6f1880bb6a3f566a19cbbbfddfb204b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa6f1880bb6a3f566a19cbbbfddfb204b8" kindref="member">MACD_HIST</ref>,<sp/><sp/></highlight><highlight class="comment">//<sp/>MACD_LINE<sp/>-<sp/>SIG_EMA<sp/>(MACD<sp/>HISTOGRAM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*<sp/>END<sp/>OF<sp/>CALCULATED<sp/>FIELDS<sp/>*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa884806b8188679868516f4e19428dd13" kindref="member">END_TICKER_FIELDS</ref></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*<sp/>END<sp/>OF<sp/>ALL<sp/>TICKER<sp/>FIELDS<sp/>*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa884806b8188679868516f4e19428dd13" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="class_ticker_data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_ticker_data" kindref="compound">TickerData</ref></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>********************<sp/>CLASS<sp/>CONSTANTS<sp/>********************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="class_ticker_data_1a875fa60f1877615e9ca408b697b27905" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_ticker_data_1a875fa60f1877615e9ca408b697b27905" kindref="member">NA_VAL</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************<sp/>CONSTRUCTORS<sp/>**********************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ticker_data_1ae29619f5b91cd6a8f348a72f244f1d36" kindref="member">TickerData</ref>(std::string<sp/>&amp;a_tickerName,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;a_directory<sp/>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>***********************<sp/>ACCESSORS<sp/>***********************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="class_ticker_data_1a417646c038db3d2c73785a06b2de14c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_ticker_data_1a417646c038db3d2c73785a06b2de14c9" kindref="member">GetCurrentDataOf</ref>(<sp/><ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafaf" kindref="member">TICKER_FIELDS</ref><sp/>a_field<sp/>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_ticker_data_1ab48c85fc6e08165baf3133be3493dff9" kindref="member">m_tickerData</ref>[a_field].at(<ref refid="class_ticker_data_1a48c1ab70886fd0c243816b0b25f0d955" kindref="member">m_tradingDateIndexStart</ref>+1);<sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="class_ticker_data_1a35d4daa28dbb110844ac33657ee7f7a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_ticker_data_1a35d4daa28dbb110844ac33657ee7f7a8" kindref="member">GetCloseYesterday</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_ticker_data_1ab48c85fc6e08165baf3133be3493dff9" kindref="member">m_tickerData</ref>[<ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa685f73194ad125cbc784c3210cdb3449" kindref="member">TICKER_FIELDS::CLOSE</ref>].at(<ref refid="class_ticker_data_1a48c1ab70886fd0c243816b0b25f0d955" kindref="member">m_tradingDateIndexStart</ref>+2);<sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*****************<sp/>PUBLIC<sp/>CLASS<sp/>METHODS<sp/>******************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ticker_data_1ab7018ea10b33e3e411da4b5d3c50db3b" kindref="member">SetTradingDateRange</ref>(<sp/><ref refid="class_date_time" kindref="compound">DateTime</ref>*<sp/>a_startDate,<sp/><ref refid="class_date_time" kindref="compound">DateTime</ref>*<sp/>a_endDate);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_ticker_data_1aaf1f6539e8da61af8091c72dcfd39e0d" kindref="member">GetMACDSignal</ref>();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="class_ticker_data_1a00452f84d330c1261f501a65d9794650" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ticker_data_1a00452f84d330c1261f501a65d9794650" kindref="member">~TickerData</ref>()=</highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*******************<sp/>DEBUGGING<sp/>METHODS<sp/>*******************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ticker_data_1a2911629c43557f55b171d7d901570a85" kindref="member">PrintDataHead</ref>();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ticker_data_1a61b055a3f30fb19996f99aa1cd0b9d8c" kindref="member">PrintAllColumns</ref>();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="108" refid="class_ticker_data_1ae29619f5b91cd6a8f348a72f244f1d36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ticker_data_1ae29619f5b91cd6a8f348a72f244f1d36" kindref="member">TickerData</ref>()=</highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>********************<sp/>CLASS<sp/>VARIABLES<sp/>********************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="class_ticker_data_1a5ae1441ed45c2d92dcce72a9d7863a5a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_ticker_data_1a5ae1441ed45c2d92dcce72a9d7863a5a" kindref="member">m_tickerName</ref>;</highlight></codeline>
+<codeline lineno="117" refid="class_ticker_data_1ab48c85fc6e08165baf3133be3493dff9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="class_ticker_data_1ab48c85fc6e08165baf3133be3493dff9" kindref="member">m_tickerData</ref>[<ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa884806b8188679868516f4e19428dd13" kindref="member">TICKER_FIELDS::END_TICKER_FIELDS</ref>];</highlight></codeline>
+<codeline lineno="119" refid="class_ticker_data_1a5ad87c6102b7a5f35f53fa633729afed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;DateTime*&gt;<sp/><ref refid="class_ticker_data_1a5ad87c6102b7a5f35f53fa633729afed" kindref="member">m_tickerDates</ref>;</highlight></codeline>
+<codeline lineno="121" refid="class_ticker_data_1a48c1ab70886fd0c243816b0b25f0d955" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_ticker_data_1a48c1ab70886fd0c243816b0b25f0d955" kindref="member">m_tradingDateIndexStart</ref>;</highlight></codeline>
+<codeline lineno="123" refid="class_ticker_data_1a17c871ed7c2fd57c41bc2c7b3701df60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_ticker_data_1a17c871ed7c2fd57c41bc2c7b3701df60" kindref="member">m_tradingDateIndexEnd</ref>;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>***************<sp/>PRIVATE<sp/>UTILITY<sp/>METHODS<sp/>*****************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ticker_data_1ae1a96fbae5695797dfa0c6e31960363e" kindref="member">parseTickerData</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;a_directory<sp/>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ticker_data_1afbe2562719b8213e530a1c4cac3d04b1" kindref="member">calculateMACDfields</ref>();</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>Ticker_h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="TickerData.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,602 @@
+\doxysection{Data\+Access Class Reference}
+\label{class_data_access}\index{DataAccess@{DataAccess}}
+
+
+{\ttfamily \#include $<$Data\+Access.\+h$>$}
+
+
+
+Collaboration diagram for Data\+Access\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_access__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::vector$<$ std\+::string $>$ \textbf{ Get\+Universe} ()
+\begin{DoxyCompactList}\small\item\em Get constituent names in the universe. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \textbf{ Date\+Time} $\ast$ $>$ \textbf{ Get\+Trading\+Dates} ()
+\begin{DoxyCompactList}\small\item\em Get trading dates. \end{DoxyCompactList}\item 
+\textbf{ Date\+Time} $\ast$ \textbf{ Get\+Oldest\+Trading\+Date} ()
+\begin{DoxyCompactList}\small\item\em Get oldest trading date for which data is available. \end{DoxyCompactList}\item 
+\textbf{ Date\+Time} $\ast$ \textbf{ Get\+Latest\+Trading\+Date} ()
+\begin{DoxyCompactList}\small\item\em Get most recent trading date for which data is available. \end{DoxyCompactList}\item 
+std\+::vector$<$ \textbf{ Date\+Time} $\ast$ $>$ \textbf{ Get\+Trading\+Dates\+In\+Range} (\textbf{ Date\+Time} $\ast$a\+\_\+from, \textbf{ Date\+Time} $\ast$a\+\_\+to)
+\begin{DoxyCompactList}\small\item\em Get trading dates from \char`\"{}a\+\_\+from\char`\"{} to \char`\"{}a\+\_\+to\char`\"{}. \end{DoxyCompactList}\item 
+\textbf{ Ticker\+Data} $\ast$ \textbf{ Get\+Ticker\+Data} (std\+::string a\+\_\+ticker)
+\begin{DoxyCompactList}\small\item\em Get \doxyref{Ticker\+Data}{p.}{class_ticker_data} Data. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Data\+Access} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+bool \textbf{ Check\+Date\+Range} (\textbf{ Date\+Time} $\ast$a\+\_\+start\+Date, \textbf{ Date\+Time} $\ast$a\+\_\+end\+Date)
+\begin{DoxyCompactList}\small\item\em Check date range with available data\textquotesingle{}s date range. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \textbf{ Data\+Access} $\ast$ \textbf{ Get\+Db\+Instance} (const std\+::string a\+\_\+directory, const std\+::string a\+\_\+universe)
+\begin{DoxyCompactList}\small\item\em Static access method to create a singleton \doxyref{Data\+Access}{p.}{class_data_access} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Data\+Access} ()
+\begin{DoxyCompactList}\small\item\em Private constructors to prevent multiple instancing\+: \end{DoxyCompactList}\item 
+\textbf{ Data\+Access} (const std\+::string \&a\+\_\+directory, const std\+::string \&a\+\_\+universe)
+\begin{DoxyCompactList}\small\item\em Main class parameterized constructor. \end{DoxyCompactList}\item 
+\textbf{ Data\+Access} (\textbf{ Data\+Access} const \&)
+\begin{DoxyCompactList}\small\item\em Private copy constructor. \end{DoxyCompactList}\item 
+\textbf{ Data\+Access} \& \textbf{ operator=} (\textbf{ Data\+Access} const \&)=delete
+\begin{DoxyCompactList}\small\item\em Delete assignment operator. \end{DoxyCompactList}\item 
+void \textbf{ load\+Ticker\+Names} (const std\+::string \&a\+\_\+universe)
+\begin{DoxyCompactList}\small\item\em Method to load ticker names from the constituent universe file. \end{DoxyCompactList}\item 
+void \textbf{ load\+Ticker\+Data} (const std\+::string \&a\+\_\+directory)
+\begin{DoxyCompactList}\small\item\em Method to load price data for loaded tickers. \end{DoxyCompactList}\item 
+void \textbf{ load\+Trading\+Dates} (const std\+::string \&a\+\_\+directory)
+\begin{DoxyCompactList}\small\item\em Method to load trading dates from the refence ticker, I\+BM. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \textbf{ m\+\_\+trading\+Dates\+Ref\+Ticker} = \char`\"{}I\+BM\char`\"{}
+\begin{DoxyCompactList}\small\item\em \doxyref{Ticker\+Data}{p.}{class_ticker_data} for referencing trading dates. Uses I\+BM. \end{DoxyCompactList}\item 
+static \textbf{ Data\+Access} $\ast$ \textbf{ m\+\_\+data\+Instance} = 0
+\begin{DoxyCompactList}\small\item\em Single \doxyref{Data\+Access}{p.}{class_data_access} instance var. \end{DoxyCompactList}\item 
+static std\+::vector$<$ std\+::string $>$ \textbf{ m\+\_\+ticker\+Names}
+\begin{DoxyCompactList}\small\item\em \doxyref{Ticker\+Data}{p.}{class_ticker_data} names specified in the universe. \end{DoxyCompactList}\item 
+static std\+::vector$<$ \textbf{ Date\+Time} $\ast$ $>$ \textbf{ m\+\_\+trading\+Dates}
+\begin{DoxyCompactList}\small\item\em Trading dates loaded from reference ticker. \end{DoxyCompactList}\item 
+static std\+::map$<$ std\+::string, \textbf{ Ticker\+Data} $\ast$ $>$ \textbf{ m\+\_\+ticker\+Data}
+\begin{DoxyCompactList}\small\item\em Map variable ( \doxyref{Ticker\+Data}{p.}{class_ticker_data} Name \+: \doxyref{Ticker\+Data}{p.}{class_ticker_data} Data ) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxyref{Data\+Access.\+h}{p.}{_data_access_8h} Singleton class for storing data of ticker price data in internal memory. Cannot have multiple instances since it can use a lot of memory.
+
+Created by Salil Maharjan on 4/29/20. Copyright © 2020 Salil Maharjan. All rights reserved. 
+
+Definition at line 18 of file Data\+Access.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_data_access_ac9ca4ff2f082d5982bf4f00b6394c078}} 
+\index{DataAccess@{DataAccess}!````~DataAccess@{$\sim$DataAccess}}
+\index{````~DataAccess@{$\sim$DataAccess}!DataAccess@{DataAccess}}
+\doxysubsubsection{$\sim$DataAccess()}
+{\footnotesize\ttfamily Data\+Access\+::$\sim$\+Data\+Access (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destructor. 
+
+\mbox{\label{class_data_access_af99b77ec290d1e723d0540ba9d9a95ba}} 
+\index{DataAccess@{DataAccess}!DataAccess@{DataAccess}}
+\index{DataAccess@{DataAccess}!DataAccess@{DataAccess}}
+\doxysubsubsection{DataAccess()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Data\+Access\+::\+Data\+Access (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Private constructors to prevent multiple instancing\+: 
+
+
+
+Definition at line 80 of file Data\+Access.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_access_af99b77ec290d1e723d0540ba9d9a95ba_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_data_access_a6401bb06d5a926b9fdb9d03f58d9952b}} 
+\index{DataAccess@{DataAccess}!DataAccess@{DataAccess}}
+\index{DataAccess@{DataAccess}!DataAccess@{DataAccess}}
+\doxysubsubsection{DataAccess()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Data\+Access\+::\+Data\+Access (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+\_\+directory,  }\item[{const std\+::string \&}]{a\+\_\+universe }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Main class parameterized constructor. 
+
+\doxyref{Data\+Access\+::\+Data\+Access}{p.}{class_data_access_af99b77ec290d1e723d0540ba9d9a95ba}. Constructor to create single instance of \doxyref{Data\+Access}{p.}{class_data_access}. Stores price data for the specified universe in memory. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+directory} & string Price data directory path. \\
+\hline
+{\em a\+\_\+universe} & string Directory path for ticker name universe file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/29/20. 
+\end{DoxyDate}
+
+
+Definition at line 34 of file Data\+Access.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_access_a6401bb06d5a926b9fdb9d03f58d9952b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_data_access_a253a1c0e03533be0b8173851e237305b}} 
+\index{DataAccess@{DataAccess}!DataAccess@{DataAccess}}
+\index{DataAccess@{DataAccess}!DataAccess@{DataAccess}}
+\doxysubsubsection{DataAccess()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Data\+Access\+::\+Data\+Access (\begin{DoxyParamCaption}\item[{\textbf{ Data\+Access} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Private copy constructor. 
+
+
+
+Definition at line 85 of file Data\+Access.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_data_access_a999d5066dde617c2b244606d57f003ed}} 
+\index{DataAccess@{DataAccess}!CheckDateRange@{CheckDateRange}}
+\index{CheckDateRange@{CheckDateRange}!DataAccess@{DataAccess}}
+\doxysubsubsection{CheckDateRange()}
+{\footnotesize\ttfamily bool Data\+Access\+::\+Check\+Date\+Range (\begin{DoxyParamCaption}\item[{\textbf{ Date\+Time} $\ast$}]{a\+\_\+start\+Date,  }\item[{\textbf{ Date\+Time} $\ast$}]{a\+\_\+end\+Date }\end{DoxyParamCaption})}
+
+
+
+Check date range with available data\textquotesingle{}s date range. 
+
+\doxyref{Data\+Access\+::\+Check\+Date\+Range}{p.}{class_data_access_a999d5066dde617c2b244606d57f003ed}. Check date range with available data\textquotesingle{}s date range. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+start\+Date} & Date\+Time$\ast$ Starting date range. \\
+\hline
+{\em a\+\_\+end\+Date} & Date\+Time$\ast$ End of date range. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool If data is available for the date range. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/29/20. 
+\end{DoxyDate}
+
+
+Definition at line 70 of file Data\+Access.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_access_a999d5066dde617c2b244606d57f003ed_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_data_access_abc3ed687ddf164425f4f7c797eddcb55}} 
+\index{DataAccess@{DataAccess}!GetDbInstance@{GetDbInstance}}
+\index{GetDbInstance@{GetDbInstance}!DataAccess@{DataAccess}}
+\doxysubsubsection{GetDbInstance()}
+{\footnotesize\ttfamily \textbf{ Data\+Access} $\ast$ Data\+Access\+::\+Get\+Db\+Instance (\begin{DoxyParamCaption}\item[{const std\+::string}]{a\+\_\+directory,  }\item[{const std\+::string}]{a\+\_\+universe }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Static access method to create a singleton \doxyref{Data\+Access}{p.}{class_data_access} object. 
+
+\doxyref{Data\+Access\+::\+Get\+Db\+Instance}{p.}{class_data_access_abc3ed687ddf164425f4f7c797eddcb55}. Method to create a single instance of \doxyref{Data\+Access}{p.}{class_data_access} and prevent multiple instances. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+directory} & string Price data directory path. \\
+\hline
+{\em a\+\_\+universe} & string Directory path for file with ticker name universe. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Data\+Access$\ast$ Single instance of the path. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/29/20. 
+\end{DoxyDate}
+
+
+Definition at line 53 of file Data\+Access.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_access_abc3ed687ddf164425f4f7c797eddcb55_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_access_abc3ed687ddf164425f4f7c797eddcb55_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_data_access_a515ad86dcb1b7dded8aabb7400b1609d}} 
+\index{DataAccess@{DataAccess}!GetLatestTradingDate@{GetLatestTradingDate}}
+\index{GetLatestTradingDate@{GetLatestTradingDate}!DataAccess@{DataAccess}}
+\doxysubsubsection{GetLatestTradingDate()}
+{\footnotesize\ttfamily \textbf{ Date\+Time}$\ast$ Data\+Access\+::\+Get\+Latest\+Trading\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get most recent trading date for which data is available. 
+
+
+
+Definition at line 36 of file Data\+Access.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_access_a515ad86dcb1b7dded8aabb7400b1609d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_data_access_a9e9db2cee4493ae998b9abaa17fe6be6}} 
+\index{DataAccess@{DataAccess}!GetOldestTradingDate@{GetOldestTradingDate}}
+\index{GetOldestTradingDate@{GetOldestTradingDate}!DataAccess@{DataAccess}}
+\doxysubsubsection{GetOldestTradingDate()}
+{\footnotesize\ttfamily \textbf{ Date\+Time}$\ast$ Data\+Access\+::\+Get\+Oldest\+Trading\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get oldest trading date for which data is available. 
+
+
+
+Definition at line 33 of file Data\+Access.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_access_a9e9db2cee4493ae998b9abaa17fe6be6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_data_access_a8fef2d9972260413cc5c949d6ad7f245}} 
+\index{DataAccess@{DataAccess}!GetTickerData@{GetTickerData}}
+\index{GetTickerData@{GetTickerData}!DataAccess@{DataAccess}}
+\doxysubsubsection{GetTickerData()}
+{\footnotesize\ttfamily \textbf{ Ticker\+Data} $\ast$ Data\+Access\+::\+Get\+Ticker\+Data (\begin{DoxyParamCaption}\item[{std\+::string}]{a\+\_\+ticker }\end{DoxyParamCaption})}
+
+
+
+Get \doxyref{Ticker\+Data}{p.}{class_ticker_data} Data. 
+
+\doxyref{Data\+Access\+::\+Get\+Ticker\+Data}{p.}{class_data_access_a8fef2d9972260413cc5c949d6ad7f245}. Get ticker data for a\+\_\+ticker. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+ticker} & string The name of the ticker to get data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ticker\+Data$\ast$ Price data of a\+\_\+ticker 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/29/20. 
+\end{DoxyDate}
+
+
+Definition at line 105 of file Data\+Access.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_access_a8fef2d9972260413cc5c949d6ad7f245_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_data_access_a597aaef015817d95979ee025a6e81121}} 
+\index{DataAccess@{DataAccess}!GetTradingDates@{GetTradingDates}}
+\index{GetTradingDates@{GetTradingDates}!DataAccess@{DataAccess}}
+\doxysubsubsection{GetTradingDates()}
+{\footnotesize\ttfamily const std\+::vector$<$\textbf{ Date\+Time}$\ast$$>$ Data\+Access\+::\+Get\+Trading\+Dates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get trading dates. 
+
+
+
+Definition at line 30 of file Data\+Access.\+h.
+
+\mbox{\label{class_data_access_aca25ff0e8ce73d87a8e2f4584ee87149}} 
+\index{DataAccess@{DataAccess}!GetTradingDatesInRange@{GetTradingDatesInRange}}
+\index{GetTradingDatesInRange@{GetTradingDatesInRange}!DataAccess@{DataAccess}}
+\doxysubsubsection{GetTradingDatesInRange()}
+{\footnotesize\ttfamily std\+::vector$<$ \textbf{ Date\+Time} $\ast$ $>$ Data\+Access\+::\+Get\+Trading\+Dates\+In\+Range (\begin{DoxyParamCaption}\item[{\textbf{ Date\+Time} $\ast$}]{a\+\_\+from,  }\item[{\textbf{ Date\+Time} $\ast$}]{a\+\_\+to }\end{DoxyParamCaption})}
+
+
+
+Get trading dates from \char`\"{}a\+\_\+from\char`\"{} to \char`\"{}a\+\_\+to\char`\"{}. 
+
+\doxyref{Data\+Access\+::\+Get\+Trading\+Dates\+In\+Range}{p.}{class_data_access_aca25ff0e8ce73d87a8e2f4584ee87149}. Get trading dates from \char`\"{}a\+\_\+from\char`\"{} to \char`\"{}a\+\_\+to\char`\"{} according to reference ticker. I\+BM. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+from} & Date\+Time$\ast$ Starting date range. \\
+\hline
+{\em a\+\_\+to} & Date\+Time$\ast$ End of date range. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$\+Date\+Time$\ast$$>$ All trading dates in range. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/29/20. 
+\end{DoxyDate}
+
+
+Definition at line 84 of file Data\+Access.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_access_aca25ff0e8ce73d87a8e2f4584ee87149_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_data_access_a3192674ca52329b3db8f0a5f3c0e9141}} 
+\index{DataAccess@{DataAccess}!GetUniverse@{GetUniverse}}
+\index{GetUniverse@{GetUniverse}!DataAccess@{DataAccess}}
+\doxysubsubsection{GetUniverse()}
+{\footnotesize\ttfamily const std\+::vector$<$std\+::string$>$ Data\+Access\+::\+Get\+Universe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get constituent names in the universe. 
+
+
+
+Definition at line 27 of file Data\+Access.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_access_a3192674ca52329b3db8f0a5f3c0e9141_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_data_access_a5ac301f8e12a423d054ec44865e973de}} 
+\index{DataAccess@{DataAccess}!loadTickerData@{loadTickerData}}
+\index{loadTickerData@{loadTickerData}!DataAccess@{DataAccess}}
+\doxysubsubsection{loadTickerData()}
+{\footnotesize\ttfamily void Data\+Access\+::load\+Ticker\+Data (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+\_\+directory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Method to load price data for loaded tickers. 
+
+\doxyref{Data\+Access\+::load\+Ticker\+Data}{p.}{class_data_access_a5ac301f8e12a423d054ec44865e973de}. Method to load price data for each ticker in the universe. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+directory} & string Price data directory path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/29/20. 
+\end{DoxyDate}
+
+
+Definition at line 182 of file Data\+Access.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_access_a5ac301f8e12a423d054ec44865e973de_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_access_a5ac301f8e12a423d054ec44865e973de_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_data_access_a22d1b0fdc94c69e4fd22ab2806c0774c}} 
+\index{DataAccess@{DataAccess}!loadTickerNames@{loadTickerNames}}
+\index{loadTickerNames@{loadTickerNames}!DataAccess@{DataAccess}}
+\doxysubsubsection{loadTickerNames()}
+{\footnotesize\ttfamily void Data\+Access\+::load\+Ticker\+Names (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+\_\+universe }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Method to load ticker names from the constituent universe file. 
+
+\doxyref{Data\+Access\+::load\+Ticker\+Names}{p.}{class_data_access_a22d1b0fdc94c69e4fd22ab2806c0774c}. Method to load ticker names in the universe. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+universe} & string Directory path for ticker name universe file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/29/20. 
+\end{DoxyDate}
+
+
+Definition at line 124 of file Data\+Access.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_access_a22d1b0fdc94c69e4fd22ab2806c0774c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_data_access_a44f425fb23df421e7b4d5fd1545731ad}} 
+\index{DataAccess@{DataAccess}!loadTradingDates@{loadTradingDates}}
+\index{loadTradingDates@{loadTradingDates}!DataAccess@{DataAccess}}
+\doxysubsubsection{loadTradingDates()}
+{\footnotesize\ttfamily void Data\+Access\+::load\+Trading\+Dates (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+\_\+directory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Method to load trading dates from the refence ticker, I\+BM. 
+
+\doxyref{Data\+Access\+::load\+Trading\+Dates}{p.}{class_data_access_a44f425fb23df421e7b4d5fd1545731ad}. Method to load trading dates from the refence ticker, I\+BM. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+directory} & string Price data directory path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/29/20. 
+\end{DoxyDate}
+
+
+Definition at line 154 of file Data\+Access.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_access_a44f425fb23df421e7b4d5fd1545731ad_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_data_access_aec4ac0b293f6123602cb5edd1dd58652}} 
+\index{DataAccess@{DataAccess}!operator=@{operator=}}
+\index{operator=@{operator=}!DataAccess@{DataAccess}}
+\doxysubsubsection{operator=()}
+{\footnotesize\ttfamily \textbf{ Data\+Access}\& Data\+Access\+::operator= (\begin{DoxyParamCaption}\item[{\textbf{ Data\+Access} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+
+
+Delete assignment operator. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{class_data_access_a6052079ffd5ad4d1d20dc311a2edf1de}} 
+\index{DataAccess@{DataAccess}!m\_dataInstance@{m\_dataInstance}}
+\index{m\_dataInstance@{m\_dataInstance}!DataAccess@{DataAccess}}
+\doxysubsubsection{m\_dataInstance}
+{\footnotesize\ttfamily \textbf{ Data\+Access} $\ast$ Data\+Access\+::m\+\_\+data\+Instance = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Single \doxyref{Data\+Access}{p.}{class_data_access} instance var. 
+
+\doxyref{Data\+Access.\+cpp}{p.}{_data_access_8cpp} Implementation of \doxyref{Data\+Access.\+h}{p.}{_data_access_8h}
+
+Created by Salil Maharjan on 4/29/20. Copyright © 2020 Salil Maharjan. All rights reserved. 
+
+Definition at line 67 of file Data\+Access.\+h.
+
+\mbox{\label{class_data_access_a33d75e928a5979c6e6cd4cdc47a3802f}} 
+\index{DataAccess@{DataAccess}!m\_tickerData@{m\_tickerData}}
+\index{m\_tickerData@{m\_tickerData}!DataAccess@{DataAccess}}
+\doxysubsubsection{m\_tickerData}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, \textbf{ Ticker\+Data} $\ast$ $>$ Data\+Access\+::m\+\_\+ticker\+Data\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Map variable ( \doxyref{Ticker\+Data}{p.}{class_ticker_data} Name \+: \doxyref{Ticker\+Data}{p.}{class_ticker_data} Data ) 
+
+
+
+Definition at line 73 of file Data\+Access.\+h.
+
+\mbox{\label{class_data_access_aa2021225186679fab899867e14256462}} 
+\index{DataAccess@{DataAccess}!m\_tickerNames@{m\_tickerNames}}
+\index{m\_tickerNames@{m\_tickerNames}!DataAccess@{DataAccess}}
+\doxysubsubsection{m\_tickerNames}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Data\+Access\+::m\+\_\+ticker\+Names\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+\doxyref{Ticker\+Data}{p.}{class_ticker_data} names specified in the universe. 
+
+
+
+Definition at line 69 of file Data\+Access.\+h.
+
+\mbox{\label{class_data_access_a3675547c80c87288d0f3afb679566b9a}} 
+\index{DataAccess@{DataAccess}!m\_tradingDates@{m\_tradingDates}}
+\index{m\_tradingDates@{m\_tradingDates}!DataAccess@{DataAccess}}
+\doxysubsubsection{m\_tradingDates}
+{\footnotesize\ttfamily std\+::vector$<$ \textbf{ Date\+Time} $\ast$ $>$ Data\+Access\+::m\+\_\+trading\+Dates\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Trading dates loaded from reference ticker. 
+
+
+
+Definition at line 71 of file Data\+Access.\+h.
+
+\mbox{\label{class_data_access_a103ea7eafa2a2da552050ce3726955b9}} 
+\index{DataAccess@{DataAccess}!m\_tradingDatesRefTicker@{m\_tradingDatesRefTicker}}
+\index{m\_tradingDatesRefTicker@{m\_tradingDatesRefTicker}!DataAccess@{DataAccess}}
+\doxysubsubsection{m\_tradingDatesRefTicker}
+{\footnotesize\ttfamily const std\+::string Data\+Access\+::m\+\_\+trading\+Dates\+Ref\+Ticker = \char`\"{}I\+BM\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+\doxyref{Ticker\+Data}{p.}{class_ticker_data} for referencing trading dates. Uses I\+BM. 
+
+
+
+Definition at line 65 of file Data\+Access.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Data\+Access.\+h}\item 
+\textbf{ Data\+Access.\+cpp}\end{DoxyCompactItemize}

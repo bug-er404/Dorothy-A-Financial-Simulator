@@ -1,0 +1,6 @@
+<map id="Simulator::recordSharpeRatio" name="Simulator::recordSharpeRatio">
+<area shape="rect" id="node1" title="Function to record sharpe ratio to daily statistics file." alt="" coords="5,31,199,57"/>
+<area shape="rect" id="node2" href="$class_simulator.html#a1176c2f39f71a17dd1c9d669d3a46d15" title="Function to calculate sharpe ratio." alt="" coords="247,23,425,65"/>
+<area shape="rect" id="node3" href="$namespace_utilities.html#a80b350cec72abbcf34ad7e28405d531c" title="Function to get average of a list with doubles." alt="" coords="503,5,646,32"/>
+<area shape="rect" id="node4" href="$namespace_utilities.html#a175ab95f5c509ccc3d4b571e8963f22e" title="Function to get the standard deviation of a list with doubles." alt="" coords="473,56,676,83"/>
+</map>

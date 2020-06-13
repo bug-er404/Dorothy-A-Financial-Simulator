@@ -1,0 +1,6 @@
+<map id="TickerData::TickerData" name="TickerData::TickerData">
+<area shape="rect" id="node1" title="Parameterized constructor to create a ticker object." alt="" coords="5,31,164,57"/>
+<area shape="rect" id="node2" href="$class_ticker_data.html#afbe2562719b8213e530a1c4cac3d04b1" title="Calculate MACD fields and append to the ticker data." alt="" coords="212,5,429,32"/>
+<area shape="rect" id="node3" href="$class_ticker_data.html#ae1a96fbae5695797dfa0c6e31960363e" title="Parse ticker data from data source files." alt="" coords="225,56,416,83"/>
+<area shape="rect" id="node4" href="$namespace_utilities.html#a0ab4e4bfac17a04ab38640746aba42fe" title="Method to trim leading and trailing blanks while reading data." alt="" coords="477,56,613,83"/>
+</map>

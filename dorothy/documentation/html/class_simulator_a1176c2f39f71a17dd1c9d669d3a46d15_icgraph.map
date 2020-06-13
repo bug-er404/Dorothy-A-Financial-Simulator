@@ -1,0 +1,8 @@
+<map id="Simulator::calculateSharpeRatio" name="Simulator::calculateSharpeRatio">
+<area shape="rect" id="node1" title="Function to calculate sharpe ratio." alt="" coords="1041,23,1220,65"/>
+<area shape="rect" id="node2" href="$class_simulator.html#accf533fb22ca8261dce0830daa5945f1" title="Function to record sharpe ratio to daily statistics file." alt="" coords="800,5,993,32"/>
+<area shape="rect" id="node4" href="$class_simulator.html#a9a703ddcca1a802b3df9a9dc921927ae" title="Main method to run simulation." alt="" coords="327,31,497,57"/>
+<area shape="rect" id="node3" href="$class_simulator.html#ae77749f93581b683330f30726f5aaffb" title="Function to record daily statistics to a file." alt="" coords="545,5,752,32"/>
+<area shape="rect" id="node5" href="$class_simulator.html#ab899d33750e674079de022d269c6bf9c" title="Interface method to start the simulation." alt="" coords="104,31,279,57"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,31,56,57"/>
+</map>

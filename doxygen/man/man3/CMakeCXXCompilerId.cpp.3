@@ -1,0 +1,158 @@
+.TH "cmake-build-debug/CMakeFiles/3.16.5/CompilerIdCXX/CMakeCXXCompilerId.cpp" 3 "Sat Jun 6 2020" "Version Version 1.0" "DOROTHY" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cmake-build-debug/CMakeFiles/3.16.5/CompilerIdCXX/CMakeCXXCompilerId.cpp
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBCOMPILER_ID\fP   ''"
+.br
+.ti -1c
+.RI "#define \fBSTRINGIFY_HELPER\fP(\fBX\fP)   #\fBX\fP"
+.br
+.ti -1c
+.RI "#define \fBSTRINGIFY\fP(\fBX\fP)   \fBSTRINGIFY_HELPER\fP(\fBX\fP)"
+.br
+.ti -1c
+.RI "#define \fBPLATFORM_ID\fP"
+.br
+.ti -1c
+.RI "#define \fBARCHITECTURE_ID\fP"
+.br
+.ti -1c
+.RI "#define \fBDEC\fP(n)"
+.br
+.ti -1c
+.RI "#define \fBHEX\fP(n)"
+.br
+.ti -1c
+.RI "#define \fBCXX_STD\fP   \fB__cplusplus\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBint\fP \fBmain\fP (\fBint\fP argc, \fBchar\fP *argv[])"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBchar\fP const  * \fBinfo_compiler\fP = 'INFO' ':' 'compiler[' COMPILER_ID ']'"
+.br
+.ti -1c
+.RI "\fBchar\fP const  * \fBinfo_platform\fP = 'INFO' ':' 'platform[' PLATFORM_ID ']'"
+.br
+.ti -1c
+.RI "\fBchar\fP const  * \fBinfo_arch\fP = 'INFO' ':' 'arch[' ARCHITECTURE_ID ']'"
+.br
+.ti -1c
+.RI "const \fBchar\fP * \fBinfo_language_dialect_default\fP"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ARCHITECTURE_ID"
+
+.PP
+Definition at line 526 of file CMakeCXXCompilerId\&.cpp\&.
+.SS "#define COMPILER_ID   ''"
+
+.PP
+Definition at line 300 of file CMakeCXXCompilerId\&.cpp\&.
+.SS "#define CXX_STD   \fB__cplusplus\fP"
+
+.PP
+Definition at line 619 of file CMakeCXXCompilerId\&.cpp\&.
+.SS "#define DEC(n)"
+\fBValue:\fP
+.PP
+.nf
+  ('0' + (((n) / 10000000)%10)), \
+  ('0' + (((n) / 1000000)%10)),  \
+  ('0' + (((n) / 100000)%10)),   \
+  ('0' + (((n) / 10000)%10)),    \
+  ('0' + (((n) / 1000)%10)),     \
+  ('0' + (((n) / 100)%10)),      \
+  ('0' + (((n) / 10)%10)),       \
+  ('0' +  ((n) % 10))
+.fi
+.PP
+Definition at line 530 of file CMakeCXXCompilerId\&.cpp\&.
+.SS "#define HEX(n)"
+\fBValue:\fP
+.PP
+.nf
+  ('0' + ((n)>>28 & 0xF)), \
+  ('0' + ((n)>>24 & 0xF)), \
+  ('0' + ((n)>>20 & 0xF)), \
+  ('0' + ((n)>>16 & 0xF)), \
+  ('0' + ((n)>>12 & 0xF)), \
+  ('0' + ((n)>>8  & 0xF)), \
+  ('0' + ((n)>>4  & 0xF)), \
+  ('0' + ((n)     & 0xF))
+.fi
+.PP
+Definition at line 541 of file CMakeCXXCompilerId\&.cpp\&.
+.SS "#define PLATFORM_ID"
+
+.PP
+Definition at line 422 of file CMakeCXXCompilerId\&.cpp\&.
+.SS "#define STRINGIFY(\fBX\fP)   \fBSTRINGIFY_HELPER\fP(\fBX\fP)"
+
+.PP
+Definition at line 321 of file CMakeCXXCompilerId\&.cpp\&.
+.SS "#define STRINGIFY_HELPER(\fBX\fP)   #\fBX\fP"
+
+.PP
+Definition at line 320 of file CMakeCXXCompilerId\&.cpp\&.
+.SH "Function Documentation"
+.PP 
+.SS "\fBint\fP main (\fBint\fP argc, \fBchar\fP * argv[])"
+
+.PP
+Definition at line 637 of file CMakeCXXCompilerId\&.cpp\&.
+.SH "Variable Documentation"
+.PP 
+.SS "\fBchar\fP const* info_arch = 'INFO' ':' 'arch[' ARCHITECTURE_ID ']'"
+
+.PP
+Definition at line 600 of file CMakeCXXCompilerId\&.cpp\&.
+.SS "\fBchar\fP const* info_compiler = 'INFO' ':' 'compiler[' COMPILER_ID ']'"
+
+.PP
+Definition at line 306 of file CMakeCXXCompilerId\&.cpp\&.
+.SS "const \fBchar\fP* info_language_dialect_default"
+\fBInitial value:\fP
+.PP
+.nf
+= "INFO" ":" "dialect_default["
+
+
+
+
+
+
+
+
+
+  "98"
+
+"]"
+.fi
+.PP
+Definition at line 621 of file CMakeCXXCompilerId\&.cpp\&.
+.SS "\fBchar\fP const* info_platform = 'INFO' ':' 'platform[' PLATFORM_ID ']'"
+
+.PP
+Definition at line 599 of file CMakeCXXCompilerId\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DOROTHY from the source code\&.

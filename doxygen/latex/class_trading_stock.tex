@@ -1,0 +1,1493 @@
+\doxysection{Trading\+Stock Class Reference}
+\label{class_trading_stock}\index{TradingStock@{TradingStock}}
+
+
+{\ttfamily \#include $<$Trading\+Stock.\+h$>$}
+
+
+
+Collaboration diagram for Trading\+Stock\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Trading\+Stock} (std\+::string a\+\_\+ticker\+Name, double a\+\_\+starting\+Capital)
+\begin{DoxyCompactList}\small\item\em Class parameterized constructor. \end{DoxyCompactList}\item 
+const std\+::string \textbf{ Get\+Stock\+Name} ()
+\item 
+const bool \textbf{ Is\+Long} ()
+\item 
+const bool \textbf{ Is\+Short} ()
+\item 
+const std\+::vector$<$ double $>$ \textbf{ Get\+Signal\+Record} ()
+\item 
+const double \textbf{ Get\+Total\+Shares} ()
+\item 
+const double \textbf{ Get\+Available\+Capital} ()
+\item 
+const double \textbf{ Get\+Daily\+PnL} ()
+\item 
+const double \textbf{ Get\+Daily\+R\+OR} ()
+\item 
+const std\+::vector$<$ double $>$ \textbf{ Get\+R\+OR} ()
+\item 
+const double \textbf{ Get\+Latest\+Share\+Activity} ()
+\item 
+const double \textbf{ Get\+Sharpe\+Today} ()
+\item 
+double \textbf{ Get\+Transaction\+Count} ()
+\begin{DoxyCompactList}\small\item\em Method to get current completed transaction count (Does not consider incomplete transactions.) \end{DoxyCompactList}\item 
+const double \textbf{ Get\+Short\+Shares\+Held} ()
+\begin{DoxyCompactList}\small\item\em Method to get short shares held. \end{DoxyCompactList}\item 
+const double \textbf{ Get\+Long\+Shares\+Held} ()
+\begin{DoxyCompactList}\small\item\em Method to get long shares held. \end{DoxyCompactList}\item 
+std\+::vector$<$ \textbf{ Transaction} $\ast$ $>$ \textbf{ Get\+Closed\+Transactions} ()
+\begin{DoxyCompactList}\small\item\em Method to get closed transactions and remove them from memory. \end{DoxyCompactList}\item 
+const double \textbf{ Get\+Short\+Capital} ()
+\begin{DoxyCompactList}\small\item\em Method to get short capital in investment. \end{DoxyCompactList}\item 
+const double \textbf{ Get\+Long\+Capital} ()
+\begin{DoxyCompactList}\small\item\em Method to get long capital in investment. \end{DoxyCompactList}\item 
+void \textbf{ Set\+Long} (bool a\+\_\+long)
+\item 
+void \textbf{ Set\+Short} (bool a\+\_\+short)
+\item 
+void \textbf{ Increase\+Shares\+By} (double a\+\_\+share)
+\item 
+void \textbf{ Decrease\+Shares\+By} (double a\+\_\+share)
+\item 
+void \textbf{ Increase\+Capital\+By} (double a\+\_\+share)
+\item 
+void \textbf{ Decrease\+Capital\+By} (double a\+\_\+share)
+\item 
+void \textbf{ Sell\+Shares} (double a\+\_\+shares, double a\+\_\+price)
+\begin{DoxyCompactList}\small\item\em Method to sell shares. \end{DoxyCompactList}\item 
+void \textbf{ Buy\+Shares} (double a\+\_\+shares, double a\+\_\+price)
+\begin{DoxyCompactList}\small\item\em Method to buys shares. \end{DoxyCompactList}\item 
+void \textbf{ Close\+Stale\+Positions} (\textbf{ int} a\+\_\+day\+Limit, \textbf{ Date\+Time} $\ast$a\+\_\+date, double a\+\_\+signal, double a\+\_\+price)
+\begin{DoxyCompactList}\small\item\em Method to close positions that exceed maximum days limit. \end{DoxyCompactList}\item 
+void \textbf{ Open\+Position} (\textbf{ Date\+Time} $\ast$a\+\_\+date, double a\+\_\+signal, double a\+\_\+share, double a\+\_\+price)
+\begin{DoxyCompactList}\small\item\em Method to open a position for the trading stock. \end{DoxyCompactList}\item 
+double \textbf{ Close\+Long\+Positions} (\textbf{ Date\+Time} $\ast$a\+\_\+date, double a\+\_\+signal, double a\+\_\+price, double \&a\+\_\+invested\+Captial, double \&a\+\_\+num\+Of\+Shares)
+\begin{DoxyCompactList}\small\item\em Method to close all long positions. \end{DoxyCompactList}\item 
+double \textbf{ Close\+Short\+Positions} (\textbf{ Date\+Time} $\ast$a\+\_\+date, double a\+\_\+signal, double a\+\_\+price, double \&a\+\_\+invested\+Captial, double \&a\+\_\+num\+Of\+Shares)
+\begin{DoxyCompactList}\small\item\em Method to close all short positions. \end{DoxyCompactList}\item 
+bool \textbf{ Check\+Short\+Signal} (double a\+\_\+price)
+\begin{DoxyCompactList}\small\item\em Method to check if signal is profitable for short positions. \end{DoxyCompactList}\item 
+bool \textbf{ Check\+Long\+Signal} (double a\+\_\+price)
+\begin{DoxyCompactList}\small\item\em Method to check if signal is profitable for long positions. \end{DoxyCompactList}\item 
+void \textbf{ Update\+Stock\+Position} ()
+\begin{DoxyCompactList}\small\item\em Method to update long/short position status of the trading stock. \end{DoxyCompactList}\item 
+void \textbf{ Record\+Signal} (double a\+\_\+signal)
+\begin{DoxyCompactList}\small\item\em Record day\textquotesingle{}s signal. \end{DoxyCompactList}\item 
+void \textbf{ Record\+P\+NL} (double a\+\_\+pnl, double a\+\_\+invested\+Capital)
+\begin{DoxyCompactList}\small\item\em Record day\textquotesingle{}s P\+NL. \end{DoxyCompactList}\item 
+void \textbf{ Record\+Transactions\+Count} (\textbf{ int} a\+\_\+count)
+\begin{DoxyCompactList}\small\item\em Record day\textquotesingle{}s number of transactions. \end{DoxyCompactList}\item 
+void \textbf{ Record\+Daily\+Return} (double a\+\_\+amount)
+\begin{DoxyCompactList}\small\item\em Recard day\textquotesingle{}s daily return. \end{DoxyCompactList}\item 
+double \textbf{ Get\+Invested\+Capital} ()
+\begin{DoxyCompactList}\small\item\em Get latest committed capital in an investment. \end{DoxyCompactList}\item 
+void \textbf{ Calculate\+Daily\+Sharpe\+Ratio} ()
+\begin{DoxyCompactList}\small\item\em Calculate daily sharpe ratio for individual stock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Trading\+Stock} ()=default
+\begin{DoxyCompactList}\small\item\em Private default constructor. \end{DoxyCompactList}\item 
+void \textbf{ new\+Trading\+Day} ()
+\begin{DoxyCompactList}\small\item\em Method to update days in position of all held shares. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \textbf{ m\+\_\+ticker\+Name}
+\begin{DoxyCompactList}\small\item\em Ticker name. \end{DoxyCompactList}\item 
+double \textbf{ m\+\_\+available\+Capital}
+\begin{DoxyCompactList}\small\item\em Available capital for trading stock. \end{DoxyCompactList}\item 
+\textbf{ int} \textbf{ m\+\_\+transactions\+Total\+Count}
+\begin{DoxyCompactList}\small\item\em Total transactions count. \end{DoxyCompactList}\item 
+\textbf{ int} \textbf{ m\+\_\+transaction\+Counter}
+\begin{DoxyCompactList}\small\item\em Current complete transaction counter. \end{DoxyCompactList}\item 
+double \textbf{ m\+\_\+total\+Shares\+Count}
+\begin{DoxyCompactList}\small\item\em Total shares held for stock. \end{DoxyCompactList}\item 
+bool \textbf{ m\+\_\+long\+Pos\+Flag}
+\begin{DoxyCompactList}\small\item\em Long position flag. \end{DoxyCompactList}\item 
+bool \textbf{ m\+\_\+short\+Pos\+Flag}
+\begin{DoxyCompactList}\small\item\em Short position flag. \end{DoxyCompactList}\item 
+std\+::vector$<$ \textbf{ Transaction} $\ast$ $>$ \textbf{ m\+\_\+transactions}
+\begin{DoxyCompactList}\small\item\em Records all transactions. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \textbf{ m\+\_\+signal\+Activity\+Record}
+\begin{DoxyCompactList}\small\item\em Records daily signals. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \textbf{ m\+\_\+capital\+Activity\+Record}
+\begin{DoxyCompactList}\small\item\em Records daily capital activities. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \textbf{ m\+\_\+share\+Activity\+Record}
+\begin{DoxyCompactList}\small\item\em Records daily position changes. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \textbf{ m\+\_\+daily\+P\+N\+L\+Record}
+\begin{DoxyCompactList}\small\item\em Records daily P\+NL. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \textbf{ m\+\_\+daily\+Return\+Record}
+\begin{DoxyCompactList}\small\item\em Records daily rate of return (R\+OR) \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \textbf{ m\+\_\+cumulative\+P\+N\+L\+Record}
+\begin{DoxyCompactList}\small\item\em Records daily cumulative P\+NL. \end{DoxyCompactList}\item 
+std\+::vector$<$ \textbf{ int} $>$ \textbf{ m\+\_\+\+Transactions\+Count\+Record}
+\begin{DoxyCompactList}\small\item\em Records daily transaction counts. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \textbf{ m\+\_\+sharpe\+Ratio\+Record}
+\begin{DoxyCompactList}\small\item\em Records daily sharpe ratio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxyref{Trading\+Stock.\+h}{p.}{_trading_stock_8h} Class that handles the investment portfolio of a trading stock in the simulator. Handles trading details for each ticker used in the simulator.
+
+Created by Salil Maharjan on 05/03/20. Copyright © 2020 Salil Maharjan. All rights reserved. 
+
+Definition at line 18 of file Trading\+Stock.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_trading_stock_acf37f3142597c43e861aeba34fe7b303}} 
+\index{TradingStock@{TradingStock}!TradingStock@{TradingStock}}
+\index{TradingStock@{TradingStock}!TradingStock@{TradingStock}}
+\doxysubsubsection{TradingStock()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Trading\+Stock\+::\+Trading\+Stock (\begin{DoxyParamCaption}\item[{std\+::string}]{a\+\_\+ticker\+Name,  }\item[{double}]{a\+\_\+starting\+Capital }\end{DoxyParamCaption})}
+
+
+
+Class parameterized constructor. 
+
+\doxyref{Trading\+Stock.\+cpp}{p.}{_trading_stock_8cpp} Implementation of \doxyref{Trading\+Stock.\+h}{p.}{_trading_stock_8h}
+
+Created by Salil Maharjan on 05/03/20. Copyright © 2020 Salil Maharjan. All rights reserved. \doxyref{Trading\+Stock\+::\+Trading\+Stock}{p.}{class_trading_stock_acf37f3142597c43e861aeba34fe7b303} Class parameterized constructor to create a trading stock object. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+ticker\+Name} & string Trading stock\textquotesingle{}s ticker name. \\
+\hline
+{\em a\+\_\+starting\+Capital} & double Initial capital to invest for the stock. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 26 of file Trading\+Stock.\+cpp.
+
+\mbox{\label{class_trading_stock_a3ebff0c1f91ab2f961b9665c2865b74f}} 
+\index{TradingStock@{TradingStock}!TradingStock@{TradingStock}}
+\index{TradingStock@{TradingStock}!TradingStock@{TradingStock}}
+\doxysubsubsection{TradingStock()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Trading\+Stock\+::\+Trading\+Stock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [default]}}
+
+
+
+Private default constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_trading_stock_a8b890a05cb0536bbca53e6c341196158}} 
+\index{TradingStock@{TradingStock}!BuyShares@{BuyShares}}
+\index{BuyShares@{BuyShares}!TradingStock@{TradingStock}}
+\doxysubsubsection{BuyShares()}
+{\footnotesize\ttfamily void Trading\+Stock\+::\+Buy\+Shares (\begin{DoxyParamCaption}\item[{double}]{a\+\_\+shares,  }\item[{double}]{a\+\_\+price }\end{DoxyParamCaption})}
+
+
+
+Method to buys shares. 
+
+\doxyref{Trading\+Stock\+::\+Buy\+Shares}{p.}{class_trading_stock_a8b890a05cb0536bbca53e6c341196158} Method to buy shares. Updates capital and record variables. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+shares} & double Number of shares to buy. \\
+\hline
+{\em a\+\_\+price} & double Price at which to buy shares. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 63 of file Trading\+Stock.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_a8b890a05cb0536bbca53e6c341196158_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_a8b890a05cb0536bbca53e6c341196158_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_a39cc9a02efc5431a4e150b941a9c7df6}} 
+\index{TradingStock@{TradingStock}!CalculateDailySharpeRatio@{CalculateDailySharpeRatio}}
+\index{CalculateDailySharpeRatio@{CalculateDailySharpeRatio}!TradingStock@{TradingStock}}
+\doxysubsubsection{CalculateDailySharpeRatio()}
+{\footnotesize\ttfamily void Trading\+Stock\+::\+Calculate\+Daily\+Sharpe\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculate daily sharpe ratio for individual stock. 
+
+\doxyref{Trading\+Stock\+::\+Calculate\+Daily\+Sharpe\+Ratio}{p.}{class_trading_stock_a39cc9a02efc5431a4e150b941a9c7df6} Calculate daily sharpe ratio for individual stock. Can be used to get individual stock\textquotesingle{}s Sharpe ratio instead of the complete model\textquotesingle{}s Sharpe. \begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 456 of file Trading\+Stock.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_a39cc9a02efc5431a4e150b941a9c7df6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_a8610312df44fd64d9ff6fc4b7057b0b4}} 
+\index{TradingStock@{TradingStock}!CheckLongSignal@{CheckLongSignal}}
+\index{CheckLongSignal@{CheckLongSignal}!TradingStock@{TradingStock}}
+\doxysubsubsection{CheckLongSignal()}
+{\footnotesize\ttfamily bool Trading\+Stock\+::\+Check\+Long\+Signal (\begin{DoxyParamCaption}\item[{double}]{a\+\_\+price }\end{DoxyParamCaption})}
+
+
+
+Method to check if signal is profitable for long positions. 
+
+\doxyref{Trading\+Stock\+::\+Check\+Long\+Signal}{p.}{class_trading_stock_a8610312df44fd64d9ff6fc4b7057b0b4} Method to check if signal is profitable for long positions. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+price} & double Current price of shares. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool If signal will be profitable. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 324 of file Trading\+Stock.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_a8610312df44fd64d9ff6fc4b7057b0b4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_aec7895ca3d924226dc25ef2d961ed181}} 
+\index{TradingStock@{TradingStock}!CheckShortSignal@{CheckShortSignal}}
+\index{CheckShortSignal@{CheckShortSignal}!TradingStock@{TradingStock}}
+\doxysubsubsection{CheckShortSignal()}
+{\footnotesize\ttfamily bool Trading\+Stock\+::\+Check\+Short\+Signal (\begin{DoxyParamCaption}\item[{double}]{a\+\_\+price }\end{DoxyParamCaption})}
+
+
+
+Method to check if signal is profitable for short positions. 
+
+\doxyref{Trading\+Stock\+::\+Check\+Short\+Signal}{p.}{class_trading_stock_aec7895ca3d924226dc25ef2d961ed181} Method to check if signal is profitable for short positions. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+price} & double Current price of shares. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool If signal will be profitable. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 304 of file Trading\+Stock.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_aec7895ca3d924226dc25ef2d961ed181_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_a60478a78a694204f99b6ac01e5f61258}} 
+\index{TradingStock@{TradingStock}!CloseLongPositions@{CloseLongPositions}}
+\index{CloseLongPositions@{CloseLongPositions}!TradingStock@{TradingStock}}
+\doxysubsubsection{CloseLongPositions()}
+{\footnotesize\ttfamily double Trading\+Stock\+::\+Close\+Long\+Positions (\begin{DoxyParamCaption}\item[{\textbf{ Date\+Time} $\ast$}]{a\+\_\+date,  }\item[{double}]{a\+\_\+signal,  }\item[{double}]{a\+\_\+price,  }\item[{double \&}]{a\+\_\+invested\+Captial,  }\item[{double \&}]{a\+\_\+num\+Of\+Shares }\end{DoxyParamCaption})}
+
+
+
+Method to close all long positions. 
+
+\doxyref{Trading\+Stock\+::\+Close\+Long\+Positions}{p.}{class_trading_stock_a60478a78a694204f99b6ac01e5f61258} Method to close profiting long positions. Returns profit/loss generated from closing long positions. Updates invested capital in closing long positions and number of long positions that are variables passed by reference. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+date} & Date\+Time$\ast$ Today\textquotesingle{}s date. \\
+\hline
+{\em a\+\_\+signal} & double Current day\textquotesingle{}s signal. \\
+\hline
+{\em a\+\_\+price} & double Price of shares at the time of closing. \\
+\hline
+{\em a\+\_\+invested\+Captial} & double\& Invested capital placeholder to return the invested capital in long positions. \\
+\hline
+{\em a\+\_\+num\+Of\+Shares} & double\& Placeholder to return number of shares in long position that were closed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Profit or loss generated from closing long positions. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 215 of file Trading\+Stock.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_a60478a78a694204f99b6ac01e5f61258_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_a60478a78a694204f99b6ac01e5f61258_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_a32ad16346c6c9bf2ffd9cc6a68f01325}} 
+\index{TradingStock@{TradingStock}!CloseShortPositions@{CloseShortPositions}}
+\index{CloseShortPositions@{CloseShortPositions}!TradingStock@{TradingStock}}
+\doxysubsubsection{CloseShortPositions()}
+{\footnotesize\ttfamily double Trading\+Stock\+::\+Close\+Short\+Positions (\begin{DoxyParamCaption}\item[{\textbf{ Date\+Time} $\ast$}]{a\+\_\+date,  }\item[{double}]{a\+\_\+signal,  }\item[{double}]{a\+\_\+price,  }\item[{double \&}]{a\+\_\+invested\+Captial,  }\item[{double \&}]{a\+\_\+num\+Of\+Shares }\end{DoxyParamCaption})}
+
+
+
+Method to close all short positions. 
+
+\doxyref{Trading\+Stock\+::\+Close\+Short\+Positions}{p.}{class_trading_stock_a32ad16346c6c9bf2ffd9cc6a68f01325} Method to close profiting short positions. Returns profit/loss generated from closing short positions. Updates invested capital in closing short positions and number of short positions that are variables passed by reference. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+date} & Date\+Time$\ast$ Today\textquotesingle{}s date. \\
+\hline
+{\em a\+\_\+signal} & double Current day\textquotesingle{}s signal. \\
+\hline
+{\em a\+\_\+price} & double Price of shares at the time of closing. \\
+\hline
+{\em a\+\_\+invested\+Captial} & double\& Invested capital placeholder to return the invested capital in long positions. \\
+\hline
+{\em a\+\_\+num\+Of\+Shares} & double\& Placeholder to return number of shares in long position that were closed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Profit or loss generated from closing long positions. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 262 of file Trading\+Stock.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_a32ad16346c6c9bf2ffd9cc6a68f01325_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_a32ad16346c6c9bf2ffd9cc6a68f01325_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_aad5057092b58a0ed625be05cfcef3c3e}} 
+\index{TradingStock@{TradingStock}!CloseStalePositions@{CloseStalePositions}}
+\index{CloseStalePositions@{CloseStalePositions}!TradingStock@{TradingStock}}
+\doxysubsubsection{CloseStalePositions()}
+{\footnotesize\ttfamily void Trading\+Stock\+::\+Close\+Stale\+Positions (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{a\+\_\+day\+Limit,  }\item[{\textbf{ Date\+Time} $\ast$}]{a\+\_\+date,  }\item[{double}]{a\+\_\+signal,  }\item[{double}]{a\+\_\+price }\end{DoxyParamCaption})}
+
+
+
+Method to close positions that exceed maximum days limit. 
+
+\doxyref{Trading\+Stock\+::\+Close\+Stale\+Positions}{p.}{class_trading_stock_aad5057092b58a0ed625be05cfcef3c3e} Method to close positions that exceed maximum days limit. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+day\+Limit} & int Maximum days in position limit. \\
+\hline
+{\em a\+\_\+date} & Date\+Time$\ast$ Today\textquotesingle{}s date. \\
+\hline
+{\em a\+\_\+signal} & double Current day\textquotesingle{}s signal. \\
+\hline
+{\em a\+\_\+price} & double Current price of shares. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 371 of file Trading\+Stock.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_aad5057092b58a0ed625be05cfcef3c3e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_aad5057092b58a0ed625be05cfcef3c3e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_ae17abba347d59335fc2f7ebb74c5e6aa}} 
+\index{TradingStock@{TradingStock}!DecreaseCapitalBy@{DecreaseCapitalBy}}
+\index{DecreaseCapitalBy@{DecreaseCapitalBy}!TradingStock@{TradingStock}}
+\doxysubsubsection{DecreaseCapitalBy()}
+{\footnotesize\ttfamily void Trading\+Stock\+::\+Decrease\+Capital\+By (\begin{DoxyParamCaption}\item[{double}]{a\+\_\+share }\end{DoxyParamCaption})}
+
+\doxyref{Trading\+Stock\+::\+Decrease\+Capital\+By}{p.}{class_trading_stock_ae17abba347d59335fc2f7ebb74c5e6aa} Function to decrease available capital in the stock and record it. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+capital} & double Capital to decrease. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 131 of file Trading\+Stock.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_ae17abba347d59335fc2f7ebb74c5e6aa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_a32fbb2c7467bdd9351875549c86c1790}} 
+\index{TradingStock@{TradingStock}!DecreaseSharesBy@{DecreaseSharesBy}}
+\index{DecreaseSharesBy@{DecreaseSharesBy}!TradingStock@{TradingStock}}
+\doxysubsubsection{DecreaseSharesBy()}
+{\footnotesize\ttfamily void Trading\+Stock\+::\+Decrease\+Shares\+By (\begin{DoxyParamCaption}\item[{double}]{a\+\_\+share }\end{DoxyParamCaption})}
+
+\doxyref{Trading\+Stock\+::\+Decrease\+Shares\+By}{p.}{class_trading_stock_a32fbb2c7467bdd9351875549c86c1790} Function to decrease shares owned in the stock. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+share} & double Number of shares to remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 105 of file Trading\+Stock.\+cpp.
+
+\mbox{\label{class_trading_stock_a9d6e882e90f88a6dce91cc6d08f0847a}} 
+\index{TradingStock@{TradingStock}!GetAvailableCapital@{GetAvailableCapital}}
+\index{GetAvailableCapital@{GetAvailableCapital}!TradingStock@{TradingStock}}
+\doxysubsubsection{GetAvailableCapital()}
+{\footnotesize\ttfamily const double Trading\+Stock\+::\+Get\+Available\+Capital (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 38 of file Trading\+Stock.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_a9d6e882e90f88a6dce91cc6d08f0847a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_ae5b6f96bb1b51aa1d0e5144eeaf7fea1}} 
+\index{TradingStock@{TradingStock}!GetClosedTransactions@{GetClosedTransactions}}
+\index{GetClosedTransactions@{GetClosedTransactions}!TradingStock@{TradingStock}}
+\doxysubsubsection{GetClosedTransactions()}
+{\footnotesize\ttfamily std\+::vector$<$ \textbf{ Transaction} $\ast$ $>$ Trading\+Stock\+::\+Get\+Closed\+Transactions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to get closed transactions and remove them from memory. 
+
+\doxyref{Trading\+Stock\+::\+Get\+Closed\+Transactions}{p.}{class_trading_stock_ae5b6f96bb1b51aa1d0e5144eeaf7fea1} Method to get closed transactions. Once returned, they are removed from the record. \begin{DoxyReturn}{Returns}
+double Total capital in long positions. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 570 of file Trading\+Stock.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_ae5b6f96bb1b51aa1d0e5144eeaf7fea1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_aff216b0773772c62708b2ede2b4263de}} 
+\index{TradingStock@{TradingStock}!GetDailyPnL@{GetDailyPnL}}
+\index{GetDailyPnL@{GetDailyPnL}!TradingStock@{TradingStock}}
+\doxysubsubsection{GetDailyPnL()}
+{\footnotesize\ttfamily const double Trading\+Stock\+::\+Get\+Daily\+PnL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 39 of file Trading\+Stock.\+h.
+
+\mbox{\label{class_trading_stock_a3c5d34b2014664070cd7f0fd1c8cdf50}} 
+\index{TradingStock@{TradingStock}!GetDailyROR@{GetDailyROR}}
+\index{GetDailyROR@{GetDailyROR}!TradingStock@{TradingStock}}
+\doxysubsubsection{GetDailyROR()}
+{\footnotesize\ttfamily const double Trading\+Stock\+::\+Get\+Daily\+R\+OR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 40 of file Trading\+Stock.\+h.
+
+\mbox{\label{class_trading_stock_ab9b7d80cfd3dc2bcbc6ac9ab52afae08}} 
+\index{TradingStock@{TradingStock}!GetInvestedCapital@{GetInvestedCapital}}
+\index{GetInvestedCapital@{GetInvestedCapital}!TradingStock@{TradingStock}}
+\doxysubsubsection{GetInvestedCapital()}
+{\footnotesize\ttfamily double Trading\+Stock\+::\+Get\+Invested\+Capital (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get latest committed capital in an investment. 
+
+\doxyref{Trading\+Stock\+::\+Get\+Invested\+Capital}{p.}{class_trading_stock_ab9b7d80cfd3dc2bcbc6ac9ab52afae08} Get latest committed capital in an investment \begin{DoxyReturn}{Returns}
+double Latest committed capital activity. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 436 of file Trading\+Stock.\+cpp.
+
+\mbox{\label{class_trading_stock_a6a1cbdd1ce85e26c7bd4e7c46b584c07}} 
+\index{TradingStock@{TradingStock}!GetLatestShareActivity@{GetLatestShareActivity}}
+\index{GetLatestShareActivity@{GetLatestShareActivity}!TradingStock@{TradingStock}}
+\doxysubsubsection{GetLatestShareActivity()}
+{\footnotesize\ttfamily const double Trading\+Stock\+::\+Get\+Latest\+Share\+Activity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 43 of file Trading\+Stock.\+h.
+
+\mbox{\label{class_trading_stock_a96bb13205b822d35fbbdcc6c21a1d5a9}} 
+\index{TradingStock@{TradingStock}!GetLongCapital@{GetLongCapital}}
+\index{GetLongCapital@{GetLongCapital}!TradingStock@{TradingStock}}
+\doxysubsubsection{GetLongCapital()}
+{\footnotesize\ttfamily const double Trading\+Stock\+::\+Get\+Long\+Capital (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to get long capital in investment. 
+
+\doxyref{Trading\+Stock\+::\+Get\+Long\+Capital}{p.}{class_trading_stock_a96bb13205b822d35fbbdcc6c21a1d5a9} Accessor method to get capital invested in long positions in trading stock. \begin{DoxyReturn}{Returns}
+double Total capital in long positions. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 549 of file Trading\+Stock.\+cpp.
+
+\mbox{\label{class_trading_stock_a7fe5dbc6b3d6bf08c8b1520cf669a9ca}} 
+\index{TradingStock@{TradingStock}!GetLongSharesHeld@{GetLongSharesHeld}}
+\index{GetLongSharesHeld@{GetLongSharesHeld}!TradingStock@{TradingStock}}
+\doxysubsubsection{GetLongSharesHeld()}
+{\footnotesize\ttfamily const double Trading\+Stock\+::\+Get\+Long\+Shares\+Held (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to get long shares held. 
+
+\doxyref{Trading\+Stock\+::\+Get\+Long\+Shares\+Held}{p.}{class_trading_stock_a7fe5dbc6b3d6bf08c8b1520cf669a9ca} Accessor method to get long shares held in the trading stock. \begin{DoxyReturn}{Returns}
+double Number of short positions held. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 507 of file Trading\+Stock.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_a7fe5dbc6b3d6bf08c8b1520cf669a9ca_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_a37b5fb9d2c04a236069dfe31eeba7845}} 
+\index{TradingStock@{TradingStock}!GetROR@{GetROR}}
+\index{GetROR@{GetROR}!TradingStock@{TradingStock}}
+\doxysubsubsection{GetROR()}
+{\footnotesize\ttfamily const std\+::vector$<$double$>$ Trading\+Stock\+::\+Get\+R\+OR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 42 of file Trading\+Stock.\+h.
+
+\mbox{\label{class_trading_stock_a9a33d27b1cf6c190fa2bd1042a7a0ac7}} 
+\index{TradingStock@{TradingStock}!GetSharpeToday@{GetSharpeToday}}
+\index{GetSharpeToday@{GetSharpeToday}!TradingStock@{TradingStock}}
+\doxysubsubsection{GetSharpeToday()}
+{\footnotesize\ttfamily const double Trading\+Stock\+::\+Get\+Sharpe\+Today (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\doxyref{Trading\+Stock\+::\+Get\+Sharpe\+Today}{p.}{class_trading_stock_a9a33d27b1cf6c190fa2bd1042a7a0ac7} Accessor method to get the Sharpe ratio of the current day of an individual stock. \begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 471 of file Trading\+Stock.\+cpp.
+
+\mbox{\label{class_trading_stock_a4468ad7c3e2addaccb00619e36db1540}} 
+\index{TradingStock@{TradingStock}!GetShortCapital@{GetShortCapital}}
+\index{GetShortCapital@{GetShortCapital}!TradingStock@{TradingStock}}
+\doxysubsubsection{GetShortCapital()}
+{\footnotesize\ttfamily const double Trading\+Stock\+::\+Get\+Short\+Capital (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to get short capital in investment. 
+
+\doxyref{Trading\+Stock\+::\+Get\+Short\+Capital}{p.}{class_trading_stock_a4468ad7c3e2addaccb00619e36db1540} Accessor method to get capital invested in short positions in trading stock. \begin{DoxyReturn}{Returns}
+double Total capital in short positions. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 528 of file Trading\+Stock.\+cpp.
+
+\mbox{\label{class_trading_stock_ac87efd94107349785d32cdf7ea6541d7}} 
+\index{TradingStock@{TradingStock}!GetShortSharesHeld@{GetShortSharesHeld}}
+\index{GetShortSharesHeld@{GetShortSharesHeld}!TradingStock@{TradingStock}}
+\doxysubsubsection{GetShortSharesHeld()}
+{\footnotesize\ttfamily const double Trading\+Stock\+::\+Get\+Short\+Shares\+Held (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to get short shares held. 
+
+\doxyref{Trading\+Stock\+::\+Get\+Short\+Shares\+Held}{p.}{class_trading_stock_ac87efd94107349785d32cdf7ea6541d7} Accessor method to get short shares held in the trading stock. \begin{DoxyReturn}{Returns}
+double Number of short positions held. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 486 of file Trading\+Stock.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_ac87efd94107349785d32cdf7ea6541d7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_a3f01e1cee2b7b6ae685351266850a723}} 
+\index{TradingStock@{TradingStock}!GetSignalRecord@{GetSignalRecord}}
+\index{GetSignalRecord@{GetSignalRecord}!TradingStock@{TradingStock}}
+\doxysubsubsection{GetSignalRecord()}
+{\footnotesize\ttfamily const std\+::vector$<$double$>$ Trading\+Stock\+::\+Get\+Signal\+Record (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 36 of file Trading\+Stock.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_a3f01e1cee2b7b6ae685351266850a723_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_a5cf4ad5ac772ed5bd2861097299e08f3}} 
+\index{TradingStock@{TradingStock}!GetStockName@{GetStockName}}
+\index{GetStockName@{GetStockName}!TradingStock@{TradingStock}}
+\doxysubsubsection{GetStockName()}
+{\footnotesize\ttfamily const std\+::string Trading\+Stock\+::\+Get\+Stock\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 33 of file Trading\+Stock.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_a5cf4ad5ac772ed5bd2861097299e08f3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_aaa530618eafb6d8ce09bfb08c0080e3e}} 
+\index{TradingStock@{TradingStock}!GetTotalShares@{GetTotalShares}}
+\index{GetTotalShares@{GetTotalShares}!TradingStock@{TradingStock}}
+\doxysubsubsection{GetTotalShares()}
+{\footnotesize\ttfamily const double Trading\+Stock\+::\+Get\+Total\+Shares (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 37 of file Trading\+Stock.\+h.
+
+\mbox{\label{class_trading_stock_a610d809a67408a6ba4a23616b071e345}} 
+\index{TradingStock@{TradingStock}!GetTransactionCount@{GetTransactionCount}}
+\index{GetTransactionCount@{GetTransactionCount}!TradingStock@{TradingStock}}
+\doxysubsubsection{GetTransactionCount()}
+{\footnotesize\ttfamily double Trading\+Stock\+::\+Get\+Transaction\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to get current completed transaction count (Does not consider incomplete transactions.) 
+
+\doxyref{Trading\+Stock\+::\+Get\+Transaction\+Count}{p.}{class_trading_stock_a610d809a67408a6ba4a23616b071e345} Function to get current closed transaction counter. \begin{DoxyReturn}{Returns}
+double Number of current completed transactions. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 594 of file Trading\+Stock.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_a610d809a67408a6ba4a23616b071e345_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_aa8181ddc5cc8c9e978393112563bf504}} 
+\index{TradingStock@{TradingStock}!IncreaseCapitalBy@{IncreaseCapitalBy}}
+\index{IncreaseCapitalBy@{IncreaseCapitalBy}!TradingStock@{TradingStock}}
+\doxysubsubsection{IncreaseCapitalBy()}
+{\footnotesize\ttfamily void Trading\+Stock\+::\+Increase\+Capital\+By (\begin{DoxyParamCaption}\item[{double}]{a\+\_\+capital }\end{DoxyParamCaption})}
+
+\doxyref{Trading\+Stock\+::\+Increase\+Capital\+By}{p.}{class_trading_stock_aa8181ddc5cc8c9e978393112563bf504} Function to increase available capital in the stock and record it. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+capital} & double Capital to increase. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 118 of file Trading\+Stock.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_aa8181ddc5cc8c9e978393112563bf504_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_a6dd461322fe1bf432705e4be521654af}} 
+\index{TradingStock@{TradingStock}!IncreaseSharesBy@{IncreaseSharesBy}}
+\index{IncreaseSharesBy@{IncreaseSharesBy}!TradingStock@{TradingStock}}
+\doxysubsubsection{IncreaseSharesBy()}
+{\footnotesize\ttfamily void Trading\+Stock\+::\+Increase\+Shares\+By (\begin{DoxyParamCaption}\item[{double}]{a\+\_\+share }\end{DoxyParamCaption})}
+
+\doxyref{Trading\+Stock\+::\+Increase\+Shares\+By}{p.}{class_trading_stock_a6dd461322fe1bf432705e4be521654af} Function to increase shares owned in the stock. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+share} & double Number of shares to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 92 of file Trading\+Stock.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_a6dd461322fe1bf432705e4be521654af_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_a0f34b4c03fc00907a9ab21c76450ca6f}} 
+\index{TradingStock@{TradingStock}!IsLong@{IsLong}}
+\index{IsLong@{IsLong}!TradingStock@{TradingStock}}
+\doxysubsubsection{IsLong()}
+{\footnotesize\ttfamily const bool Trading\+Stock\+::\+Is\+Long (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 34 of file Trading\+Stock.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_a0f34b4c03fc00907a9ab21c76450ca6f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_a70adc544aeb365d69f4dfa3a99ac3d18}} 
+\index{TradingStock@{TradingStock}!IsShort@{IsShort}}
+\index{IsShort@{IsShort}!TradingStock@{TradingStock}}
+\doxysubsubsection{IsShort()}
+{\footnotesize\ttfamily const bool Trading\+Stock\+::\+Is\+Short (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 35 of file Trading\+Stock.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_a70adc544aeb365d69f4dfa3a99ac3d18_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_a2942da99da8b25978168083c5e29be72}} 
+\index{TradingStock@{TradingStock}!newTradingDay@{newTradingDay}}
+\index{newTradingDay@{newTradingDay}!TradingStock@{TradingStock}}
+\doxysubsubsection{newTradingDay()}
+{\footnotesize\ttfamily void Trading\+Stock\+::new\+Trading\+Day (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Method to update days in position of all held shares. 
+
+\doxyref{Trading\+Stock\+::new\+Trading\+Day}{p.}{class_trading_stock_a2942da99da8b25978168083c5e29be72} Method to update days in position of all held shares \begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 610 of file Trading\+Stock.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_a2942da99da8b25978168083c5e29be72_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_a4398bf190fdf2e8f089e929b60fe2e6d}} 
+\index{TradingStock@{TradingStock}!OpenPosition@{OpenPosition}}
+\index{OpenPosition@{OpenPosition}!TradingStock@{TradingStock}}
+\doxysubsubsection{OpenPosition()}
+{\footnotesize\ttfamily void Trading\+Stock\+::\+Open\+Position (\begin{DoxyParamCaption}\item[{\textbf{ Date\+Time} $\ast$}]{a\+\_\+date,  }\item[{double}]{a\+\_\+signal,  }\item[{double}]{a\+\_\+share,  }\item[{double}]{a\+\_\+price }\end{DoxyParamCaption})}
+
+
+
+Method to open a position for the trading stock. 
+
+\doxyref{Trading\+Stock\+::\+Open\+Position}{p.}{class_trading_stock_a4398bf190fdf2e8f089e929b60fe2e6d} Open a new position for the trading stock. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+date} & Date\+Time$\ast$ Today\textquotesingle{}s date. \\
+\hline
+{\em a\+\_\+signal} & double Current day\textquotesingle{}s signal. \\
+\hline
+{\em a\+\_\+share} & double Number of shares to open. \\
+\hline
+{\em a\+\_\+price} & double Price of shares at the time of opening. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 197 of file Trading\+Stock.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_a4398bf190fdf2e8f089e929b60fe2e6d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_a08f0c522a18efec82f4c272e0d03fe7c}} 
+\index{TradingStock@{TradingStock}!RecordDailyReturn@{RecordDailyReturn}}
+\index{RecordDailyReturn@{RecordDailyReturn}!TradingStock@{TradingStock}}
+\doxysubsubsection{RecordDailyReturn()}
+{\footnotesize\ttfamily void Trading\+Stock\+::\+Record\+Daily\+Return (\begin{DoxyParamCaption}\item[{double}]{a\+\_\+amount }\end{DoxyParamCaption})}
+
+
+
+Recard day\textquotesingle{}s daily return. 
+
+\doxyref{Trading\+Stock\+::\+Record\+Daily\+Return}{p.}{class_trading_stock_a08f0c522a18efec82f4c272e0d03fe7c} Record daily rate of return (R\+OR). 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+amount} & double Daily R\+OR. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 182 of file Trading\+Stock.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_a08f0c522a18efec82f4c272e0d03fe7c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_a82ea8bcd2b94eef82bb100c929c519e0}} 
+\index{TradingStock@{TradingStock}!RecordPNL@{RecordPNL}}
+\index{RecordPNL@{RecordPNL}!TradingStock@{TradingStock}}
+\doxysubsubsection{RecordPNL()}
+{\footnotesize\ttfamily void Trading\+Stock\+::\+Record\+P\+NL (\begin{DoxyParamCaption}\item[{double}]{a\+\_\+pnl,  }\item[{double}]{a\+\_\+invested\+Capital }\end{DoxyParamCaption})}
+
+
+
+Record day\textquotesingle{}s P\+NL. 
+
+\doxyref{Trading\+Stock\+::\+Record\+P\+NL}{p.}{class_trading_stock_a82ea8bcd2b94eef82bb100c929c519e0} Records P\+NL and calls Record\+Daily\+Return to record R\+OR. (coupled functions) 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+pnl} & double Profit or loss for the day. \\
+\hline
+{\em a\+\_\+invested\+Capital} & double Invested capital in the position generating profit or loss. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 145 of file Trading\+Stock.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_a82ea8bcd2b94eef82bb100c929c519e0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_a82ea8bcd2b94eef82bb100c929c519e0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_abe36e5075cacda88997a32e5f4923ee6}} 
+\index{TradingStock@{TradingStock}!RecordSignal@{RecordSignal}}
+\index{RecordSignal@{RecordSignal}!TradingStock@{TradingStock}}
+\doxysubsubsection{RecordSignal()}
+{\footnotesize\ttfamily void Trading\+Stock\+::\+Record\+Signal (\begin{DoxyParamCaption}\item[{double}]{a\+\_\+signal }\end{DoxyParamCaption})}
+
+
+
+Record day\textquotesingle{}s signal. 
+
+\doxyref{Trading\+Stock\+::\+Record\+Signal}{p.}{class_trading_stock_abe36e5075cacda88997a32e5f4923ee6} Function to record the trading day signal and update the days in position of the stocks held. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+signal} & double Day\textquotesingle{}s trading signal. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 79 of file Trading\+Stock.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_abe36e5075cacda88997a32e5f4923ee6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_af0ebb1d62314db9844a05255605fc47a}} 
+\index{TradingStock@{TradingStock}!RecordTransactionsCount@{RecordTransactionsCount}}
+\index{RecordTransactionsCount@{RecordTransactionsCount}!TradingStock@{TradingStock}}
+\doxysubsubsection{RecordTransactionsCount()}
+{\footnotesize\ttfamily void Trading\+Stock\+::\+Record\+Transactions\+Count (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{a\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+Record day\textquotesingle{}s number of transactions. 
+
+\doxyref{Trading\+Stock\+::\+Record\+Transactions\+Count}{p.}{class_trading_stock_af0ebb1d62314db9844a05255605fc47a} Record daily transaction count. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+count} & int Daily transactions count. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 169 of file Trading\+Stock.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_af0ebb1d62314db9844a05255605fc47a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_abf15f389461393974e58d973a7a4f593}} 
+\index{TradingStock@{TradingStock}!SellShares@{SellShares}}
+\index{SellShares@{SellShares}!TradingStock@{TradingStock}}
+\doxysubsubsection{SellShares()}
+{\footnotesize\ttfamily void Trading\+Stock\+::\+Sell\+Shares (\begin{DoxyParamCaption}\item[{double}]{a\+\_\+shares,  }\item[{double}]{a\+\_\+price }\end{DoxyParamCaption})}
+
+
+
+Method to sell shares. 
+
+\doxyref{Trading\+Stock\+::\+Sell\+Shares}{p.}{class_trading_stock_abf15f389461393974e58d973a7a4f593} Method to sell shares. Updates capital and record variables. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+shares} & double Number of shares to sell. \\
+\hline
+{\em a\+\_\+price} & double Price at which to sell shares. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 46 of file Trading\+Stock.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_abf15f389461393974e58d973a7a4f593_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_abf15f389461393974e58d973a7a4f593_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_a0b8e6cd751ccac4691b33e9b3a50f8d1}} 
+\index{TradingStock@{TradingStock}!SetLong@{SetLong}}
+\index{SetLong@{SetLong}!TradingStock@{TradingStock}}
+\doxysubsubsection{SetLong()}
+{\footnotesize\ttfamily void Trading\+Stock\+::\+Set\+Long (\begin{DoxyParamCaption}\item[{bool}]{a\+\_\+long }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 63 of file Trading\+Stock.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_a0b8e6cd751ccac4691b33e9b3a50f8d1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_a1e3d0dc8a813cf51bf10dd7cc1ca8175}} 
+\index{TradingStock@{TradingStock}!SetShort@{SetShort}}
+\index{SetShort@{SetShort}!TradingStock@{TradingStock}}
+\doxysubsubsection{SetShort()}
+{\footnotesize\ttfamily void Trading\+Stock\+::\+Set\+Short (\begin{DoxyParamCaption}\item[{bool}]{a\+\_\+short }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 64 of file Trading\+Stock.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_a1e3d0dc8a813cf51bf10dd7cc1ca8175_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_trading_stock_ac32c8930adc0a8ad8611209ea9cf0fe8}} 
+\index{TradingStock@{TradingStock}!UpdateStockPosition@{UpdateStockPosition}}
+\index{UpdateStockPosition@{UpdateStockPosition}!TradingStock@{TradingStock}}
+\doxysubsubsection{UpdateStockPosition()}
+{\footnotesize\ttfamily void Trading\+Stock\+::\+Update\+Stock\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to update long/short position status of the trading stock. 
+
+\doxyref{Trading\+Stock\+::\+Update\+Stock\+Position}{p.}{class_trading_stock_ac32c8930adc0a8ad8611209ea9cf0fe8} Method to update long/short position flags of the trading stock. \begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/20. 
+\end{DoxyDate}
+
+
+Definition at line 342 of file Trading\+Stock.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_trading_stock_ac32c8930adc0a8ad8611209ea9cf0fe8_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{class_trading_stock_ab344aad5f77661cbff9339a556a673cb}} 
+\index{TradingStock@{TradingStock}!m\_availableCapital@{m\_availableCapital}}
+\index{m\_availableCapital@{m\_availableCapital}!TradingStock@{TradingStock}}
+\doxysubsubsection{m\_availableCapital}
+{\footnotesize\ttfamily double Trading\+Stock\+::m\+\_\+available\+Capital\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Available capital for trading stock. 
+
+
+
+Definition at line 129 of file Trading\+Stock.\+h.
+
+\mbox{\label{class_trading_stock_a2182f57e853ec0c69a7051f1c36bf56b}} 
+\index{TradingStock@{TradingStock}!m\_capitalActivityRecord@{m\_capitalActivityRecord}}
+\index{m\_capitalActivityRecord@{m\_capitalActivityRecord}!TradingStock@{TradingStock}}
+\doxysubsubsection{m\_capitalActivityRecord}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Trading\+Stock\+::m\+\_\+capital\+Activity\+Record\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Records daily capital activities. 
+
+
+
+Definition at line 151 of file Trading\+Stock.\+h.
+
+\mbox{\label{class_trading_stock_a4b62a7f5eae82a2e14957c167fdd0a0a}} 
+\index{TradingStock@{TradingStock}!m\_cumulativePNLRecord@{m\_cumulativePNLRecord}}
+\index{m\_cumulativePNLRecord@{m\_cumulativePNLRecord}!TradingStock@{TradingStock}}
+\doxysubsubsection{m\_cumulativePNLRecord}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Trading\+Stock\+::m\+\_\+cumulative\+P\+N\+L\+Record\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Records daily cumulative P\+NL. 
+
+
+
+Definition at line 159 of file Trading\+Stock.\+h.
+
+\mbox{\label{class_trading_stock_a73d378cbffc5da8e87f91125c63391ed}} 
+\index{TradingStock@{TradingStock}!m\_dailyPNLRecord@{m\_dailyPNLRecord}}
+\index{m\_dailyPNLRecord@{m\_dailyPNLRecord}!TradingStock@{TradingStock}}
+\doxysubsubsection{m\_dailyPNLRecord}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Trading\+Stock\+::m\+\_\+daily\+P\+N\+L\+Record\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Records daily P\+NL. 
+
+
+
+Definition at line 155 of file Trading\+Stock.\+h.
+
+\mbox{\label{class_trading_stock_ad19aabe8f6955c24479f381f82a1ebb2}} 
+\index{TradingStock@{TradingStock}!m\_dailyReturnRecord@{m\_dailyReturnRecord}}
+\index{m\_dailyReturnRecord@{m\_dailyReturnRecord}!TradingStock@{TradingStock}}
+\doxysubsubsection{m\_dailyReturnRecord}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Trading\+Stock\+::m\+\_\+daily\+Return\+Record\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Records daily rate of return (R\+OR) 
+
+
+
+Definition at line 157 of file Trading\+Stock.\+h.
+
+\mbox{\label{class_trading_stock_a31f327f15d57d007c94454402fbd712f}} 
+\index{TradingStock@{TradingStock}!m\_longPosFlag@{m\_longPosFlag}}
+\index{m\_longPosFlag@{m\_longPosFlag}!TradingStock@{TradingStock}}
+\doxysubsubsection{m\_longPosFlag}
+{\footnotesize\ttfamily bool Trading\+Stock\+::m\+\_\+long\+Pos\+Flag\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Long position flag. 
+
+
+
+Definition at line 137 of file Trading\+Stock.\+h.
+
+\mbox{\label{class_trading_stock_a0b6f6119524b706ebcde2578c7a692d2}} 
+\index{TradingStock@{TradingStock}!m\_shareActivityRecord@{m\_shareActivityRecord}}
+\index{m\_shareActivityRecord@{m\_shareActivityRecord}!TradingStock@{TradingStock}}
+\doxysubsubsection{m\_shareActivityRecord}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Trading\+Stock\+::m\+\_\+share\+Activity\+Record\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Records daily position changes. 
+
+
+
+Definition at line 153 of file Trading\+Stock.\+h.
+
+\mbox{\label{class_trading_stock_a649821526ca9021bd4cfd6b8b5d70842}} 
+\index{TradingStock@{TradingStock}!m\_sharpeRatioRecord@{m\_sharpeRatioRecord}}
+\index{m\_sharpeRatioRecord@{m\_sharpeRatioRecord}!TradingStock@{TradingStock}}
+\doxysubsubsection{m\_sharpeRatioRecord}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Trading\+Stock\+::m\+\_\+sharpe\+Ratio\+Record\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Records daily sharpe ratio. 
+
+
+
+Definition at line 163 of file Trading\+Stock.\+h.
+
+\mbox{\label{class_trading_stock_ad25663655bd3c1f1683464766f18f90c}} 
+\index{TradingStock@{TradingStock}!m\_shortPosFlag@{m\_shortPosFlag}}
+\index{m\_shortPosFlag@{m\_shortPosFlag}!TradingStock@{TradingStock}}
+\doxysubsubsection{m\_shortPosFlag}
+{\footnotesize\ttfamily bool Trading\+Stock\+::m\+\_\+short\+Pos\+Flag\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Short position flag. 
+
+
+
+Definition at line 139 of file Trading\+Stock.\+h.
+
+\mbox{\label{class_trading_stock_a5287c59a981bbfc50f275c741718b893}} 
+\index{TradingStock@{TradingStock}!m\_signalActivityRecord@{m\_signalActivityRecord}}
+\index{m\_signalActivityRecord@{m\_signalActivityRecord}!TradingStock@{TradingStock}}
+\doxysubsubsection{m\_signalActivityRecord}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Trading\+Stock\+::m\+\_\+signal\+Activity\+Record\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Records daily signals. 
+
+
+
+Definition at line 149 of file Trading\+Stock.\+h.
+
+\mbox{\label{class_trading_stock_aab3ac7177cab825b96e2e72986934c14}} 
+\index{TradingStock@{TradingStock}!m\_tickerName@{m\_tickerName}}
+\index{m\_tickerName@{m\_tickerName}!TradingStock@{TradingStock}}
+\doxysubsubsection{m\_tickerName}
+{\footnotesize\ttfamily std\+::string Trading\+Stock\+::m\+\_\+ticker\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ticker name. 
+
+
+
+Definition at line 127 of file Trading\+Stock.\+h.
+
+\mbox{\label{class_trading_stock_a361b06a4129ef77652f24bbf53dbaba3}} 
+\index{TradingStock@{TradingStock}!m\_totalSharesCount@{m\_totalSharesCount}}
+\index{m\_totalSharesCount@{m\_totalSharesCount}!TradingStock@{TradingStock}}
+\doxysubsubsection{m\_totalSharesCount}
+{\footnotesize\ttfamily double Trading\+Stock\+::m\+\_\+total\+Shares\+Count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Total shares held for stock. 
+
+
+
+Definition at line 135 of file Trading\+Stock.\+h.
+
+\mbox{\label{class_trading_stock_abdba716e97be8c2a0ba28ddbc5cad9c2}} 
+\index{TradingStock@{TradingStock}!m\_transactionCounter@{m\_transactionCounter}}
+\index{m\_transactionCounter@{m\_transactionCounter}!TradingStock@{TradingStock}}
+\doxysubsubsection{m\_transactionCounter}
+{\footnotesize\ttfamily \textbf{ int} Trading\+Stock\+::m\+\_\+transaction\+Counter\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Current complete transaction counter. 
+
+
+
+Definition at line 133 of file Trading\+Stock.\+h.
+
+\mbox{\label{class_trading_stock_a84107772ee8962d8d20ff5b69a65cc22}} 
+\index{TradingStock@{TradingStock}!m\_transactions@{m\_transactions}}
+\index{m\_transactions@{m\_transactions}!TradingStock@{TradingStock}}
+\doxysubsubsection{m\_transactions}
+{\footnotesize\ttfamily std\+::vector$<$\textbf{ Transaction}$\ast$$>$ Trading\+Stock\+::m\+\_\+transactions\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Records all transactions. 
+
+
+
+Definition at line 147 of file Trading\+Stock.\+h.
+
+\mbox{\label{class_trading_stock_aafa0593383e1f7afc886846b1d4873cd}} 
+\index{TradingStock@{TradingStock}!m\_TransactionsCountRecord@{m\_TransactionsCountRecord}}
+\index{m\_TransactionsCountRecord@{m\_TransactionsCountRecord}!TradingStock@{TradingStock}}
+\doxysubsubsection{m\_TransactionsCountRecord}
+{\footnotesize\ttfamily std\+::vector$<$\textbf{ int}$>$ Trading\+Stock\+::m\+\_\+\+Transactions\+Count\+Record\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Records daily transaction counts. 
+
+
+
+Definition at line 161 of file Trading\+Stock.\+h.
+
+\mbox{\label{class_trading_stock_a02736eb71eea26f771c09a574787e414}} 
+\index{TradingStock@{TradingStock}!m\_transactionsTotalCount@{m\_transactionsTotalCount}}
+\index{m\_transactionsTotalCount@{m\_transactionsTotalCount}!TradingStock@{TradingStock}}
+\doxysubsubsection{m\_transactionsTotalCount}
+{\footnotesize\ttfamily \textbf{ int} Trading\+Stock\+::m\+\_\+transactions\+Total\+Count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Total transactions count. 
+
+
+
+Definition at line 131 of file Trading\+Stock.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Trading\+Stock.\+h}\item 
+\textbf{ Trading\+Stock.\+cpp}\end{DoxyCompactItemize}

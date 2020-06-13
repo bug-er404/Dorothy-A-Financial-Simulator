@@ -1,0 +1,5 @@
+<map id="TradingStock::CalculateDailySharpeRatio" name="TradingStock::CalculateDailySharpeRatio">
+<area shape="rect" id="node1" title="Calculate daily sharpe ratio for individual stock." alt="" coords="5,23,197,65"/>
+<area shape="rect" id="node2" href="$namespace_utilities.html#a80b350cec72abbcf34ad7e28405d531c" title="Function to get average of a list with doubles." alt="" coords="275,5,418,32"/>
+<area shape="rect" id="node3" href="$namespace_utilities.html#a175ab95f5c509ccc3d4b571e8963f22e" title="Function to get the standard deviation of a list with doubles." alt="" coords="245,56,448,83"/>
+</map>

@@ -1,0 +1,337 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="_simulator_8h" kind="file" language="C++">
+    <compoundname>Simulator.h</compoundname>
+    <includes refid="_prefix_header_8pch" local="yes">PrefixHeader.pch</includes>
+    <includes refid="_config_8h" local="yes">Config.h</includes>
+    <includes refid="_data_access_8h" local="yes">DataAccess.h</includes>
+    <includes refid="_trading_stock_8h" local="yes">TradingStock.h</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="_simulator_8cpp" local="yes">Simulator.cpp</includedby>
+    <incdepgraph>
+      <node id="15">
+        <label>DataAccess.h</label>
+        <link refid="_data_access_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>cassert</label>
+      </node>
+      <node id="16">
+        <label>DateTime.h</label>
+        <link refid="_date_time_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="19">
+        <label>Transaction.h</label>
+        <link refid="_transaction_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>map</label>
+      </node>
+      <node id="17">
+        <label>TickerData.h</label>
+        <link refid="_ticker_data_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>TradingStock.h</label>
+        <link refid="_trading_stock_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>fstream</label>
+      </node>
+      <node id="2">
+        <label>PrefixHeader.pch</label>
+        <link refid="_prefix_header_8pch"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Simulator.h</label>
+        <link refid="_simulator_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="11">
+        <label>typeinfo</label>
+      </node>
+      <node id="12">
+        <label>vector</label>
+      </node>
+      <node id="10">
+        <label>sstream</label>
+      </node>
+      <node id="14">
+        <label>Config.h</label>
+        <link refid="_config_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="7">
+        <label>unordered_map</label>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>Simulator.h</label>
+        <link refid="_simulator_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="3">
+        <label>Simulator.cpp</label>
+        <link refid="_simulator_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_simulator" prot="public">Simulator</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#ifndef<sp/>Simulator_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Simulator_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_prefix_header_8pch" kindref="compound">PrefixHeader.pch</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_config_8h" kindref="compound">Config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_data_access_8h" kindref="compound">DataAccess.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_trading_stock_8h" kindref="compound">TradingStock.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="class_simulator" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_simulator" kindref="compound">Simulator</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************<sp/>CONSTRUCTORS<sp/>**********************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_simulator_1a5ee3126b7491cec8402850d5497b817c" kindref="member">Simulator</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv[]<sp/>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>****************<sp/>PUBLIC<sp/>CLASS<sp/>METHODS<sp/><sp/>*****************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1ab899d33750e674079de022d269c6bf9c" kindref="member">StartSimulation</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" kindref="member">RunSimulation</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="class_simulator_1a5ee3126b7491cec8402850d5497b817c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_simulator_1a5ee3126b7491cec8402850d5497b817c" kindref="member">Simulator</ref>()=</highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>********<sp/>CONFIGURATION<sp/>PARAMETER<sp/>IDENTIFIERS<sp/><sp/>**********</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="class_simulator_1a8d54012cdf3478b20f8d792b84de129c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_simulator_1a8d54012cdf3478b20f8d792b84de129c" kindref="member">UNIVERSE_PATH_PARAM</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;UNIVERSE_DIRECTORY&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50" refid="class_simulator_1af7743ff89da2d5a70380d89cf93517cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_simulator_1af7743ff89da2d5a70380d89cf93517cd" kindref="member">TICKER_PATH_PARAM</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;TICKER_DATA_DIRECTORY&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52" refid="class_simulator_1a4f33098635f757e2a31bfbb76ce7dfe9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_simulator_1a4f33098635f757e2a31bfbb76ce7dfe9" kindref="member">PORTFOLIO_CAPITAL</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;PORTFOLIO_CAPITAL&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53" refid="class_simulator_1a3a536c742457453e2d3e96b97d91629a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_simulator_1a3a536c742457453e2d3e96b97d91629a" kindref="member">MAX_CAPITAL_PER_STOCK_PARAM</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;MAX_CAPITAL_PER_STOCK&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55" refid="class_simulator_1aa0bac330691bf03dbf8716be787cad45" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_simulator_1aa0bac330691bf03dbf8716be787cad45" kindref="member">PERIOD_START_DATE</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;START_DATE&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56" refid="class_simulator_1aa39d4d9502abf412d78b50d1f15f811b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_simulator_1aa39d4d9502abf412d78b50d1f15f811b" kindref="member">PERIOD_END_DATE</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;END_DATE&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58" refid="class_simulator_1a5f3cd0a9c644e7548a0424556b03e627" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_simulator_1a5f3cd0a9c644e7548a0424556b03e627" kindref="member">ENTRY_SIGNAL_PARAM</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;ENTRY_THRESHOLD&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59" refid="class_simulator_1a39b11ae9b5e07c049444d568f800e11e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_simulator_1a39b11ae9b5e07c049444d568f800e11e" kindref="member">EXIT_SIGNAL_PARAM</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;EXIT_THRESHOLD&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61" refid="class_simulator_1afeaec183962d21c49fefb01dd671ea33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_simulator_1afeaec183962d21c49fefb01dd671ea33" kindref="member">MAX_POS_PER_STOCK</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;MAX_POSITIONS_PER_STOCK&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62" refid="class_simulator_1adb8c5bb4e289a14b706a3803c50a5643" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_simulator_1adb8c5bb4e289a14b706a3803c50a5643" kindref="member">DAYS_IN_POS_PARAM</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;MAX_DAYS_IN_POSITION&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63" refid="class_simulator_1a4f727299fa4922e4b1a817983fe228dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_simulator_1a4f727299fa4922e4b1a817983fe228dd" kindref="member">STOP_LOSS_PARAM</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;STOP_LOSS&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65" refid="class_simulator_1a97f519a765ab449b62be329d9b1eddc6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_simulator_1a97f519a765ab449b62be329d9b1eddc6" kindref="member">DAILY_PUB_PARAM</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;DAILY&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66" refid="class_simulator_1a8743b3779eb9eae58768e408176483ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_simulator_1a8743b3779eb9eae58768e408176483ac" kindref="member">MONTHLY_PUB_PARAM</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;MONTHLY&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67" refid="class_simulator_1afd3e6d193653a3642067721af2b6ed38" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_simulator_1afd3e6d193653a3642067721af2b6ed38" kindref="member">TRANSACTION_PUB_PARAM</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;TRANSACTION&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68" refid="class_simulator_1a51929ed4f5640f5d2644b3dfd0628329" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_simulator_1a51929ed4f5640f5d2644b3dfd0628329" kindref="member">SIGNAL_PUB_PARAM</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SIGNAL&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>(To<sp/>include<sp/>when<sp/>considering<sp/>portfolio<sp/>publication)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>const<sp/>std::string<sp/>PORTFOLIO_PUB_PARAM<sp/>=<sp/>&quot;PORTFOLIO&quot;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>**************<sp/>CONFIGURATION<sp/>VARIABLES<sp/><sp/>****************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="class_simulator_1a9f9825e7abbefadd90cd260af723f362" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_simulator_1a9f9825e7abbefadd90cd260af723f362" kindref="member">m_universePath</ref>;</highlight></codeline>
+<codeline lineno="80" refid="class_simulator_1ae9617ea33ba0f08b1fa26be1777eee58" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_simulator_1ae9617ea33ba0f08b1fa26be1777eee58" kindref="member">m_tickerPath</ref>;</highlight></codeline>
+<codeline lineno="82" refid="class_simulator_1ac63f13d5fc10eb815958703a859f2761" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1ac63f13d5fc10eb815958703a859f2761" kindref="member">m_portfolioCapital</ref>;</highlight></codeline>
+<codeline lineno="83" refid="class_simulator_1a6d29b66f23f025901b41cdb4b8b54d85" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a6d29b66f23f025901b41cdb4b8b54d85" kindref="member">m_capitalLimitPerStock</ref>;</highlight></codeline>
+<codeline lineno="85" refid="class_simulator_1a3cb05c9f9cc50bed5f7c284140dd3228" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a3cb05c9f9cc50bed5f7c284140dd3228" kindref="member">m_entrySignal</ref>;</highlight></codeline>
+<codeline lineno="86" refid="class_simulator_1a8245a5e2736adcf414f737d1501f846f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a8245a5e2736adcf414f737d1501f846f" kindref="member">m_exitSignal</ref>;</highlight></codeline>
+<codeline lineno="88" refid="class_simulator_1a1808159b6db7cc8cb1fde241b3ca1a63" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_date_time" kindref="compound">DateTime</ref>*<sp/><ref refid="class_simulator_1a1808159b6db7cc8cb1fde241b3ca1a63" kindref="member">m_startDate</ref>;</highlight></codeline>
+<codeline lineno="89" refid="class_simulator_1a5418c16b656f3e90fe909c2cea9a7b26" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_date_time" kindref="compound">DateTime</ref>*<sp/><ref refid="class_simulator_1a5418c16b656f3e90fe909c2cea9a7b26" kindref="member">m_endDate</ref>;</highlight></codeline>
+<codeline lineno="91" refid="class_simulator_1a762c9da4d9b398b70e4a5fcf8084693a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a762c9da4d9b398b70e4a5fcf8084693a" kindref="member">m_maxPositionsPerStock</ref>;</highlight></codeline>
+<codeline lineno="92" refid="class_simulator_1a465d97fd2465e1e8fbbf12d9a8ad4294" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a465d97fd2465e1e8fbbf12d9a8ad4294" kindref="member">m_maxDaysPerPosition</ref>;</highlight></codeline>
+<codeline lineno="93" refid="class_simulator_1aa51155015b9738f8dcb0815271144ac1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1aa51155015b9738f8dcb0815271144ac1" kindref="member">m_stopLoss</ref>;</highlight></codeline>
+<codeline lineno="95" refid="class_simulator_1a554d967210680039cb8f8c9590275d62" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a554d967210680039cb8f8c9590275d62" kindref="member">m_dailyPublication</ref>;</highlight></codeline>
+<codeline lineno="96" refid="class_simulator_1ab5eee5366d5945ba1c047183c99140d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1ab5eee5366d5945ba1c047183c99140d5" kindref="member">m_monthlyPublication</ref>;</highlight></codeline>
+<codeline lineno="97" refid="class_simulator_1a147bb76a9bd3662868ada07ce810c1e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a147bb76a9bd3662868ada07ce810c1e9" kindref="member">m_transactionPublication</ref>;</highlight></codeline>
+<codeline lineno="98" refid="class_simulator_1aec6e5c383d7b6b366716fb62194d8a02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1aec6e5c383d7b6b366716fb62194d8a02" kindref="member">m_signalPublication</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>(To<sp/>include<sp/>when<sp/>considering<sp/>portfolio<sp/>publication)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>bool<sp/>m_portfolioPublication;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>************<sp/>OUTPUT<sp/>STREAMS<sp/>FOR<sp/>RECORDS<sp/><sp/>***************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="class_simulator_1a163d168daf7ddb30c31a34084fdd56cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ofstream<sp/><ref refid="class_simulator_1a163d168daf7ddb30c31a34084fdd56cd" kindref="member">m_dailyInfoFile</ref>;</highlight></codeline>
+<codeline lineno="109" refid="class_simulator_1a03b15dcf1a5ebd34356a2c013ba95190" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ofstream<sp/><ref refid="class_simulator_1a03b15dcf1a5ebd34356a2c013ba95190" kindref="member">m_monthlyInfoFile</ref>;</highlight></codeline>
+<codeline lineno="110" refid="class_simulator_1a1f7936d90aa2ee50df1d41f336a2db80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ofstream<sp/><ref refid="class_simulator_1a1f7936d90aa2ee50df1d41f336a2db80" kindref="member">m_transactionInfoFile</ref>;</highlight></codeline>
+<codeline lineno="111" refid="class_simulator_1ac1f4b274af12359ab1359d48cb793633" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ofstream<sp/><ref refid="class_simulator_1ac1f4b274af12359ab1359d48cb793633" kindref="member">m_signalInfoFile</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>(To<sp/>include<sp/>when<sp/>considering<sp/>portfolio<sp/>publication)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>std::ofstream<sp/>m_portfolioInfoFile;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>***************<sp/>SIMULATION<sp/>VARIABLES<sp/><sp/>******************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="class_simulator_1af8b9686a07f4801d903c03ba06f10b6c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1af8b9686a07f4801d903c03ba06f10b6c" kindref="member">m_ROR</ref>;</highlight></codeline>
+<codeline lineno="123" refid="class_simulator_1a2ad80992205bb876c7aec067760fd380" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a2ad80992205bb876c7aec067760fd380" kindref="member">m_totalPNL</ref>;</highlight></codeline>
+<codeline lineno="125" refid="class_simulator_1a874ad8839e8a4625d556126136df86b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a874ad8839e8a4625d556126136df86b0" kindref="member">m_dailyPNL</ref>;</highlight></codeline>
+<codeline lineno="127" refid="class_simulator_1ade008ef893f45012690935775c11b744" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1ade008ef893f45012690935775c11b744" kindref="member">m_longPosCount</ref>;</highlight></codeline>
+<codeline lineno="129" refid="class_simulator_1a7437688899e7340ff427051e6499b42f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a7437688899e7340ff427051e6499b42f" kindref="member">m_shortPosCount</ref>;</highlight></codeline>
+<codeline lineno="131" refid="class_simulator_1ad9bd5da8f745195f8efb7fde07c4b398" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1ad9bd5da8f745195f8efb7fde07c4b398" kindref="member">m_totalPosCount</ref>;</highlight></codeline>
+<codeline lineno="133" refid="class_simulator_1a75b03660c930f8fabdfa41eccff44f4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a75b03660c930f8fabdfa41eccff44f4b" kindref="member">m_netMarketValue</ref>;</highlight></codeline>
+<codeline lineno="135" refid="class_simulator_1a92a066b5676e453879a884dd047d53aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a92a066b5676e453879a884dd047d53aa" kindref="member">m_grossMarketValue</ref>;</highlight></codeline>
+<codeline lineno="137" refid="class_simulator_1a5df061dcae309d085e48d6aa68f9a0ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_date_time" kindref="compound">DateTime</ref>*<sp/><ref refid="class_simulator_1a5df061dcae309d085e48d6aa68f9a0ff" kindref="member">m_today</ref>;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>**************<sp/>DAILY<sp/>RECORD<sp/>VARIABLES<sp/><sp/>*****************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="class_simulator_1ab5aebf9f33c4d351336481d74df87204" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="class_simulator_1ab5aebf9f33c4d351336481d74df87204" kindref="member">m_dailyPNLRecord</ref>;</highlight></codeline>
+<codeline lineno="147" refid="class_simulator_1a788eddb47b5e2b64ad373e3e16f50e4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="class_simulator_1a788eddb47b5e2b64ad373e3e16f50e4e" kindref="member">m_dailyCumulativeROR</ref>;</highlight></codeline>
+<codeline lineno="149" refid="class_simulator_1abcf33b93b8230d84d99eb31cd73e3b69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="class_simulator_1abcf33b93b8230d84d99eb31cd73e3b69" kindref="member">m_sharpeRecord</ref>;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>***************<sp/>MEMBER<sp/>CLASS<sp/>VARIABLES<sp/><sp/>****************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="class_simulator_1ab0249e8e762a5c5d50263175ca53cbc7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1ab0249e8e762a5c5d50263175ca53cbc7" kindref="member">m_configFilesPassed</ref>;</highlight></codeline>
+<codeline lineno="159" refid="class_simulator_1aaa17fec7cb1219dabc3b67a885148b1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1aaa17fec7cb1219dabc3b67a885148b1e" kindref="member">m_simulationCount</ref>;</highlight></codeline>
+<codeline lineno="161" refid="class_simulator_1a22ea6689c8b7f808f101fe3a157338de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;const<sp/>char*&gt;<sp/><ref refid="class_simulator_1a22ea6689c8b7f808f101fe3a157338de" kindref="member">m_configFile</ref>;</highlight></codeline>
+<codeline lineno="163" refid="class_simulator_1a50c85d7f67459a61c525de84f296f696" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_config" kindref="compound">Config</ref>*<sp/><ref refid="class_simulator_1a50c85d7f67459a61c525de84f296f696" kindref="member">m_config</ref>;</highlight></codeline>
+<codeline lineno="165" refid="class_simulator_1a98713f90d7d7ce86cce337f787acf0e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_data_access" kindref="compound">DataAccess</ref>*<sp/><ref refid="class_simulator_1a98713f90d7d7ce86cce337f787acf0e0" kindref="member">m_data</ref>;</highlight></codeline>
+<codeline lineno="167" refid="class_simulator_1a1d14636c2b29e1b2ae40ea1264465318" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;TradingStock*&gt;<sp/><ref refid="class_simulator_1a1d14636c2b29e1b2ae40ea1264465318" kindref="member">m_tradingStocks</ref>;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>***************<sp/>PRIVATE<sp/>UTILITY<sp/>METHODS<sp/><sp/>***************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a0e2d73d3f5c09acdcac93e22a95b721d" kindref="member">initializeSimulator</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>a_configFile<sp/>);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a0cd976fca52f982a92f2f897a6ddd1de" kindref="member">rerunSimulator</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>a_configFile);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1af45eb4ca17242683290fbf5c54af13f2" kindref="member">initializePublications</ref>();</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a5b96a3d0c4c330d2b49be7dd7930c510" kindref="member">checkParameters</ref>();</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" kindref="member">loadParameters</ref>();</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a3752d08182992d06e6dc5783ed82cafc" kindref="member">initializeTradingTickers</ref>();</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1ac66d4a8840edc51e1fda473d677ccce2" kindref="member">verifyDateParameters</ref>();</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1af2fc928bf40748cf305a1a699746e77d" kindref="member">calculateSignal</ref>(<sp/><ref refid="class_ticker_data" kindref="compound">TickerData</ref><sp/>&amp;a_stockData<sp/>);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1adc8821db9e85da458f9a6e8b1912ac86" kindref="member">makeTrade</ref>(<sp/><ref refid="class_trading_stock" kindref="compound">TradingStock</ref><sp/>&amp;a_stock,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;a_currentPrice,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;a_signalToday<sp/>);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a4dbbe2a4cbd784dff5a9bdc4ee913b08" kindref="member">hasEnoughCapital</ref>(<sp/><ref refid="class_trading_stock" kindref="compound">TradingStock</ref><sp/>&amp;a_stock,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a_price<sp/>);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a20a56ab01d34b348fe22129caa44df09" kindref="member">closePositions</ref>(<sp/><ref refid="class_trading_stock" kindref="compound">TradingStock</ref><sp/>&amp;a_stock,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;a_currentPrice,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;a_signal<sp/>);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1ad24c99fbfd5808aba7f5c9de11cc23f0" kindref="member">openPositions</ref>(<sp/><ref refid="class_trading_stock" kindref="compound">TradingStock</ref><sp/>&amp;a_stock,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;a_currentPrice,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;a_signal<sp/>);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a56638656f8e85aec70ba6c2680025279" kindref="member">recordTransaction</ref>(<sp/><ref refid="class_trading_stock" kindref="compound">TradingStock</ref><sp/>&amp;a_stock<sp/>);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a5a78edbf904b54bb6f66a5c3b8c87cd9" kindref="member">recordSignalInfo</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a_signal);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1ae77749f93581b683330f30726f5aaffb" kindref="member">recordDailyStatistics</ref>();</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1ae9b8b2ffbef1ba49bd8a9dc5fad5a1b2" kindref="member">recordMonthlyStatistics</ref>();</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a2ae468429b6e8eedc5c1744891e36346" kindref="member">closeDailyPublication</ref>();</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a9bf890f96b97a53f5beac15581689b18" kindref="member">closeMonthlyPublication</ref>(<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>a_flag<sp/>);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a8de16aac7f0616e43ee45e895d15b67a" kindref="member">closeTransactionPublication</ref>();</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a9c907c7e0a1a2fdd334cb51dd5ff47c6" kindref="member">closeSignalPublication</ref>();</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1accf533fb22ca8261dce0830daa5945f1" kindref="member">recordSharpeRatio</ref>();</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a4238ab87912e40d99cad5deb558e3a96" kindref="member">recordNoActivity</ref>(<sp/><ref refid="class_trading_stock" kindref="compound">TradingStock</ref><sp/>&amp;a_stock<sp/>);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulator_1a1176c2f39f71a17dd1c9d669d3a46d15" kindref="member">calculateSharpeRatio</ref>();</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>Simulator_h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="Simulator.h"/>
+  </compounddef>
+</doxygen>

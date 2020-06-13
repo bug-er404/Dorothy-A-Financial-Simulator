@@ -1,0 +1,315 @@
+.TH "TickerData" 3 "Sat Jun 6 2020" "Version Version 1.0" "DOROTHY" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TickerData
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <TickerData\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTickerData\fP (std::string &a_tickerName, const std::string &a_directory)"
+.br
+.RI "Parameterized constructor to create a ticker object\&. "
+.ti -1c
+.RI "double \fBGetCurrentDataOf\fP (\fBTICKER_FIELDS\fP a_field)"
+.br
+.RI "Get today's data of a_field\&. "
+.ti -1c
+.RI "double \fBGetCloseYesterday\fP ()"
+.br
+.RI "Get yesterday's close price\&. "
+.ti -1c
+.RI "void \fBSetTradingDateRange\fP (\fBDateTime\fP *a_startDate, \fBDateTime\fP *a_endDate)"
+.br
+.RI "Method to set trading date range\&. "
+.ti -1c
+.RI "double \fBGetMACDSignal\fP ()"
+.br
+.RI "Get current date's MACD signal\&. "
+.ti -1c
+.RI "\fB~TickerData\fP ()=default"
+.br
+.RI "Default deconstructor\&. "
+.ti -1c
+.RI "void \fBPrintDataHead\fP ()"
+.br
+.RI "Print head of data columns\&. "
+.ti -1c
+.RI "void \fBPrintAllColumns\fP ()"
+.br
+.RI "Print sample of all columns including data and calculated columns\&. "
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const \fBint\fP \fBNA_VAL\fP = \-999"
+.br
+.RI "Fill constant for unavailable data\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTickerData\fP ()=default"
+.br
+.RI "Default constructor\&. "
+.ti -1c
+.RI "void \fBparseTickerData\fP (const std::string &a_directory)"
+.br
+.RI "Parse ticker data from data source files\&. "
+.ti -1c
+.RI "void \fBcalculateMACDfields\fP ()"
+.br
+.RI "Calculate MACD fields and append to the ticker data\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBm_tickerName\fP"
+.br
+.RI "Stock ticker name\&. "
+.ti -1c
+.RI "std::vector< double > \fBm_tickerData\fP [\fBTICKER_FIELDS::END_TICKER_FIELDS\fP]"
+.br
+.RI "\fBTickerData\fP data for a stock in memory\&. "
+.ti -1c
+.RI "std::vector< \fBDateTime\fP * > \fBm_tickerDates\fP"
+.br
+.RI "\fBTickerData\fP dates of the price data\&. "
+.ti -1c
+.RI "\fBint\fP \fBm_tradingDateIndexStart\fP"
+.br
+.RI "Trading start date index in m_tickerDates\&. "
+.ti -1c
+.RI "\fBint\fP \fBm_tradingDateIndexEnd\fP"
+.br
+.RI "Trading end date index in m_tickerDates\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 55 of file TickerData\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TickerData::TickerData (std::string & a_tickerName, const std::string & a_directory)"
+
+.PP
+Parameterized constructor to create a ticker object\&. \fBTickerData::TickerData\fP\&. Parameterized constructor to create a ticker object 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_tickerName\fP string Name of ticker 
+.br
+\fIa_directory\fP string Price data directory path\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+4/30/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 28 of file TickerData\&.cpp\&.
+.SS "TickerData::~TickerData ()\fC [default]\fP"
+
+.PP
+Default deconstructor\&. 
+.SS "TickerData::TickerData ()\fC [private]\fP, \fC [default]\fP"
+
+.PP
+Default constructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void TickerData::calculateMACDfields ()\fC [private]\fP"
+
+.PP
+Calculate MACD fields and append to the ticker data\&. \fBTickerData::calculateMACDfields\fP Calculate MACD fields and append to the ticker data\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+4/30/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 159 of file TickerData\&.cpp\&.
+.SS "double TickerData::GetCloseYesterday ()\fC [inline]\fP"
+
+.PP
+Get yesterday's close price\&. 
+.PP
+Definition at line 80 of file TickerData\&.h\&.
+.SS "double TickerData::GetCurrentDataOf (\fBTICKER_FIELDS\fP a_field)\fC [inline]\fP"
+
+.PP
+Get today's data of a_field\&. 
+.PP
+Definition at line 77 of file TickerData\&.h\&.
+.SS "double TickerData::GetMACDSignal ()"
+
+.PP
+Get current date's MACD signal\&. \fBTickerData::GetMACDSignal\fP\&. Get current date's MACD signal\&. 
+.PP
+\fBReturns\fP
+.RS 4
+double The current MACD signal\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+4/30/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 76 of file TickerData\&.cpp\&.
+.SS "void TickerData::parseTickerData (const std::string & a_directory)\fC [private]\fP"
+
+.PP
+Parse ticker data from data source files\&. \fBTickerData::parseTickerData\fP\&. Parse ticker data from data source files\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_directory\fP string Path where the price data is located\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+4/30/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 105 of file TickerData\&.cpp\&.
+.SS "void TickerData::PrintAllColumns ()"
+
+.PP
+Print sample of all columns including data and calculated columns\&. \fBTickerData::PrintAllColumns\fP Method to print a sample of data for all data and calculated columns\&. Used for debugging and checking\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+4/30/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 305 of file TickerData\&.cpp\&.
+.SS "void TickerData::PrintDataHead ()"
+
+.PP
+Print head of data columns\&. \fBTickerData::PrintDataHead\fP Method to print first 10 data entries for the ticker object\&. Only print data fields\&. Used for debugging and checking\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+4/30/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 261 of file TickerData\&.cpp\&.
+.SS "void TickerData::SetTradingDateRange (\fBDateTime\fP * a_startDate, \fBDateTime\fP * a_endDate)"
+
+.PP
+Method to set trading date range\&. \fBTickerData::SetTradingDateRange\fP\&. Method to set trading date range\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_startDate\fP DateTime* Start date of simulation to set\&. 
+.br
+\fIa_endDate\fP DateTime* End date of simulation to set\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+4/30/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 47 of file TickerData\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "std::vector<double> TickerData::m_tickerData[\fBTICKER_FIELDS::END_TICKER_FIELDS\fP]\fC [private]\fP"
+
+.PP
+\fBTickerData\fP data for a stock in memory\&. 
+.PP
+Definition at line 117 of file TickerData\&.h\&.
+.SS "std::vector<\fBDateTime\fP*> TickerData::m_tickerDates\fC [private]\fP"
+
+.PP
+\fBTickerData\fP dates of the price data\&. 
+.PP
+Definition at line 119 of file TickerData\&.h\&.
+.SS "std::string TickerData::m_tickerName\fC [private]\fP"
+
+.PP
+Stock ticker name\&. 
+.PP
+Definition at line 115 of file TickerData\&.h\&.
+.SS "\fBint\fP TickerData::m_tradingDateIndexEnd\fC [private]\fP"
+
+.PP
+Trading end date index in m_tickerDates\&. 
+.PP
+Definition at line 123 of file TickerData\&.h\&.
+.SS "\fBint\fP TickerData::m_tradingDateIndexStart\fC [private]\fP"
+
+.PP
+Trading start date index in m_tickerDates\&. 
+.PP
+Definition at line 121 of file TickerData\&.h\&.
+.SS "const \fBint\fP TickerData::NA_VAL = \-999\fC [static]\fP"
+
+.PP
+Fill constant for unavailable data\&. \fBTickerData\&.cpp\fP Implementation of \fBTickerData\&.h\fP
+.PP
+Created by Salil Maharjan on 4/30/20\&. Copyright © 2020 Salil Maharjan\&. All rights reserved\&. 
+.PP
+Definition at line 63 of file TickerData\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DOROTHY from the source code\&.

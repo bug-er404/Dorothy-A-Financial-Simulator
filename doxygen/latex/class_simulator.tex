@@ -1,0 +1,1795 @@
+\doxysection{Simulator Class Reference}
+\label{class_simulator}\index{Simulator@{Simulator}}
+
+
+{\ttfamily \#include $<$Simulator.\+h$>$}
+
+
+
+Collaboration diagram for Simulator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Simulator} (\textbf{ int} argc, const \textbf{ char} $\ast$argv[$\,$])
+\begin{DoxyCompactList}\small\item\em Main simulator constructor. \end{DoxyCompactList}\item 
+void \textbf{ Start\+Simulation} ()
+\begin{DoxyCompactList}\small\item\em Interface method to start the simulation. \end{DoxyCompactList}\item 
+void \textbf{ Run\+Simulation} ()
+\begin{DoxyCompactList}\small\item\em Main method to run simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Simulator} ()=default
+\begin{DoxyCompactList}\small\item\em Private default constructor. \end{DoxyCompactList}\item 
+void \textbf{ initialize\+Simulator} (const \textbf{ char} $\ast$a\+\_\+config\+File)
+\begin{DoxyCompactList}\small\item\em Initializes the simulator by loading configurations, ticker data and trading stocks. \end{DoxyCompactList}\item 
+void \textbf{ rerun\+Simulator} (const \textbf{ char} $\ast$a\+\_\+config\+File)
+\begin{DoxyCompactList}\small\item\em Rerun simulator for consecutive configuration files. \end{DoxyCompactList}\item 
+void \textbf{ initialize\+Publications} ()
+\begin{DoxyCompactList}\small\item\em Initialize file write stream for the publications requested in config. \end{DoxyCompactList}\item 
+bool \textbf{ check\+Parameters} ()
+\begin{DoxyCompactList}\small\item\em Checks if all required parameters are passed for simulator to run. \end{DoxyCompactList}\item 
+void \textbf{ load\+Parameters} ()
+\begin{DoxyCompactList}\small\item\em Loads parameters required for the simulator. \end{DoxyCompactList}\item 
+void \textbf{ initialize\+Trading\+Tickers} ()
+\begin{DoxyCompactList}\small\item\em Initialize stocks that the simulator will be trading. \end{DoxyCompactList}\item 
+void \textbf{ verify\+Date\+Parameters} ()
+\begin{DoxyCompactList}\small\item\em Verify date range. \end{DoxyCompactList}\item 
+double \textbf{ calculate\+Signal} (\textbf{ Ticker\+Data} \&a\+\_\+stock\+Data)
+\begin{DoxyCompactList}\small\item\em Calculate trade signal. \end{DoxyCompactList}\item 
+void \textbf{ make\+Trade} (\textbf{ Trading\+Stock} \&a\+\_\+stock, double \&a\+\_\+current\+Price, double \&a\+\_\+signal\+Today)
+\begin{DoxyCompactList}\small\item\em Function to open or close positions according to the signal by checking current position. \end{DoxyCompactList}\item 
+bool \textbf{ has\+Enough\+Capital} (\textbf{ Trading\+Stock} \&a\+\_\+stock, double a\+\_\+price)
+\begin{DoxyCompactList}\small\item\em Check if available capital for a stock is enough to purchase more equities at a\+\_\+price. \end{DoxyCompactList}\item 
+void \textbf{ close\+Positions} (\textbf{ Trading\+Stock} \&a\+\_\+stock, double \&a\+\_\+current\+Price, double \&a\+\_\+signal)
+\begin{DoxyCompactList}\small\item\em Close positions for a trading stock. \end{DoxyCompactList}\item 
+void \textbf{ open\+Positions} (\textbf{ Trading\+Stock} \&a\+\_\+stock, double \&a\+\_\+current\+Price, double \&a\+\_\+signal)
+\begin{DoxyCompactList}\small\item\em Open positions for a trading stock. \end{DoxyCompactList}\item 
+void \textbf{ record\+Transaction} (\textbf{ Trading\+Stock} \&a\+\_\+stock)
+\begin{DoxyCompactList}\small\item\em Function to record transactions to a file. \end{DoxyCompactList}\item 
+void \textbf{ record\+Signal\+Info} (double a\+\_\+signal)
+\begin{DoxyCompactList}\small\item\em Function to record signals to a file. \end{DoxyCompactList}\item 
+void \textbf{ record\+Daily\+Statistics} ()
+\begin{DoxyCompactList}\small\item\em Function to record daily statistics to a file. \end{DoxyCompactList}\item 
+void \textbf{ record\+Monthly\+Statistics} ()
+\begin{DoxyCompactList}\small\item\em Function to record monthly statistics to a file. \end{DoxyCompactList}\item 
+void \textbf{ close\+Daily\+Publication} ()
+\begin{DoxyCompactList}\small\item\em Method to close daily publication record file. \end{DoxyCompactList}\item 
+void \textbf{ close\+Monthly\+Publication} (bool a\+\_\+flag)
+\begin{DoxyCompactList}\small\item\em Method to close monthly publication record file. \end{DoxyCompactList}\item 
+void \textbf{ close\+Transaction\+Publication} ()
+\begin{DoxyCompactList}\small\item\em Method to close transaction publication record file. \end{DoxyCompactList}\item 
+void \textbf{ close\+Signal\+Publication} ()
+\begin{DoxyCompactList}\small\item\em Method to close signal publication record file. \end{DoxyCompactList}\item 
+void \textbf{ record\+Sharpe\+Ratio} ()
+\begin{DoxyCompactList}\small\item\em Function to record sharpe ratio to daily statistics file. \end{DoxyCompactList}\item 
+void \textbf{ record\+No\+Activity} (\textbf{ Trading\+Stock} \&a\+\_\+stock)
+\begin{DoxyCompactList}\small\item\em Method to record necessary elements for no activity (code reuse purposes). \end{DoxyCompactList}\item 
+double \textbf{ calculate\+Sharpe\+Ratio} ()
+\begin{DoxyCompactList}\small\item\em Function to calculate sharpe ratio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \textbf{ U\+N\+I\+V\+E\+R\+S\+E\+\_\+\+P\+A\+T\+H\+\_\+\+P\+A\+R\+AM} = \char`\"{}U\+N\+I\+V\+E\+R\+S\+E\+\_\+\+D\+I\+R\+E\+C\+T\+O\+RY\char`\"{}
+\item 
+const std\+::string \textbf{ T\+I\+C\+K\+E\+R\+\_\+\+P\+A\+T\+H\+\_\+\+P\+A\+R\+AM} = \char`\"{}T\+I\+C\+K\+E\+R\+\_\+\+D\+A\+T\+A\+\_\+\+D\+I\+R\+E\+C\+T\+O\+RY\char`\"{}
+\item 
+const std\+::string \textbf{ P\+O\+R\+T\+F\+O\+L\+I\+O\+\_\+\+C\+A\+P\+I\+T\+AL} = \char`\"{}P\+O\+R\+T\+F\+O\+L\+I\+O\+\_\+\+C\+A\+P\+I\+T\+AL\char`\"{}
+\item 
+const std\+::string \textbf{ M\+A\+X\+\_\+\+C\+A\+P\+I\+T\+A\+L\+\_\+\+P\+E\+R\+\_\+\+S\+T\+O\+C\+K\+\_\+\+P\+A\+R\+AM} = \char`\"{}M\+A\+X\+\_\+\+C\+A\+P\+I\+T\+A\+L\+\_\+\+P\+E\+R\+\_\+\+S\+T\+O\+CK\char`\"{}
+\item 
+const std\+::string \textbf{ P\+E\+R\+I\+O\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+D\+A\+TE} = \char`\"{}S\+T\+A\+R\+T\+\_\+\+D\+A\+TE\char`\"{}
+\item 
+const std\+::string \textbf{ P\+E\+R\+I\+O\+D\+\_\+\+E\+N\+D\+\_\+\+D\+A\+TE} = \char`\"{}E\+N\+D\+\_\+\+D\+A\+TE\char`\"{}
+\item 
+const std\+::string \textbf{ E\+N\+T\+R\+Y\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+P\+A\+R\+AM} = \char`\"{}E\+N\+T\+R\+Y\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD\char`\"{}
+\item 
+const std\+::string \textbf{ E\+X\+I\+T\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+P\+A\+R\+AM} = \char`\"{}E\+X\+I\+T\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD\char`\"{}
+\item 
+const std\+::string \textbf{ M\+A\+X\+\_\+\+P\+O\+S\+\_\+\+P\+E\+R\+\_\+\+S\+T\+O\+CK} = \char`\"{}M\+A\+X\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+S\+\_\+\+P\+E\+R\+\_\+\+S\+T\+O\+CK\char`\"{}
+\item 
+const std\+::string \textbf{ D\+A\+Y\+S\+\_\+\+I\+N\+\_\+\+P\+O\+S\+\_\+\+P\+A\+R\+AM} = \char`\"{}M\+A\+X\+\_\+\+D\+A\+Y\+S\+\_\+\+I\+N\+\_\+\+P\+O\+S\+I\+T\+I\+ON\char`\"{}
+\item 
+const std\+::string \textbf{ S\+T\+O\+P\+\_\+\+L\+O\+S\+S\+\_\+\+P\+A\+R\+AM} = \char`\"{}S\+T\+O\+P\+\_\+\+L\+O\+SS\char`\"{}
+\item 
+const std\+::string \textbf{ D\+A\+I\+L\+Y\+\_\+\+P\+U\+B\+\_\+\+P\+A\+R\+AM} = \char`\"{}D\+A\+I\+LY\char`\"{}
+\item 
+const std\+::string \textbf{ M\+O\+N\+T\+H\+L\+Y\+\_\+\+P\+U\+B\+\_\+\+P\+A\+R\+AM} = \char`\"{}M\+O\+N\+T\+H\+LY\char`\"{}
+\item 
+const std\+::string \textbf{ T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+\_\+\+P\+U\+B\+\_\+\+P\+A\+R\+AM} = \char`\"{}T\+R\+A\+N\+S\+A\+C\+T\+I\+ON\char`\"{}
+\item 
+const std\+::string \textbf{ S\+I\+G\+N\+A\+L\+\_\+\+P\+U\+B\+\_\+\+P\+A\+R\+AM} = \char`\"{}S\+I\+G\+N\+AL\char`\"{}
+\item 
+std\+::string \textbf{ m\+\_\+universe\+Path}
+\item 
+std\+::string \textbf{ m\+\_\+ticker\+Path}
+\item 
+double \textbf{ m\+\_\+portfolio\+Capital}
+\item 
+double \textbf{ m\+\_\+capital\+Limit\+Per\+Stock}
+\item 
+double \textbf{ m\+\_\+entry\+Signal}
+\item 
+double \textbf{ m\+\_\+exit\+Signal}
+\item 
+\textbf{ Date\+Time} $\ast$ \textbf{ m\+\_\+start\+Date}
+\item 
+\textbf{ Date\+Time} $\ast$ \textbf{ m\+\_\+end\+Date}
+\item 
+\textbf{ int} \textbf{ m\+\_\+max\+Positions\+Per\+Stock}
+\item 
+\textbf{ int} \textbf{ m\+\_\+max\+Days\+Per\+Position}
+\item 
+double \textbf{ m\+\_\+stop\+Loss}
+\item 
+bool \textbf{ m\+\_\+daily\+Publication}
+\item 
+bool \textbf{ m\+\_\+monthly\+Publication}
+\item 
+bool \textbf{ m\+\_\+transaction\+Publication}
+\item 
+bool \textbf{ m\+\_\+signal\+Publication}
+\item 
+std\+::ofstream \textbf{ m\+\_\+daily\+Info\+File}
+\begin{DoxyCompactList}\small\item\em Output streams to write publications. \end{DoxyCompactList}\item 
+std\+::ofstream \textbf{ m\+\_\+monthly\+Info\+File}
+\item 
+std\+::ofstream \textbf{ m\+\_\+transaction\+Info\+File}
+\item 
+std\+::ofstream \textbf{ m\+\_\+signal\+Info\+File}
+\item 
+double \textbf{ m\+\_\+\+R\+OR}
+\begin{DoxyCompactList}\small\item\em Daily return. The profit for the day divided by the capital committed. \end{DoxyCompactList}\item 
+double \textbf{ m\+\_\+total\+P\+NL}
+\begin{DoxyCompactList}\small\item\em Cumulative P\+NL from the beginning of the simulation to the current date. \end{DoxyCompactList}\item 
+double \textbf{ m\+\_\+daily\+P\+NL}
+\begin{DoxyCompactList}\small\item\em The profit or loss in dollars for the day. \end{DoxyCompactList}\item 
+double \textbf{ m\+\_\+long\+Pos\+Count}
+\begin{DoxyCompactList}\small\item\em Daily long position counter variable. \end{DoxyCompactList}\item 
+double \textbf{ m\+\_\+short\+Pos\+Count}
+\begin{DoxyCompactList}\small\item\em Daily short position counter variable. \end{DoxyCompactList}\item 
+double \textbf{ m\+\_\+total\+Pos\+Count}
+\begin{DoxyCompactList}\small\item\em Daily total position counter variable. \end{DoxyCompactList}\item 
+double \textbf{ m\+\_\+net\+Market\+Value}
+\begin{DoxyCompactList}\small\item\em Total amount of capital committed to the model at the end of the day. \end{DoxyCompactList}\item 
+double \textbf{ m\+\_\+gross\+Market\+Value}
+\begin{DoxyCompactList}\small\item\em Long capital minus the short capital at the end of the day. \end{DoxyCompactList}\item 
+\textbf{ Date\+Time} $\ast$ \textbf{ m\+\_\+today}
+\begin{DoxyCompactList}\small\item\em Date today. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \textbf{ m\+\_\+daily\+P\+N\+L\+Record}
+\begin{DoxyCompactList}\small\item\em Daily P\+NL record. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \textbf{ m\+\_\+daily\+Cumulative\+R\+OR}
+\begin{DoxyCompactList}\small\item\em Daily cumulative R\+OR record for all trading stocks in simulation. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \textbf{ m\+\_\+sharpe\+Record}
+\begin{DoxyCompactList}\small\item\em Sharpe ratio record. \end{DoxyCompactList}\item 
+\textbf{ int} \textbf{ m\+\_\+config\+Files\+Passed}
+\begin{DoxyCompactList}\small\item\em Number of config files passed. \end{DoxyCompactList}\item 
+\textbf{ int} \textbf{ m\+\_\+simulation\+Count}
+\begin{DoxyCompactList}\small\item\em Count of how many config files have been simulated. \end{DoxyCompactList}\item 
+std\+::vector$<$ const \textbf{ char} $\ast$ $>$ \textbf{ m\+\_\+config\+File}
+\begin{DoxyCompactList}\small\item\em Var with config file name. \end{DoxyCompactList}\item 
+\textbf{ Config} $\ast$ \textbf{ m\+\_\+config}
+\begin{DoxyCompactList}\small\item\em Configuration object. \end{DoxyCompactList}\item 
+\textbf{ Data\+Access} $\ast$ \textbf{ m\+\_\+data}
+\begin{DoxyCompactList}\small\item\em Data access object. \end{DoxyCompactList}\item 
+std\+::vector$<$ \textbf{ Trading\+Stock} $\ast$ $>$ \textbf{ m\+\_\+trading\+Stocks}
+\begin{DoxyCompactList}\small\item\em All the trading stocks in the simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxyref{Simulator.\+h}{p.}{_simulator_8h} Main container class for the simulator. Uses member classes for financial simulation.
+
+Created by Salil Maharjan on 4/29/20. Copyright © 2020 Salil Maharjan. All rights reserved. 
+
+Definition at line 18 of file Simulator.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_simulator_a53cc2e7e6dde4d4893e259b0be2aae9a}} 
+\index{Simulator@{Simulator}!Simulator@{Simulator}}
+\index{Simulator@{Simulator}!Simulator@{Simulator}}
+\doxysubsubsection{Simulator()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Simulator\+::\+Simulator (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{argc,  }\item[{const \textbf{ char} $\ast$}]{argv[$\,$] }\end{DoxyParamCaption})}
+
+
+
+Main simulator constructor. 
+
+\doxyref{Simulator.\+cpp}{p.}{_simulator_8cpp} Implementation of \doxyref{Simulator.\+h}{p.}{_simulator_8h}.
+
+Created by Salil Maharjan on 4/29/20. Copyright © 2020 Salil Maharjan. All rights reserved. \doxyref{Simulator\+::\+Simulator}{p.}{class_simulator_a53cc2e7e6dde4d4893e259b0be2aae9a} Parameterized constructor for \doxyref{Simulator}{p.}{class_simulator} class. Initializes the \doxyref{Simulator}{p.}{class_simulator}. Can handle multiple configuration files. 
+\begin{DoxyParams}{Parameters}
+{\em argc} & int Number of command line arguments. \\
+\hline
+{\em argv} & const char$\ast$ Array of command line arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 26 of file Simulator.\+cpp.
+
+\mbox{\label{class_simulator_a5ee3126b7491cec8402850d5497b817c}} 
+\index{Simulator@{Simulator}!Simulator@{Simulator}}
+\index{Simulator@{Simulator}!Simulator@{Simulator}}
+\doxysubsubsection{Simulator()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Simulator\+::\+Simulator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [default]}}
+
+
+
+Private default constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_simulator_a1176c2f39f71a17dd1c9d669d3a46d15}} 
+\index{Simulator@{Simulator}!calculateSharpeRatio@{calculateSharpeRatio}}
+\index{calculateSharpeRatio@{calculateSharpeRatio}!Simulator@{Simulator}}
+\doxysubsubsection{calculateSharpeRatio()}
+{\footnotesize\ttfamily double Simulator\+::calculate\+Sharpe\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function to calculate sharpe ratio. 
+
+\doxyref{Simulator\+::calculate\+Sharpe\+Ratio}{p.}{class_simulator_a1176c2f39f71a17dd1c9d669d3a46d15} Method to calculate sharpe ratio. \begin{DoxyReturn}{Returns}
+double Daily sharpe ratio of the model. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 667 of file Simulator.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a1176c2f39f71a17dd1c9d669d3a46d15_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a1176c2f39f71a17dd1c9d669d3a46d15_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_simulator_af2fc928bf40748cf305a1a699746e77d}} 
+\index{Simulator@{Simulator}!calculateSignal@{calculateSignal}}
+\index{calculateSignal@{calculateSignal}!Simulator@{Simulator}}
+\doxysubsubsection{calculateSignal()}
+{\footnotesize\ttfamily double Simulator\+::calculate\+Signal (\begin{DoxyParamCaption}\item[{\textbf{ Ticker\+Data} \&}]{a\+\_\+stock\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calculate trade signal. 
+
+\doxyref{Simulator\+::calculate\+Signal}{p.}{class_simulator_af2fc928bf40748cf305a1a699746e77d} Function to calculate trade signal. Currently uses M\+A\+CD indicator to get signal. If not, the simulation will run for all available data instead of stopping. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+stock\+Data} & \doxyref{Ticker\+Data}{p.}{class_ticker_data}\& The data of the trading stock in the specified date range. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Trading signal. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 470 of file Simulator.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_af2fc928bf40748cf305a1a699746e77d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_af2fc928bf40748cf305a1a699746e77d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_simulator_a5b96a3d0c4c330d2b49be7dd7930c510}} 
+\index{Simulator@{Simulator}!checkParameters@{checkParameters}}
+\index{checkParameters@{checkParameters}!Simulator@{Simulator}}
+\doxysubsubsection{checkParameters()}
+{\footnotesize\ttfamily bool Simulator\+::check\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Checks if all required parameters are passed for simulator to run. 
+
+\doxyref{Simulator\+::check\+Parameters}{p.}{class_simulator_a5b96a3d0c4c330d2b49be7dd7930c510} Checks if all required parameters are passed for simulator to run. \begin{DoxyReturn}{Returns}
+bool If all required parameters are in configuration file. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 337 of file Simulator.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a5b96a3d0c4c330d2b49be7dd7930c510_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a5b96a3d0c4c330d2b49be7dd7930c510_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_simulator_a2ae468429b6e8eedc5c1744891e36346}} 
+\index{Simulator@{Simulator}!closeDailyPublication@{closeDailyPublication}}
+\index{closeDailyPublication@{closeDailyPublication}!Simulator@{Simulator}}
+\doxysubsubsection{closeDailyPublication()}
+{\footnotesize\ttfamily void Simulator\+::close\+Daily\+Publication (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Method to close daily publication record file. 
+
+\doxyref{Simulator\+::close\+Daily\+Publication}{p.}{class_simulator_a2ae468429b6e8eedc5c1744891e36346} Method to close daily publication record file. \begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 922 of file Simulator.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a2ae468429b6e8eedc5c1744891e36346_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_simulator_a9bf890f96b97a53f5beac15581689b18}} 
+\index{Simulator@{Simulator}!closeMonthlyPublication@{closeMonthlyPublication}}
+\index{closeMonthlyPublication@{closeMonthlyPublication}!Simulator@{Simulator}}
+\doxysubsubsection{closeMonthlyPublication()}
+{\footnotesize\ttfamily void Simulator\+::close\+Monthly\+Publication (\begin{DoxyParamCaption}\item[{bool}]{a\+\_\+flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Method to close monthly publication record file. 
+
+\doxyref{Simulator\+::close\+Monthly\+Publication}{p.}{class_simulator_a9bf890f96b97a53f5beac15581689b18} Method to close monthly publication record file. Monthly statistics use daily statistics, so daily must be set to write monthly publications. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+flag} & Flag if monthly statistics can be generated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 940 of file Simulator.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a9bf890f96b97a53f5beac15581689b18_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_simulator_a20a56ab01d34b348fe22129caa44df09}} 
+\index{Simulator@{Simulator}!closePositions@{closePositions}}
+\index{closePositions@{closePositions}!Simulator@{Simulator}}
+\doxysubsubsection{closePositions()}
+{\footnotesize\ttfamily void Simulator\+::close\+Positions (\begin{DoxyParamCaption}\item[{\textbf{ Trading\+Stock} \&}]{a\+\_\+stock,  }\item[{double \&}]{a\+\_\+current\+Price,  }\item[{double \&}]{a\+\_\+signal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Close positions for a trading stock. 
+
+\doxyref{Simulator\+::close\+Positions}{p.}{class_simulator_a20a56ab01d34b348fe22129caa44df09} Method to close positions for a trading stock. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+stock} & \doxyref{Trading\+Stock}{p.}{class_trading_stock}\& The stock that is being traded. \\
+\hline
+{\em a\+\_\+current\+Price} & double\& Current price of the stock. \\
+\hline
+{\em a\+\_\+signal\+Today} & double\& Signal calculated for the day. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 631 of file Simulator.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a20a56ab01d34b348fe22129caa44df09_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a20a56ab01d34b348fe22129caa44df09_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_simulator_a9c907c7e0a1a2fdd334cb51dd5ff47c6}} 
+\index{Simulator@{Simulator}!closeSignalPublication@{closeSignalPublication}}
+\index{closeSignalPublication@{closeSignalPublication}!Simulator@{Simulator}}
+\doxysubsubsection{closeSignalPublication()}
+{\footnotesize\ttfamily void Simulator\+::close\+Signal\+Publication (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Method to close signal publication record file. 
+
+\doxyref{Simulator\+::close\+Signal\+Publication}{p.}{class_simulator_a9c907c7e0a1a2fdd334cb51dd5ff47c6} Method to close signal publication record file. \begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 976 of file Simulator.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a9c907c7e0a1a2fdd334cb51dd5ff47c6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_simulator_a8de16aac7f0616e43ee45e895d15b67a}} 
+\index{Simulator@{Simulator}!closeTransactionPublication@{closeTransactionPublication}}
+\index{closeTransactionPublication@{closeTransactionPublication}!Simulator@{Simulator}}
+\doxysubsubsection{closeTransactionPublication()}
+{\footnotesize\ttfamily void Simulator\+::close\+Transaction\+Publication (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Method to close transaction publication record file. 
+
+\doxyref{Simulator\+::close\+Transaction\+Publication}{p.}{class_simulator_a8de16aac7f0616e43ee45e895d15b67a} Method to close transaction publication record file. \begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 959 of file Simulator.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a8de16aac7f0616e43ee45e895d15b67a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_simulator_a4dbbe2a4cbd784dff5a9bdc4ee913b08}} 
+\index{Simulator@{Simulator}!hasEnoughCapital@{hasEnoughCapital}}
+\index{hasEnoughCapital@{hasEnoughCapital}!Simulator@{Simulator}}
+\doxysubsubsection{hasEnoughCapital()}
+{\footnotesize\ttfamily bool Simulator\+::has\+Enough\+Capital (\begin{DoxyParamCaption}\item[{\textbf{ Trading\+Stock} \&}]{a\+\_\+stock,  }\item[{double}]{a\+\_\+price }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Check if available capital for a stock is enough to purchase more equities at a\+\_\+price. 
+
+\doxyref{Simulator\+::has\+Enough\+Capital}{p.}{class_simulator_a4dbbe2a4cbd784dff5a9bdc4ee913b08} Check if available capital for a stock is enough to purchase more equities at a\+\_\+price 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+stock} & \doxyref{Trading\+Stock}{p.}{class_trading_stock}\& The stock that is being traded. \\
+\hline
+{\em a\+\_\+current\+Price} & double\& Current price of the stock. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool If there is sufficient capital to buy positions of a\+\_\+stock at a\+\_\+price. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 559 of file Simulator.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a4dbbe2a4cbd784dff5a9bdc4ee913b08_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a4dbbe2a4cbd784dff5a9bdc4ee913b08_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_simulator_af45eb4ca17242683290fbf5c54af13f2}} 
+\index{Simulator@{Simulator}!initializePublications@{initializePublications}}
+\index{initializePublications@{initializePublications}!Simulator@{Simulator}}
+\doxysubsubsection{initializePublications()}
+{\footnotesize\ttfamily void Simulator\+::initialize\+Publications (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initialize file write stream for the publications requested in config. 
+
+\doxyref{Simulator\+::initialize\+Publications}{p.}{class_simulator_af45eb4ca17242683290fbf5c54af13f2} Initializes file write streams for the publications requested in configurations. \begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 278 of file Simulator.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_af45eb4ca17242683290fbf5c54af13f2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_simulator_a0e2d73d3f5c09acdcac93e22a95b721d}} 
+\index{Simulator@{Simulator}!initializeSimulator@{initializeSimulator}}
+\index{initializeSimulator@{initializeSimulator}!Simulator@{Simulator}}
+\doxysubsubsection{initializeSimulator()}
+{\footnotesize\ttfamily void Simulator\+::initialize\+Simulator (\begin{DoxyParamCaption}\item[{const \textbf{ char} $\ast$}]{a\+\_\+config\+File }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initializes the simulator by loading configurations, ticker data and trading stocks. 
+
+\doxyref{Simulator\+::initialize\+Simulator}{p.}{class_simulator_a0e2d73d3f5c09acdcac93e22a95b721d} Main method to initialize simulator for run. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+config\+File} & char$\ast$ \doxyref{Config}{p.}{class_config} file to initialize simulator for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 212 of file Simulator.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a0e2d73d3f5c09acdcac93e22a95b721d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a0e2d73d3f5c09acdcac93e22a95b721d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_simulator_a3752d08182992d06e6dc5783ed82cafc}} 
+\index{Simulator@{Simulator}!initializeTradingTickers@{initializeTradingTickers}}
+\index{initializeTradingTickers@{initializeTradingTickers}!Simulator@{Simulator}}
+\doxysubsubsection{initializeTradingTickers()}
+{\footnotesize\ttfamily void Simulator\+::initialize\+Trading\+Tickers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initialize stocks that the simulator will be trading. 
+
+\doxyref{Simulator\+::initialize\+Trading\+Tickers}{p.}{class_simulator_a3752d08182992d06e6dc5783ed82cafc} Initialize stock tickers from constituents file that the simulator will be trading. \begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 410 of file Simulator.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a3752d08182992d06e6dc5783ed82cafc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a3752d08182992d06e6dc5783ed82cafc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_simulator_a3369bc36fe39499aac6dba8efb3e187a}} 
+\index{Simulator@{Simulator}!loadParameters@{loadParameters}}
+\index{loadParameters@{loadParameters}!Simulator@{Simulator}}
+\doxysubsubsection{loadParameters()}
+{\footnotesize\ttfamily void Simulator\+::load\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Loads parameters required for the simulator. 
+
+\doxyref{Simulator\+::load\+Parameters}{p.}{class_simulator_a3369bc36fe39499aac6dba8efb3e187a} Loads parameters from configuration file that are required for the simulation. \begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 372 of file Simulator.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a3369bc36fe39499aac6dba8efb3e187a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a3369bc36fe39499aac6dba8efb3e187a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_simulator_adc8821db9e85da458f9a6e8b1912ac86}} 
+\index{Simulator@{Simulator}!makeTrade@{makeTrade}}
+\index{makeTrade@{makeTrade}!Simulator@{Simulator}}
+\doxysubsubsection{makeTrade()}
+{\footnotesize\ttfamily void Simulator\+::make\+Trade (\begin{DoxyParamCaption}\item[{\textbf{ Trading\+Stock} \&}]{a\+\_\+stock,  }\item[{double \&}]{a\+\_\+current\+Price,  }\item[{double \&}]{a\+\_\+signal\+Today }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function to open or close positions according to the signal by checking current position. 
+
+\doxyref{Simulator\+::make\+Trade}{p.}{class_simulator_adc8821db9e85da458f9a6e8b1912ac86} Function to make trade according to the signal. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+stock} & \doxyref{Trading\+Stock}{p.}{class_trading_stock}\& The stock that is being traded. \\
+\hline
+{\em a\+\_\+current\+Price} & double\& Current price of the stock. \\
+\hline
+{\em a\+\_\+signal\+Today} & double\& Signal calculated for the day. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 485 of file Simulator.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_adc8821db9e85da458f9a6e8b1912ac86_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_adc8821db9e85da458f9a6e8b1912ac86_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_simulator_ad24c99fbfd5808aba7f5c9de11cc23f0}} 
+\index{Simulator@{Simulator}!openPositions@{openPositions}}
+\index{openPositions@{openPositions}!Simulator@{Simulator}}
+\doxysubsubsection{openPositions()}
+{\footnotesize\ttfamily void Simulator\+::open\+Positions (\begin{DoxyParamCaption}\item[{\textbf{ Trading\+Stock} \&}]{a\+\_\+stock,  }\item[{double \&}]{a\+\_\+current\+Price,  }\item[{double \&}]{a\+\_\+signal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Open positions for a trading stock. 
+
+\doxyref{Simulator\+::open\+Positions}{p.}{class_simulator_ad24c99fbfd5808aba7f5c9de11cc23f0} Method to open positions for a trading stock. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+stock} & \doxyref{Trading\+Stock}{p.}{class_trading_stock}\& The stock that is being traded. \\
+\hline
+{\em a\+\_\+current\+Price} & double\& Current price of the stock. \\
+\hline
+{\em a\+\_\+signal\+Today} & double\& Signal calculated for the day. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 588 of file Simulator.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_ad24c99fbfd5808aba7f5c9de11cc23f0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_ad24c99fbfd5808aba7f5c9de11cc23f0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_simulator_ae77749f93581b683330f30726f5aaffb}} 
+\index{Simulator@{Simulator}!recordDailyStatistics@{recordDailyStatistics}}
+\index{recordDailyStatistics@{recordDailyStatistics}!Simulator@{Simulator}}
+\doxysubsubsection{recordDailyStatistics()}
+{\footnotesize\ttfamily void Simulator\+::record\+Daily\+Statistics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function to record daily statistics to a file. 
+
+\doxyref{Simulator\+::record\+Daily\+Statistics}{p.}{class_simulator_ae77749f93581b683330f30726f5aaffb} Function to record daily statistics to daily stats file. \begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 742 of file Simulator.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_ae77749f93581b683330f30726f5aaffb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_ae77749f93581b683330f30726f5aaffb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_simulator_ae9b8b2ffbef1ba49bd8a9dc5fad5a1b2}} 
+\index{Simulator@{Simulator}!recordMonthlyStatistics@{recordMonthlyStatistics}}
+\index{recordMonthlyStatistics@{recordMonthlyStatistics}!Simulator@{Simulator}}
+\doxysubsubsection{recordMonthlyStatistics()}
+{\footnotesize\ttfamily void Simulator\+::record\+Monthly\+Statistics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function to record monthly statistics to a file. 
+
+\doxyref{Simulator\+::record\+Monthly\+Statistics}{p.}{class_simulator_ae9b8b2ffbef1ba49bd8a9dc5fad5a1b2} Function to record monthly statistics to a file. Uses the generated daily publication to generate a monthly report. \begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 770 of file Simulator.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{class_simulator_ae9b8b2ffbef1ba49bd8a9dc5fad5a1b2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_ae9b8b2ffbef1ba49bd8a9dc5fad5a1b2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_simulator_a4238ab87912e40d99cad5deb558e3a96}} 
+\index{Simulator@{Simulator}!recordNoActivity@{recordNoActivity}}
+\index{recordNoActivity@{recordNoActivity}!Simulator@{Simulator}}
+\doxysubsubsection{recordNoActivity()}
+{\footnotesize\ttfamily void Simulator\+::record\+No\+Activity (\begin{DoxyParamCaption}\item[{\textbf{ Trading\+Stock} \&}]{a\+\_\+stock }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Method to record necessary elements for no activity (code reuse purposes). 
+
+\doxyref{Simulator\+::record\+No\+Activity}{p.}{class_simulator_a4238ab87912e40d99cad5deb558e3a96} Method to record necessary elements for no activity (code reuse purposes). 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+stock} & \doxyref{Trading\+Stock}{p.}{class_trading_stock}\& The stock that is being traded. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 571 of file Simulator.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a4238ab87912e40d99cad5deb558e3a96_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a4238ab87912e40d99cad5deb558e3a96_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_simulator_accf533fb22ca8261dce0830daa5945f1}} 
+\index{Simulator@{Simulator}!recordSharpeRatio@{recordSharpeRatio}}
+\index{recordSharpeRatio@{recordSharpeRatio}!Simulator@{Simulator}}
+\doxysubsubsection{recordSharpeRatio()}
+{\footnotesize\ttfamily void Simulator\+::record\+Sharpe\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function to record sharpe ratio to daily statistics file. 
+
+\doxyref{Simulator\+::record\+Sharpe\+Ratio}{p.}{class_simulator_accf533fb22ca8261dce0830daa5945f1} Method to record sharpe ratio to statistics file. Uses calculate\+Sharpe\+Ratio function to calculate sharpe ratio for the entire model. \begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 683 of file Simulator.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_accf533fb22ca8261dce0830daa5945f1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_accf533fb22ca8261dce0830daa5945f1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_simulator_a5a78edbf904b54bb6f66a5c3b8c87cd9}} 
+\index{Simulator@{Simulator}!recordSignalInfo@{recordSignalInfo}}
+\index{recordSignalInfo@{recordSignalInfo}!Simulator@{Simulator}}
+\doxysubsubsection{recordSignalInfo()}
+{\footnotesize\ttfamily void Simulator\+::record\+Signal\+Info (\begin{DoxyParamCaption}\item[{double}]{a\+\_\+signal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function to record signals to a file. 
+
+\doxyref{Simulator\+::record\+Signal\+Info}{p.}{class_simulator_a5a78edbf904b54bb6f66a5c3b8c87cd9} Function to record signals to a file. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+signal} & The day\textquotesingle{}s signal \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 730 of file Simulator.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a5a78edbf904b54bb6f66a5c3b8c87cd9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a5a78edbf904b54bb6f66a5c3b8c87cd9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_simulator_a56638656f8e85aec70ba6c2680025279}} 
+\index{Simulator@{Simulator}!recordTransaction@{recordTransaction}}
+\index{recordTransaction@{recordTransaction}!Simulator@{Simulator}}
+\doxysubsubsection{recordTransaction()}
+{\footnotesize\ttfamily void Simulator\+::record\+Transaction (\begin{DoxyParamCaption}\item[{\textbf{ Trading\+Stock} \&}]{a\+\_\+stock }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function to record transactions to a file. 
+
+\doxyref{Simulator\+::record\+Transaction}{p.}{class_simulator_a56638656f8e85aec70ba6c2680025279} Function to record closed transactions to the transaction report file. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+stock} & \doxyref{Trading\+Stock}{p.}{class_trading_stock}\& The stock that is being traded. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 704 of file Simulator.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a56638656f8e85aec70ba6c2680025279_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a56638656f8e85aec70ba6c2680025279_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_simulator_a0cd976fca52f982a92f2f897a6ddd1de}} 
+\index{Simulator@{Simulator}!rerunSimulator@{rerunSimulator}}
+\index{rerunSimulator@{rerunSimulator}!Simulator@{Simulator}}
+\doxysubsubsection{rerunSimulator()}
+{\footnotesize\ttfamily void Simulator\+::rerun\+Simulator (\begin{DoxyParamCaption}\item[{const \textbf{ char} $\ast$}]{a\+\_\+config\+File }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Rerun simulator for consecutive configuration files. 
+
+\doxyref{Simulator\+::rerun\+Simulator}{p.}{class_simulator_a0cd976fca52f982a92f2f897a6ddd1de} Rerun simulator for consecutive configuration files 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+config\+File} & char$\ast$ \doxyref{Config}{p.}{class_config} file to initialize simulator for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 246 of file Simulator.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a0cd976fca52f982a92f2f897a6ddd1de_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a0cd976fca52f982a92f2f897a6ddd1de_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_simulator_a9a703ddcca1a802b3df9a9dc921927ae}} 
+\index{Simulator@{Simulator}!RunSimulation@{RunSimulation}}
+\index{RunSimulation@{RunSimulation}!Simulator@{Simulator}}
+\doxysubsubsection{RunSimulation()}
+{\footnotesize\ttfamily void Simulator\+::\+Run\+Simulation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main method to run simulation. 
+
+\doxyref{Simulator\+::\+Run\+Simulation}{p.}{class_simulator_a9a703ddcca1a802b3df9a9dc921927ae} Main method to run the simulation. \begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 75 of file Simulator.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a9a703ddcca1a802b3df9a9dc921927ae_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_a9a703ddcca1a802b3df9a9dc921927ae_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_simulator_ab899d33750e674079de022d269c6bf9c}} 
+\index{Simulator@{Simulator}!StartSimulation@{StartSimulation}}
+\index{StartSimulation@{StartSimulation}!Simulator@{Simulator}}
+\doxysubsubsection{StartSimulation()}
+{\footnotesize\ttfamily void Simulator\+::\+Start\+Simulation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Interface method to start the simulation. 
+
+\doxyref{Simulator\+::\+Start\+Simulation}{p.}{class_simulator_ab899d33750e674079de022d269c6bf9c} Interface method to start the simulation \begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 52 of file Simulator.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_ab899d33750e674079de022d269c6bf9c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{class_simulator_ab899d33750e674079de022d269c6bf9c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_simulator_ac66d4a8840edc51e1fda473d677ccce2}} 
+\index{Simulator@{Simulator}!verifyDateParameters@{verifyDateParameters}}
+\index{verifyDateParameters@{verifyDateParameters}!Simulator@{Simulator}}
+\doxysubsubsection{verifyDateParameters()}
+{\footnotesize\ttfamily void Simulator\+::verify\+Date\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Verify date range. 
+
+\doxyref{Simulator\+::verify\+Date\+Parameters}{p.}{class_simulator_ac66d4a8840edc51e1fda473d677ccce2} Verify date range in configuration file to assert if data is available for that range. If not, the simulation will run for all available data instead of stopping. \begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/12/20. 
+\end{DoxyDate}
+
+
+Definition at line 447 of file Simulator.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_ac66d4a8840edc51e1fda473d677ccce2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simulator_ac66d4a8840edc51e1fda473d677ccce2_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{class_simulator_a97f519a765ab449b62be329d9b1eddc6}} 
+\index{Simulator@{Simulator}!DAILY\_PUB\_PARAM@{DAILY\_PUB\_PARAM}}
+\index{DAILY\_PUB\_PARAM@{DAILY\_PUB\_PARAM}!Simulator@{Simulator}}
+\doxysubsubsection{DAILY\_PUB\_PARAM}
+{\footnotesize\ttfamily const std\+::string Simulator\+::\+D\+A\+I\+L\+Y\+\_\+\+P\+U\+B\+\_\+\+P\+A\+R\+AM = \char`\"{}D\+A\+I\+LY\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\doxysubsection{[\+P\+U\+B\+L\+I\+C\+A\+T\+I\+O\+N P\+A\+R\+A\+M\+E\+T\+E\+R\+S]}\label{class_simulator_autotoc_md5}
+
+
+Definition at line 65 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_adb8c5bb4e289a14b706a3803c50a5643}} 
+\index{Simulator@{Simulator}!DAYS\_IN\_POS\_PARAM@{DAYS\_IN\_POS\_PARAM}}
+\index{DAYS\_IN\_POS\_PARAM@{DAYS\_IN\_POS\_PARAM}!Simulator@{Simulator}}
+\doxysubsubsection{DAYS\_IN\_POS\_PARAM}
+{\footnotesize\ttfamily const std\+::string Simulator\+::\+D\+A\+Y\+S\+\_\+\+I\+N\+\_\+\+P\+O\+S\+\_\+\+P\+A\+R\+AM = \char`\"{}M\+A\+X\+\_\+\+D\+A\+Y\+S\+\_\+\+I\+N\+\_\+\+P\+O\+S\+I\+T\+I\+ON\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 62 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a5f3cd0a9c644e7548a0424556b03e627}} 
+\index{Simulator@{Simulator}!ENTRY\_SIGNAL\_PARAM@{ENTRY\_SIGNAL\_PARAM}}
+\index{ENTRY\_SIGNAL\_PARAM@{ENTRY\_SIGNAL\_PARAM}!Simulator@{Simulator}}
+\doxysubsubsection{ENTRY\_SIGNAL\_PARAM}
+{\footnotesize\ttfamily const std\+::string Simulator\+::\+E\+N\+T\+R\+Y\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+P\+A\+R\+AM = \char`\"{}E\+N\+T\+R\+Y\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\doxysubsection{[\+S\+I\+G\+N\+A\+L T\+H\+R\+E\+S\+H\+O\+L\+D\+S]}\label{class_simulator_autotoc_md3}
+
+
+Definition at line 58 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a39b11ae9b5e07c049444d568f800e11e}} 
+\index{Simulator@{Simulator}!EXIT\_SIGNAL\_PARAM@{EXIT\_SIGNAL\_PARAM}}
+\index{EXIT\_SIGNAL\_PARAM@{EXIT\_SIGNAL\_PARAM}!Simulator@{Simulator}}
+\doxysubsubsection{EXIT\_SIGNAL\_PARAM}
+{\footnotesize\ttfamily const std\+::string Simulator\+::\+E\+X\+I\+T\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+P\+A\+R\+AM = \char`\"{}E\+X\+I\+T\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 59 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a6d29b66f23f025901b41cdb4b8b54d85}} 
+\index{Simulator@{Simulator}!m\_capitalLimitPerStock@{m\_capitalLimitPerStock}}
+\index{m\_capitalLimitPerStock@{m\_capitalLimitPerStock}!Simulator@{Simulator}}
+\doxysubsubsection{m\_capitalLimitPerStock}
+{\footnotesize\ttfamily double Simulator\+::m\+\_\+capital\+Limit\+Per\+Stock\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 83 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a50c85d7f67459a61c525de84f296f696}} 
+\index{Simulator@{Simulator}!m\_config@{m\_config}}
+\index{m\_config@{m\_config}!Simulator@{Simulator}}
+\doxysubsubsection{m\_config}
+{\footnotesize\ttfamily \textbf{ Config}$\ast$ Simulator\+::m\+\_\+config\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Configuration object. 
+
+
+
+Definition at line 163 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a22ea6689c8b7f808f101fe3a157338de}} 
+\index{Simulator@{Simulator}!m\_configFile@{m\_configFile}}
+\index{m\_configFile@{m\_configFile}!Simulator@{Simulator}}
+\doxysubsubsection{m\_configFile}
+{\footnotesize\ttfamily std\+::vector$<$const \textbf{ char}$\ast$$>$ Simulator\+::m\+\_\+config\+File\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Var with config file name. 
+
+
+
+Definition at line 161 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_ab0249e8e762a5c5d50263175ca53cbc7}} 
+\index{Simulator@{Simulator}!m\_configFilesPassed@{m\_configFilesPassed}}
+\index{m\_configFilesPassed@{m\_configFilesPassed}!Simulator@{Simulator}}
+\doxysubsubsection{m\_configFilesPassed}
+{\footnotesize\ttfamily \textbf{ int} Simulator\+::m\+\_\+config\+Files\+Passed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Number of config files passed. 
+
+
+
+Definition at line 157 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a788eddb47b5e2b64ad373e3e16f50e4e}} 
+\index{Simulator@{Simulator}!m\_dailyCumulativeROR@{m\_dailyCumulativeROR}}
+\index{m\_dailyCumulativeROR@{m\_dailyCumulativeROR}!Simulator@{Simulator}}
+\doxysubsubsection{m\_dailyCumulativeROR}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Simulator\+::m\+\_\+daily\+Cumulative\+R\+OR\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Daily cumulative R\+OR record for all trading stocks in simulation. 
+
+
+
+Definition at line 147 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a163d168daf7ddb30c31a34084fdd56cd}} 
+\index{Simulator@{Simulator}!m\_dailyInfoFile@{m\_dailyInfoFile}}
+\index{m\_dailyInfoFile@{m\_dailyInfoFile}!Simulator@{Simulator}}
+\doxysubsubsection{m\_dailyInfoFile}
+{\footnotesize\ttfamily std\+::ofstream Simulator\+::m\+\_\+daily\+Info\+File\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Output streams to write publications. 
+
+
+
+Definition at line 108 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a874ad8839e8a4625d556126136df86b0}} 
+\index{Simulator@{Simulator}!m\_dailyPNL@{m\_dailyPNL}}
+\index{m\_dailyPNL@{m\_dailyPNL}!Simulator@{Simulator}}
+\doxysubsubsection{m\_dailyPNL}
+{\footnotesize\ttfamily double Simulator\+::m\+\_\+daily\+P\+NL\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The profit or loss in dollars for the day. 
+
+
+
+Definition at line 125 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_ab5aebf9f33c4d351336481d74df87204}} 
+\index{Simulator@{Simulator}!m\_dailyPNLRecord@{m\_dailyPNLRecord}}
+\index{m\_dailyPNLRecord@{m\_dailyPNLRecord}!Simulator@{Simulator}}
+\doxysubsubsection{m\_dailyPNLRecord}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Simulator\+::m\+\_\+daily\+P\+N\+L\+Record\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Daily P\+NL record. 
+
+
+
+Definition at line 145 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a554d967210680039cb8f8c9590275d62}} 
+\index{Simulator@{Simulator}!m\_dailyPublication@{m\_dailyPublication}}
+\index{m\_dailyPublication@{m\_dailyPublication}!Simulator@{Simulator}}
+\doxysubsubsection{m\_dailyPublication}
+{\footnotesize\ttfamily bool Simulator\+::m\+\_\+daily\+Publication\hspace{0.3cm}{\ttfamily [private]}}
+
+\doxysubsection{[\+P\+U\+B\+L\+I\+C\+A\+T\+I\+O\+N P\+A\+R\+A\+M\+E\+T\+E\+R\+S]}\label{class_simulator_autotoc_md11}
+
+
+Definition at line 95 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a98713f90d7d7ce86cce337f787acf0e0}} 
+\index{Simulator@{Simulator}!m\_data@{m\_data}}
+\index{m\_data@{m\_data}!Simulator@{Simulator}}
+\doxysubsubsection{m\_data}
+{\footnotesize\ttfamily \textbf{ Data\+Access}$\ast$ Simulator\+::m\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Data access object. 
+
+
+
+Definition at line 165 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a5418c16b656f3e90fe909c2cea9a7b26}} 
+\index{Simulator@{Simulator}!m\_endDate@{m\_endDate}}
+\index{m\_endDate@{m\_endDate}!Simulator@{Simulator}}
+\doxysubsubsection{m\_endDate}
+{\footnotesize\ttfamily \textbf{ Date\+Time}$\ast$ Simulator\+::m\+\_\+end\+Date\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 89 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a3cb05c9f9cc50bed5f7c284140dd3228}} 
+\index{Simulator@{Simulator}!m\_entrySignal@{m\_entrySignal}}
+\index{m\_entrySignal@{m\_entrySignal}!Simulator@{Simulator}}
+\doxysubsubsection{m\_entrySignal}
+{\footnotesize\ttfamily double Simulator\+::m\+\_\+entry\+Signal\hspace{0.3cm}{\ttfamily [private]}}
+
+\doxysubsection{[\+S\+I\+G\+N\+A\+L T\+H\+R\+E\+S\+H\+O\+L\+D\+S]}\label{class_simulator_autotoc_md8}
+
+
+Definition at line 85 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a8245a5e2736adcf414f737d1501f846f}} 
+\index{Simulator@{Simulator}!m\_exitSignal@{m\_exitSignal}}
+\index{m\_exitSignal@{m\_exitSignal}!Simulator@{Simulator}}
+\doxysubsubsection{m\_exitSignal}
+{\footnotesize\ttfamily double Simulator\+::m\+\_\+exit\+Signal\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 86 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a92a066b5676e453879a884dd047d53aa}} 
+\index{Simulator@{Simulator}!m\_grossMarketValue@{m\_grossMarketValue}}
+\index{m\_grossMarketValue@{m\_grossMarketValue}!Simulator@{Simulator}}
+\doxysubsubsection{m\_grossMarketValue}
+{\footnotesize\ttfamily double Simulator\+::m\+\_\+gross\+Market\+Value\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Long capital minus the short capital at the end of the day. 
+
+
+
+Definition at line 135 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_ade008ef893f45012690935775c11b744}} 
+\index{Simulator@{Simulator}!m\_longPosCount@{m\_longPosCount}}
+\index{m\_longPosCount@{m\_longPosCount}!Simulator@{Simulator}}
+\doxysubsubsection{m\_longPosCount}
+{\footnotesize\ttfamily double Simulator\+::m\+\_\+long\+Pos\+Count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Daily long position counter variable. 
+
+
+
+Definition at line 127 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a465d97fd2465e1e8fbbf12d9a8ad4294}} 
+\index{Simulator@{Simulator}!m\_maxDaysPerPosition@{m\_maxDaysPerPosition}}
+\index{m\_maxDaysPerPosition@{m\_maxDaysPerPosition}!Simulator@{Simulator}}
+\doxysubsubsection{m\_maxDaysPerPosition}
+{\footnotesize\ttfamily \textbf{ int} Simulator\+::m\+\_\+max\+Days\+Per\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 92 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a762c9da4d9b398b70e4a5fcf8084693a}} 
+\index{Simulator@{Simulator}!m\_maxPositionsPerStock@{m\_maxPositionsPerStock}}
+\index{m\_maxPositionsPerStock@{m\_maxPositionsPerStock}!Simulator@{Simulator}}
+\doxysubsubsection{m\_maxPositionsPerStock}
+{\footnotesize\ttfamily \textbf{ int} Simulator\+::m\+\_\+max\+Positions\+Per\+Stock\hspace{0.3cm}{\ttfamily [private]}}
+
+\doxysubsection{[\+T\+R\+A\+D\+I\+N\+G P\+A\+R\+A\+M\+E\+T\+E\+R\+S]}\label{class_simulator_autotoc_md10}
+
+
+Definition at line 91 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a03b15dcf1a5ebd34356a2c013ba95190}} 
+\index{Simulator@{Simulator}!m\_monthlyInfoFile@{m\_monthlyInfoFile}}
+\index{m\_monthlyInfoFile@{m\_monthlyInfoFile}!Simulator@{Simulator}}
+\doxysubsubsection{m\_monthlyInfoFile}
+{\footnotesize\ttfamily std\+::ofstream Simulator\+::m\+\_\+monthly\+Info\+File\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 109 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_ab5eee5366d5945ba1c047183c99140d5}} 
+\index{Simulator@{Simulator}!m\_monthlyPublication@{m\_monthlyPublication}}
+\index{m\_monthlyPublication@{m\_monthlyPublication}!Simulator@{Simulator}}
+\doxysubsubsection{m\_monthlyPublication}
+{\footnotesize\ttfamily bool Simulator\+::m\+\_\+monthly\+Publication\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 96 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a75b03660c930f8fabdfa41eccff44f4b}} 
+\index{Simulator@{Simulator}!m\_netMarketValue@{m\_netMarketValue}}
+\index{m\_netMarketValue@{m\_netMarketValue}!Simulator@{Simulator}}
+\doxysubsubsection{m\_netMarketValue}
+{\footnotesize\ttfamily double Simulator\+::m\+\_\+net\+Market\+Value\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Total amount of capital committed to the model at the end of the day. 
+
+
+
+Definition at line 133 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_ac63f13d5fc10eb815958703a859f2761}} 
+\index{Simulator@{Simulator}!m\_portfolioCapital@{m\_portfolioCapital}}
+\index{m\_portfolioCapital@{m\_portfolioCapital}!Simulator@{Simulator}}
+\doxysubsubsection{m\_portfolioCapital}
+{\footnotesize\ttfamily double Simulator\+::m\+\_\+portfolio\+Capital\hspace{0.3cm}{\ttfamily [private]}}
+
+\doxysubsection{[\+P\+O\+R\+T\+F\+O\+L\+I\+O D\+A\+T\+A]}\label{class_simulator_autotoc_md7}
+
+
+Definition at line 82 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_af8b9686a07f4801d903c03ba06f10b6c}} 
+\index{Simulator@{Simulator}!m\_ROR@{m\_ROR}}
+\index{m\_ROR@{m\_ROR}!Simulator@{Simulator}}
+\doxysubsubsection{m\_ROR}
+{\footnotesize\ttfamily double Simulator\+::m\+\_\+\+R\+OR\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Daily return. The profit for the day divided by the capital committed. 
+
+
+
+Definition at line 121 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_abcf33b93b8230d84d99eb31cd73e3b69}} 
+\index{Simulator@{Simulator}!m\_sharpeRecord@{m\_sharpeRecord}}
+\index{m\_sharpeRecord@{m\_sharpeRecord}!Simulator@{Simulator}}
+\doxysubsubsection{m\_sharpeRecord}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Simulator\+::m\+\_\+sharpe\+Record\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sharpe ratio record. 
+
+
+
+Definition at line 149 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a7437688899e7340ff427051e6499b42f}} 
+\index{Simulator@{Simulator}!m\_shortPosCount@{m\_shortPosCount}}
+\index{m\_shortPosCount@{m\_shortPosCount}!Simulator@{Simulator}}
+\doxysubsubsection{m\_shortPosCount}
+{\footnotesize\ttfamily double Simulator\+::m\+\_\+short\+Pos\+Count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Daily short position counter variable. 
+
+
+
+Definition at line 129 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_ac1f4b274af12359ab1359d48cb793633}} 
+\index{Simulator@{Simulator}!m\_signalInfoFile@{m\_signalInfoFile}}
+\index{m\_signalInfoFile@{m\_signalInfoFile}!Simulator@{Simulator}}
+\doxysubsubsection{m\_signalInfoFile}
+{\footnotesize\ttfamily std\+::ofstream Simulator\+::m\+\_\+signal\+Info\+File\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 111 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_aec6e5c383d7b6b366716fb62194d8a02}} 
+\index{Simulator@{Simulator}!m\_signalPublication@{m\_signalPublication}}
+\index{m\_signalPublication@{m\_signalPublication}!Simulator@{Simulator}}
+\doxysubsubsection{m\_signalPublication}
+{\footnotesize\ttfamily bool Simulator\+::m\+\_\+signal\+Publication\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 98 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_aaa17fec7cb1219dabc3b67a885148b1e}} 
+\index{Simulator@{Simulator}!m\_simulationCount@{m\_simulationCount}}
+\index{m\_simulationCount@{m\_simulationCount}!Simulator@{Simulator}}
+\doxysubsubsection{m\_simulationCount}
+{\footnotesize\ttfamily \textbf{ int} Simulator\+::m\+\_\+simulation\+Count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Count of how many config files have been simulated. 
+
+
+
+Definition at line 159 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a1808159b6db7cc8cb1fde241b3ca1a63}} 
+\index{Simulator@{Simulator}!m\_startDate@{m\_startDate}}
+\index{m\_startDate@{m\_startDate}!Simulator@{Simulator}}
+\doxysubsubsection{m\_startDate}
+{\footnotesize\ttfamily \textbf{ Date\+Time}$\ast$ Simulator\+::m\+\_\+start\+Date\hspace{0.3cm}{\ttfamily [private]}}
+
+\doxysubsection{[\+S\+I\+M\+U\+L\+A\+T\+I\+O\+N P\+E\+R\+I\+O\+D]}\label{class_simulator_autotoc_md9}
+
+
+Definition at line 88 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_aa51155015b9738f8dcb0815271144ac1}} 
+\index{Simulator@{Simulator}!m\_stopLoss@{m\_stopLoss}}
+\index{m\_stopLoss@{m\_stopLoss}!Simulator@{Simulator}}
+\doxysubsubsection{m\_stopLoss}
+{\footnotesize\ttfamily double Simulator\+::m\+\_\+stop\+Loss\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 93 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_ae9617ea33ba0f08b1fa26be1777eee58}} 
+\index{Simulator@{Simulator}!m\_tickerPath@{m\_tickerPath}}
+\index{m\_tickerPath@{m\_tickerPath}!Simulator@{Simulator}}
+\doxysubsubsection{m\_tickerPath}
+{\footnotesize\ttfamily std\+::string Simulator\+::m\+\_\+ticker\+Path\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 80 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a5df061dcae309d085e48d6aa68f9a0ff}} 
+\index{Simulator@{Simulator}!m\_today@{m\_today}}
+\index{m\_today@{m\_today}!Simulator@{Simulator}}
+\doxysubsubsection{m\_today}
+{\footnotesize\ttfamily \textbf{ Date\+Time}$\ast$ Simulator\+::m\+\_\+today\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Date today. 
+
+
+
+Definition at line 137 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a2ad80992205bb876c7aec067760fd380}} 
+\index{Simulator@{Simulator}!m\_totalPNL@{m\_totalPNL}}
+\index{m\_totalPNL@{m\_totalPNL}!Simulator@{Simulator}}
+\doxysubsubsection{m\_totalPNL}
+{\footnotesize\ttfamily double Simulator\+::m\+\_\+total\+P\+NL\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Cumulative P\+NL from the beginning of the simulation to the current date. 
+
+
+
+Definition at line 123 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_ad9bd5da8f745195f8efb7fde07c4b398}} 
+\index{Simulator@{Simulator}!m\_totalPosCount@{m\_totalPosCount}}
+\index{m\_totalPosCount@{m\_totalPosCount}!Simulator@{Simulator}}
+\doxysubsubsection{m\_totalPosCount}
+{\footnotesize\ttfamily double Simulator\+::m\+\_\+total\+Pos\+Count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Daily total position counter variable. 
+
+
+
+Definition at line 131 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a1d14636c2b29e1b2ae40ea1264465318}} 
+\index{Simulator@{Simulator}!m\_tradingStocks@{m\_tradingStocks}}
+\index{m\_tradingStocks@{m\_tradingStocks}!Simulator@{Simulator}}
+\doxysubsubsection{m\_tradingStocks}
+{\footnotesize\ttfamily std\+::vector$<$\textbf{ Trading\+Stock}$\ast$$>$ Simulator\+::m\+\_\+trading\+Stocks\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+All the trading stocks in the simulation. 
+
+
+
+Definition at line 167 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a1f7936d90aa2ee50df1d41f336a2db80}} 
+\index{Simulator@{Simulator}!m\_transactionInfoFile@{m\_transactionInfoFile}}
+\index{m\_transactionInfoFile@{m\_transactionInfoFile}!Simulator@{Simulator}}
+\doxysubsubsection{m\_transactionInfoFile}
+{\footnotesize\ttfamily std\+::ofstream Simulator\+::m\+\_\+transaction\+Info\+File\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 110 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a147bb76a9bd3662868ada07ce810c1e9}} 
+\index{Simulator@{Simulator}!m\_transactionPublication@{m\_transactionPublication}}
+\index{m\_transactionPublication@{m\_transactionPublication}!Simulator@{Simulator}}
+\doxysubsubsection{m\_transactionPublication}
+{\footnotesize\ttfamily bool Simulator\+::m\+\_\+transaction\+Publication\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 97 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a9f9825e7abbefadd90cd260af723f362}} 
+\index{Simulator@{Simulator}!m\_universePath@{m\_universePath}}
+\index{m\_universePath@{m\_universePath}!Simulator@{Simulator}}
+\doxysubsubsection{m\_universePath}
+{\footnotesize\ttfamily std\+::string Simulator\+::m\+\_\+universe\+Path\hspace{0.3cm}{\ttfamily [private]}}
+
+Member variables from the configuration file \doxysubsection{[\+D\+I\+R\+E\+C\+T\+O\+R\+Y D\+A\+T\+A]}\label{class_simulator_autotoc_md6}
+
+
+Definition at line 79 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a3a536c742457453e2d3e96b97d91629a}} 
+\index{Simulator@{Simulator}!MAX\_CAPITAL\_PER\_STOCK\_PARAM@{MAX\_CAPITAL\_PER\_STOCK\_PARAM}}
+\index{MAX\_CAPITAL\_PER\_STOCK\_PARAM@{MAX\_CAPITAL\_PER\_STOCK\_PARAM}!Simulator@{Simulator}}
+\doxysubsubsection{MAX\_CAPITAL\_PER\_STOCK\_PARAM}
+{\footnotesize\ttfamily const std\+::string Simulator\+::\+M\+A\+X\+\_\+\+C\+A\+P\+I\+T\+A\+L\+\_\+\+P\+E\+R\+\_\+\+S\+T\+O\+C\+K\+\_\+\+P\+A\+R\+AM = \char`\"{}M\+A\+X\+\_\+\+C\+A\+P\+I\+T\+A\+L\+\_\+\+P\+E\+R\+\_\+\+S\+T\+O\+CK\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 53 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_afeaec183962d21c49fefb01dd671ea33}} 
+\index{Simulator@{Simulator}!MAX\_POS\_PER\_STOCK@{MAX\_POS\_PER\_STOCK}}
+\index{MAX\_POS\_PER\_STOCK@{MAX\_POS\_PER\_STOCK}!Simulator@{Simulator}}
+\doxysubsubsection{MAX\_POS\_PER\_STOCK}
+{\footnotesize\ttfamily const std\+::string Simulator\+::\+M\+A\+X\+\_\+\+P\+O\+S\+\_\+\+P\+E\+R\+\_\+\+S\+T\+O\+CK = \char`\"{}M\+A\+X\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+S\+\_\+\+P\+E\+R\+\_\+\+S\+T\+O\+CK\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\doxysubsection{[\+T\+R\+A\+D\+I\+N\+G P\+A\+R\+A\+M\+E\+T\+E\+R\+S]}\label{class_simulator_autotoc_md4}
+
+
+Definition at line 61 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a8743b3779eb9eae58768e408176483ac}} 
+\index{Simulator@{Simulator}!MONTHLY\_PUB\_PARAM@{MONTHLY\_PUB\_PARAM}}
+\index{MONTHLY\_PUB\_PARAM@{MONTHLY\_PUB\_PARAM}!Simulator@{Simulator}}
+\doxysubsubsection{MONTHLY\_PUB\_PARAM}
+{\footnotesize\ttfamily const std\+::string Simulator\+::\+M\+O\+N\+T\+H\+L\+Y\+\_\+\+P\+U\+B\+\_\+\+P\+A\+R\+AM = \char`\"{}M\+O\+N\+T\+H\+LY\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 66 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_aa39d4d9502abf412d78b50d1f15f811b}} 
+\index{Simulator@{Simulator}!PERIOD\_END\_DATE@{PERIOD\_END\_DATE}}
+\index{PERIOD\_END\_DATE@{PERIOD\_END\_DATE}!Simulator@{Simulator}}
+\doxysubsubsection{PERIOD\_END\_DATE}
+{\footnotesize\ttfamily const std\+::string Simulator\+::\+P\+E\+R\+I\+O\+D\+\_\+\+E\+N\+D\+\_\+\+D\+A\+TE = \char`\"{}E\+N\+D\+\_\+\+D\+A\+TE\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 56 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_aa0bac330691bf03dbf8716be787cad45}} 
+\index{Simulator@{Simulator}!PERIOD\_START\_DATE@{PERIOD\_START\_DATE}}
+\index{PERIOD\_START\_DATE@{PERIOD\_START\_DATE}!Simulator@{Simulator}}
+\doxysubsubsection{PERIOD\_START\_DATE}
+{\footnotesize\ttfamily const std\+::string Simulator\+::\+P\+E\+R\+I\+O\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+D\+A\+TE = \char`\"{}S\+T\+A\+R\+T\+\_\+\+D\+A\+TE\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\doxysubsection{[\+S\+I\+M\+U\+L\+A\+T\+I\+O\+N P\+E\+R\+I\+O\+D]}\label{class_simulator_autotoc_md2}
+
+
+Definition at line 55 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a4f33098635f757e2a31bfbb76ce7dfe9}} 
+\index{Simulator@{Simulator}!PORTFOLIO\_CAPITAL@{PORTFOLIO\_CAPITAL}}
+\index{PORTFOLIO\_CAPITAL@{PORTFOLIO\_CAPITAL}!Simulator@{Simulator}}
+\doxysubsubsection{PORTFOLIO\_CAPITAL}
+{\footnotesize\ttfamily const std\+::string Simulator\+::\+P\+O\+R\+T\+F\+O\+L\+I\+O\+\_\+\+C\+A\+P\+I\+T\+AL = \char`\"{}P\+O\+R\+T\+F\+O\+L\+I\+O\+\_\+\+C\+A\+P\+I\+T\+AL\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\doxysubsection{[\+P\+O\+R\+T\+F\+O\+L\+I\+O D\+A\+T\+A]}\label{class_simulator_autotoc_md1}
+
+
+Definition at line 52 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a51929ed4f5640f5d2644b3dfd0628329}} 
+\index{Simulator@{Simulator}!SIGNAL\_PUB\_PARAM@{SIGNAL\_PUB\_PARAM}}
+\index{SIGNAL\_PUB\_PARAM@{SIGNAL\_PUB\_PARAM}!Simulator@{Simulator}}
+\doxysubsubsection{SIGNAL\_PUB\_PARAM}
+{\footnotesize\ttfamily const std\+::string Simulator\+::\+S\+I\+G\+N\+A\+L\+\_\+\+P\+U\+B\+\_\+\+P\+A\+R\+AM = \char`\"{}S\+I\+G\+N\+AL\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 68 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a4f727299fa4922e4b1a817983fe228dd}} 
+\index{Simulator@{Simulator}!STOP\_LOSS\_PARAM@{STOP\_LOSS\_PARAM}}
+\index{STOP\_LOSS\_PARAM@{STOP\_LOSS\_PARAM}!Simulator@{Simulator}}
+\doxysubsubsection{STOP\_LOSS\_PARAM}
+{\footnotesize\ttfamily const std\+::string Simulator\+::\+S\+T\+O\+P\+\_\+\+L\+O\+S\+S\+\_\+\+P\+A\+R\+AM = \char`\"{}S\+T\+O\+P\+\_\+\+L\+O\+SS\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 63 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_af7743ff89da2d5a70380d89cf93517cd}} 
+\index{Simulator@{Simulator}!TICKER\_PATH\_PARAM@{TICKER\_PATH\_PARAM}}
+\index{TICKER\_PATH\_PARAM@{TICKER\_PATH\_PARAM}!Simulator@{Simulator}}
+\doxysubsubsection{TICKER\_PATH\_PARAM}
+{\footnotesize\ttfamily const std\+::string Simulator\+::\+T\+I\+C\+K\+E\+R\+\_\+\+P\+A\+T\+H\+\_\+\+P\+A\+R\+AM = \char`\"{}T\+I\+C\+K\+E\+R\+\_\+\+D\+A\+T\+A\+\_\+\+D\+I\+R\+E\+C\+T\+O\+RY\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 50 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_afd3e6d193653a3642067721af2b6ed38}} 
+\index{Simulator@{Simulator}!TRANSACTION\_PUB\_PARAM@{TRANSACTION\_PUB\_PARAM}}
+\index{TRANSACTION\_PUB\_PARAM@{TRANSACTION\_PUB\_PARAM}!Simulator@{Simulator}}
+\doxysubsubsection{TRANSACTION\_PUB\_PARAM}
+{\footnotesize\ttfamily const std\+::string Simulator\+::\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+\_\+\+P\+U\+B\+\_\+\+P\+A\+R\+AM = \char`\"{}T\+R\+A\+N\+S\+A\+C\+T\+I\+ON\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 67 of file Simulator.\+h.
+
+\mbox{\label{class_simulator_a8d54012cdf3478b20f8d792b84de129c}} 
+\index{Simulator@{Simulator}!UNIVERSE\_PATH\_PARAM@{UNIVERSE\_PATH\_PARAM}}
+\index{UNIVERSE\_PATH\_PARAM@{UNIVERSE\_PATH\_PARAM}!Simulator@{Simulator}}
+\doxysubsubsection{UNIVERSE\_PATH\_PARAM}
+{\footnotesize\ttfamily const std\+::string Simulator\+::\+U\+N\+I\+V\+E\+R\+S\+E\+\_\+\+P\+A\+T\+H\+\_\+\+P\+A\+R\+AM = \char`\"{}U\+N\+I\+V\+E\+R\+S\+E\+\_\+\+D\+I\+R\+E\+C\+T\+O\+RY\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\doxysubsection{[\+D\+I\+R\+E\+C\+T\+O\+R\+Y D\+A\+T\+A]}\label{class_simulator_autotoc_md0}
+
+
+Definition at line 49 of file Simulator.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Simulator.\+h}\item 
+\textbf{ Simulator.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,27 @@
+var class_transaction =
+[
+    [ "Transaction", "class_transaction.html#a9ff3e14de368615046e75ab122caa327", null ],
+    [ "Transaction", "class_transaction.html#ab47005b855d38bc324bb79fd023baa13", null ],
+    [ "CloseTransaction", "class_transaction.html#ab5150df4457fda64acf329e3b5333f96", null ],
+    [ "GetClosedPrice", "class_transaction.html#a373d771f5dd603825cdc6a825cc1ffb8", null ],
+    [ "GetCloseSignal", "class_transaction.html#a31112e042ad4f73b2231f0dde46abce0", null ],
+    [ "GetDaysInPosition", "class_transaction.html#a9833cf5e7fae393429914b42919b631b", null ],
+    [ "GetNumSharesHeld", "class_transaction.html#a34399835d523d6b2dc98de51224fd00e", null ],
+    [ "GetOpenedPrice", "class_transaction.html#ad323ea3eecce084ab4207216da11aef3", null ],
+    [ "GetOpenSignal", "class_transaction.html#adff7d7d155a838a80fe14d74953bb2b8", null ],
+    [ "GetPositionCloseDate", "class_transaction.html#af73b2f27a31f8f53246770b3d12162bf", null ],
+    [ "GetPositionOpenDate", "class_transaction.html#a492d0922c5af8b883981e265b91b66d9", null ],
+    [ "IsClosed", "class_transaction.html#a790efa45756bf2efdb6ba085fa0e3605", null ],
+    [ "IsLongPosition", "class_transaction.html#a318f40ecb6200373d210ddc63501d7a8", null ],
+    [ "NextDayInPosition", "class_transaction.html#afba291c3886ecf68a948a012f81ea74d", null ],
+    [ "m_closedFlag", "class_transaction.html#aad0ee036f4dc0bc615156ac6ee471104", null ],
+    [ "m_currentSharesCount", "class_transaction.html#aab337c995879abb44ca3cb75df646ffd", null ],
+    [ "m_inPosition", "class_transaction.html#a067ff7356df3a4bbec5b41d4dbaa5ea4", null ],
+    [ "m_longFlag", "class_transaction.html#ad9aa1638c1d5239def95ea7022165337", null ],
+    [ "m_TACloseDate", "class_transaction.html#aae306db338fafc30d10238889e712898", null ],
+    [ "m_TAClosePrice", "class_transaction.html#a61b7a25cb9489c3c65aad25b8c4d3d2b", null ],
+    [ "m_TACloseSignal", "class_transaction.html#a7d42563bbe4a16b408dbcbaf813613df", null ],
+    [ "m_TAOpenDate", "class_transaction.html#ac2d7eda4299c0c7dee9ed7f457b1102c", null ],
+    [ "m_TAOpenPrice", "class_transaction.html#a7c92a75529ae077fb8d76d4969b61048", null ],
+    [ "m_TAOpenSignal", "class_transaction.html#a04e7430d41698ec30100910786673f1f", null ]
+];

@@ -1,0 +1,373 @@
+.TH "Config" 3 "Sat Jun 6 2020" "Version Version 1.0" "DOROTHY" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Config
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Config\&.h>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBConfigValue\fP"
+.br
+.RI "Struct to hold configuration values and access flag\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConfig\fP ()"
+.br
+.RI "Default constructor\&. "
+.ti -1c
+.RI "\fBConfig\fP (const \fBchar\fP *a_file)"
+.br
+.RI "Main class constructor\&. "
+.ti -1c
+.RI "virtual \fB~Config\fP ()"
+.br
+.RI "Virtual deconstructor\&. "
+.ti -1c
+.RI "template<class T > bool \fBGetParameter\fP (std::string a_parameter, T &a_value)"
+.br
+.RI "Template function to access parameters\&. "
+.ti -1c
+.RI "bool \fBGetParameter\fP (std::string a_parameter, \fBchar\fP *a_value)"
+.br
+.RI "Template function specializations to access parameters as char* and bool\&. "
+.ti -1c
+.RI "bool \fBGetParameter\fP (std::string a_parameter, bool &a_value)"
+.br
+.ti -1c
+.RI "bool \fBLoad\fP (const \fBchar\fP *a_file, bool a_displayParameters=true)"
+.br
+.RI "Load in data from a specified configuration file\&. Allows multiple calls\&. "
+.ti -1c
+.RI "bool \fBContainsParameter\fP (std::string a_parameter)"
+.br
+.RI "Test if a config file has a parameter for a given segment\&. "
+.ti -1c
+.RI "void \fBGetUnaccessedParameters\fP (std::vector< std::string > &a_paramNames)"
+.br
+.RI "Provides a list of the parameters that were not accessed\&. "
+.ti -1c
+.RI "void \fBClearConfigData\fP ()"
+.br
+.RI "Clear the set of recorded parameters\&. "
+.ti -1c
+.RI "void \fBDisplayParameters\fP ()"
+.br
+.RI "Display the parameters in alphabetical order\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBtrimBlanks\fP (std::string &a_str)"
+.br
+.RI "Trim leading and trailing blanks\&. "
+.ti -1c
+.RI "bool \fBparseLine\fP (const std::string &a_line, std::string &a_name, std::string &a_value)"
+.br
+.RI "Get parameters by parsing line from config file\&. "
+.ti -1c
+.RI "bool \fBgetParameterValue\fP (std::string a_name, std::string &a_value)"
+.br
+.RI "Get the value of a specified parameter\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::unordered_map< std::string, \fBConfigValue\fP > \fBm_ConfigData\fP"
+.br
+.RI "Map of config values\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBConfig\&.h\fP Interface for the \fBConfig\fP class\&. Loads configurations from file to use for simulation\&.
+.PP
+Created by Salil Maharjan on 4/25/20\&. Copyright © 2020 Salil Maharjan\&. All rights reserved\&. 
+.PP
+Definition at line 18 of file Config\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Config::Config ()\fC [inline]\fP"
+
+.PP
+Default constructor\&. 
+.PP
+Definition at line 27 of file Config\&.h\&.
+.SS "Config::Config (const \fBchar\fP * a_file)\fC [inline]\fP"
+
+.PP
+Main class constructor\&. 
+.PP
+Definition at line 30 of file Config\&.h\&.
+.SS "virtual Config::~Config ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Virtual deconstructor\&. 
+.PP
+Definition at line 33 of file Config\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Config::ClearConfigData ()\fC [inline]\fP"
+
+.PP
+Clear the set of recorded parameters\&. 
+.PP
+Definition at line 65 of file Config\&.h\&.
+.SS "bool Config::ContainsParameter (std::string a_parameter)\fC [inline]\fP"
+
+.PP
+Test if a config file has a parameter for a given segment\&. 
+.PP
+Definition at line 55 of file Config\&.h\&.
+.SS "void Config::DisplayParameters ()"
+
+.PP
+Display the parameters in alphabetical order\&. \fBConfig::DisplayParameters\fP Method to display the parameters in alphabetical order\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+4/30/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 140 of file Config\&.cpp\&.
+.SS "bool Config::GetParameter (std::string a_parameter, bool & a_value)"
+\fBConfig::GetParameter\fP Template function specialization of function (GetParameter) for returning parameter value as booleans\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_parameter\fP string Parameter name\&. 
+.br
+\fIa_value\fP bool Variable to save parameter value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool Function execution status\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+4/30/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 93 of file Config\&.cpp\&.
+.SS "bool Config::GetParameter (std::string a_parameter, \fBchar\fP * a_value)"
+
+.PP
+Template function specializations to access parameters as char* and bool\&. \fBConfig::GetParameter\fP Template function specialization of function (GetParameter) for returning parameter value as char*\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_parameter\fP string Parameter name\&. 
+.br
+\fIa_value\fP char* Variable to save parameter value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool Function execution status\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+4/30/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 71 of file Config\&.cpp\&.
+.SS "template<class T > bool Config::GetParameter (std::string a_parameter, T & a_value)"
+
+.PP
+Template function to access parameters\&. \fBConfig::GetParameter\fP Template function to get parameter value and pass it by reference\&. Template supports: (string, int, short, long, float, double) Explicit instantiation of template function on header file to prevent linker error\&. Separate template function specialization functions defined for (bool, char*) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_parameter\fP string Parameter name\&. 
+.br
+\fIa_value\fP T Variable to save parameter value\&. Template supported types\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool Function execution status\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+4/30/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 115 of file Config\&.h\&.
+.SS "bool Config::getParameterValue (std::string a_name, std::string & a_value)\fC [private]\fP"
+
+.PP
+Get the value of a specified parameter\&. \fBConfig::getParameterValue\fP Private utility function to get parameter value as a string\&. Used by GetParameter\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_name\fP string Parameter name\&. 
+.br
+\fIa_value\fP bool Parameter value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool Function execution status\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+4/30/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 221 of file Config\&.cpp\&.
+.SS "void Config::GetUnaccessedParameters (std::vector< std::string > & a_paramNames)"
+
+.PP
+Provides a list of the parameters that were not accessed\&. \fBConfig::GetUnaccessedParameters\fP Method to provide the list of the parameters that were not accessed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_paramNames\fP vector<string> Names of parameters that were not accessed\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+4/30/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 125 of file Config\&.cpp\&.
+.SS "bool Config::Load (const \fBchar\fP * a_file, bool a_displayParameters = \fCtrue\fP)"
+
+.PP
+Load in data from a specified configuration file\&. Allows multiple calls\&. \fBConfig\&.cpp\fP Implementation of \fBConfig\&.h\fP\&.
+.PP
+Created by Salil Maharjan on 4/25/20\&. Copyright © 2020 Salil Maharjan\&. All rights reserved\&. \fBConfig::Load\fP Method to load configuration file\&. Uses parseLine method to parse lines\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_file\fP char* \fBConfig\fP file name\&. 
+.br
+\fIa_displayParameters\fP bool Flag for display purposes 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool Function execution status\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+4/30/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file Config\&.cpp\&.
+.SS "bool Config::parseLine (const std::string & a_line, std::string & a_name, std::string & a_value)\fC [private]\fP"
+
+.PP
+Get parameters by parsing line from config file\&. \fBConfig::parseLine\fP Method to parse configuration file line into parameter name and value\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_line\fP string The line read from configuration file\&. 
+.br
+\fIa_name\fP string Variable to save parameter name by reference\&. 
+.br
+\fI\fP 
+.RE
+.PP
+
+.PP
+Definition at line 169 of file Config\&.cpp\&.
+.SS "void Config::trimBlanks (std::string & a_str)\fC [private]\fP"
+
+.PP
+Trim leading and trailing blanks\&. \fBConfig::trimBlanks\fP Method to trim leading and trailing whitespaces\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_str\fP string Reference to string to trim white spaces\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+4/30/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 245 of file Config\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "std::unordered_map<std::string, \fBConfigValue\fP> Config::m_ConfigData\fC [private]\fP"
+
+.PP
+Map of config values\&. 
+.PP
+Definition at line 87 of file Config\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DOROTHY from the source code\&.

@@ -1,0 +1,4 @@
+<map id="Simulator::hasEnoughCapital" name="Simulator::hasEnoughCapital">
+<area shape="rect" id="node1" title="Check if available capital for a stock is enough to purchase more equities at a_price." alt="" coords="5,13,196,39"/>
+<area shape="rect" id="node2" href="$class_trading_stock.html#a9d6e882e90f88a6dce91cc6d08f0847a" title=" " alt="" coords="244,5,425,47"/>
+</map>

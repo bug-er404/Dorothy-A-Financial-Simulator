@@ -1,0 +1,7 @@
+<map id="Simulator::closePositions" name="Simulator::closePositions">
+<area shape="rect" id="node1" title="Close positions for a trading stock." alt="" coords="744,5,915,32"/>
+<area shape="rect" id="node2" href="$class_simulator.html#adc8821db9e85da458f9a6e8b1912ac86" title="Function to open or close positions according to the signal by checking current position." alt="" coords="545,5,696,32"/>
+<area shape="rect" id="node3" href="$class_simulator.html#a9a703ddcca1a802b3df9a9dc921927ae" title="Main method to run simulation." alt="" coords="327,5,497,32"/>
+<area shape="rect" id="node4" href="$class_simulator.html#ab899d33750e674079de022d269c6bf9c" title="Interface method to start the simulation." alt="" coords="104,5,279,32"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,5,56,32"/>
+</map>

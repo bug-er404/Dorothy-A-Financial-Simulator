@@ -1,0 +1,444 @@
+\doxysection{Ticker\+Data Class Reference}
+\label{class_ticker_data}\index{TickerData@{TickerData}}
+
+
+{\ttfamily \#include $<$Ticker\+Data.\+h$>$}
+
+
+
+Collaboration diagram for Ticker\+Data\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_ticker_data__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Ticker\+Data} (std\+::string \&a\+\_\+ticker\+Name, const std\+::string \&a\+\_\+directory)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor to create a ticker object. \end{DoxyCompactList}\item 
+double \textbf{ Get\+Current\+Data\+Of} (\textbf{ T\+I\+C\+K\+E\+R\+\_\+\+F\+I\+E\+L\+DS} a\+\_\+field)
+\begin{DoxyCompactList}\small\item\em Get today\textquotesingle{}s data of a\+\_\+field. \end{DoxyCompactList}\item 
+double \textbf{ Get\+Close\+Yesterday} ()
+\begin{DoxyCompactList}\small\item\em Get yesterday\textquotesingle{}s close price. \end{DoxyCompactList}\item 
+void \textbf{ Set\+Trading\+Date\+Range} (\textbf{ Date\+Time} $\ast$a\+\_\+start\+Date, \textbf{ Date\+Time} $\ast$a\+\_\+end\+Date)
+\begin{DoxyCompactList}\small\item\em Method to set trading date range. \end{DoxyCompactList}\item 
+double \textbf{ Get\+M\+A\+C\+D\+Signal} ()
+\begin{DoxyCompactList}\small\item\em Get current date\textquotesingle{}s M\+A\+CD signal. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Ticker\+Data} ()=default
+\begin{DoxyCompactList}\small\item\em Default deconstructor. \end{DoxyCompactList}\item 
+void \textbf{ Print\+Data\+Head} ()
+\begin{DoxyCompactList}\small\item\em Print head of data columns. \end{DoxyCompactList}\item 
+void \textbf{ Print\+All\+Columns} ()
+\begin{DoxyCompactList}\small\item\em Print sample of all columns including data and calculated columns. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \textbf{ int} \textbf{ N\+A\+\_\+\+V\+AL} = -\/999
+\begin{DoxyCompactList}\small\item\em Fill constant for unavailable data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Ticker\+Data} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \textbf{ parse\+Ticker\+Data} (const std\+::string \&a\+\_\+directory)
+\begin{DoxyCompactList}\small\item\em Parse ticker data from data source files. \end{DoxyCompactList}\item 
+void \textbf{ calculate\+M\+A\+C\+Dfields} ()
+\begin{DoxyCompactList}\small\item\em Calculate M\+A\+CD fields and append to the ticker data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \textbf{ m\+\_\+ticker\+Name}
+\begin{DoxyCompactList}\small\item\em Stock ticker name. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \textbf{ m\+\_\+ticker\+Data} [\textbf{ T\+I\+C\+K\+E\+R\+\_\+\+F\+I\+E\+L\+D\+S\+::\+E\+N\+D\+\_\+\+T\+I\+C\+K\+E\+R\+\_\+\+F\+I\+E\+L\+DS}]
+\begin{DoxyCompactList}\small\item\em \doxyref{Ticker\+Data}{p.}{class_ticker_data} data for a stock in memory. \end{DoxyCompactList}\item 
+std\+::vector$<$ \textbf{ Date\+Time} $\ast$ $>$ \textbf{ m\+\_\+ticker\+Dates}
+\begin{DoxyCompactList}\small\item\em \doxyref{Ticker\+Data}{p.}{class_ticker_data} dates of the price data. \end{DoxyCompactList}\item 
+\textbf{ int} \textbf{ m\+\_\+trading\+Date\+Index\+Start}
+\begin{DoxyCompactList}\small\item\em Trading start date index in m\+\_\+ticker\+Dates. \end{DoxyCompactList}\item 
+\textbf{ int} \textbf{ m\+\_\+trading\+Date\+Index\+End}
+\begin{DoxyCompactList}\small\item\em Trading end date index in m\+\_\+ticker\+Dates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 55 of file Ticker\+Data.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_ticker_data_a9d7b95aba7d6e6f002b8efd39f05f73f}} 
+\index{TickerData@{TickerData}!TickerData@{TickerData}}
+\index{TickerData@{TickerData}!TickerData@{TickerData}}
+\doxysubsubsection{TickerData()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Ticker\+Data\+::\+Ticker\+Data (\begin{DoxyParamCaption}\item[{std\+::string \&}]{a\+\_\+ticker\+Name,  }\item[{const std\+::string \&}]{a\+\_\+directory }\end{DoxyParamCaption})}
+
+
+
+Parameterized constructor to create a ticker object. 
+
+\doxyref{Ticker\+Data\+::\+Ticker\+Data}{p.}{class_ticker_data_a9d7b95aba7d6e6f002b8efd39f05f73f}. Parameterized constructor to create a ticker object 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+ticker\+Name} & string Name of ticker \\
+\hline
+{\em a\+\_\+directory} & string Price data directory path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/30/20. 
+\end{DoxyDate}
+
+
+Definition at line 28 of file Ticker\+Data.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ticker_data_a9d7b95aba7d6e6f002b8efd39f05f73f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_ticker_data_a00452f84d330c1261f501a65d9794650}} 
+\index{TickerData@{TickerData}!````~TickerData@{$\sim$TickerData}}
+\index{````~TickerData@{$\sim$TickerData}!TickerData@{TickerData}}
+\doxysubsubsection{$\sim$TickerData()}
+{\footnotesize\ttfamily Ticker\+Data\+::$\sim$\+Ticker\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default deconstructor. 
+
+\mbox{\label{class_ticker_data_ae29619f5b91cd6a8f348a72f244f1d36}} 
+\index{TickerData@{TickerData}!TickerData@{TickerData}}
+\index{TickerData@{TickerData}!TickerData@{TickerData}}
+\doxysubsubsection{TickerData()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Ticker\+Data\+::\+Ticker\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [default]}}
+
+
+
+Default constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_ticker_data_afbe2562719b8213e530a1c4cac3d04b1}} 
+\index{TickerData@{TickerData}!calculateMACDfields@{calculateMACDfields}}
+\index{calculateMACDfields@{calculateMACDfields}!TickerData@{TickerData}}
+\doxysubsubsection{calculateMACDfields()}
+{\footnotesize\ttfamily void Ticker\+Data\+::calculate\+M\+A\+C\+Dfields (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calculate M\+A\+CD fields and append to the ticker data. 
+
+\doxyref{Ticker\+Data\+::calculate\+M\+A\+C\+Dfields}{p.}{class_ticker_data_afbe2562719b8213e530a1c4cac3d04b1} Calculate M\+A\+CD fields and append to the ticker data. \begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/30/20. 
+\end{DoxyDate}
+
+
+Definition at line 159 of file Ticker\+Data.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ticker_data_afbe2562719b8213e530a1c4cac3d04b1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_ticker_data_a35d4daa28dbb110844ac33657ee7f7a8}} 
+\index{TickerData@{TickerData}!GetCloseYesterday@{GetCloseYesterday}}
+\index{GetCloseYesterday@{GetCloseYesterday}!TickerData@{TickerData}}
+\doxysubsubsection{GetCloseYesterday()}
+{\footnotesize\ttfamily double Ticker\+Data\+::\+Get\+Close\+Yesterday (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get yesterday\textquotesingle{}s close price. 
+
+
+
+Definition at line 80 of file Ticker\+Data.\+h.
+
+\mbox{\label{class_ticker_data_a417646c038db3d2c73785a06b2de14c9}} 
+\index{TickerData@{TickerData}!GetCurrentDataOf@{GetCurrentDataOf}}
+\index{GetCurrentDataOf@{GetCurrentDataOf}!TickerData@{TickerData}}
+\doxysubsubsection{GetCurrentDataOf()}
+{\footnotesize\ttfamily double Ticker\+Data\+::\+Get\+Current\+Data\+Of (\begin{DoxyParamCaption}\item[{\textbf{ T\+I\+C\+K\+E\+R\+\_\+\+F\+I\+E\+L\+DS}}]{a\+\_\+field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get today\textquotesingle{}s data of a\+\_\+field. 
+
+
+
+Definition at line 77 of file Ticker\+Data.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ticker_data_a417646c038db3d2c73785a06b2de14c9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_ticker_data_aaf1f6539e8da61af8091c72dcfd39e0d}} 
+\index{TickerData@{TickerData}!GetMACDSignal@{GetMACDSignal}}
+\index{GetMACDSignal@{GetMACDSignal}!TickerData@{TickerData}}
+\doxysubsubsection{GetMACDSignal()}
+{\footnotesize\ttfamily double Ticker\+Data\+::\+Get\+M\+A\+C\+D\+Signal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get current date\textquotesingle{}s M\+A\+CD signal. 
+
+\doxyref{Ticker\+Data\+::\+Get\+M\+A\+C\+D\+Signal}{p.}{class_ticker_data_aaf1f6539e8da61af8091c72dcfd39e0d}. Get current date\textquotesingle{}s M\+A\+CD signal. \begin{DoxyReturn}{Returns}
+double The current M\+A\+CD signal. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/30/20. 
+\end{DoxyDate}
+
+
+Definition at line 76 of file Ticker\+Data.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ticker_data_aaf1f6539e8da61af8091c72dcfd39e0d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_ticker_data_ae1a96fbae5695797dfa0c6e31960363e}} 
+\index{TickerData@{TickerData}!parseTickerData@{parseTickerData}}
+\index{parseTickerData@{parseTickerData}!TickerData@{TickerData}}
+\doxysubsubsection{parseTickerData()}
+{\footnotesize\ttfamily void Ticker\+Data\+::parse\+Ticker\+Data (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+\_\+directory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Parse ticker data from data source files. 
+
+\doxyref{Ticker\+Data\+::parse\+Ticker\+Data}{p.}{class_ticker_data_ae1a96fbae5695797dfa0c6e31960363e}. Parse ticker data from data source files. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+directory} & string Path where the price data is located. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/30/20. 
+\end{DoxyDate}
+
+
+Definition at line 105 of file Ticker\+Data.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ticker_data_ae1a96fbae5695797dfa0c6e31960363e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ticker_data_ae1a96fbae5695797dfa0c6e31960363e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_ticker_data_a61b055a3f30fb19996f99aa1cd0b9d8c}} 
+\index{TickerData@{TickerData}!PrintAllColumns@{PrintAllColumns}}
+\index{PrintAllColumns@{PrintAllColumns}!TickerData@{TickerData}}
+\doxysubsubsection{PrintAllColumns()}
+{\footnotesize\ttfamily void Ticker\+Data\+::\+Print\+All\+Columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print sample of all columns including data and calculated columns. 
+
+\doxyref{Ticker\+Data\+::\+Print\+All\+Columns}{p.}{class_ticker_data_a61b055a3f30fb19996f99aa1cd0b9d8c} Method to print a sample of data for all data and calculated columns. Used for debugging and checking. \begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/30/20. 
+\end{DoxyDate}
+
+
+Definition at line 305 of file Ticker\+Data.\+cpp.
+
+\mbox{\label{class_ticker_data_a2911629c43557f55b171d7d901570a85}} 
+\index{TickerData@{TickerData}!PrintDataHead@{PrintDataHead}}
+\index{PrintDataHead@{PrintDataHead}!TickerData@{TickerData}}
+\doxysubsubsection{PrintDataHead()}
+{\footnotesize\ttfamily void Ticker\+Data\+::\+Print\+Data\+Head (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print head of data columns. 
+
+\doxyref{Ticker\+Data\+::\+Print\+Data\+Head}{p.}{class_ticker_data_a2911629c43557f55b171d7d901570a85} Method to print first 10 data entries for the ticker object. Only print data fields. Used for debugging and checking. \begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/30/20. 
+\end{DoxyDate}
+
+
+Definition at line 261 of file Ticker\+Data.\+cpp.
+
+\mbox{\label{class_ticker_data_ab7018ea10b33e3e411da4b5d3c50db3b}} 
+\index{TickerData@{TickerData}!SetTradingDateRange@{SetTradingDateRange}}
+\index{SetTradingDateRange@{SetTradingDateRange}!TickerData@{TickerData}}
+\doxysubsubsection{SetTradingDateRange()}
+{\footnotesize\ttfamily void Ticker\+Data\+::\+Set\+Trading\+Date\+Range (\begin{DoxyParamCaption}\item[{\textbf{ Date\+Time} $\ast$}]{a\+\_\+start\+Date,  }\item[{\textbf{ Date\+Time} $\ast$}]{a\+\_\+end\+Date }\end{DoxyParamCaption})}
+
+
+
+Method to set trading date range. 
+
+\doxyref{Ticker\+Data\+::\+Set\+Trading\+Date\+Range}{p.}{class_ticker_data_ab7018ea10b33e3e411da4b5d3c50db3b}. Method to set trading date range. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+start\+Date} & Date\+Time$\ast$ Start date of simulation to set. \\
+\hline
+{\em a\+\_\+end\+Date} & Date\+Time$\ast$ End date of simulation to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/30/20. 
+\end{DoxyDate}
+
+
+Definition at line 47 of file Ticker\+Data.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ticker_data_ab7018ea10b33e3e411da4b5d3c50db3b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ticker_data_ab7018ea10b33e3e411da4b5d3c50db3b_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{class_ticker_data_ab48c85fc6e08165baf3133be3493dff9}} 
+\index{TickerData@{TickerData}!m\_tickerData@{m\_tickerData}}
+\index{m\_tickerData@{m\_tickerData}!TickerData@{TickerData}}
+\doxysubsubsection{m\_tickerData}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Ticker\+Data\+::m\+\_\+ticker\+Data[\textbf{ T\+I\+C\+K\+E\+R\+\_\+\+F\+I\+E\+L\+D\+S\+::\+E\+N\+D\+\_\+\+T\+I\+C\+K\+E\+R\+\_\+\+F\+I\+E\+L\+DS}]\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxyref{Ticker\+Data}{p.}{class_ticker_data} data for a stock in memory. 
+
+
+
+Definition at line 117 of file Ticker\+Data.\+h.
+
+\mbox{\label{class_ticker_data_a5ad87c6102b7a5f35f53fa633729afed}} 
+\index{TickerData@{TickerData}!m\_tickerDates@{m\_tickerDates}}
+\index{m\_tickerDates@{m\_tickerDates}!TickerData@{TickerData}}
+\doxysubsubsection{m\_tickerDates}
+{\footnotesize\ttfamily std\+::vector$<$\textbf{ Date\+Time}$\ast$$>$ Ticker\+Data\+::m\+\_\+ticker\+Dates\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxyref{Ticker\+Data}{p.}{class_ticker_data} dates of the price data. 
+
+
+
+Definition at line 119 of file Ticker\+Data.\+h.
+
+\mbox{\label{class_ticker_data_a5ae1441ed45c2d92dcce72a9d7863a5a}} 
+\index{TickerData@{TickerData}!m\_tickerName@{m\_tickerName}}
+\index{m\_tickerName@{m\_tickerName}!TickerData@{TickerData}}
+\doxysubsubsection{m\_tickerName}
+{\footnotesize\ttfamily std\+::string Ticker\+Data\+::m\+\_\+ticker\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stock ticker name. 
+
+
+
+Definition at line 115 of file Ticker\+Data.\+h.
+
+\mbox{\label{class_ticker_data_a17c871ed7c2fd57c41bc2c7b3701df60}} 
+\index{TickerData@{TickerData}!m\_tradingDateIndexEnd@{m\_tradingDateIndexEnd}}
+\index{m\_tradingDateIndexEnd@{m\_tradingDateIndexEnd}!TickerData@{TickerData}}
+\doxysubsubsection{m\_tradingDateIndexEnd}
+{\footnotesize\ttfamily \textbf{ int} Ticker\+Data\+::m\+\_\+trading\+Date\+Index\+End\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Trading end date index in m\+\_\+ticker\+Dates. 
+
+
+
+Definition at line 123 of file Ticker\+Data.\+h.
+
+\mbox{\label{class_ticker_data_a48c1ab70886fd0c243816b0b25f0d955}} 
+\index{TickerData@{TickerData}!m\_tradingDateIndexStart@{m\_tradingDateIndexStart}}
+\index{m\_tradingDateIndexStart@{m\_tradingDateIndexStart}!TickerData@{TickerData}}
+\doxysubsubsection{m\_tradingDateIndexStart}
+{\footnotesize\ttfamily \textbf{ int} Ticker\+Data\+::m\+\_\+trading\+Date\+Index\+Start\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Trading start date index in m\+\_\+ticker\+Dates. 
+
+
+
+Definition at line 121 of file Ticker\+Data.\+h.
+
+\mbox{\label{class_ticker_data_a875fa60f1877615e9ca408b697b27905}} 
+\index{TickerData@{TickerData}!NA\_VAL@{NA\_VAL}}
+\index{NA\_VAL@{NA\_VAL}!TickerData@{TickerData}}
+\doxysubsubsection{NA\_VAL}
+{\footnotesize\ttfamily const \textbf{ int} Ticker\+Data\+::\+N\+A\+\_\+\+V\+AL = -\/999\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Fill constant for unavailable data. 
+
+\doxyref{Ticker\+Data.\+cpp}{p.}{_ticker_data_8cpp} Implementation of \doxyref{Ticker\+Data.\+h}{p.}{_ticker_data_8h}
+
+Created by Salil Maharjan on 4/30/20. Copyright © 2020 Salil Maharjan. All rights reserved. 
+
+Definition at line 63 of file Ticker\+Data.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Ticker\+Data.\+h}\item 
+\textbf{ Ticker\+Data.\+cpp}\end{DoxyCompactItemize}

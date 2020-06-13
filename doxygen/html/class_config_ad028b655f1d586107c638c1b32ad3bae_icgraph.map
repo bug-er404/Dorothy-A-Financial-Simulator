@@ -1,0 +1,10 @@
+<map id="Config::getParameterValue" name="Config::getParameterValue">
+<area shape="rect" id="node1" title="Get the value of a specified parameter." alt="" coords="1024,56,1203,83"/>
+<area shape="rect" id="node2" href="$class_config.html#aaee87de753014e9dfd1a5a88c13d51f0" title="Test if a config file has a parameter for a given segment." alt="" coords="796,31,976,57"/>
+<area shape="rect" id="node8" href="$class_config.html#ad7440ca7ec81f569bf8f8b7575734fd5" title="Template function specializations to access parameters as char* and bool." alt="" coords="811,81,961,108"/>
+<area shape="rect" id="node3" href="$class_simulator.html#a5b96a3d0c4c330d2b49be7dd7930c510" title="Checks if all required parameters are passed for simulator to run." alt="" coords="561,31,748,57"/>
+<area shape="rect" id="node4" href="$class_simulator.html#a0e2d73d3f5c09acdcac93e22a95b721d" title="Initializes the simulator by loading configurations, ticker data and trading stocks." alt="" coords="327,5,513,32"/>
+<area shape="rect" id="node7" href="$class_simulator.html#a0cd976fca52f982a92f2f897a6ddd1de" title="Rerun simulator for consecutive configuration files." alt="" coords="335,56,505,83"/>
+<area shape="rect" id="node5" href="$class_simulator.html#ab899d33750e674079de022d269c6bf9c" title="Interface method to start the simulation." alt="" coords="104,31,279,57"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,31,56,57"/>
+</map>

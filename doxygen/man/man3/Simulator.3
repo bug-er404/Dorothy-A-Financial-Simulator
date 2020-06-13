@@ -1,0 +1,1174 @@
+.TH "Simulator" 3 "Sat Jun 6 2020" "Version Version 1.0" "DOROTHY" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Simulator
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Simulator\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSimulator\fP (\fBint\fP argc, const \fBchar\fP *argv[])"
+.br
+.RI "Main simulator constructor\&. "
+.ti -1c
+.RI "void \fBStartSimulation\fP ()"
+.br
+.RI "Interface method to start the simulation\&. "
+.ti -1c
+.RI "void \fBRunSimulation\fP ()"
+.br
+.RI "Main method to run simulation\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSimulator\fP ()=default"
+.br
+.RI "Private default constructor\&. "
+.ti -1c
+.RI "void \fBinitializeSimulator\fP (const \fBchar\fP *a_configFile)"
+.br
+.RI "Initializes the simulator by loading configurations, ticker data and trading stocks\&. "
+.ti -1c
+.RI "void \fBrerunSimulator\fP (const \fBchar\fP *a_configFile)"
+.br
+.RI "Rerun simulator for consecutive configuration files\&. "
+.ti -1c
+.RI "void \fBinitializePublications\fP ()"
+.br
+.RI "Initialize file write stream for the publications requested in config\&. "
+.ti -1c
+.RI "bool \fBcheckParameters\fP ()"
+.br
+.RI "Checks if all required parameters are passed for simulator to run\&. "
+.ti -1c
+.RI "void \fBloadParameters\fP ()"
+.br
+.RI "Loads parameters required for the simulator\&. "
+.ti -1c
+.RI "void \fBinitializeTradingTickers\fP ()"
+.br
+.RI "Initialize stocks that the simulator will be trading\&. "
+.ti -1c
+.RI "void \fBverifyDateParameters\fP ()"
+.br
+.RI "Verify date range\&. "
+.ti -1c
+.RI "double \fBcalculateSignal\fP (\fBTickerData\fP &a_stockData)"
+.br
+.RI "Calculate trade signal\&. "
+.ti -1c
+.RI "void \fBmakeTrade\fP (\fBTradingStock\fP &a_stock, double &a_currentPrice, double &a_signalToday)"
+.br
+.RI "Function to open or close positions according to the signal by checking current position\&. "
+.ti -1c
+.RI "bool \fBhasEnoughCapital\fP (\fBTradingStock\fP &a_stock, double a_price)"
+.br
+.RI "Check if available capital for a stock is enough to purchase more equities at a_price\&. "
+.ti -1c
+.RI "void \fBclosePositions\fP (\fBTradingStock\fP &a_stock, double &a_currentPrice, double &a_signal)"
+.br
+.RI "Close positions for a trading stock\&. "
+.ti -1c
+.RI "void \fBopenPositions\fP (\fBTradingStock\fP &a_stock, double &a_currentPrice, double &a_signal)"
+.br
+.RI "Open positions for a trading stock\&. "
+.ti -1c
+.RI "void \fBrecordTransaction\fP (\fBTradingStock\fP &a_stock)"
+.br
+.RI "Function to record transactions to a file\&. "
+.ti -1c
+.RI "void \fBrecordSignalInfo\fP (double a_signal)"
+.br
+.RI "Function to record signals to a file\&. "
+.ti -1c
+.RI "void \fBrecordDailyStatistics\fP ()"
+.br
+.RI "Function to record daily statistics to a file\&. "
+.ti -1c
+.RI "void \fBrecordMonthlyStatistics\fP ()"
+.br
+.RI "Function to record monthly statistics to a file\&. "
+.ti -1c
+.RI "void \fBcloseDailyPublication\fP ()"
+.br
+.RI "Method to close daily publication record file\&. "
+.ti -1c
+.RI "void \fBcloseMonthlyPublication\fP (bool a_flag)"
+.br
+.RI "Method to close monthly publication record file\&. "
+.ti -1c
+.RI "void \fBcloseTransactionPublication\fP ()"
+.br
+.RI "Method to close transaction publication record file\&. "
+.ti -1c
+.RI "void \fBcloseSignalPublication\fP ()"
+.br
+.RI "Method to close signal publication record file\&. "
+.ti -1c
+.RI "void \fBrecordSharpeRatio\fP ()"
+.br
+.RI "Function to record sharpe ratio to daily statistics file\&. "
+.ti -1c
+.RI "void \fBrecordNoActivity\fP (\fBTradingStock\fP &a_stock)"
+.br
+.RI "Method to record necessary elements for no activity (code reuse purposes)\&. "
+.ti -1c
+.RI "double \fBcalculateSharpeRatio\fP ()"
+.br
+.RI "Function to calculate sharpe ratio\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "const std::string \fBUNIVERSE_PATH_PARAM\fP = 'UNIVERSE_DIRECTORY'"
+.br
+.ti -1c
+.RI "const std::string \fBTICKER_PATH_PARAM\fP = 'TICKER_DATA_DIRECTORY'"
+.br
+.ti -1c
+.RI "const std::string \fBPORTFOLIO_CAPITAL\fP = 'PORTFOLIO_CAPITAL'"
+.br
+.ti -1c
+.RI "const std::string \fBMAX_CAPITAL_PER_STOCK_PARAM\fP = 'MAX_CAPITAL_PER_STOCK'"
+.br
+.ti -1c
+.RI "const std::string \fBPERIOD_START_DATE\fP = 'START_DATE'"
+.br
+.ti -1c
+.RI "const std::string \fBPERIOD_END_DATE\fP = 'END_DATE'"
+.br
+.ti -1c
+.RI "const std::string \fBENTRY_SIGNAL_PARAM\fP = 'ENTRY_THRESHOLD'"
+.br
+.ti -1c
+.RI "const std::string \fBEXIT_SIGNAL_PARAM\fP = 'EXIT_THRESHOLD'"
+.br
+.ti -1c
+.RI "const std::string \fBMAX_POS_PER_STOCK\fP = 'MAX_POSITIONS_PER_STOCK'"
+.br
+.ti -1c
+.RI "const std::string \fBDAYS_IN_POS_PARAM\fP = 'MAX_DAYS_IN_POSITION'"
+.br
+.ti -1c
+.RI "const std::string \fBSTOP_LOSS_PARAM\fP = 'STOP_LOSS'"
+.br
+.ti -1c
+.RI "const std::string \fBDAILY_PUB_PARAM\fP = 'DAILY'"
+.br
+.ti -1c
+.RI "const std::string \fBMONTHLY_PUB_PARAM\fP = 'MONTHLY'"
+.br
+.ti -1c
+.RI "const std::string \fBTRANSACTION_PUB_PARAM\fP = 'TRANSACTION'"
+.br
+.ti -1c
+.RI "const std::string \fBSIGNAL_PUB_PARAM\fP = 'SIGNAL'"
+.br
+.ti -1c
+.RI "std::string \fBm_universePath\fP"
+.br
+.ti -1c
+.RI "std::string \fBm_tickerPath\fP"
+.br
+.ti -1c
+.RI "double \fBm_portfolioCapital\fP"
+.br
+.ti -1c
+.RI "double \fBm_capitalLimitPerStock\fP"
+.br
+.ti -1c
+.RI "double \fBm_entrySignal\fP"
+.br
+.ti -1c
+.RI "double \fBm_exitSignal\fP"
+.br
+.ti -1c
+.RI "\fBDateTime\fP * \fBm_startDate\fP"
+.br
+.ti -1c
+.RI "\fBDateTime\fP * \fBm_endDate\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBm_maxPositionsPerStock\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBm_maxDaysPerPosition\fP"
+.br
+.ti -1c
+.RI "double \fBm_stopLoss\fP"
+.br
+.ti -1c
+.RI "bool \fBm_dailyPublication\fP"
+.br
+.ti -1c
+.RI "bool \fBm_monthlyPublication\fP"
+.br
+.ti -1c
+.RI "bool \fBm_transactionPublication\fP"
+.br
+.ti -1c
+.RI "bool \fBm_signalPublication\fP"
+.br
+.ti -1c
+.RI "std::ofstream \fBm_dailyInfoFile\fP"
+.br
+.RI "Output streams to write publications\&. "
+.ti -1c
+.RI "std::ofstream \fBm_monthlyInfoFile\fP"
+.br
+.ti -1c
+.RI "std::ofstream \fBm_transactionInfoFile\fP"
+.br
+.ti -1c
+.RI "std::ofstream \fBm_signalInfoFile\fP"
+.br
+.ti -1c
+.RI "double \fBm_ROR\fP"
+.br
+.RI "Daily return\&. The profit for the day divided by the capital committed\&. "
+.ti -1c
+.RI "double \fBm_totalPNL\fP"
+.br
+.RI "Cumulative PNL from the beginning of the simulation to the current date\&. "
+.ti -1c
+.RI "double \fBm_dailyPNL\fP"
+.br
+.RI "The profit or loss in dollars for the day\&. "
+.ti -1c
+.RI "double \fBm_longPosCount\fP"
+.br
+.RI "Daily long position counter variable\&. "
+.ti -1c
+.RI "double \fBm_shortPosCount\fP"
+.br
+.RI "Daily short position counter variable\&. "
+.ti -1c
+.RI "double \fBm_totalPosCount\fP"
+.br
+.RI "Daily total position counter variable\&. "
+.ti -1c
+.RI "double \fBm_netMarketValue\fP"
+.br
+.RI "Total amount of capital committed to the model at the end of the day\&. "
+.ti -1c
+.RI "double \fBm_grossMarketValue\fP"
+.br
+.RI "Long capital minus the short capital at the end of the day\&. "
+.ti -1c
+.RI "\fBDateTime\fP * \fBm_today\fP"
+.br
+.RI "Date today\&. "
+.ti -1c
+.RI "std::vector< double > \fBm_dailyPNLRecord\fP"
+.br
+.RI "Daily PNL record\&. "
+.ti -1c
+.RI "std::vector< double > \fBm_dailyCumulativeROR\fP"
+.br
+.RI "Daily cumulative ROR record for all trading stocks in simulation\&. "
+.ti -1c
+.RI "std::vector< double > \fBm_sharpeRecord\fP"
+.br
+.RI "Sharpe ratio record\&. "
+.ti -1c
+.RI "\fBint\fP \fBm_configFilesPassed\fP"
+.br
+.RI "Number of config files passed\&. "
+.ti -1c
+.RI "\fBint\fP \fBm_simulationCount\fP"
+.br
+.RI "Count of how many config files have been simulated\&. "
+.ti -1c
+.RI "std::vector< const \fBchar\fP * > \fBm_configFile\fP"
+.br
+.RI "Var with config file name\&. "
+.ti -1c
+.RI "\fBConfig\fP * \fBm_config\fP"
+.br
+.RI "Configuration object\&. "
+.ti -1c
+.RI "\fBDataAccess\fP * \fBm_data\fP"
+.br
+.RI "Data access object\&. "
+.ti -1c
+.RI "std::vector< \fBTradingStock\fP * > \fBm_tradingStocks\fP"
+.br
+.RI "All the trading stocks in the simulation\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBSimulator\&.h\fP Main container class for the simulator\&. Uses member classes for financial simulation\&.
+.PP
+Created by Salil Maharjan on 4/29/20\&. Copyright © 2020 Salil Maharjan\&. All rights reserved\&. 
+.PP
+Definition at line 18 of file Simulator\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Simulator::Simulator (\fBint\fP argc, const \fBchar\fP * argv[])"
+
+.PP
+Main simulator constructor\&. \fBSimulator\&.cpp\fP Implementation of \fBSimulator\&.h\fP\&.
+.PP
+Created by Salil Maharjan on 4/29/20\&. Copyright © 2020 Salil Maharjan\&. All rights reserved\&. \fBSimulator::Simulator\fP Parameterized constructor for \fBSimulator\fP class\&. Initializes the \fBSimulator\fP\&. Can handle multiple configuration files\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargc\fP int Number of command line arguments\&. 
+.br
+\fIargv\fP const char* Array of command line arguments\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 26 of file Simulator\&.cpp\&.
+.SS "Simulator::Simulator ()\fC [private]\fP, \fC [default]\fP"
+
+.PP
+Private default constructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "double Simulator::calculateSharpeRatio ()\fC [private]\fP"
+
+.PP
+Function to calculate sharpe ratio\&. \fBSimulator::calculateSharpeRatio\fP Method to calculate sharpe ratio\&. 
+.PP
+\fBReturns\fP
+.RS 4
+double Daily sharpe ratio of the model\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 667 of file Simulator\&.cpp\&.
+.SS "double Simulator::calculateSignal (\fBTickerData\fP & a_stockData)\fC [private]\fP"
+
+.PP
+Calculate trade signal\&. \fBSimulator::calculateSignal\fP Function to calculate trade signal\&. Currently uses MACD indicator to get signal\&. If not, the simulation will run for all available data instead of stopping\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_stockData\fP \fBTickerData\fP& The data of the trading stock in the specified date range\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+double Trading signal\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 470 of file Simulator\&.cpp\&.
+.SS "bool Simulator::checkParameters ()\fC [private]\fP"
+
+.PP
+Checks if all required parameters are passed for simulator to run\&. \fBSimulator::checkParameters\fP Checks if all required parameters are passed for simulator to run\&. 
+.PP
+\fBReturns\fP
+.RS 4
+bool If all required parameters are in configuration file\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 337 of file Simulator\&.cpp\&.
+.SS "void Simulator::closeDailyPublication ()\fC [private]\fP"
+
+.PP
+Method to close daily publication record file\&. \fBSimulator::closeDailyPublication\fP Method to close daily publication record file\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 922 of file Simulator\&.cpp\&.
+.SS "void Simulator::closeMonthlyPublication (bool a_flag)\fC [private]\fP"
+
+.PP
+Method to close monthly publication record file\&. \fBSimulator::closeMonthlyPublication\fP Method to close monthly publication record file\&. Monthly statistics use daily statistics, so daily must be set to write monthly publications\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_flag\fP Flag if monthly statistics can be generated\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 940 of file Simulator\&.cpp\&.
+.SS "void Simulator::closePositions (\fBTradingStock\fP & a_stock, double & a_currentPrice, double & a_signal)\fC [private]\fP"
+
+.PP
+Close positions for a trading stock\&. \fBSimulator::closePositions\fP Method to close positions for a trading stock\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_stock\fP \fBTradingStock\fP& The stock that is being traded\&. 
+.br
+\fIa_currentPrice\fP double& Current price of the stock\&. 
+.br
+\fIa_signalToday\fP double& Signal calculated for the day\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 631 of file Simulator\&.cpp\&.
+.SS "void Simulator::closeSignalPublication ()\fC [private]\fP"
+
+.PP
+Method to close signal publication record file\&. \fBSimulator::closeSignalPublication\fP Method to close signal publication record file\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 976 of file Simulator\&.cpp\&.
+.SS "void Simulator::closeTransactionPublication ()\fC [private]\fP"
+
+.PP
+Method to close transaction publication record file\&. \fBSimulator::closeTransactionPublication\fP Method to close transaction publication record file\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 959 of file Simulator\&.cpp\&.
+.SS "bool Simulator::hasEnoughCapital (\fBTradingStock\fP & a_stock, double a_price)\fC [private]\fP"
+
+.PP
+Check if available capital for a stock is enough to purchase more equities at a_price\&. \fBSimulator::hasEnoughCapital\fP Check if available capital for a stock is enough to purchase more equities at a_price 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_stock\fP \fBTradingStock\fP& The stock that is being traded\&. 
+.br
+\fIa_currentPrice\fP double& Current price of the stock\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool If there is sufficient capital to buy positions of a_stock at a_price\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 559 of file Simulator\&.cpp\&.
+.SS "void Simulator::initializePublications ()\fC [private]\fP"
+
+.PP
+Initialize file write stream for the publications requested in config\&. \fBSimulator::initializePublications\fP Initializes file write streams for the publications requested in configurations\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 278 of file Simulator\&.cpp\&.
+.SS "void Simulator::initializeSimulator (const \fBchar\fP * a_configFile)\fC [private]\fP"
+
+.PP
+Initializes the simulator by loading configurations, ticker data and trading stocks\&. \fBSimulator::initializeSimulator\fP Main method to initialize simulator for run\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_configFile\fP char* \fBConfig\fP file to initialize simulator for\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 212 of file Simulator\&.cpp\&.
+.SS "void Simulator::initializeTradingTickers ()\fC [private]\fP"
+
+.PP
+Initialize stocks that the simulator will be trading\&. \fBSimulator::initializeTradingTickers\fP Initialize stock tickers from constituents file that the simulator will be trading\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 410 of file Simulator\&.cpp\&.
+.SS "void Simulator::loadParameters ()\fC [private]\fP"
+
+.PP
+Loads parameters required for the simulator\&. \fBSimulator::loadParameters\fP Loads parameters from configuration file that are required for the simulation\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 372 of file Simulator\&.cpp\&.
+.SS "void Simulator::makeTrade (\fBTradingStock\fP & a_stock, double & a_currentPrice, double & a_signalToday)\fC [private]\fP"
+
+.PP
+Function to open or close positions according to the signal by checking current position\&. \fBSimulator::makeTrade\fP Function to make trade according to the signal\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_stock\fP \fBTradingStock\fP& The stock that is being traded\&. 
+.br
+\fIa_currentPrice\fP double& Current price of the stock\&. 
+.br
+\fIa_signalToday\fP double& Signal calculated for the day\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 485 of file Simulator\&.cpp\&.
+.SS "void Simulator::openPositions (\fBTradingStock\fP & a_stock, double & a_currentPrice, double & a_signal)\fC [private]\fP"
+
+.PP
+Open positions for a trading stock\&. \fBSimulator::openPositions\fP Method to open positions for a trading stock\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_stock\fP \fBTradingStock\fP& The stock that is being traded\&. 
+.br
+\fIa_currentPrice\fP double& Current price of the stock\&. 
+.br
+\fIa_signalToday\fP double& Signal calculated for the day\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 588 of file Simulator\&.cpp\&.
+.SS "void Simulator::recordDailyStatistics ()\fC [private]\fP"
+
+.PP
+Function to record daily statistics to a file\&. \fBSimulator::recordDailyStatistics\fP Function to record daily statistics to daily stats file\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 742 of file Simulator\&.cpp\&.
+.SS "void Simulator::recordMonthlyStatistics ()\fC [private]\fP"
+
+.PP
+Function to record monthly statistics to a file\&. \fBSimulator::recordMonthlyStatistics\fP Function to record monthly statistics to a file\&. Uses the generated daily publication to generate a monthly report\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 770 of file Simulator\&.cpp\&.
+.SS "void Simulator::recordNoActivity (\fBTradingStock\fP & a_stock)\fC [private]\fP"
+
+.PP
+Method to record necessary elements for no activity (code reuse purposes)\&. \fBSimulator::recordNoActivity\fP Method to record necessary elements for no activity (code reuse purposes)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_stock\fP \fBTradingStock\fP& The stock that is being traded\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 571 of file Simulator\&.cpp\&.
+.SS "void Simulator::recordSharpeRatio ()\fC [private]\fP"
+
+.PP
+Function to record sharpe ratio to daily statistics file\&. \fBSimulator::recordSharpeRatio\fP Method to record sharpe ratio to statistics file\&. Uses calculateSharpeRatio function to calculate sharpe ratio for the entire model\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 683 of file Simulator\&.cpp\&.
+.SS "void Simulator::recordSignalInfo (double a_signal)\fC [private]\fP"
+
+.PP
+Function to record signals to a file\&. \fBSimulator::recordSignalInfo\fP Function to record signals to a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_signal\fP The day's signal 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 730 of file Simulator\&.cpp\&.
+.SS "void Simulator::recordTransaction (\fBTradingStock\fP & a_stock)\fC [private]\fP"
+
+.PP
+Function to record transactions to a file\&. \fBSimulator::recordTransaction\fP Function to record closed transactions to the transaction report file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_stock\fP \fBTradingStock\fP& The stock that is being traded\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 704 of file Simulator\&.cpp\&.
+.SS "void Simulator::rerunSimulator (const \fBchar\fP * a_configFile)\fC [private]\fP"
+
+.PP
+Rerun simulator for consecutive configuration files\&. \fBSimulator::rerunSimulator\fP Rerun simulator for consecutive configuration files 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_configFile\fP char* \fBConfig\fP file to initialize simulator for\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 246 of file Simulator\&.cpp\&.
+.SS "void Simulator::RunSimulation ()"
+
+.PP
+Main method to run simulation\&. \fBSimulator::RunSimulation\fP Main method to run the simulation\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 75 of file Simulator\&.cpp\&.
+.SS "void Simulator::StartSimulation ()"
+
+.PP
+Interface method to start the simulation\&. \fBSimulator::StartSimulation\fP Interface method to start the simulation 
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 52 of file Simulator\&.cpp\&.
+.SS "void Simulator::verifyDateParameters ()\fC [private]\fP"
+
+.PP
+Verify date range\&. \fBSimulator::verifyDateParameters\fP Verify date range in configuration file to assert if data is available for that range\&. If not, the simulation will run for all available data instead of stopping\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 447 of file Simulator\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "const std::string Simulator::DAILY_PUB_PARAM = 'DAILY'\fC [private]\fP"
+
+.SH "[PUBLICATION PARAMETERS]"
+.PP
+
+.PP
+Definition at line 65 of file Simulator\&.h\&.
+.SS "const std::string Simulator::DAYS_IN_POS_PARAM = 'MAX_DAYS_IN_POSITION'\fC [private]\fP"
+
+.PP
+Definition at line 62 of file Simulator\&.h\&.
+.SS "const std::string Simulator::ENTRY_SIGNAL_PARAM = 'ENTRY_THRESHOLD'\fC [private]\fP"
+
+.SH "[SIGNAL THRESHOLDS]"
+.PP
+
+.PP
+Definition at line 58 of file Simulator\&.h\&.
+.SS "const std::string Simulator::EXIT_SIGNAL_PARAM = 'EXIT_THRESHOLD'\fC [private]\fP"
+
+.PP
+Definition at line 59 of file Simulator\&.h\&.
+.SS "double Simulator::m_capitalLimitPerStock\fC [private]\fP"
+
+.PP
+Definition at line 83 of file Simulator\&.h\&.
+.SS "\fBConfig\fP* Simulator::m_config\fC [private]\fP"
+
+.PP
+Configuration object\&. 
+.PP
+Definition at line 163 of file Simulator\&.h\&.
+.SS "std::vector<const \fBchar\fP*> Simulator::m_configFile\fC [private]\fP"
+
+.PP
+Var with config file name\&. 
+.PP
+Definition at line 161 of file Simulator\&.h\&.
+.SS "\fBint\fP Simulator::m_configFilesPassed\fC [private]\fP"
+
+.PP
+Number of config files passed\&. 
+.PP
+Definition at line 157 of file Simulator\&.h\&.
+.SS "std::vector<double> Simulator::m_dailyCumulativeROR\fC [private]\fP"
+
+.PP
+Daily cumulative ROR record for all trading stocks in simulation\&. 
+.PP
+Definition at line 147 of file Simulator\&.h\&.
+.SS "std::ofstream Simulator::m_dailyInfoFile\fC [private]\fP"
+
+.PP
+Output streams to write publications\&. 
+.PP
+Definition at line 108 of file Simulator\&.h\&.
+.SS "double Simulator::m_dailyPNL\fC [private]\fP"
+
+.PP
+The profit or loss in dollars for the day\&. 
+.PP
+Definition at line 125 of file Simulator\&.h\&.
+.SS "std::vector<double> Simulator::m_dailyPNLRecord\fC [private]\fP"
+
+.PP
+Daily PNL record\&. 
+.PP
+Definition at line 145 of file Simulator\&.h\&.
+.SS "bool Simulator::m_dailyPublication\fC [private]\fP"
+
+.SH "[PUBLICATION PARAMETERS]"
+.PP
+
+.PP
+Definition at line 95 of file Simulator\&.h\&.
+.SS "\fBDataAccess\fP* Simulator::m_data\fC [private]\fP"
+
+.PP
+Data access object\&. 
+.PP
+Definition at line 165 of file Simulator\&.h\&.
+.SS "\fBDateTime\fP* Simulator::m_endDate\fC [private]\fP"
+
+.PP
+Definition at line 89 of file Simulator\&.h\&.
+.SS "double Simulator::m_entrySignal\fC [private]\fP"
+
+.SH "[SIGNAL THRESHOLDS]"
+.PP
+
+.PP
+Definition at line 85 of file Simulator\&.h\&.
+.SS "double Simulator::m_exitSignal\fC [private]\fP"
+
+.PP
+Definition at line 86 of file Simulator\&.h\&.
+.SS "double Simulator::m_grossMarketValue\fC [private]\fP"
+
+.PP
+Long capital minus the short capital at the end of the day\&. 
+.PP
+Definition at line 135 of file Simulator\&.h\&.
+.SS "double Simulator::m_longPosCount\fC [private]\fP"
+
+.PP
+Daily long position counter variable\&. 
+.PP
+Definition at line 127 of file Simulator\&.h\&.
+.SS "\fBint\fP Simulator::m_maxDaysPerPosition\fC [private]\fP"
+
+.PP
+Definition at line 92 of file Simulator\&.h\&.
+.SS "\fBint\fP Simulator::m_maxPositionsPerStock\fC [private]\fP"
+
+.SH "[TRADING PARAMETERS]"
+.PP
+
+.PP
+Definition at line 91 of file Simulator\&.h\&.
+.SS "std::ofstream Simulator::m_monthlyInfoFile\fC [private]\fP"
+
+.PP
+Definition at line 109 of file Simulator\&.h\&.
+.SS "bool Simulator::m_monthlyPublication\fC [private]\fP"
+
+.PP
+Definition at line 96 of file Simulator\&.h\&.
+.SS "double Simulator::m_netMarketValue\fC [private]\fP"
+
+.PP
+Total amount of capital committed to the model at the end of the day\&. 
+.PP
+Definition at line 133 of file Simulator\&.h\&.
+.SS "double Simulator::m_portfolioCapital\fC [private]\fP"
+
+.SH "[PORTFOLIO DATA]"
+.PP
+
+.PP
+Definition at line 82 of file Simulator\&.h\&.
+.SS "double Simulator::m_ROR\fC [private]\fP"
+
+.PP
+Daily return\&. The profit for the day divided by the capital committed\&. 
+.PP
+Definition at line 121 of file Simulator\&.h\&.
+.SS "std::vector<double> Simulator::m_sharpeRecord\fC [private]\fP"
+
+.PP
+Sharpe ratio record\&. 
+.PP
+Definition at line 149 of file Simulator\&.h\&.
+.SS "double Simulator::m_shortPosCount\fC [private]\fP"
+
+.PP
+Daily short position counter variable\&. 
+.PP
+Definition at line 129 of file Simulator\&.h\&.
+.SS "std::ofstream Simulator::m_signalInfoFile\fC [private]\fP"
+
+.PP
+Definition at line 111 of file Simulator\&.h\&.
+.SS "bool Simulator::m_signalPublication\fC [private]\fP"
+
+.PP
+Definition at line 98 of file Simulator\&.h\&.
+.SS "\fBint\fP Simulator::m_simulationCount\fC [private]\fP"
+
+.PP
+Count of how many config files have been simulated\&. 
+.PP
+Definition at line 159 of file Simulator\&.h\&.
+.SS "\fBDateTime\fP* Simulator::m_startDate\fC [private]\fP"
+
+.SH "[SIMULATION PERIOD]"
+.PP
+
+.PP
+Definition at line 88 of file Simulator\&.h\&.
+.SS "double Simulator::m_stopLoss\fC [private]\fP"
+
+.PP
+Definition at line 93 of file Simulator\&.h\&.
+.SS "std::string Simulator::m_tickerPath\fC [private]\fP"
+
+.PP
+Definition at line 80 of file Simulator\&.h\&.
+.SS "\fBDateTime\fP* Simulator::m_today\fC [private]\fP"
+
+.PP
+Date today\&. 
+.PP
+Definition at line 137 of file Simulator\&.h\&.
+.SS "double Simulator::m_totalPNL\fC [private]\fP"
+
+.PP
+Cumulative PNL from the beginning of the simulation to the current date\&. 
+.PP
+Definition at line 123 of file Simulator\&.h\&.
+.SS "double Simulator::m_totalPosCount\fC [private]\fP"
+
+.PP
+Daily total position counter variable\&. 
+.PP
+Definition at line 131 of file Simulator\&.h\&.
+.SS "std::vector<\fBTradingStock\fP*> Simulator::m_tradingStocks\fC [private]\fP"
+
+.PP
+All the trading stocks in the simulation\&. 
+.PP
+Definition at line 167 of file Simulator\&.h\&.
+.SS "std::ofstream Simulator::m_transactionInfoFile\fC [private]\fP"
+
+.PP
+Definition at line 110 of file Simulator\&.h\&.
+.SS "bool Simulator::m_transactionPublication\fC [private]\fP"
+
+.PP
+Definition at line 97 of file Simulator\&.h\&.
+.SS "std::string Simulator::m_universePath\fC [private]\fP"
+Member variables from the configuration file 
+.SH "[DIRECTORY DATA]"
+.PP
+
+.PP
+Definition at line 79 of file Simulator\&.h\&.
+.SS "const std::string Simulator::MAX_CAPITAL_PER_STOCK_PARAM = 'MAX_CAPITAL_PER_STOCK'\fC [private]\fP"
+
+.PP
+Definition at line 53 of file Simulator\&.h\&.
+.SS "const std::string Simulator::MAX_POS_PER_STOCK = 'MAX_POSITIONS_PER_STOCK'\fC [private]\fP"
+
+.SH "[TRADING PARAMETERS]"
+.PP
+
+.PP
+Definition at line 61 of file Simulator\&.h\&.
+.SS "const std::string Simulator::MONTHLY_PUB_PARAM = 'MONTHLY'\fC [private]\fP"
+
+.PP
+Definition at line 66 of file Simulator\&.h\&.
+.SS "const std::string Simulator::PERIOD_END_DATE = 'END_DATE'\fC [private]\fP"
+
+.PP
+Definition at line 56 of file Simulator\&.h\&.
+.SS "const std::string Simulator::PERIOD_START_DATE = 'START_DATE'\fC [private]\fP"
+
+.SH "[SIMULATION PERIOD]"
+.PP
+
+.PP
+Definition at line 55 of file Simulator\&.h\&.
+.SS "const std::string Simulator::PORTFOLIO_CAPITAL = 'PORTFOLIO_CAPITAL'\fC [private]\fP"
+
+.SH "[PORTFOLIO DATA]"
+.PP
+
+.PP
+Definition at line 52 of file Simulator\&.h\&.
+.SS "const std::string Simulator::SIGNAL_PUB_PARAM = 'SIGNAL'\fC [private]\fP"
+
+.PP
+Definition at line 68 of file Simulator\&.h\&.
+.SS "const std::string Simulator::STOP_LOSS_PARAM = 'STOP_LOSS'\fC [private]\fP"
+
+.PP
+Definition at line 63 of file Simulator\&.h\&.
+.SS "const std::string Simulator::TICKER_PATH_PARAM = 'TICKER_DATA_DIRECTORY'\fC [private]\fP"
+
+.PP
+Definition at line 50 of file Simulator\&.h\&.
+.SS "const std::string Simulator::TRANSACTION_PUB_PARAM = 'TRANSACTION'\fC [private]\fP"
+
+.PP
+Definition at line 67 of file Simulator\&.h\&.
+.SS "const std::string Simulator::UNIVERSE_PATH_PARAM = 'UNIVERSE_DIRECTORY'\fC [private]\fP"
+
+.SH "[DIRECTORY DATA]"
+.PP
+
+.PP
+Definition at line 49 of file Simulator\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DOROTHY from the source code\&.

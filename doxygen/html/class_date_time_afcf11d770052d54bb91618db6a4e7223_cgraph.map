@@ -1,0 +1,4 @@
+<map id="DateTime::getJulianDay" name="DateTime::getJulianDay">
+<area shape="rect" id="node1" title="Gets the Julian day from this date. Julian day vary from 0 to 365." alt="" coords="5,5,168,32"/>
+<area shape="rect" id="node2" href="$class_date_time.html#a3ca8a7d66ec814441db980816cf1ab4c" title="Determines if the year recorded here is a leap year." alt="" coords="216,5,367,32"/>
+</map>

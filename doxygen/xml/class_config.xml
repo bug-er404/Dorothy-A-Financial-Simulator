@@ -1,0 +1,565 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_config" kind="class" language="C++" prot="public">
+    <compoundname>Config</compoundname>
+    <includes refid="_config_8h" local="no">Config.h</includes>
+    <innerclass refid="struct_config_1_1_config_value" prot="private">Config::ConfigValue</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_config_1a26885e0f2d452bb41c4d7ee0d24bff7d" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, <ref refid="struct_config_1_1_config_value" kindref="compound">ConfigValue</ref> &gt;</type>
+        <definition>std::unordered_map&lt;std::string, ConfigValue&gt; Config::m_ConfigData</definition>
+        <argsstring></argsstring>
+        <name>m_ConfigData</name>
+        <briefdescription>
+<para>Map of config values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Config.h" line="87" column="24" bodyfile="Config.h" bodystart="87" bodyend="-1"/>
+        <referencedby refid="class_config_1af25db79b5adc8c8aceb76344809552a4" compoundref="_config_8cpp" startline="25" endline="59">Load</referencedby>
+        <referencedby refid="class_config_1a5c298672c623744f1fbe9be2dfccbb10" compoundref="_config_8cpp" startline="125" endline="132">GetUnaccessedParameters</referencedby>
+        <referencedby refid="class_config_1a63e5ea888ebde7bc280948a0e8433c73" compoundref="_config_8cpp" startline="140" endline="153">DisplayParameters</referencedby>
+        <referencedby refid="class_config_1ad028b655f1d586107c638c1b32ad3bae" compoundref="_config_8cpp" startline="221" endline="236">getParameterValue</referencedby>
+        <referencedby refid="class_config_1a25caa5bee6ea9e2c66845881939c0ded" compoundref="_config_8h" startline="65" endline="65">ClearConfigData</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_config_1abd0c571c116924871e30444b192b792a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Config::Config</definition>
+        <argsstring>()</argsstring>
+        <name>Config</name>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Config.h" line="27" column="5" bodyfile="Config.h" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1a688fc8535c34f8be1ff0c27006394bd7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Config::Config</definition>
+        <argsstring>(const char *a_file)</argsstring>
+        <name>Config</name>
+        <param>
+          <type>const <ref refid="_c_make_cache_8txt_1afe71f11dacb15682cdc012f7208e6e09" kindref="member">char</ref> *</type>
+          <declname>a_file</declname>
+        </param>
+        <briefdescription>
+<para>Main class constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Config.h" line="30" column="5" bodyfile="Config.h" bodystart="30" bodyend="30"/>
+        <references refid="class_config_1af25db79b5adc8c8aceb76344809552a4" compoundref="_config_8cpp" startline="25" endline="59">Load</references>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1ae0b90d4e69f2d1cb411f8a6466db7bba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual Config::~Config</definition>
+        <argsstring>()</argsstring>
+        <name>~Config</name>
+        <briefdescription>
+<para>Virtual deconstructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Config.h" line="33" column="13" bodyfile="Config.h" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1ad4154541cb9dc550527551a736862578" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool Config::GetParameter</definition>
+        <argsstring>(std::string a_parameter, T &amp;a_value)</argsstring>
+        <name>GetParameter</name>
+        <param>
+          <type>std::string</type>
+          <declname>a_parameter</declname>
+        </param>
+        <param>
+          <type>T &amp;</type>
+          <declname>a_value</declname>
+        </param>
+        <briefdescription>
+<para>Template function to access parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_config_1ad4154541cb9dc550527551a736862578" kindref="member">Config::GetParameter</ref> Template function to get parameter value and pass it by reference. Template supports: (string, int, short, long, float, double) Explicit instantiation of template function on header file to prevent linker error. Separate template function specialization functions defined for (bool, char*) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_parameter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string Parameter name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>T Variable to save parameter value. Template supported types. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool Function execution status. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>4/30/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Config.h" line="41" column="10" bodyfile="Config.h" bodystart="115" bodyend="132"/>
+        <references refid="class_config_1ad028b655f1d586107c638c1b32ad3bae" compoundref="_config_8cpp" startline="221" endline="236">getParameterValue</references>
+        <referencedby refid="class_simulator_1a3369bc36fe39499aac6dba8efb3e187a" compoundref="_simulator_8cpp" startline="372" endline="402">Simulator::loadParameters</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1ad7440ca7ec81f569bf8f8b7575734fd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Config::GetParameter</definition>
+        <argsstring>(std::string a_parameter, char *a_value)</argsstring>
+        <name>GetParameter</name>
+        <param>
+          <type>std::string</type>
+          <declname>a_parameter</declname>
+        </param>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1afe71f11dacb15682cdc012f7208e6e09" kindref="member">char</ref> *</type>
+          <declname>a_value</declname>
+        </param>
+        <briefdescription>
+<para>Template function specializations to access parameters as char* and bool. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_config_1ad4154541cb9dc550527551a736862578" kindref="member">Config::GetParameter</ref> Template function specialization of function (GetParameter) for returning parameter value as char*. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_parameter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string Parameter name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>char* Variable to save parameter value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool Function execution status. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>4/30/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Config.h" line="43" column="10" bodyfile="Config.cpp" bodystart="71" bodyend="82"/>
+        <references refid="class_config_1ad028b655f1d586107c638c1b32ad3bae" compoundref="_config_8cpp" startline="221" endline="236">getParameterValue</references>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1a1a3e3dfa8a7f68307c2753ed58f21c53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Config::GetParameter</definition>
+        <argsstring>(std::string a_parameter, bool &amp;a_value)</argsstring>
+        <name>GetParameter</name>
+        <param>
+          <type>std::string</type>
+          <declname>a_parameter</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>a_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_config_1ad4154541cb9dc550527551a736862578" kindref="member">Config::GetParameter</ref> Template function specialization of function (GetParameter) for returning parameter value as booleans. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_parameter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string Parameter name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bool Variable to save parameter value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool Function execution status. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>4/30/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Config.h" line="44" column="10" bodyfile="Config.cpp" bodystart="93" bodyend="115"/>
+        <references refid="class_config_1ad028b655f1d586107c638c1b32ad3bae" compoundref="_config_8cpp" startline="221" endline="236">getParameterValue</references>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1af25db79b5adc8c8aceb76344809552a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Config::Load</definition>
+        <argsstring>(const char *a_file, bool a_displayParameters=true)</argsstring>
+        <name>Load</name>
+        <param>
+          <type>const <ref refid="_c_make_cache_8txt_1afe71f11dacb15682cdc012f7208e6e09" kindref="member">char</ref> *</type>
+          <declname>a_file</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>a_displayParameters</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Load in data from a specified configuration file. Allows multiple calls. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="_config_8cpp" kindref="compound">Config.cpp</ref> Implementation of <ref refid="_config_8h" kindref="compound">Config.h</ref>.</para>
+<para>Created by Salil Maharjan on 4/25/20. Copyright © 2020 Salil Maharjan. All rights reserved. <ref refid="class_config_1af25db79b5adc8c8aceb76344809552a4" kindref="member">Config::Load</ref> Method to load configuration file. Uses parseLine method to parse lines. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>char* <ref refid="class_config" kindref="compound">Config</ref> file name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_displayParameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bool Flag for display purposes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool Function execution status. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>4/30/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Config.h" line="51" column="10" bodyfile="Config.cpp" bodystart="25" bodyend="59"/>
+        <references refid="class_config_1a63e5ea888ebde7bc280948a0e8433c73" compoundref="_config_8cpp" startline="140" endline="153">DisplayParameters</references>
+        <references refid="class_config_1a26885e0f2d452bb41c4d7ee0d24bff7d" compoundref="_config_8h" startline="87">m_ConfigData</references>
+        <references refid="class_config_1a95ecc48a1098ca2083118d0e7f3f07bb" compoundref="_config_8cpp" startline="169" endline="210">parseLine</references>
+        <references refid="struct_config_1_1_config_value_1a21d975cc43e2320733c2da4dde3bbeee" compoundref="_config_8h" startline="79">Config::ConfigValue::value</references>
+        <referencedby refid="class_config_1a688fc8535c34f8be1ff0c27006394bd7" compoundref="_config_8h" startline="30" endline="30">Config</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1aaee87de753014e9dfd1a5a88c13d51f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Config::ContainsParameter</definition>
+        <argsstring>(std::string a_parameter)</argsstring>
+        <name>ContainsParameter</name>
+        <param>
+          <type>std::string</type>
+          <declname>a_parameter</declname>
+        </param>
+        <briefdescription>
+<para>Test if a config file has a parameter for a given segment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Config.h" line="55" column="10" bodyfile="Config.h" bodystart="55" bodyend="59"/>
+        <references refid="class_config_1ad028b655f1d586107c638c1b32ad3bae" compoundref="_config_8cpp" startline="221" endline="236">getParameterValue</references>
+        <referencedby refid="class_simulator_1a5b96a3d0c4c330d2b49be7dd7930c510" compoundref="_simulator_8cpp" startline="337" endline="364">Simulator::checkParameters</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1a5c298672c623744f1fbe9be2dfccbb10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Config::GetUnaccessedParameters</definition>
+        <argsstring>(std::vector&lt; std::string &gt; &amp;a_paramNames)</argsstring>
+        <name>GetUnaccessedParameters</name>
+        <param>
+          <type>std::vector&lt; std::string &gt; &amp;</type>
+          <declname>a_paramNames</declname>
+        </param>
+        <briefdescription>
+<para>Provides a list of the parameters that were not accessed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_config_1a5c298672c623744f1fbe9be2dfccbb10" kindref="member">Config::GetUnaccessedParameters</ref> Method to provide the list of the parameters that were not accessed. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_paramNames</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector&lt;string&gt; Names of parameters that were not accessed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>4/30/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Config.h" line="62" column="10" bodyfile="Config.cpp" bodystart="125" bodyend="132"/>
+        <references refid="class_config_1a26885e0f2d452bb41c4d7ee0d24bff7d" compoundref="_config_8h" startline="87">m_ConfigData</references>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1a25caa5bee6ea9e2c66845881939c0ded" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Config::ClearConfigData</definition>
+        <argsstring>()</argsstring>
+        <name>ClearConfigData</name>
+        <briefdescription>
+<para>Clear the set of recorded parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Config.h" line="65" column="10" bodyfile="Config.h" bodystart="65" bodyend="65"/>
+        <references refid="class_config_1a26885e0f2d452bb41c4d7ee0d24bff7d" compoundref="_config_8h" startline="87">m_ConfigData</references>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1a63e5ea888ebde7bc280948a0e8433c73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Config::DisplayParameters</definition>
+        <argsstring>()</argsstring>
+        <name>DisplayParameters</name>
+        <briefdescription>
+<para>Display the parameters in alphabetical order. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_config_1a63e5ea888ebde7bc280948a0e8433c73" kindref="member">Config::DisplayParameters</ref> Method to display the parameters in alphabetical order. <simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>4/30/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Config.h" line="68" column="10" bodyfile="Config.cpp" bodystart="140" bodyend="153"/>
+        <references refid="class_config_1a26885e0f2d452bb41c4d7ee0d24bff7d" compoundref="_config_8h" startline="87">m_ConfigData</references>
+        <referencedby refid="class_config_1af25db79b5adc8c8aceb76344809552a4" compoundref="_config_8cpp" startline="25" endline="59">Load</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_config_1add5f97cae5bee6215791bd9c346fffcf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Config::trimBlanks</definition>
+        <argsstring>(std::string &amp;a_str)</argsstring>
+        <name>trimBlanks</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>a_str</declname>
+        </param>
+        <briefdescription>
+<para>Trim leading and trailing blanks. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_config_1add5f97cae5bee6215791bd9c346fffcf" kindref="member">Config::trimBlanks</ref> Method to trim leading and trailing whitespaces. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string Reference to string to trim white spaces. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>4/30/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Config.h" line="94" column="10" bodyfile="Config.cpp" bodystart="245" bodyend="254"/>
+        <referencedby refid="class_config_1a95ecc48a1098ca2083118d0e7f3f07bb" compoundref="_config_8cpp" startline="169" endline="210">parseLine</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1a95ecc48a1098ca2083118d0e7f3f07bb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Config::parseLine</definition>
+        <argsstring>(const std::string &amp;a_line, std::string &amp;a_name, std::string &amp;a_value)</argsstring>
+        <name>parseLine</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>a_line</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>a_name</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>a_value</declname>
+        </param>
+        <briefdescription>
+<para>Get parameters by parsing line from config file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_config_1a95ecc48a1098ca2083118d0e7f3f07bb" kindref="member">Config::parseLine</ref> Method to parse configuration file line into parameter name and value. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string The line read from configuration file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string Variable to save parameter name by reference. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Config.h" line="97" column="10" bodyfile="Config.cpp" bodystart="169" bodyend="210"/>
+        <references refid="class_config_1add5f97cae5bee6215791bd9c346fffcf" compoundref="_config_8cpp" startline="245" endline="254">trimBlanks</references>
+        <referencedby refid="class_config_1af25db79b5adc8c8aceb76344809552a4" compoundref="_config_8cpp" startline="25" endline="59">Load</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1ad028b655f1d586107c638c1b32ad3bae" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Config::getParameterValue</definition>
+        <argsstring>(std::string a_name, std::string &amp;a_value)</argsstring>
+        <name>getParameterValue</name>
+        <param>
+          <type>std::string</type>
+          <declname>a_name</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>a_value</declname>
+        </param>
+        <briefdescription>
+<para>Get the value of a specified parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_config_1ad028b655f1d586107c638c1b32ad3bae" kindref="member">Config::getParameterValue</ref> Private utility function to get parameter value as a string. Used by GetParameter. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string Parameter name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bool Parameter value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool Function execution status. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>4/30/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Config.h" line="100" column="10" bodyfile="Config.cpp" bodystart="221" bodyend="236"/>
+        <references refid="class_config_1a26885e0f2d452bb41c4d7ee0d24bff7d" compoundref="_config_8h" startline="87">m_ConfigData</references>
+        <referencedby refid="class_config_1aaee87de753014e9dfd1a5a88c13d51f0" compoundref="_config_8h" startline="55" endline="59">ContainsParameter</referencedby>
+        <referencedby refid="class_config_1ad7440ca7ec81f569bf8f8b7575734fd5" compoundref="_config_8cpp" startline="71" endline="82">GetParameter</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="_config_8h" kindref="compound">Config.h</ref> Interface for the <ref refid="class_config" kindref="compound">Config</ref> class. Loads configurations from file to use for simulation.</para>
+<para>Created by Salil Maharjan on 4/25/20. Copyright © 2020 Salil Maharjan. All rights reserved. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>std::unordered_map&lt; std::string, Config::ConfigValue &gt;</label>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Config::ConfigValue</label>
+        <link refid="struct_config_1_1_config_value"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+isAccessed</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+value</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="1">
+        <label>Config</label>
+        <link refid="class_config"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-m_ConfigData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>bool</label>
+      </node>
+      <node id="3">
+        <label>std::string</label>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Config.h" line="18" column="1" bodyfile="Config.h" bodystart="19" bodyend="101"/>
+    <listofallmembers>
+      <member refid="class_config_1a25caa5bee6ea9e2c66845881939c0ded" prot="public" virt="non-virtual"><scope>Config</scope><name>ClearConfigData</name></member>
+      <member refid="class_config_1abd0c571c116924871e30444b192b792a" prot="public" virt="non-virtual"><scope>Config</scope><name>Config</name></member>
+      <member refid="class_config_1a688fc8535c34f8be1ff0c27006394bd7" prot="public" virt="non-virtual"><scope>Config</scope><name>Config</name></member>
+      <member refid="class_config_1aaee87de753014e9dfd1a5a88c13d51f0" prot="public" virt="non-virtual"><scope>Config</scope><name>ContainsParameter</name></member>
+      <member refid="class_config_1a63e5ea888ebde7bc280948a0e8433c73" prot="public" virt="non-virtual"><scope>Config</scope><name>DisplayParameters</name></member>
+      <member refid="class_config_1ad4154541cb9dc550527551a736862578" prot="public" virt="non-virtual"><scope>Config</scope><name>GetParameter</name></member>
+      <member refid="class_config_1ad7440ca7ec81f569bf8f8b7575734fd5" prot="public" virt="non-virtual"><scope>Config</scope><name>GetParameter</name></member>
+      <member refid="class_config_1a1a3e3dfa8a7f68307c2753ed58f21c53" prot="public" virt="non-virtual"><scope>Config</scope><name>GetParameter</name></member>
+      <member refid="class_config_1ad028b655f1d586107c638c1b32ad3bae" prot="private" virt="non-virtual"><scope>Config</scope><name>getParameterValue</name></member>
+      <member refid="class_config_1a5c298672c623744f1fbe9be2dfccbb10" prot="public" virt="non-virtual"><scope>Config</scope><name>GetUnaccessedParameters</name></member>
+      <member refid="class_config_1af25db79b5adc8c8aceb76344809552a4" prot="public" virt="non-virtual"><scope>Config</scope><name>Load</name></member>
+      <member refid="class_config_1a26885e0f2d452bb41c4d7ee0d24bff7d" prot="private" virt="non-virtual"><scope>Config</scope><name>m_ConfigData</name></member>
+      <member refid="class_config_1a95ecc48a1098ca2083118d0e7f3f07bb" prot="private" virt="non-virtual"><scope>Config</scope><name>parseLine</name></member>
+      <member refid="class_config_1add5f97cae5bee6215791bd9c346fffcf" prot="private" virt="non-virtual"><scope>Config</scope><name>trimBlanks</name></member>
+      <member refid="class_config_1ae0b90d4e69f2d1cb411f8a6466db7bba" prot="public" virt="virtual"><scope>Config</scope><name>~Config</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

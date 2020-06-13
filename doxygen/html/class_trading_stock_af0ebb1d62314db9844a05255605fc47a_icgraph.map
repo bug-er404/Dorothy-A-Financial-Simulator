@@ -1,0 +1,12 @@
+<map id="TradingStock::RecordTransactionsCount" name="TradingStock::RecordTransactionsCount">
+<area shape="rect" id="node1" title="Record day&#39;s number of transactions." alt="" coords="1245,86,1469,127"/>
+<area shape="rect" id="node2" href="$class_trading_stock.html#a60478a78a694204f99b6ac01e5f61258" title="Method to close all long positions." alt="" coords="975,5,1197,32"/>
+<area shape="rect" id="node8" href="$class_trading_stock.html#a32ad16346c6c9bf2ffd9cc6a68f01325" title="Method to close all short positions." alt="" coords="1000,57,1172,98"/>
+<area shape="rect" id="node9" href="$class_trading_stock.html#aad5057092b58a0ed625be05cfcef3c3e" title="Method to close positions that exceed maximum days limit." alt="" coords="750,113,921,154"/>
+<area shape="rect" id="node10" href="$class_simulator.html#a4238ab87912e40d99cad5deb558e3a96" title="Method to record necessary elements for no activity (code reuse purposes)." alt="" coords="744,179,927,205"/>
+<area shape="rect" id="node3" href="$class_simulator.html#a20a56ab01d34b348fe22129caa44df09" title="Close positions for a trading stock." alt="" coords="750,61,921,88"/>
+<area shape="rect" id="node4" href="$class_simulator.html#adc8821db9e85da458f9a6e8b1912ac86" title="Function to open or close positions according to the signal by checking current position." alt="" coords="545,123,696,149"/>
+<area shape="rect" id="node5" href="$class_simulator.html#a9a703ddcca1a802b3df9a9dc921927ae" title="Main method to run simulation." alt="" coords="327,149,497,176"/>
+<area shape="rect" id="node6" href="$class_simulator.html#ab899d33750e674079de022d269c6bf9c" title="Interface method to start the simulation." alt="" coords="104,149,279,176"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,149,56,176"/>
+</map>

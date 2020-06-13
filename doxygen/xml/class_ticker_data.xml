@@ -1,0 +1,533 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_ticker_data" kind="class" language="C++" prot="public">
+    <compoundname>TickerData</compoundname>
+    <includes refid="_ticker_data_8h" local="no">TickerData.h</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_ticker_data_1a875fa60f1877615e9ca408b697b27905" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>const int TickerData::NA_VAL</definition>
+        <argsstring></argsstring>
+        <name>NA_VAL</name>
+        <initializer>= -999</initializer>
+        <briefdescription>
+<para>Fill constant for unavailable data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="_ticker_data_8cpp" kindref="compound">TickerData.cpp</ref> Implementation of <ref refid="_ticker_data_8h" kindref="compound">TickerData.h</ref></para>
+<para>Created by Salil Maharjan on 4/30/20. Copyright © 2020 Salil Maharjan. All rights reserved. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TickerData.h" line="63" column="22" bodyfile="TickerData.h" bodystart="63" bodyend="-1"/>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">Simulator::RunSimulation</referencedby>
+        <referencedby refid="class_ticker_data_1afbe2562719b8213e530a1c4cac3d04b1" compoundref="_ticker_data_8cpp" startline="159" endline="248">calculateMACDfields</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_ticker_data_1a5ae1441ed45c2d92dcce72a9d7863a5a" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TickerData::m_tickerName</definition>
+        <argsstring></argsstring>
+        <name>m_tickerName</name>
+        <briefdescription>
+<para>Stock ticker name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TickerData.h" line="115" column="17" bodyfile="TickerData.h" bodystart="115" bodyend="-1"/>
+        <referencedby refid="class_ticker_data_1ab7018ea10b33e3e411da4b5d3c50db3b" compoundref="_ticker_data_8cpp" startline="47" endline="67">SetTradingDateRange</referencedby>
+        <referencedby refid="class_ticker_data_1aaf1f6539e8da61af8091c72dcfd39e0d" compoundref="_ticker_data_8cpp" startline="76" endline="91">GetMACDSignal</referencedby>
+        <referencedby refid="class_ticker_data_1ae1a96fbae5695797dfa0c6e31960363e" compoundref="_ticker_data_8cpp" startline="105" endline="151">parseTickerData</referencedby>
+        <referencedby refid="class_ticker_data_1a61b055a3f30fb19996f99aa1cd0b9d8c" compoundref="_ticker_data_8cpp" startline="305" endline="351">PrintAllColumns</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_ticker_data_1ab48c85fc6e08165baf3133be3493dff9" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; TickerData::m_tickerData[TICKER_FIELDS::END_TICKER_FIELDS]</definition>
+        <argsstring>[TICKER_FIELDS::END_TICKER_FIELDS]</argsstring>
+        <name>m_tickerData</name>
+        <briefdescription>
+<para><ref refid="class_ticker_data" kindref="compound">TickerData</ref> data for a stock in memory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TickerData.h" line="117" column="17" bodyfile="TickerData.h" bodystart="117" bodyend="-1"/>
+        <referencedby refid="class_ticker_data_1aaf1f6539e8da61af8091c72dcfd39e0d" compoundref="_ticker_data_8cpp" startline="76" endline="91">GetMACDSignal</referencedby>
+        <referencedby refid="class_ticker_data_1ae1a96fbae5695797dfa0c6e31960363e" compoundref="_ticker_data_8cpp" startline="105" endline="151">parseTickerData</referencedby>
+        <referencedby refid="class_ticker_data_1afbe2562719b8213e530a1c4cac3d04b1" compoundref="_ticker_data_8cpp" startline="159" endline="248">calculateMACDfields</referencedby>
+        <referencedby refid="class_ticker_data_1a2911629c43557f55b171d7d901570a85" compoundref="_ticker_data_8cpp" startline="261" endline="297">PrintDataHead</referencedby>
+        <referencedby refid="class_ticker_data_1a61b055a3f30fb19996f99aa1cd0b9d8c" compoundref="_ticker_data_8cpp" startline="305" endline="351">PrintAllColumns</referencedby>
+        <referencedby refid="class_ticker_data_1a417646c038db3d2c73785a06b2de14c9" compoundref="_ticker_data_8h" startline="77" endline="77">GetCurrentDataOf</referencedby>
+        <referencedby refid="class_ticker_data_1a35d4daa28dbb110844ac33657ee7f7a8" compoundref="_ticker_data_8h" startline="80" endline="80">GetCloseYesterday</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_ticker_data_1a5ad87c6102b7a5f35f53fa633729afed" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_date_time" kindref="compound">DateTime</ref> * &gt;</type>
+        <definition>std::vector&lt;DateTime*&gt; TickerData::m_tickerDates</definition>
+        <argsstring></argsstring>
+        <name>m_tickerDates</name>
+        <briefdescription>
+<para><ref refid="class_ticker_data" kindref="compound">TickerData</ref> dates of the price data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TickerData.h" line="119" column="17" bodyfile="TickerData.h" bodystart="119" bodyend="-1"/>
+        <referencedby refid="class_ticker_data_1ab7018ea10b33e3e411da4b5d3c50db3b" compoundref="_ticker_data_8cpp" startline="47" endline="67">SetTradingDateRange</referencedby>
+        <referencedby refid="class_ticker_data_1ae1a96fbae5695797dfa0c6e31960363e" compoundref="_ticker_data_8cpp" startline="105" endline="151">parseTickerData</referencedby>
+        <referencedby refid="class_ticker_data_1a2911629c43557f55b171d7d901570a85" compoundref="_ticker_data_8cpp" startline="261" endline="297">PrintDataHead</referencedby>
+        <referencedby refid="class_ticker_data_1a61b055a3f30fb19996f99aa1cd0b9d8c" compoundref="_ticker_data_8cpp" startline="305" endline="351">PrintAllColumns</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_ticker_data_1a48c1ab70886fd0c243816b0b25f0d955" prot="private" static="no" mutable="no">
+        <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>int TickerData::m_tradingDateIndexStart</definition>
+        <argsstring></argsstring>
+        <name>m_tradingDateIndexStart</name>
+        <briefdescription>
+<para>Trading start date index in m_tickerDates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TickerData.h" line="121" column="9" bodyfile="TickerData.h" bodystart="121" bodyend="-1"/>
+        <referencedby refid="class_ticker_data_1ab7018ea10b33e3e411da4b5d3c50db3b" compoundref="_ticker_data_8cpp" startline="47" endline="67">SetTradingDateRange</referencedby>
+        <referencedby refid="class_ticker_data_1aaf1f6539e8da61af8091c72dcfd39e0d" compoundref="_ticker_data_8cpp" startline="76" endline="91">GetMACDSignal</referencedby>
+        <referencedby refid="class_ticker_data_1a417646c038db3d2c73785a06b2de14c9" compoundref="_ticker_data_8h" startline="77" endline="77">GetCurrentDataOf</referencedby>
+        <referencedby refid="class_ticker_data_1a35d4daa28dbb110844ac33657ee7f7a8" compoundref="_ticker_data_8h" startline="80" endline="80">GetCloseYesterday</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_ticker_data_1a17c871ed7c2fd57c41bc2c7b3701df60" prot="private" static="no" mutable="no">
+        <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>int TickerData::m_tradingDateIndexEnd</definition>
+        <argsstring></argsstring>
+        <name>m_tradingDateIndexEnd</name>
+        <briefdescription>
+<para>Trading end date index in m_tickerDates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TickerData.h" line="123" column="9" bodyfile="TickerData.h" bodystart="123" bodyend="-1"/>
+        <referencedby refid="class_ticker_data_1ab7018ea10b33e3e411da4b5d3c50db3b" compoundref="_ticker_data_8cpp" startline="47" endline="67">SetTradingDateRange</referencedby>
+        <referencedby refid="class_ticker_data_1aaf1f6539e8da61af8091c72dcfd39e0d" compoundref="_ticker_data_8cpp" startline="76" endline="91">GetMACDSignal</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ticker_data_1a9d7b95aba7d6e6f002b8efd39f05f73f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TickerData::TickerData</definition>
+        <argsstring>(std::string &amp;a_tickerName, const std::string &amp;a_directory)</argsstring>
+        <name>TickerData</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>a_tickerName</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>a_directory</declname>
+        </param>
+        <briefdescription>
+<para>Parameterized constructor to create a ticker object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_ticker_data_1a9d7b95aba7d6e6f002b8efd39f05f73f" kindref="member">TickerData::TickerData</ref>. Parameterized constructor to create a ticker object <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_tickerName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string Name of ticker </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_directory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string Price data directory path. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>4/30/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TickerData.h" line="70" column="5" bodyfile="TickerData.cpp" bodystart="28" bodyend="33"/>
+        <references refid="class_ticker_data_1afbe2562719b8213e530a1c4cac3d04b1" compoundref="_ticker_data_8cpp" startline="159" endline="248">calculateMACDfields</references>
+        <references refid="class_ticker_data_1ae1a96fbae5695797dfa0c6e31960363e" compoundref="_ticker_data_8cpp" startline="105" endline="151">parseTickerData</references>
+      </memberdef>
+      <memberdef kind="function" id="class_ticker_data_1a417646c038db3d2c73785a06b2de14c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double TickerData::GetCurrentDataOf</definition>
+        <argsstring>(TICKER_FIELDS a_field)</argsstring>
+        <name>GetCurrentDataOf</name>
+        <param>
+          <type><ref refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafaf" kindref="member">TICKER_FIELDS</ref></type>
+          <declname>a_field</declname>
+        </param>
+        <briefdescription>
+<para>Get today&apos;s data of a_field. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TickerData.h" line="77" column="12" bodyfile="TickerData.h" bodystart="77" bodyend="77"/>
+        <references refid="class_ticker_data_1ab48c85fc6e08165baf3133be3493dff9" compoundref="_ticker_data_8h" startline="117">m_tickerData</references>
+        <references refid="class_ticker_data_1a48c1ab70886fd0c243816b0b25f0d955" compoundref="_ticker_data_8h" startline="121">m_tradingDateIndexStart</references>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">Simulator::RunSimulation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_ticker_data_1a35d4daa28dbb110844ac33657ee7f7a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double TickerData::GetCloseYesterday</definition>
+        <argsstring>()</argsstring>
+        <name>GetCloseYesterday</name>
+        <briefdescription>
+<para>Get yesterday&apos;s close price. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TickerData.h" line="80" column="12" bodyfile="TickerData.h" bodystart="80" bodyend="80"/>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa685f73194ad125cbc784c3210cdb3449" compoundref="_ticker_data_8h" startline="32">CLOSE</references>
+        <references refid="class_ticker_data_1ab48c85fc6e08165baf3133be3493dff9" compoundref="_ticker_data_8h" startline="117">m_tickerData</references>
+        <references refid="class_ticker_data_1a48c1ab70886fd0c243816b0b25f0d955" compoundref="_ticker_data_8h" startline="121">m_tradingDateIndexStart</references>
+      </memberdef>
+      <memberdef kind="function" id="class_ticker_data_1ab7018ea10b33e3e411da4b5d3c50db3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TickerData::SetTradingDateRange</definition>
+        <argsstring>(DateTime *a_startDate, DateTime *a_endDate)</argsstring>
+        <name>SetTradingDateRange</name>
+        <param>
+          <type><ref refid="class_date_time" kindref="compound">DateTime</ref> *</type>
+          <declname>a_startDate</declname>
+        </param>
+        <param>
+          <type><ref refid="class_date_time" kindref="compound">DateTime</ref> *</type>
+          <declname>a_endDate</declname>
+        </param>
+        <briefdescription>
+<para>Method to set trading date range. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_ticker_data_1ab7018ea10b33e3e411da4b5d3c50db3b" kindref="member">TickerData::SetTradingDateRange</ref>. Method to set trading date range. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_startDate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DateTime* Start date of simulation to set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_endDate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DateTime* End date of simulation to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>4/30/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TickerData.h" line="87" column="10" bodyfile="TickerData.cpp" bodystart="47" bodyend="67"/>
+        <references refid="class_date_time_1ac717768ad9a7a31af9be09c4296ac470" compoundref="_date_time_8h" startline="90" endline="90">DateTime::GetASCIIDate</references>
+        <references refid="_c_make_cache_8txt_1a7e98b8a17c0aad30ba64d47b74e2a6c1" compoundref="_c_make_cache_8txt" startline="299">i</references>
+        <references refid="class_ticker_data_1a5ad87c6102b7a5f35f53fa633729afed" compoundref="_ticker_data_8h" startline="119">m_tickerDates</references>
+        <references refid="class_ticker_data_1a5ae1441ed45c2d92dcce72a9d7863a5a" compoundref="_ticker_data_8h" startline="115">m_tickerName</references>
+        <references refid="class_ticker_data_1a17c871ed7c2fd57c41bc2c7b3701df60" compoundref="_ticker_data_8h" startline="123">m_tradingDateIndexEnd</references>
+        <references refid="class_ticker_data_1a48c1ab70886fd0c243816b0b25f0d955" compoundref="_ticker_data_8h" startline="121">m_tradingDateIndexStart</references>
+        <referencedby refid="class_simulator_1a9a703ddcca1a802b3df9a9dc921927ae" compoundref="_simulator_8cpp" startline="75" endline="198">Simulator::RunSimulation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_ticker_data_1aaf1f6539e8da61af8091c72dcfd39e0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double TickerData::GetMACDSignal</definition>
+        <argsstring>()</argsstring>
+        <name>GetMACDSignal</name>
+        <briefdescription>
+<para>Get current date&apos;s MACD signal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_ticker_data_1aaf1f6539e8da61af8091c72dcfd39e0d" kindref="member">TickerData::GetMACDSignal</ref>. Get current date&apos;s MACD signal. <simplesect kind="return"><para>double The current MACD signal. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>4/30/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TickerData.h" line="90" column="12" bodyfile="TickerData.cpp" bodystart="76" bodyend="91"/>
+        <references refid="class_ticker_data_1ab48c85fc6e08165baf3133be3493dff9" compoundref="_ticker_data_8h" startline="117">m_tickerData</references>
+        <references refid="class_ticker_data_1a5ae1441ed45c2d92dcce72a9d7863a5a" compoundref="_ticker_data_8h" startline="115">m_tickerName</references>
+        <references refid="class_ticker_data_1a17c871ed7c2fd57c41bc2c7b3701df60" compoundref="_ticker_data_8h" startline="123">m_tradingDateIndexEnd</references>
+        <references refid="class_ticker_data_1a48c1ab70886fd0c243816b0b25f0d955" compoundref="_ticker_data_8h" startline="121">m_tradingDateIndexStart</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa6f1880bb6a3f566a19cbbbfddfb204b8" compoundref="_ticker_data_8h" startline="48">MACD_HIST</references>
+        <referencedby refid="class_simulator_1af2fc928bf40748cf305a1a699746e77d" compoundref="_simulator_8cpp" startline="470" endline="474">Simulator::calculateSignal</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_ticker_data_1a00452f84d330c1261f501a65d9794650" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TickerData::~TickerData</definition>
+        <argsstring>()=default</argsstring>
+        <name>~TickerData</name>
+        <briefdescription>
+<para>Default deconstructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TickerData.h" line="93" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ticker_data_1a2911629c43557f55b171d7d901570a85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TickerData::PrintDataHead</definition>
+        <argsstring>()</argsstring>
+        <name>PrintDataHead</name>
+        <briefdescription>
+<para>Print head of data columns. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_ticker_data_1a2911629c43557f55b171d7d901570a85" kindref="member">TickerData::PrintDataHead</ref> Method to print first 10 data entries for the ticker object. Only print data fields. Used for debugging and checking. <simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>4/30/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TickerData.h" line="100" column="10" bodyfile="TickerData.cpp" bodystart="261" bodyend="297"/>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa3c9301d3b5db85466b68c50332e09d54" compoundref="_ticker_data_8h" startline="34">ADJ_CLOSE</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa685f73194ad125cbc784c3210cdb3449" compoundref="_ticker_data_8h" startline="32">CLOSE</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa5bb1d61946cf3b388960a86623fdb5e4" compoundref="_ticker_data_8h" startline="35">DIVIDEND</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa0c3a1dacf94061154b3ee354359c5893" compoundref="_ticker_data_8h" startline="30">HIGH</references>
+        <references refid="_c_make_cache_8txt_1a7e98b8a17c0aad30ba64d47b74e2a6c1" compoundref="_c_make_cache_8txt" startline="299">i</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa6a226f4143ca3b18999551694cdb72a8" compoundref="_ticker_data_8h" startline="31">LOW</references>
+        <references refid="class_ticker_data_1ab48c85fc6e08165baf3133be3493dff9" compoundref="_ticker_data_8h" startline="117">m_tickerData</references>
+        <references refid="class_ticker_data_1a5ad87c6102b7a5f35f53fa633729afed" compoundref="_ticker_data_8h" startline="119">m_tickerDates</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa0e0143636c29971736eab47415868eae" compoundref="_ticker_data_8h" startline="27">OPEN</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa822c3fb0a7fbc8057c21c3b16e5a9a72" compoundref="_ticker_data_8h" startline="38">SHARE_OUTSTANDING</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa7cf1f5924560c2c48f72f6e1a462e9c9" compoundref="_ticker_data_8h" startline="36">SPLIT</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa9d326c2efb1f1ef1840d474c0f9b8a48" compoundref="_ticker_data_8h" startline="33">VOLUME</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa689cbd84f20f3ce37e7348cef1ff0a49" compoundref="_ticker_data_8h" startline="37">VWAP</references>
+      </memberdef>
+      <memberdef kind="function" id="class_ticker_data_1a61b055a3f30fb19996f99aa1cd0b9d8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TickerData::PrintAllColumns</definition>
+        <argsstring>()</argsstring>
+        <name>PrintAllColumns</name>
+        <briefdescription>
+<para>Print sample of all columns including data and calculated columns. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_ticker_data_1a61b055a3f30fb19996f99aa1cd0b9d8c" kindref="member">TickerData::PrintAllColumns</ref> Method to print a sample of data for all data and calculated columns. Used for debugging and checking. <simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>4/30/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TickerData.h" line="103" column="10" bodyfile="TickerData.cpp" bodystart="305" bodyend="351"/>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa3c9301d3b5db85466b68c50332e09d54" compoundref="_ticker_data_8h" startline="34">ADJ_CLOSE</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa685f73194ad125cbc784c3210cdb3449" compoundref="_ticker_data_8h" startline="32">CLOSE</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa5bb1d61946cf3b388960a86623fdb5e4" compoundref="_ticker_data_8h" startline="35">DIVIDEND</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa08596ee828503af3aa2e2278a3e414da" compoundref="_ticker_data_8h" startline="44">FAST_EMA</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa0c3a1dacf94061154b3ee354359c5893" compoundref="_ticker_data_8h" startline="30">HIGH</references>
+        <references refid="_c_make_cache_8txt_1a7e98b8a17c0aad30ba64d47b74e2a6c1" compoundref="_c_make_cache_8txt" startline="299">i</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa6a226f4143ca3b18999551694cdb72a8" compoundref="_ticker_data_8h" startline="31">LOW</references>
+        <references refid="class_ticker_data_1ab48c85fc6e08165baf3133be3493dff9" compoundref="_ticker_data_8h" startline="117">m_tickerData</references>
+        <references refid="class_ticker_data_1a5ad87c6102b7a5f35f53fa633729afed" compoundref="_ticker_data_8h" startline="119">m_tickerDates</references>
+        <references refid="class_ticker_data_1a5ae1441ed45c2d92dcce72a9d7863a5a" compoundref="_ticker_data_8h" startline="115">m_tickerName</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa6f1880bb6a3f566a19cbbbfddfb204b8" compoundref="_ticker_data_8h" startline="48">MACD_HIST</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa02d7b0434a6c73c9dae1d16ff649b980" compoundref="_ticker_data_8h" startline="46">MACD_LINE</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa0e0143636c29971736eab47415868eae" compoundref="_ticker_data_8h" startline="27">OPEN</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa822c3fb0a7fbc8057c21c3b16e5a9a72" compoundref="_ticker_data_8h" startline="38">SHARE_OUTSTANDING</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafaa5290299e5bf77e1609551751ef1ea58" compoundref="_ticker_data_8h" startline="47">SIG_LINE</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa97f12d998aa17b72732bd697aa16d8f8" compoundref="_ticker_data_8h" startline="45">SLOW_EMA</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa7cf1f5924560c2c48f72f6e1a462e9c9" compoundref="_ticker_data_8h" startline="36">SPLIT</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa9d326c2efb1f1ef1840d474c0f9b8a48" compoundref="_ticker_data_8h" startline="33">VOLUME</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa689cbd84f20f3ce37e7348cef1ff0a49" compoundref="_ticker_data_8h" startline="37">VWAP</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_ticker_data_1ae29619f5b91cd6a8f348a72f244f1d36" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TickerData::TickerData</definition>
+        <argsstring>()=default</argsstring>
+        <name>TickerData</name>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TickerData.h" line="108" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ticker_data_1ae1a96fbae5695797dfa0c6e31960363e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TickerData::parseTickerData</definition>
+        <argsstring>(const std::string &amp;a_directory)</argsstring>
+        <name>parseTickerData</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>a_directory</declname>
+        </param>
+        <briefdescription>
+<para>Parse ticker data from data source files. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_ticker_data_1ae1a96fbae5695797dfa0c6e31960363e" kindref="member">TickerData::parseTickerData</ref>. Parse ticker data from data source files. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_directory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string Path where the price data is located. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>4/30/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TickerData.h" line="130" column="10" bodyfile="TickerData.cpp" bodystart="105" bodyend="151"/>
+        <references refid="_c_make_cache_8txt_1a7e98b8a17c0aad30ba64d47b74e2a6c1" compoundref="_c_make_cache_8txt" startline="299">i</references>
+        <references refid="class_ticker_data_1ab48c85fc6e08165baf3133be3493dff9" compoundref="_ticker_data_8h" startline="117">m_tickerData</references>
+        <references refid="class_ticker_data_1a5ad87c6102b7a5f35f53fa633729afed" compoundref="_ticker_data_8h" startline="119">m_tickerDates</references>
+        <references refid="class_ticker_data_1a5ae1441ed45c2d92dcce72a9d7863a5a" compoundref="_ticker_data_8h" startline="115">m_tickerName</references>
+        <references refid="namespace_utilities_1a0ab4e4bfac17a04ab38640746aba42fe" compoundref="_utilities_8cpp" startline="73" endline="77">Utilities::trimBlanks</references>
+        <referencedby refid="class_ticker_data_1a9d7b95aba7d6e6f002b8efd39f05f73f" compoundref="_ticker_data_8cpp" startline="28" endline="33">TickerData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_ticker_data_1afbe2562719b8213e530a1c4cac3d04b1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TickerData::calculateMACDfields</definition>
+        <argsstring>()</argsstring>
+        <name>calculateMACDfields</name>
+        <briefdescription>
+<para>Calculate MACD fields and append to the ticker data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_ticker_data_1afbe2562719b8213e530a1c4cac3d04b1" kindref="member">TickerData::calculateMACDfields</ref> Calculate MACD fields and append to the ticker data. <simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>4/30/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TickerData.h" line="133" column="10" bodyfile="TickerData.cpp" bodystart="159" bodyend="248"/>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa685f73194ad125cbc784c3210cdb3449" compoundref="_ticker_data_8h" startline="32">CLOSE</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa08596ee828503af3aa2e2278a3e414da" compoundref="_ticker_data_8h" startline="44">FAST_EMA</references>
+        <references refid="_c_make_cache_8txt_1a7e98b8a17c0aad30ba64d47b74e2a6c1" compoundref="_c_make_cache_8txt" startline="299">i</references>
+        <references refid="class_ticker_data_1ab48c85fc6e08165baf3133be3493dff9" compoundref="_ticker_data_8h" startline="117">m_tickerData</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa6f1880bb6a3f566a19cbbbfddfb204b8" compoundref="_ticker_data_8h" startline="48">MACD_HIST</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa02d7b0434a6c73c9dae1d16ff649b980" compoundref="_ticker_data_8h" startline="46">MACD_LINE</references>
+        <references refid="class_ticker_data_1a875fa60f1877615e9ca408b697b27905" compoundref="_ticker_data_8h" startline="63">NA_VAL</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafaa5290299e5bf77e1609551751ef1ea58" compoundref="_ticker_data_8h" startline="47">SIG_LINE</references>
+        <references refid="_ticker_data_8h_1a698cb0bfc890ce6b194caf0f426cafafa97f12d998aa17b72732bd697aa16d8f8" compoundref="_ticker_data_8h" startline="45">SLOW_EMA</references>
+        <referencedby refid="class_ticker_data_1a9d7b95aba7d6e6f002b8efd39f05f73f" compoundref="_ticker_data_8cpp" startline="28" endline="33">TickerData</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6">
+        <label>DateTime</label>
+        <link refid="class_date_time"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-m_date</edgelabel>
+          <edgelabel>-dayPreMonth</edgelabel>
+          <edgelabel>-m_FakeTodayValue</edgelabel>
+          <edgelabel>-daysInMonth</edgelabel>
+          <edgelabel>+BlankDate</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>std::vector&lt; double &gt;</label>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="2">
+        <label>int</label>
+      </node>
+      <node id="8">
+        <label>double</label>
+      </node>
+      <node id="1">
+        <label>TickerData</label>
+        <link refid="class_ticker_data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+NA_VAL</edgelabel>
+          <edgelabel>-m_tradingDateIndexEnd</edgelabel>
+          <edgelabel>-m_tradingDateIndexStart</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-m_tickerName</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-m_tickerDates</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-m_tickerData</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::vector&lt; DateTime * &gt;</label>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::string</label>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="TickerData.h" line="55" column="1" bodyfile="TickerData.h" bodystart="56" bodyend="135"/>
+    <listofallmembers>
+      <member refid="class_ticker_data_1afbe2562719b8213e530a1c4cac3d04b1" prot="private" virt="non-virtual"><scope>TickerData</scope><name>calculateMACDfields</name></member>
+      <member refid="class_ticker_data_1a35d4daa28dbb110844ac33657ee7f7a8" prot="public" virt="non-virtual"><scope>TickerData</scope><name>GetCloseYesterday</name></member>
+      <member refid="class_ticker_data_1a417646c038db3d2c73785a06b2de14c9" prot="public" virt="non-virtual"><scope>TickerData</scope><name>GetCurrentDataOf</name></member>
+      <member refid="class_ticker_data_1aaf1f6539e8da61af8091c72dcfd39e0d" prot="public" virt="non-virtual"><scope>TickerData</scope><name>GetMACDSignal</name></member>
+      <member refid="class_ticker_data_1ab48c85fc6e08165baf3133be3493dff9" prot="private" virt="non-virtual"><scope>TickerData</scope><name>m_tickerData</name></member>
+      <member refid="class_ticker_data_1a5ad87c6102b7a5f35f53fa633729afed" prot="private" virt="non-virtual"><scope>TickerData</scope><name>m_tickerDates</name></member>
+      <member refid="class_ticker_data_1a5ae1441ed45c2d92dcce72a9d7863a5a" prot="private" virt="non-virtual"><scope>TickerData</scope><name>m_tickerName</name></member>
+      <member refid="class_ticker_data_1a17c871ed7c2fd57c41bc2c7b3701df60" prot="private" virt="non-virtual"><scope>TickerData</scope><name>m_tradingDateIndexEnd</name></member>
+      <member refid="class_ticker_data_1a48c1ab70886fd0c243816b0b25f0d955" prot="private" virt="non-virtual"><scope>TickerData</scope><name>m_tradingDateIndexStart</name></member>
+      <member refid="class_ticker_data_1a875fa60f1877615e9ca408b697b27905" prot="public" virt="non-virtual"><scope>TickerData</scope><name>NA_VAL</name></member>
+      <member refid="class_ticker_data_1ae1a96fbae5695797dfa0c6e31960363e" prot="private" virt="non-virtual"><scope>TickerData</scope><name>parseTickerData</name></member>
+      <member refid="class_ticker_data_1a61b055a3f30fb19996f99aa1cd0b9d8c" prot="public" virt="non-virtual"><scope>TickerData</scope><name>PrintAllColumns</name></member>
+      <member refid="class_ticker_data_1a2911629c43557f55b171d7d901570a85" prot="public" virt="non-virtual"><scope>TickerData</scope><name>PrintDataHead</name></member>
+      <member refid="class_ticker_data_1ab7018ea10b33e3e411da4b5d3c50db3b" prot="public" virt="non-virtual"><scope>TickerData</scope><name>SetTradingDateRange</name></member>
+      <member refid="class_ticker_data_1a9d7b95aba7d6e6f002b8efd39f05f73f" prot="public" virt="non-virtual"><scope>TickerData</scope><name>TickerData</name></member>
+      <member refid="class_ticker_data_1ae29619f5b91cd6a8f348a72f244f1d36" prot="private" virt="non-virtual"><scope>TickerData</scope><name>TickerData</name></member>
+      <member refid="class_ticker_data_1a00452f84d330c1261f501a65d9794650" prot="public" virt="non-virtual"><scope>TickerData</scope><name>~TickerData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

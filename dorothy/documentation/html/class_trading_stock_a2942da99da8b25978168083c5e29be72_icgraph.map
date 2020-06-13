@@ -1,0 +1,4 @@
+<map id="TradingStock::newTradingDay" name="TradingStock::newTradingDay">
+<area shape="rect" id="node1" title="Method to update days in position of all held shares." alt="" coords="239,5,437,32"/>
+<area shape="rect" id="node2" href="$class_trading_stock.html#abe36e5075cacda88997a32e5f4923ee6" title="Record day&#39;s signal." alt="" coords="5,5,191,32"/>
+</map>

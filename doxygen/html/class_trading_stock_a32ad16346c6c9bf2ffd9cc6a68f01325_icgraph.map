@@ -1,0 +1,8 @@
+<map id="TradingStock::CloseShortPositions" name="TradingStock::CloseShortPositions">
+<area shape="rect" id="node1" title="Method to close all short positions." alt="" coords="963,5,1135,47"/>
+<area shape="rect" id="node2" href="$class_simulator.html#a20a56ab01d34b348fe22129caa44df09" title="Close positions for a trading stock." alt="" coords="744,13,915,39"/>
+<area shape="rect" id="node3" href="$class_simulator.html#adc8821db9e85da458f9a6e8b1912ac86" title="Function to open or close positions according to the signal by checking current position." alt="" coords="545,13,696,39"/>
+<area shape="rect" id="node4" href="$class_simulator.html#a9a703ddcca1a802b3df9a9dc921927ae" title="Main method to run simulation." alt="" coords="327,13,497,39"/>
+<area shape="rect" id="node5" href="$class_simulator.html#ab899d33750e674079de022d269c6bf9c" title="Interface method to start the simulation." alt="" coords="104,13,279,39"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,13,56,39"/>
+</map>

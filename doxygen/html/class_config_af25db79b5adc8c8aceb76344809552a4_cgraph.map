@@ -1,0 +1,6 @@
+<map id="Config::Load" name="Config::Load">
+<area shape="rect" id="node1" title="Load in data from a specified configuration file. Allows multiple calls." alt="" coords="5,31,101,57"/>
+<area shape="rect" id="node2" href="$class_config.html#a63e5ea888ebde7bc280948a0e8433c73" title="Display the parameters in alphabetical order." alt="" coords="149,5,328,32"/>
+<area shape="rect" id="node3" href="$class_config.html#a95ecc48a1098ca2083118d0e7f3f07bb" title="Get parameters by parsing line from config file." alt="" coords="177,56,301,83"/>
+<area shape="rect" id="node4" href="$class_config.html#add5f97cae5bee6215791bd9c346fffcf" title="Trim leading and trailing blanks." alt="" coords="376,56,507,83"/>
+</map>

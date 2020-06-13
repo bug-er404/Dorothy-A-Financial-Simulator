@@ -1,0 +1,4 @@
+<map id="Config::Load" name="Config::Load">
+<area shape="rect" id="node1" title="Load in data from a specified configuration file. Allows multiple calls." alt="" coords="160,5,256,32"/>
+<area shape="rect" id="node2" href="$class_config.html#a688fc8535c34f8be1ff0c27006394bd7" title="Main class constructor." alt="" coords="5,5,112,32"/>
+</map>

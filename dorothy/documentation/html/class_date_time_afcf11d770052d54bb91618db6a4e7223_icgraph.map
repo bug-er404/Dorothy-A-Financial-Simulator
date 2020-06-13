@@ -1,0 +1,19 @@
+<map id="DateTime::getJulianDay" name="DateTime::getJulianDay">
+<area shape="rect" id="node1" title="Gets the Julian day from this date. Julian day vary from 0 to 365." alt="" coords="673,284,836,311"/>
+<area shape="rect" id="node2" href="$class_date_time.html#af3cc0803ee4678e9394ba24579d58ac9" title="Get the offset from the year 0." alt="" coords="462,259,610,285"/>
+<area shape="rect" id="node17" href="$class_date_time.html#ad967bd42942a643118cda8ff0e387759" title="Gets the Day of the week as integral value." alt="" coords="447,309,625,336"/>
+<area shape="rect" id="node3" href="$class_date_time.html#a9dd76cb1e58691859be3dec826b57445" title="Computes the calendar difference between two date." alt="" coords="204,5,399,32"/>
+<area shape="rect" id="node5" href="$class_date_time.html#a3e816351592ec442e04774d108a86612" title=" " alt="" coords="228,56,375,83"/>
+<area shape="rect" id="node6" href="$class_date_time.html#a698ebe694145c3be698ff0a0588b15da" title="Adds a specified number of days to the date." alt="" coords="230,107,373,133"/>
+<area shape="rect" id="node7" href="$class_date_time.html#a38c7ae7996e0966e67e13d79866ba409" title="Unary plus operators. (PREFIX)" alt="" coords="226,157,377,184"/>
+<area shape="rect" id="node9" href="$class_date_time.html#a2e5295058ae6b112e9bf5b0226456005" title="Subtracts a specified number of days to the date." alt="" coords="232,208,371,235"/>
+<area shape="rect" id="node10" href="$class_date_time.html#afc219149a3d959863c84e3a15530dc54" title="Unary minus operators. (PREFIX)" alt="" coords="230,259,373,285"/>
+<area shape="rect" id="node12" href="$class_date_time.html#a8af0104c406f0c3a13f5e3299af6c203" title=" " alt="" coords="230,309,373,336"/>
+<area shape="rect" id="node13" href="$class_date_time.html#a6b9df88cc66e7e7547931dccf1e1ea51" title=" " alt="" coords="226,360,377,387"/>
+<area shape="rect" id="node14" href="$class_date_time.html#ae2f878dfd2243aee2ca2000f58f8fe9a" title="Comparison operator to compare two dates:" alt="" coords="226,411,377,437"/>
+<area shape="rect" id="node15" href="$class_date_time.html#a2180c1804eecdf469107b7629cabba3d" title=" " alt="" coords="230,461,373,488"/>
+<area shape="rect" id="node16" href="$class_date_time.html#a39d825cab864948325623eecf09ef722" title=" " alt="" coords="226,512,377,539"/>
+<area shape="rect" id="node4" href="$class_date_time.html#a7914e7a4ef2ad2a5729b90c2c07bea3c" title="Finds the difference between two dates." alt="" coords="11,5,150,32"/>
+<area shape="rect" id="node8" href="$class_date_time.html#a0fe9a32549329c66d6cf58d14ab705df" title="Unary plus operators. (POSTFIX)" alt="" coords="5,157,156,184"/>
+<area shape="rect" id="node11" href="$class_date_time.html#aca232974e8aa4a1608c50f5714a9b961" title="Unary minus operators. (POSTFIX)" alt="" coords="9,259,152,285"/>
+</map>

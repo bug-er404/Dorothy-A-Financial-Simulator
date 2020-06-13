@@ -1,0 +1,3 @@
+/Users/salilmaharjan/Desktop/CLionProjects/dorothy/CMakeFiles/rebuild_cache.dir
+/Users/salilmaharjan/Desktop/CLionProjects/dorothy/CMakeFiles/edit_cache.dir
+/Users/salilmaharjan/Desktop/CLionProjects/dorothy/CMakeFiles/dorothy.dir

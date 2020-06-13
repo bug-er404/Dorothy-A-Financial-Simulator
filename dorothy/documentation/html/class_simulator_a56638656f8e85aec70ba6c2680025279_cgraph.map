@@ -1,0 +1,6 @@
+<map id="Simulator::recordTransaction" name="Simulator::recordTransaction">
+<area shape="rect" id="node1" title="Function to record transactions to a file." alt="" coords="5,56,195,83"/>
+<area shape="rect" id="node2" href="$class_trading_stock.html#ae5b6f96bb1b51aa1d0e5144eeaf7fea1" title="Method to get closed transactions and remove them from memory." alt="" coords="243,5,487,32"/>
+<area shape="rect" id="node3" href="$class_trading_stock.html#a5cf4ad5ac772ed5bd2861097299e08f3" title=" " alt="" coords="266,56,463,83"/>
+<area shape="rect" id="node4" href="$class_trading_stock.html#a610d809a67408a6ba4a23616b071e345" title="Method to get current completed transaction count (Does not consider incomplete transactions...." alt="" coords="267,107,463,149"/>
+</map>

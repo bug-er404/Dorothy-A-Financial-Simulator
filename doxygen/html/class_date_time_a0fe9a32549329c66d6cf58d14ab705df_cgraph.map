@@ -1,0 +1,10 @@
+<map id="DateTime::operator++" name="DateTime::operator++">
+<area shape="rect" id="node1" title="Unary plus operators. (POSTFIX)" alt="" coords="5,56,156,83"/>
+<area shape="rect" id="node2" href="$class_date_time.html#a38c7ae7996e0966e67e13d79866ba409" title="Unary plus operators. (PREFIX)" alt="" coords="204,56,355,83"/>
+<area shape="rect" id="node3" href="$class_date_time.html#af3cc0803ee4678e9394ba24579d58ac9" title="Get the offset from the year 0." alt="" coords="412,5,560,32"/>
+<area shape="rect" id="node6" href="$class_date_time.html#aa8a746c7fb47a7034adde3fb83c79dbe" title="Reverse date offset." alt="" coords="403,56,569,83"/>
+<area shape="rect" id="node7" href="$class_date_time.html#adf643f3779756314d8ac2505f84d5703" title=" " alt="" coords="645,85,752,112"/>
+<area shape="rect" id="node4" href="$class_date_time.html#afcf11d770052d54bb91618db6a4e7223" title="Gets the Julian day from this date. Julian day vary from 0 to 365." alt="" coords="617,5,780,32"/>
+<area shape="rect" id="node5" href="$class_date_time.html#a3ca8a7d66ec814441db980816cf1ab4c" title="Determines if the year recorded here is a leap year." alt="" coords="844,5,995,32"/>
+<area shape="rect" id="node8" href="$class_date_time.html#ae489fe891bb77431da24459e5cca394b" title="Function to assert date value ranges." alt="" coords="828,78,1011,119"/>
+</map>

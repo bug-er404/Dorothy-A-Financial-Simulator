@@ -1,0 +1,52 @@
+<map id="Simulator::RunSimulation" name="Simulator::RunSimulation">
+<area shape="rect" id="node1" title="Main method to run simulation." alt="" coords="5,452,176,479"/>
+<area shape="rect" id="node2" href="$class_simulator.html#a1176c2f39f71a17dd1c9d669d3a46d15" title="Function to calculate sharpe ratio." alt="" coords="780,45,959,86"/>
+<area shape="rect" id="node5" href="$class_simulator.html#af2fc928bf40748cf305a1a699746e77d" title="Calculate trade signal." alt="" coords="251,271,424,297"/>
+<area shape="rect" id="node7" href="$class_simulator.html#a2ae468429b6e8eedc5c1744891e36346" title="Method to close daily publication record file." alt="" coords="232,321,443,348"/>
+<area shape="rect" id="node8" href="$class_simulator.html#a9bf890f96b97a53f5beac15581689b18" title="Method to close monthly publication record file." alt="" coords="224,372,451,399"/>
+<area shape="rect" id="node9" href="$class_simulator.html#a9c907c7e0a1a2fdd334cb51dd5ff47c6" title="Method to close signal publication record file." alt="" coords="229,423,445,449"/>
+<area shape="rect" id="node10" href="$class_simulator.html#a8de16aac7f0616e43ee45e895d15b67a" title="Method to close transaction publication record file." alt="" coords="245,474,429,515"/>
+<area shape="rect" id="node11" href="$class_ticker_data.html#a417646c038db3d2c73785a06b2de14c9" title="Get today&#39;s data of a_field." alt="" coords="237,540,437,567"/>
+<area shape="rect" id="node12" href="$class_data_access.html#a8fef2d9972260413cc5c949d6ad7f245" title="Get TickerData Data." alt="" coords="244,591,431,617"/>
+<area shape="rect" id="node13" href="$class_data_access.html#aca25ff0e8ce73d87a8e2f4584ee87149" title="Get trading dates from &quot;a_from&quot; to &quot;a_to&quot;." alt="" coords="237,642,438,683"/>
+<area shape="rect" id="node14" href="$class_data_access.html#a3192674ca52329b3db8f0a5f3c0e9141" title="Get constituent names in the universe." alt="" coords="250,708,425,735"/>
+<area shape="rect" id="node15" href="$class_simulator.html#adc8821db9e85da458f9a6e8b1912ac86" title="Function to open or close positions according to the signal by checking current position." alt="" coords="262,809,413,836"/>
+<area shape="rect" id="node39" href="$class_simulator.html#a4238ab87912e40d99cad5deb558e3a96" title="Method to record necessary elements for no activity (code reuse purposes)." alt="" coords="512,501,695,528"/>
+<area shape="rect" id="node41" href="$class_simulator.html#ae77749f93581b683330f30726f5aaffb" title="Function to record daily statistics to a file." alt="" coords="234,103,441,129"/>
+<area shape="rect" id="node45" href="$class_simulator.html#ae9b8b2ffbef1ba49bd8a9dc5fad5a1b2" title="Function to record monthly statistics to a file." alt="" coords="254,1173,421,1214"/>
+<area shape="rect" id="node49" href="$class_simulator.html#a5a78edbf904b54bb6f66a5c3b8c87cd9" title="Function to record signals to a file." alt="" coords="248,153,427,180"/>
+<area shape="rect" id="node50" href="$class_ticker_data.html#ab7018ea10b33e3e411da4b5d3c50db3b" title="Method to set trading date range." alt="" coords="245,205,430,246"/>
+<area shape="rect" id="node3" href="$namespace_utilities.html#a80b350cec72abbcf34ad7e28405d531c" title="Function to get average of a list with doubles." alt="" coords="1071,27,1214,53"/>
+<area shape="rect" id="node4" href="$namespace_utilities.html#a175ab95f5c509ccc3d4b571e8963f22e" title="Function to get the standard deviation of a list with doubles." alt="" coords="1041,77,1244,104"/>
+<area shape="rect" id="node6" href="$class_ticker_data.html#aaf1f6539e8da61af8091c72dcfd39e0d" title="Get current date&#39;s MACD signal." alt="" coords="508,271,699,297"/>
+<area shape="rect" id="node16" href="$class_trading_stock.html#a8610312df44fd64d9ff6fc4b7057b0b4" title="Method to check if signal is profitable for long positions." alt="" coords="499,885,708,912"/>
+<area shape="rect" id="node17" href="$class_trading_stock.html#aec7895ca3d924226dc25ef2d961ed181" title="Method to check if signal is profitable for short positions." alt="" coords="515,937,691,978"/>
+<area shape="rect" id="node18" href="$class_simulator.html#a20a56ab01d34b348fe22129caa44df09" title="Close positions for a trading stock." alt="" coords="518,667,689,693"/>
+<area shape="rect" id="node23" href="$class_trading_stock.html#a82ea8bcd2b94eef82bb100c929c519e0" title="Record day&#39;s PNL." alt="" coords="782,549,957,576"/>
+<area shape="rect" id="node24" href="$class_simulator.html#a56638656f8e85aec70ba6c2680025279" title="Function to record transactions to a file." alt="" coords="775,600,964,627"/>
+<area shape="rect" id="node28" href="$class_trading_stock.html#aad5057092b58a0ed625be05cfcef3c3e" title="Method to close positions that exceed maximum days limit." alt="" coords="518,718,689,759"/>
+<area shape="rect" id="node29" href="$class_trading_stock.html#a3f01e1cee2b7b6ae685351266850a723" title=" " alt="" coords="500,784,707,811"/>
+<area shape="rect" id="node30" href="$class_simulator.html#a4dbbe2a4cbd784dff5a9bdc4ee913b08" title="Check if available capital for a stock is enough to purchase more equities at a_price." alt="" coords="508,1003,699,1029"/>
+<area shape="rect" id="node32" href="$class_trading_stock.html#a0f34b4c03fc00907a9ab21c76450ca6f" title=" " alt="" coords="530,835,677,861"/>
+<area shape="rect" id="node33" href="$class_trading_stock.html#a70adc544aeb365d69f4dfa3a99ac3d18" title=" " alt="" coords="529,1104,678,1131"/>
+<area shape="rect" id="node34" href="$class_simulator.html#ad24c99fbfd5808aba7f5c9de11cc23f0" title="Open positions for a trading stock." alt="" coords="520,1053,687,1080"/>
+<area shape="rect" id="node19" href="$class_trading_stock.html#a8b890a05cb0536bbca53e6c341196158" title="Method to buys shares." alt="" coords="784,835,955,861"/>
+<area shape="rect" id="node20" href="$class_trading_stock.html#a60478a78a694204f99b6ac01e5f61258" title="Method to close all long positions." alt="" coords="758,717,981,744"/>
+<area shape="rect" id="node22" href="$class_trading_stock.html#a32ad16346c6c9bf2ffd9cc6a68f01325" title="Method to close all short positions." alt="" coords="783,651,955,693"/>
+<area shape="rect" id="node25" href="$class_trading_stock.html#abf15f389461393974e58d973a7a4f593" title="Method to sell shares." alt="" coords="784,885,955,912"/>
+<area shape="rect" id="node27" href="$class_trading_stock.html#ac32c8930adc0a8ad8611209ea9cf0fe8" title="Method to update long/short position status of the trading stock." alt="" coords="778,769,961,810"/>
+<area shape="rect" id="node21" href="$class_trading_stock.html#af0ebb1d62314db9844a05255605fc47a" title="Record day&#39;s number of transactions." alt="" coords="1031,681,1255,722"/>
+<area shape="rect" id="node26" href="$class_trading_stock.html#aa8181ddc5cc8c9e978393112563bf504" title=" " alt="" coords="1035,513,1250,540"/>
+<area shape="rect" id="node31" href="$class_trading_stock.html#a9d6e882e90f88a6dce91cc6d08f0847a" title=" " alt="" coords="779,987,960,1029"/>
+<area shape="rect" id="node35" href="$class_trading_stock.html#a7fe5dbc6b3d6bf08c8b1520cf669a9ca" title="Method to get long shares held." alt="" coords="757,1155,981,1181"/>
+<area shape="rect" id="node36" href="$class_trading_stock.html#ac87efd94107349785d32cdf7ea6541d7" title="Method to get short shares held." alt="" coords="756,1205,983,1232"/>
+<area shape="rect" id="node37" href="$class_trading_stock.html#a4398bf190fdf2e8f089e929b60fe2e6d" title="Method to open a position for the trading stock." alt="" coords="777,1053,962,1080"/>
+<area shape="rect" id="node38" href="$namespace_utilities.html#a0257a93580460c13c4af232704caa0dc" title="Function to round off value to the lower integral value." alt="" coords="804,1104,935,1131"/>
+<area shape="rect" id="node40" href="$class_trading_stock.html#a6dd461322fe1bf432705e4be521654af" title=" " alt="" coords="762,448,977,475"/>
+<area shape="rect" id="node42" href="$class_date_time.html#a93795a4f6217325cb348f113f3dcf85a" title="Gets the date as one value." alt="" coords="549,128,657,155"/>
+<area shape="rect" id="node43" href="$class_date_time.html#ac717768ad9a7a31af9be09c4296ac470" title="Get date as an ASCII string in format &quot;MM/DD/YYYY&quot;." alt="" coords="517,179,689,205"/>
+<area shape="rect" id="node44" href="$class_simulator.html#accf533fb22ca8261dce0830daa5945f1" title="Function to record sharpe ratio to daily statistics file." alt="" coords="507,77,700,104"/>
+<area shape="rect" id="node46" href="$class_date_time.html#a5c592250b3cfea8314e39d6ceb55dda6" title=" " alt="" coords="531,1205,675,1232"/>
+<area shape="rect" id="node47" href="$class_date_time.html#a3fdecb31c8bb977b15c8296a69afa76e" title=" " alt="" coords="536,1256,671,1283"/>
+<area shape="rect" id="node48" href="$namespace_utilities.html#a0ab4e4bfac17a04ab38640746aba42fe" title="Method to trim leading and trailing blanks while reading data." alt="" coords="535,1155,671,1181"/>
+</map>

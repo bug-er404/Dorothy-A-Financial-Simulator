@@ -1,0 +1,5 @@
+<map id="DateTime::dateOffset" name="DateTime::dateOffset">
+<area shape="rect" id="node1" title="Get the offset from the year 0." alt="" coords="5,5,153,32"/>
+<area shape="rect" id="node2" href="$class_date_time.html#afcf11d770052d54bb91618db6a4e7223" title="Gets the Julian day from this date. Julian day vary from 0 to 365." alt="" coords="201,5,364,32"/>
+<area shape="rect" id="node3" href="$class_date_time.html#a3ca8a7d66ec814441db980816cf1ab4c" title="Determines if the year recorded here is a leap year." alt="" coords="412,5,563,32"/>
+</map>

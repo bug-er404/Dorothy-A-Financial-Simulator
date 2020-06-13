@@ -1,0 +1,6 @@
+<map id="Simulator::recordMonthlyStatistics" name="Simulator::recordMonthlyStatistics">
+<area shape="rect" id="node1" title="Function to record monthly statistics to a file." alt="" coords="5,49,172,90"/>
+<area shape="rect" id="node2" href="$class_date_time.html#a5c592250b3cfea8314e39d6ceb55dda6" title=" " alt="" coords="220,5,364,32"/>
+<area shape="rect" id="node3" href="$class_date_time.html#a3fdecb31c8bb977b15c8296a69afa76e" title=" " alt="" coords="225,56,359,83"/>
+<area shape="rect" id="node4" href="$namespace_utilities.html#a0ab4e4bfac17a04ab38640746aba42fe" title="Method to trim leading and trailing blanks while reading data." alt="" coords="224,107,360,133"/>
+</map>

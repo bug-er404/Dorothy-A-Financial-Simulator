@@ -1,0 +1,9 @@
+<map id="DateTime::GetASCIIDate" name="DateTime::GetASCIIDate">
+<area shape="rect" id="node1" title="Get date as an ASCII string in format &quot;MM/DD/YYYY&quot;." alt="" coords="800,56,972,83"/>
+<area shape="rect" id="node2" href="$class_simulator.html#ae77749f93581b683330f30726f5aaffb" title="Function to record daily statistics to a file." alt="" coords="545,5,752,32"/>
+<area shape="rect" id="node6" href="$class_simulator.html#a5a78edbf904b54bb6f66a5c3b8c87cd9" title="Function to record signals to a file." alt="" coords="559,56,738,83"/>
+<area shape="rect" id="node7" href="$class_ticker_data.html#ab7018ea10b33e3e411da4b5d3c50db3b" title="Method to set trading date range." alt="" coords="556,107,741,149"/>
+<area shape="rect" id="node3" href="$class_simulator.html#a9a703ddcca1a802b3df9a9dc921927ae" title="Main method to run simulation." alt="" coords="327,56,497,83"/>
+<area shape="rect" id="node4" href="$class_simulator.html#ab899d33750e674079de022d269c6bf9c" title="Interface method to start the simulation." alt="" coords="104,56,279,83"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,56,56,83"/>
+</map>

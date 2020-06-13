@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['calculatedailysharperatio_763',['CalculateDailySharpeRatio',['../class_trading_stock.html#a39cc9a02efc5431a4e150b941a9c7df6',1,'TradingStock']]],
+  ['calculatemacdfields_764',['calculateMACDfields',['../class_ticker_data.html#afbe2562719b8213e530a1c4cac3d04b1',1,'TickerData']]],
+  ['calculatesharperatio_765',['calculateSharpeRatio',['../class_simulator.html#a1176c2f39f71a17dd1c9d669d3a46d15',1,'Simulator']]],
+  ['calculatesignal_766',['calculateSignal',['../class_simulator.html#af2fc928bf40748cf305a1a699746e77d',1,'Simulator']]],
+  ['calendardiffdates_767',['CalendarDiffDates',['../class_date_time.html#a9dd76cb1e58691859be3dec826b57445',1,'DateTime']]],
+  ['checkdaterange_768',['CheckDateRange',['../class_data_access.html#a999d5066dde617c2b244606d57f003ed',1,'DataAccess']]],
+  ['checkdatevalueranges_769',['checkDateValueRanges',['../class_date_time.html#ae489fe891bb77431da24459e5cca394b',1,'DateTime']]],
+  ['checklongsignal_770',['CheckLongSignal',['../class_trading_stock.html#a8610312df44fd64d9ff6fc4b7057b0b4',1,'TradingStock']]],
+  ['checkparameters_771',['checkParameters',['../class_simulator.html#a5b96a3d0c4c330d2b49be7dd7930c510',1,'Simulator']]],
+  ['checkshortsignal_772',['CheckShortSignal',['../class_trading_stock.html#aec7895ca3d924226dc25ef2d961ed181',1,'TradingStock']]],
+  ['clearconfigdata_773',['ClearConfigData',['../class_config.html#a25caa5bee6ea9e2c66845881939c0ded',1,'Config']]],
+  ['closedailypublication_774',['closeDailyPublication',['../class_simulator.html#a2ae468429b6e8eedc5c1744891e36346',1,'Simulator']]],
+  ['closelongpositions_775',['CloseLongPositions',['../class_trading_stock.html#a60478a78a694204f99b6ac01e5f61258',1,'TradingStock']]],
+  ['closemonthlypublication_776',['closeMonthlyPublication',['../class_simulator.html#a9bf890f96b97a53f5beac15581689b18',1,'Simulator']]],
+  ['closepositions_777',['closePositions',['../class_simulator.html#a20a56ab01d34b348fe22129caa44df09',1,'Simulator']]],
+  ['closeshortpositions_778',['CloseShortPositions',['../class_trading_stock.html#a32ad16346c6c9bf2ffd9cc6a68f01325',1,'TradingStock']]],
+  ['closesignalpublication_779',['closeSignalPublication',['../class_simulator.html#a9c907c7e0a1a2fdd334cb51dd5ff47c6',1,'Simulator']]],
+  ['closestalepositions_780',['CloseStalePositions',['../class_trading_stock.html#aad5057092b58a0ed625be05cfcef3c3e',1,'TradingStock']]],
+  ['closetransaction_781',['CloseTransaction',['../class_transaction.html#ab5150df4457fda64acf329e3b5333f96',1,'Transaction']]],
+  ['closetransactionpublication_782',['closeTransactionPublication',['../class_simulator.html#a8de16aac7f0616e43ee45e895d15b67a',1,'Simulator']]],
+  ['config_783',['Config',['../class_config.html#abd0c571c116924871e30444b192b792a',1,'Config::Config()'],['../class_config.html#a688fc8535c34f8be1ff0c27006394bd7',1,'Config::Config(const char *a_file)']]],
+  ['configvalue_784',['ConfigValue',['../struct_config_1_1_config_value.html#ad746084225579330b3eaf81e3a6fa0b6',1,'Config::ConfigValue']]],
+  ['containsparameter_785',['ContainsParameter',['../class_config.html#aaee87de753014e9dfd1a5a88c13d51f0',1,'Config']]]
+];

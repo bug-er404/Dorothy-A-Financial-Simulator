@@ -1,0 +1,9 @@
+<map id="Simulator::recordDailyStatistics" name="Simulator::recordDailyStatistics">
+<area shape="rect" id="node1" title="Function to record daily statistics to a file." alt="" coords="5,56,212,83"/>
+<area shape="rect" id="node2" href="$class_date_time.html#a93795a4f6217325cb348f113f3dcf85a" title="Gets the date as one value." alt="" coords="303,5,411,32"/>
+<area shape="rect" id="node3" href="$class_date_time.html#ac717768ad9a7a31af9be09c4296ac470" title="Get date as an ASCII string in format &quot;MM/DD/YYYY&quot;." alt="" coords="271,56,443,83"/>
+<area shape="rect" id="node4" href="$class_simulator.html#accf533fb22ca8261dce0830daa5945f1" title="Function to record sharpe ratio to daily statistics file." alt="" coords="260,107,453,133"/>
+<area shape="rect" id="node5" href="$class_simulator.html#a1176c2f39f71a17dd1c9d669d3a46d15" title="Function to calculate sharpe ratio." alt="" coords="501,99,680,141"/>
+<area shape="rect" id="node6" href="$namespace_utilities.html#a80b350cec72abbcf34ad7e28405d531c" title="Function to get average of a list with doubles." alt="" coords="758,81,901,108"/>
+<area shape="rect" id="node7" href="$namespace_utilities.html#a175ab95f5c509ccc3d4b571e8963f22e" title="Function to get the standard deviation of a list with doubles." alt="" coords="728,132,931,159"/>
+</map>

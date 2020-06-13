@@ -1,0 +1,4 @@
+<map id="TickerData::SetTradingDateRange" name="TickerData::SetTradingDateRange">
+<area shape="rect" id="node1" title="Method to set trading date range." alt="" coords="5,5,191,47"/>
+<area shape="rect" id="node2" href="$class_date_time.html#ac717768ad9a7a31af9be09c4296ac470" title="Get date as an ASCII string in format &quot;MM/DD/YYYY&quot;." alt="" coords="239,13,411,39"/>
+</map>

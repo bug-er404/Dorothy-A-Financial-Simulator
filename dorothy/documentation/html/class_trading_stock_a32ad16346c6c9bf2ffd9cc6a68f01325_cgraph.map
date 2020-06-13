@@ -1,0 +1,4 @@
+<map id="TradingStock::CloseShortPositions" name="TradingStock::CloseShortPositions">
+<area shape="rect" id="node1" title="Method to close all short positions." alt="" coords="5,5,177,47"/>
+<area shape="rect" id="node2" href="$class_trading_stock.html#af0ebb1d62314db9844a05255605fc47a" title="Record day&#39;s number of transactions." alt="" coords="225,5,449,47"/>
+</map>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="dorothy"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="dorothy">
+				<Option output="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug/dorothy" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug/Makefile&quot;  VERBOSE=1 dorothy"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="dorothy/fast">
+				<Option output="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug/dorothy" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug/Makefile&quot;  VERBOSE=1 dorothy/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/salilmaharjan/Desktop/CLionProjects/dorothy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/Config.cpp">
+			<Option target="dorothy"/>
+		</Unit>
+		<Unit filename="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/Config.h">
+			<Option target="dorothy"/>
+		</Unit>
+		<Unit filename="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/DataAccess.cpp">
+			<Option target="dorothy"/>
+		</Unit>
+		<Unit filename="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/DataAccess.h">
+			<Option target="dorothy"/>
+		</Unit>
+		<Unit filename="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/DateTime.cpp">
+			<Option target="dorothy"/>
+		</Unit>
+		<Unit filename="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/DateTime.h">
+			<Option target="dorothy"/>
+		</Unit>
+		<Unit filename="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/PrefixHeader.pch">
+			<Option target="dorothy"/>
+		</Unit>
+		<Unit filename="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/Simulator.cpp">
+			<Option target="dorothy"/>
+		</Unit>
+		<Unit filename="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/Simulator.h">
+			<Option target="dorothy"/>
+		</Unit>
+		<Unit filename="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/TickerData.cpp">
+			<Option target="dorothy"/>
+		</Unit>
+		<Unit filename="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/TickerData.h">
+			<Option target="dorothy"/>
+		</Unit>
+		<Unit filename="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/TradingStock.cpp">
+			<Option target="dorothy"/>
+		</Unit>
+		<Unit filename="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/TradingStock.h">
+			<Option target="dorothy"/>
+		</Unit>
+		<Unit filename="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/Transaction.cpp">
+			<Option target="dorothy"/>
+		</Unit>
+		<Unit filename="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/Transaction.h">
+			<Option target="dorothy"/>
+		</Unit>
+		<Unit filename="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/Utilities.cpp">
+			<Option target="dorothy"/>
+		</Unit>
+		<Unit filename="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/Utilities.h">
+			<Option target="dorothy"/>
+		</Unit>
+		<Unit filename="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/main.cpp">
+			<Option target="dorothy"/>
+		</Unit>
+		<Unit filename="/Users/salilmaharjan/Desktop/CLionProjects/dorothy/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

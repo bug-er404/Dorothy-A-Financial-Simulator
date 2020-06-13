@@ -1,0 +1,415 @@
+.TH "DataAccess" 3 "Sat Jun 6 2020" "Version Version 1.0" "DOROTHY" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DataAccess
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <DataAccess\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "const std::vector< std::string > \fBGetUniverse\fP ()"
+.br
+.RI "Get constituent names in the universe\&. "
+.ti -1c
+.RI "const std::vector< \fBDateTime\fP * > \fBGetTradingDates\fP ()"
+.br
+.RI "Get trading dates\&. "
+.ti -1c
+.RI "\fBDateTime\fP * \fBGetOldestTradingDate\fP ()"
+.br
+.RI "Get oldest trading date for which data is available\&. "
+.ti -1c
+.RI "\fBDateTime\fP * \fBGetLatestTradingDate\fP ()"
+.br
+.RI "Get most recent trading date for which data is available\&. "
+.ti -1c
+.RI "std::vector< \fBDateTime\fP * > \fBGetTradingDatesInRange\fP (\fBDateTime\fP *a_from, \fBDateTime\fP *a_to)"
+.br
+.RI "Get trading dates from 'a_from' to 'a_to'\&. "
+.ti -1c
+.RI "\fBTickerData\fP * \fBGetTickerData\fP (std::string a_ticker)"
+.br
+.RI "Get \fBTickerData\fP Data\&. "
+.ti -1c
+.RI "\fB~DataAccess\fP ()=default"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "bool \fBCheckDateRange\fP (\fBDateTime\fP *a_startDate, \fBDateTime\fP *a_endDate)"
+.br
+.RI "Check date range with available data's date range\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBDataAccess\fP * \fBGetDbInstance\fP (const std::string a_directory, const std::string a_universe)"
+.br
+.RI "Static access method to create a singleton \fBDataAccess\fP object\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDataAccess\fP ()"
+.br
+.RI "Private constructors to prevent multiple instancing: "
+.ti -1c
+.RI "\fBDataAccess\fP (const std::string &a_directory, const std::string &a_universe)"
+.br
+.RI "Main class parameterized constructor\&. "
+.ti -1c
+.RI "\fBDataAccess\fP (\fBDataAccess\fP const &)"
+.br
+.RI "Private copy constructor\&. "
+.ti -1c
+.RI "\fBDataAccess\fP & \fBoperator=\fP (\fBDataAccess\fP const &)=delete"
+.br
+.RI "Delete assignment operator\&. "
+.ti -1c
+.RI "void \fBloadTickerNames\fP (const std::string &a_universe)"
+.br
+.RI "Method to load ticker names from the constituent universe file\&. "
+.ti -1c
+.RI "void \fBloadTickerData\fP (const std::string &a_directory)"
+.br
+.RI "Method to load price data for loaded tickers\&. "
+.ti -1c
+.RI "void \fBloadTradingDates\fP (const std::string &a_directory)"
+.br
+.RI "Method to load trading dates from the refence ticker, IBM\&. "
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const std::string \fBm_tradingDatesRefTicker\fP = 'IBM'"
+.br
+.RI "\fBTickerData\fP for referencing trading dates\&. Uses IBM\&. "
+.ti -1c
+.RI "static \fBDataAccess\fP * \fBm_dataInstance\fP = 0"
+.br
+.RI "Single \fBDataAccess\fP instance var\&. "
+.ti -1c
+.RI "static std::vector< std::string > \fBm_tickerNames\fP"
+.br
+.RI "\fBTickerData\fP names specified in the universe\&. "
+.ti -1c
+.RI "static std::vector< \fBDateTime\fP * > \fBm_tradingDates\fP"
+.br
+.RI "Trading dates loaded from reference ticker\&. "
+.ti -1c
+.RI "static std::map< std::string, \fBTickerData\fP * > \fBm_tickerData\fP"
+.br
+.RI "Map variable ( \fBTickerData\fP Name : \fBTickerData\fP Data ) "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBDataAccess\&.h\fP Singleton class for storing data of ticker price data in internal memory\&. Cannot have multiple instances since it can use a lot of memory\&.
+.PP
+Created by Salil Maharjan on 4/29/20\&. Copyright © 2020 Salil Maharjan\&. All rights reserved\&. 
+.PP
+Definition at line 18 of file DataAccess\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DataAccess::~DataAccess ()\fC [default]\fP"
+
+.PP
+Destructor\&. 
+.SS "DataAccess::DataAccess ()\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Private constructors to prevent multiple instancing: 
+.PP
+Definition at line 80 of file DataAccess\&.h\&.
+.SS "DataAccess::DataAccess (const std::string & a_directory, const std::string & a_universe)\fC [private]\fP"
+
+.PP
+Main class parameterized constructor\&. \fBDataAccess::DataAccess\fP\&. Constructor to create single instance of \fBDataAccess\fP\&. Stores price data for the specified universe in memory\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_directory\fP string Price data directory path\&. 
+.br
+\fIa_universe\fP string Directory path for ticker name universe file\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+4/29/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 34 of file DataAccess\&.cpp\&.
+.SS "DataAccess::DataAccess (\fBDataAccess\fP const &)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Private copy constructor\&. 
+.PP
+Definition at line 85 of file DataAccess\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "bool DataAccess::CheckDateRange (\fBDateTime\fP * a_startDate, \fBDateTime\fP * a_endDate)"
+
+.PP
+Check date range with available data's date range\&. \fBDataAccess::CheckDateRange\fP\&. Check date range with available data's date range\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_startDate\fP DateTime* Starting date range\&. 
+.br
+\fIa_endDate\fP DateTime* End of date range\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool If data is available for the date range\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+4/29/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 70 of file DataAccess\&.cpp\&.
+.SS "\fBDataAccess\fP * DataAccess::GetDbInstance (const std::string a_directory, const std::string a_universe)\fC [static]\fP"
+
+.PP
+Static access method to create a singleton \fBDataAccess\fP object\&. \fBDataAccess::GetDbInstance\fP\&. Method to create a single instance of \fBDataAccess\fP and prevent multiple instances\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_directory\fP string Price data directory path\&. 
+.br
+\fIa_universe\fP string Directory path for file with ticker name universe\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+DataAccess* Single instance of the path\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+4/29/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 53 of file DataAccess\&.cpp\&.
+.SS "\fBDateTime\fP* DataAccess::GetLatestTradingDate ()\fC [inline]\fP"
+
+.PP
+Get most recent trading date for which data is available\&. 
+.PP
+Definition at line 36 of file DataAccess\&.h\&.
+.SS "\fBDateTime\fP* DataAccess::GetOldestTradingDate ()\fC [inline]\fP"
+
+.PP
+Get oldest trading date for which data is available\&. 
+.PP
+Definition at line 33 of file DataAccess\&.h\&.
+.SS "\fBTickerData\fP * DataAccess::GetTickerData (std::string a_ticker)"
+
+.PP
+Get \fBTickerData\fP Data\&. \fBDataAccess::GetTickerData\fP\&. Get ticker data for a_ticker\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_ticker\fP string The name of the ticker to get data\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+TickerData* Price data of a_ticker 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+4/29/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 105 of file DataAccess\&.cpp\&.
+.SS "const std::vector<\fBDateTime\fP*> DataAccess::GetTradingDates ()\fC [inline]\fP"
+
+.PP
+Get trading dates\&. 
+.PP
+Definition at line 30 of file DataAccess\&.h\&.
+.SS "std::vector< \fBDateTime\fP * > DataAccess::GetTradingDatesInRange (\fBDateTime\fP * a_from, \fBDateTime\fP * a_to)"
+
+.PP
+Get trading dates from 'a_from' to 'a_to'\&. \fBDataAccess::GetTradingDatesInRange\fP\&. Get trading dates from 'a_from' to 'a_to' according to reference ticker\&. IBM\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_from\fP DateTime* Starting date range\&. 
+.br
+\fIa_to\fP DateTime* End of date range\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+vector<DateTime*> All trading dates in range\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+4/29/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 84 of file DataAccess\&.cpp\&.
+.SS "const std::vector<std::string> DataAccess::GetUniverse ()\fC [inline]\fP"
+
+.PP
+Get constituent names in the universe\&. 
+.PP
+Definition at line 27 of file DataAccess\&.h\&.
+.SS "void DataAccess::loadTickerData (const std::string & a_directory)\fC [private]\fP"
+
+.PP
+Method to load price data for loaded tickers\&. \fBDataAccess::loadTickerData\fP\&. Method to load price data for each ticker in the universe\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_directory\fP string Price data directory path\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+4/29/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 182 of file DataAccess\&.cpp\&.
+.SS "void DataAccess::loadTickerNames (const std::string & a_universe)\fC [private]\fP"
+
+.PP
+Method to load ticker names from the constituent universe file\&. \fBDataAccess::loadTickerNames\fP\&. Method to load ticker names in the universe\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_universe\fP string Directory path for ticker name universe file\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+4/29/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 124 of file DataAccess\&.cpp\&.
+.SS "void DataAccess::loadTradingDates (const std::string & a_directory)\fC [private]\fP"
+
+.PP
+Method to load trading dates from the refence ticker, IBM\&. \fBDataAccess::loadTradingDates\fP\&. Method to load trading dates from the refence ticker, IBM\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_directory\fP string Price data directory path\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+4/29/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 154 of file DataAccess\&.cpp\&.
+.SS "\fBDataAccess\fP& DataAccess::operator= (\fBDataAccess\fP const &)\fC [private]\fP, \fC [delete]\fP"
+
+.PP
+Delete assignment operator\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDataAccess\fP * DataAccess::m_dataInstance = 0\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Single \fBDataAccess\fP instance var\&. \fBDataAccess\&.cpp\fP Implementation of \fBDataAccess\&.h\fP
+.PP
+Created by Salil Maharjan on 4/29/20\&. Copyright © 2020 Salil Maharjan\&. All rights reserved\&. 
+.PP
+Definition at line 67 of file DataAccess\&.h\&.
+.SS "std::map< std::string, \fBTickerData\fP * > DataAccess::m_tickerData\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Map variable ( \fBTickerData\fP Name : \fBTickerData\fP Data ) 
+.PP
+Definition at line 73 of file DataAccess\&.h\&.
+.SS "std::vector< std::string > DataAccess::m_tickerNames\fC [static]\fP, \fC [private]\fP"
+
+.PP
+\fBTickerData\fP names specified in the universe\&. 
+.PP
+Definition at line 69 of file DataAccess\&.h\&.
+.SS "std::vector< \fBDateTime\fP * > DataAccess::m_tradingDates\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Trading dates loaded from reference ticker\&. 
+.PP
+Definition at line 71 of file DataAccess\&.h\&.
+.SS "const std::string DataAccess::m_tradingDatesRefTicker = 'IBM'\fC [static]\fP, \fC [private]\fP"
+
+.PP
+\fBTickerData\fP for referencing trading dates\&. Uses IBM\&. 
+.PP
+Definition at line 65 of file DataAccess\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DOROTHY from the source code\&.

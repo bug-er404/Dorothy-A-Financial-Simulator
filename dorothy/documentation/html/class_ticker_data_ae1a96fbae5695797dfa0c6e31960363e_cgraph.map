@@ -1,0 +1,4 @@
+<map id="TickerData::parseTickerData" name="TickerData::parseTickerData">
+<area shape="rect" id="node1" title="Parse ticker data from data source files." alt="" coords="5,5,196,32"/>
+<area shape="rect" id="node2" href="$namespace_utilities.html#a0ab4e4bfac17a04ab38640746aba42fe" title="Method to trim leading and trailing blanks while reading data." alt="" coords="244,5,380,32"/>
+</map>

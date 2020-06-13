@@ -1,0 +1,8 @@
+<map id="TradingStock::IncreaseSharesBy" name="TradingStock::IncreaseSharesBy">
+<area shape="rect" id="node1" title=" " alt="" coords="975,31,1189,57"/>
+<area shape="rect" id="node2" href="$class_simulator.html#a4238ab87912e40d99cad5deb558e3a96" title="Method to record necessary elements for no activity (code reuse purposes)." alt="" coords="744,31,927,57"/>
+<area shape="rect" id="node3" href="$class_simulator.html#adc8821db9e85da458f9a6e8b1912ac86" title="Function to open or close positions according to the signal by checking current position." alt="" coords="545,5,696,32"/>
+<area shape="rect" id="node4" href="$class_simulator.html#a9a703ddcca1a802b3df9a9dc921927ae" title="Main method to run simulation." alt="" coords="327,31,497,57"/>
+<area shape="rect" id="node5" href="$class_simulator.html#ab899d33750e674079de022d269c6bf9c" title="Interface method to start the simulation." alt="" coords="104,31,279,57"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,31,56,57"/>
+</map>

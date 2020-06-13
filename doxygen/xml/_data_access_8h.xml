@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="_data_access_8h" kind="file" language="C++">
+    <compoundname>DataAccess.h</compoundname>
+    <includes refid="_prefix_header_8pch" local="yes">PrefixHeader.pch</includes>
+    <includes refid="_date_time_8h" local="yes">DateTime.h</includes>
+    <includes refid="_ticker_data_8h" local="yes">TickerData.h</includes>
+    <includedby refid="_data_access_8cpp" local="yes">DataAccess.cpp</includedby>
+    <includedby refid="_simulator_8h" local="yes">Simulator.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>DataAccess.h</label>
+        <link refid="_data_access_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>cassert</label>
+      </node>
+      <node id="14">
+        <label>DateTime.h</label>
+        <link refid="_date_time_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="13">
+        <label>map</label>
+      </node>
+      <node id="15">
+        <label>TickerData.h</label>
+        <link refid="_ticker_data_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>fstream</label>
+      </node>
+      <node id="2">
+        <label>PrefixHeader.pch</label>
+        <link refid="_prefix_header_8pch"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="11">
+        <label>typeinfo</label>
+      </node>
+      <node id="12">
+        <label>vector</label>
+      </node>
+      <node id="10">
+        <label>sstream</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="7">
+        <label>unordered_map</label>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>DataAccess.h</label>
+        <link refid="_data_access_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DataAccess.cpp</label>
+        <link refid="_data_access_8cpp"/>
+      </node>
+      <node id="3">
+        <label>Simulator.h</label>
+        <link refid="_simulator_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="5">
+        <label>Simulator.cpp</label>
+        <link refid="_simulator_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_data_access" prot="public">DataAccess</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="11"><highlight class="preprocessor">#ifndef<sp/>DataAccess_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DataAccess_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_prefix_header_8pch" kindref="compound">PrefixHeader.pch</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_date_time_8h" kindref="compound">DateTime.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ticker_data_8h" kindref="compound">TickerData.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="class_data_access" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_data_access" kindref="compound">DataAccess</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>***********************<sp/>ACCESSORS<sp/>***********************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="class_data_access_1a3192674ca52329b3db8f0a5f3c0e9141" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="class_data_access_1a3192674ca52329b3db8f0a5f3c0e9141" kindref="member">GetUniverse</ref>(){<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_data_access_1aa2021225186679fab899867e14256462" kindref="member">m_tickerNames</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_data_access_1a597aaef015817d95979ee025a6e81121" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;DateTime*&gt;<sp/><ref refid="class_data_access_1a597aaef015817d95979ee025a6e81121" kindref="member">GetTradingDates</ref>(){<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_data_access_1a3675547c80c87288d0f3afb679566b9a" kindref="member">m_tradingDates</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_data_access_1a9e9db2cee4493ae998b9abaa17fe6be6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_date_time" kindref="compound">DateTime</ref>*<sp/><ref refid="class_data_access_1a9e9db2cee4493ae998b9abaa17fe6be6" kindref="member">GetOldestTradingDate</ref>(){<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_data_access_1a3675547c80c87288d0f3afb679566b9a" kindref="member">m_tradingDates</ref>[<ref refid="class_data_access_1a3675547c80c87288d0f3afb679566b9a" kindref="member">m_tradingDates</ref>.size()-1];<sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="class_data_access_1a515ad86dcb1b7dded8aabb7400b1609d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_date_time" kindref="compound">DateTime</ref>*<sp/><ref refid="class_data_access_1a515ad86dcb1b7dded8aabb7400b1609d" kindref="member">GetLatestTradingDate</ref>(){<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_data_access_1a3675547c80c87288d0f3afb679566b9a" kindref="member">m_tradingDates</ref>[0];<sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;DateTime*&gt;<sp/><ref refid="class_data_access_1aca25ff0e8ce73d87a8e2f4584ee87149" kindref="member">GetTradingDatesInRange</ref>(<sp/><ref refid="class_date_time" kindref="compound">DateTime</ref>*<sp/>a_from,<sp/><ref refid="class_date_time" kindref="compound">DateTime</ref>*<sp/>a_to);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ticker_data" kindref="compound">TickerData</ref>*<sp/><ref refid="class_data_access_1a8fef2d9972260413cc5c949d6ad7f245" kindref="member">GetTickerData</ref>(std::string<sp/>a_ticker);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*****************<sp/>PUBLIC<sp/>CLASS<sp/>METHODS<sp/>******************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_data_access" kindref="compound">DataAccess</ref>*<sp/><ref refid="class_data_access_1abc3ed687ddf164425f4f7c797eddcb55" kindref="member">GetDbInstance</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>a_directory,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>a_universe<sp/>);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="class_data_access_1ac9ca4ff2f082d5982bf4f00b6394c078" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_data_access_1ac9ca4ff2f082d5982bf4f00b6394c078" kindref="member">~DataAccess</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_data_access_1a999d5066dde617c2b244606d57f003ed" kindref="member">CheckDateRange</ref>(<sp/><ref refid="class_date_time" kindref="compound">DateTime</ref>*<sp/>a_startDate,<sp/><ref refid="class_date_time" kindref="compound">DateTime</ref>*<sp/>a_endDate<sp/>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>********************<sp/>CLASS<sp/>VARIABLES<sp/>********************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="class_data_access_1a103ea7eafa2a2da552050ce3726955b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_data_access_1a103ea7eafa2a2da552050ce3726955b9" kindref="member">m_tradingDatesRefTicker</ref>;</highlight></codeline>
+<codeline lineno="67" refid="class_data_access_1a6052079ffd5ad4d1d20dc311a2edf1de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_data_access" kindref="compound">DataAccess</ref>*<sp/><ref refid="class_data_access_1a6052079ffd5ad4d1d20dc311a2edf1de" kindref="member">m_dataInstance</ref>;</highlight></codeline>
+<codeline lineno="69" refid="class_data_access_1aa2021225186679fab899867e14256462" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="class_data_access_1aa2021225186679fab899867e14256462" kindref="member">m_tickerNames</ref>;</highlight></codeline>
+<codeline lineno="71" refid="class_data_access_1a3675547c80c87288d0f3afb679566b9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;DateTime*&gt;<sp/><ref refid="class_data_access_1a3675547c80c87288d0f3afb679566b9a" kindref="member">m_tradingDates</ref>;</highlight></codeline>
+<codeline lineno="73" refid="class_data_access_1a33d75e928a5979c6e6cd4cdc47a3802f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::map&lt;std::string,<sp/>TickerData*&gt;<sp/><ref refid="class_data_access_1a33d75e928a5979c6e6cd4cdc47a3802f" kindref="member">m_tickerData</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************<sp/>CONSTRUCTORS<sp/>**********************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="class_data_access_1af99b77ec290d1e723d0540ba9d9a95ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_data_access_1af99b77ec290d1e723d0540ba9d9a95ba" kindref="member">DataAccess</ref>(){};</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_data_access_1af99b77ec290d1e723d0540ba9d9a95ba" kindref="member">DataAccess</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;a_directory,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;a_universe<sp/>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="class_data_access_1a253a1c0e03533be0b8173851e237305b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_data_access_1a253a1c0e03533be0b8173851e237305b" kindref="member">DataAccess</ref>(<ref refid="class_data_access" kindref="compound">DataAccess</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;){};</highlight></codeline>
+<codeline lineno="87" refid="class_data_access_1aec4ac0b293f6123602cb5edd1dd58652" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_data_access" kindref="compound">DataAccess</ref>&amp;<sp/><ref refid="class_data_access_1aec4ac0b293f6123602cb5edd1dd58652" kindref="member">operator = </ref>(<ref refid="class_data_access" kindref="compound">DataAccess</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>***************<sp/>PRIVATE<sp/>UTILITY<sp/>METHODS<sp/>*****************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_data_access_1a22d1b0fdc94c69e4fd22ab2806c0774c" kindref="member">loadTickerNames</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;a_universe<sp/>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_data_access_1a5ac301f8e12a423d054ec44865e973de" kindref="member">loadTickerData</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;a_directory<sp/>);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_data_access_1a44f425fb23df421e7b4d5fd1545731ad" kindref="member">loadTradingDates</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;a_directory<sp/>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DataAccess_h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="DataAccess.h"/>
+  </compounddef>
+</doxygen>

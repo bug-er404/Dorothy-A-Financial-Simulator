@@ -1,0 +1,35 @@
+<map id="Simulator::makeTrade" name="Simulator::makeTrade">
+<area shape="rect" id="node1" title="Function to open or close positions according to the signal by checking current position." alt="" coords="5,473,156,500"/>
+<area shape="rect" id="node2" href="$class_trading_stock.html#a8610312df44fd64d9ff6fc4b7057b0b4" title="Method to check if signal is profitable for long positions." alt="" coords="204,113,413,140"/>
+<area shape="rect" id="node3" href="$class_trading_stock.html#aec7895ca3d924226dc25ef2d961ed181" title="Method to check if signal is profitable for short positions." alt="" coords="221,165,397,206"/>
+<area shape="rect" id="node4" href="$class_simulator.html#a20a56ab01d34b348fe22129caa44df09" title="Close positions for a trading stock." alt="" coords="223,296,394,323"/>
+<area shape="rect" id="node10" href="$class_trading_stock.html#a82ea8bcd2b94eef82bb100c929c519e0" title="Record day&#39;s PNL." alt="" coords="487,347,662,373"/>
+<area shape="rect" id="node12" href="$class_simulator.html#a56638656f8e85aec70ba6c2680025279" title="Function to record transactions to a file." alt="" coords="480,499,669,525"/>
+<area shape="rect" id="node19" href="$class_trading_stock.html#aad5057092b58a0ed625be05cfcef3c3e" title="Method to close positions that exceed maximum days limit." alt="" coords="223,230,394,271"/>
+<area shape="rect" id="node20" href="$class_trading_stock.html#a3f01e1cee2b7b6ae685351266850a723" title=" " alt="" coords="205,659,412,685"/>
+<area shape="rect" id="node21" href="$class_simulator.html#a4dbbe2a4cbd784dff5a9bdc4ee913b08" title="Check if available capital for a stock is enough to purchase more equities at a_price." alt="" coords="213,553,404,580"/>
+<area shape="rect" id="node23" href="$class_trading_stock.html#a0f34b4c03fc00907a9ab21c76450ca6f" title=" " alt="" coords="235,709,382,736"/>
+<area shape="rect" id="node24" href="$class_trading_stock.html#a70adc544aeb365d69f4dfa3a99ac3d18" title=" " alt="" coords="234,760,383,787"/>
+<area shape="rect" id="node25" href="$class_simulator.html#ad24c99fbfd5808aba7f5c9de11cc23f0" title="Open positions for a trading stock." alt="" coords="225,608,392,635"/>
+<area shape="rect" id="node32" href="$class_simulator.html#a4238ab87912e40d99cad5deb558e3a96" title="Method to record necessary elements for no activity (code reuse purposes)." alt="" coords="217,448,400,475"/>
+<area shape="rect" id="node5" href="$class_trading_stock.html#a8b890a05cb0536bbca53e6c341196158" title="Method to buys shares." alt="" coords="489,128,660,155"/>
+<area shape="rect" id="node7" href="$class_trading_stock.html#a60478a78a694204f99b6ac01e5f61258" title="Method to close all long positions." alt="" coords="463,179,686,205"/>
+<area shape="rect" id="node9" href="$class_trading_stock.html#a32ad16346c6c9bf2ffd9cc6a68f01325" title="Method to close all short positions." alt="" coords="489,230,661,271"/>
+<area shape="rect" id="node16" href="$class_trading_stock.html#abf15f389461393974e58d973a7a4f593" title="Method to sell shares." alt="" coords="489,296,660,323"/>
+<area shape="rect" id="node18" href="$class_trading_stock.html#ac32c8930adc0a8ad8611209ea9cf0fe8" title="Method to update long/short position status of the trading stock." alt="" coords="483,62,666,103"/>
+<area shape="rect" id="node6" href="$class_trading_stock.html#ae17abba347d59335fc2f7ebb74c5e6aa" title=" " alt="" coords="748,128,968,155"/>
+<area shape="rect" id="node8" href="$class_trading_stock.html#af0ebb1d62314db9844a05255605fc47a" title="Record day&#39;s number of transactions." alt="" coords="746,205,970,246"/>
+<area shape="rect" id="node11" href="$class_trading_stock.html#a08f0c522a18efec82f4c272e0d03fe7c" title="Recard day&#39;s daily return." alt="" coords="769,347,947,389"/>
+<area shape="rect" id="node13" href="$class_trading_stock.html#ae5b6f96bb1b51aa1d0e5144eeaf7fea1" title="Method to get closed transactions and remove them from memory." alt="" coords="736,557,980,584"/>
+<area shape="rect" id="node14" href="$class_trading_stock.html#a5cf4ad5ac772ed5bd2861097299e08f3" title=" " alt="" coords="759,440,957,467"/>
+<area shape="rect" id="node15" href="$class_trading_stock.html#a610d809a67408a6ba4a23616b071e345" title="Method to get current completed transaction count (Does not consider incomplete transactions...." alt="" coords="760,491,956,533"/>
+<area shape="rect" id="node17" href="$class_trading_stock.html#aa8181ddc5cc8c9e978393112563bf504" title=" " alt="" coords="751,296,965,323"/>
+<area shape="rect" id="node22" href="$class_trading_stock.html#a9d6e882e90f88a6dce91cc6d08f0847a" title=" " alt="" coords="484,601,665,642"/>
+<area shape="rect" id="node26" href="$class_trading_stock.html#a7fe5dbc6b3d6bf08c8b1520cf669a9ca" title="Method to get long shares held." alt="" coords="463,920,687,947"/>
+<area shape="rect" id="node27" href="$class_trading_stock.html#ac87efd94107349785d32cdf7ea6541d7" title="Method to get short shares held." alt="" coords="461,667,688,693"/>
+<area shape="rect" id="node28" href="$class_trading_stock.html#a4398bf190fdf2e8f089e929b60fe2e6d" title="Method to open a position for the trading stock." alt="" coords="482,717,667,744"/>
+<area shape="rect" id="node29" href="$namespace_utilities.html#a0257a93580460c13c4af232704caa0dc" title="Function to round off value to the lower integral value." alt="" coords="509,768,640,795"/>
+<area shape="rect" id="node30" href="$class_trading_stock.html#a0b8e6cd751ccac4691b33e9b3a50f8d1" title=" " alt="" coords="497,819,652,845"/>
+<area shape="rect" id="node31" href="$class_trading_stock.html#a1e3d0dc8a813cf51bf10dd7cc1ca8175" title=" " alt="" coords="495,869,654,896"/>
+<area shape="rect" id="node33" href="$class_trading_stock.html#a6dd461322fe1bf432705e4be521654af" title=" " alt="" coords="467,549,682,576"/>
+</map>

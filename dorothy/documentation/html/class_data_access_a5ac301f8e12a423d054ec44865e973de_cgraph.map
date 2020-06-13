@@ -1,0 +1,4 @@
+<map id="DataAccess::loadTickerData" name="DataAccess::loadTickerData">
+<area shape="rect" id="node1" title="Method to load price data for loaded tickers." alt="" coords="5,5,196,32"/>
+<area shape="rect" id="node2" href="$class_data_access.html#a44f425fb23df421e7b4d5fd1545731ad" title="Method to load trading dates from the refence ticker, IBM." alt="" coords="244,5,448,32"/>
+</map>

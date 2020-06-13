@@ -1,0 +1,5 @@
+<map id="Simulator::calculateSharpeRatio" name="Simulator::calculateSharpeRatio">
+<area shape="rect" id="node1" title="Function to calculate sharpe ratio." alt="" coords="5,23,184,65"/>
+<area shape="rect" id="node2" href="$namespace_utilities.html#a80b350cec72abbcf34ad7e28405d531c" title="Function to get average of a list with doubles." alt="" coords="262,5,405,32"/>
+<area shape="rect" id="node3" href="$namespace_utilities.html#a175ab95f5c509ccc3d4b571e8963f22e" title="Function to get the standard deviation of a list with doubles." alt="" coords="232,56,435,83"/>
+</map>

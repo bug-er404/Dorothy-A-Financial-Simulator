@@ -1,0 +1,9 @@
+<map id="DataAccess::GetUniverse" name="DataAccess::GetUniverse">
+<area shape="rect" id="node1" title="Get constituent names in the universe." alt="" coords="784,77,959,104"/>
+<area shape="rect" id="node2" href="$class_simulator.html#a3752d08182992d06e6dc5783ed82cafc" title="Initialize stocks that the simulator will be trading." alt="" coords="561,41,736,82"/>
+<area shape="rect" id="node7" href="$class_simulator.html#a9a703ddcca1a802b3df9a9dc921927ae" title="Main method to run simulation." alt="" coords="563,107,734,133"/>
+<area shape="rect" id="node3" href="$class_simulator.html#a0e2d73d3f5c09acdcac93e22a95b721d" title="Initializes the simulator by loading configurations, ticker data and trading stocks." alt="" coords="327,5,513,32"/>
+<area shape="rect" id="node6" href="$class_simulator.html#a0cd976fca52f982a92f2f897a6ddd1de" title="Rerun simulator for consecutive configuration files." alt="" coords="335,56,505,83"/>
+<area shape="rect" id="node4" href="$class_simulator.html#ab899d33750e674079de022d269c6bf9c" title="Interface method to start the simulation." alt="" coords="104,56,279,83"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,56,56,83"/>
+</map>

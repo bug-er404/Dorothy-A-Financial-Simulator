@@ -1,0 +1,5 @@
+<map id="Simulator::checkParameters" name="Simulator::checkParameters">
+<area shape="rect" id="node1" title="Checks if all required parameters are passed for simulator to run." alt="" coords="5,5,192,32"/>
+<area shape="rect" id="node2" href="$class_config.html#aaee87de753014e9dfd1a5a88c13d51f0" title="Test if a config file has a parameter for a given segment." alt="" coords="240,5,420,32"/>
+<area shape="rect" id="node3" href="$class_config.html#ad028b655f1d586107c638c1b32ad3bae" title="Get the value of a specified parameter." alt="" coords="468,5,647,32"/>
+</map>

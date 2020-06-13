@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="_transaction_8h" kind="file" language="C++">
+    <compoundname>Transaction.h</compoundname>
+    <includes refid="_prefix_header_8pch" local="yes">PrefixHeader.pch</includes>
+    <includes refid="_date_time_8h" local="yes">DateTime.h</includes>
+    <includedby refid="_trading_stock_8h" local="yes">TradingStock.h</includedby>
+    <includedby refid="_transaction_8cpp" local="yes">Transaction.cpp</includedby>
+    <incdepgraph>
+      <node id="8">
+        <label>cassert</label>
+      </node>
+      <node id="14">
+        <label>DateTime.h</label>
+        <link refid="_date_time_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>Transaction.h</label>
+        <link refid="_transaction_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>map</label>
+      </node>
+      <node id="9">
+        <label>fstream</label>
+      </node>
+      <node id="2">
+        <label>PrefixHeader.pch</label>
+        <link refid="_prefix_header_8pch"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="11">
+        <label>typeinfo</label>
+      </node>
+      <node id="12">
+        <label>vector</label>
+      </node>
+      <node id="10">
+        <label>sstream</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="7">
+        <label>unordered_map</label>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>Transaction.h</label>
+        <link refid="_transaction_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>TradingStock.h</label>
+        <link refid="_trading_stock_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Transaction.cpp</label>
+        <link refid="_transaction_8cpp"/>
+      </node>
+      <node id="6">
+        <label>TradingStock.cpp</label>
+        <link refid="_trading_stock_8cpp"/>
+      </node>
+      <node id="3">
+        <label>Simulator.h</label>
+        <link refid="_simulator_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="5">
+        <label>Simulator.cpp</label>
+        <link refid="_simulator_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_transaction" prot="public">Transaction</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#ifndef<sp/>DOROTHY_TRANSACTION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DOROTHY_TRANSACTION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_prefix_header_8pch" kindref="compound">PrefixHeader.pch</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_date_time_8h" kindref="compound">DateTime.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_transaction" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_transaction" kindref="compound">Transaction</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************<sp/>CONSTRUCTORS<sp/>**********************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_transaction_1ab47005b855d38bc324bb79fd023baa13" kindref="member">Transaction</ref>(<ref refid="class_date_time" kindref="compound">DateTime</ref>*<sp/>a_date,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a_signal,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a_share,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a_price);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>***********************<sp/>ACCESSORS<sp/>***********************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_transaction_1ad323ea3eecce084ab4207216da11aef3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1ad323ea3eecce084ab4207216da11aef3" kindref="member">GetOpenedPrice</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1a7c92a75529ae077fb8d76d4969b61048" kindref="member">m_TAOpenPrice</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="32" refid="class_transaction_1a373d771f5dd603825cdc6a825cc1ffb8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1a373d771f5dd603825cdc6a825cc1ffb8" kindref="member">GetClosedPrice</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1a61b7a25cb9489c3c65aad25b8c4d3d2b" kindref="member">m_TAClosePrice</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="33" refid="class_transaction_1a9833cf5e7fae393429914b42919b631b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1a9833cf5e7fae393429914b42919b631b" kindref="member">GetDaysInPosition</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1a067ff7356df3a4bbec5b41d4dbaa5ea4" kindref="member">m_inPosition</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="34" refid="class_transaction_1a492d0922c5af8b883981e265b91b66d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_date_time" kindref="compound">DateTime</ref><sp/>*<sp/><ref refid="class_transaction_1a492d0922c5af8b883981e265b91b66d9" kindref="member">GetPositionOpenDate</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1ac2d7eda4299c0c7dee9ed7f457b1102c" kindref="member">m_TAOpenDate</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="35" refid="class_transaction_1af73b2f27a31f8f53246770b3d12162bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_date_time" kindref="compound">DateTime</ref>*<sp/><ref refid="class_transaction_1af73b2f27a31f8f53246770b3d12162bf" kindref="member">GetPositionCloseDate</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1aae306db338fafc30d10238889e712898" kindref="member">m_TACloseDate</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="36" refid="class_transaction_1adff7d7d155a838a80fe14d74953bb2b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1adff7d7d155a838a80fe14d74953bb2b8" kindref="member">GetOpenSignal</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1a04e7430d41698ec30100910786673f1f" kindref="member">m_TAOpenSignal</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="37" refid="class_transaction_1a31112e042ad4f73b2231f0dde46abce0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1a31112e042ad4f73b2231f0dde46abce0" kindref="member">GetCloseSignal</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1a7d42563bbe4a16b408dbcbaf813613df" kindref="member">m_TACloseSignal</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="38" refid="class_transaction_1a34399835d523d6b2dc98de51224fd00e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1a34399835d523d6b2dc98de51224fd00e" kindref="member">GetNumSharesHeld</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1aab337c995879abb44ca3cb75df646ffd" kindref="member">m_currentSharesCount</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="39" refid="class_transaction_1a318f40ecb6200373d210ddc63501d7a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1a318f40ecb6200373d210ddc63501d7a8" kindref="member">IsLongPosition</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1ad9aa1638c1d5239def95ea7022165337" kindref="member">m_longFlag</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="40" refid="class_transaction_1a790efa45756bf2efdb6ba085fa0e3605" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1a790efa45756bf2efdb6ba085fa0e3605" kindref="member">IsClosed</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1aad0ee036f4dc0bc615156ac6ee471104" kindref="member">m_closedFlag</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>****************<sp/>PUBLIC<sp/>CLASS<sp/>METHODS<sp/><sp/>*****************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1ab5150df4457fda64acf329e3b5333f96" kindref="member">CloseTransaction</ref>(<ref refid="class_date_time" kindref="compound">DateTime</ref>*<sp/>a_date,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a_signal,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a_price);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1afba291c3886ecf68a948a012f81ea74d" kindref="member">NextDayInPosition</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="class_transaction_1ab47005b855d38bc324bb79fd023baa13" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_transaction_1ab47005b855d38bc324bb79fd023baa13" kindref="member">Transaction</ref>(){};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>********************<sp/>CLASS<sp/>VARIABLES<sp/>********************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*********************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="class_transaction_1ac2d7eda4299c0c7dee9ed7f457b1102c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_date_time" kindref="compound">DateTime</ref>*<sp/><ref refid="class_transaction_1ac2d7eda4299c0c7dee9ed7f457b1102c" kindref="member">m_TAOpenDate</ref>;</highlight></codeline>
+<codeline lineno="64" refid="class_transaction_1aae306db338fafc30d10238889e712898" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_date_time" kindref="compound">DateTime</ref>*<sp/><ref refid="class_transaction_1aae306db338fafc30d10238889e712898" kindref="member">m_TACloseDate</ref>;</highlight></codeline>
+<codeline lineno="66" refid="class_transaction_1a04e7430d41698ec30100910786673f1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1a04e7430d41698ec30100910786673f1f" kindref="member">m_TAOpenSignal</ref>;</highlight></codeline>
+<codeline lineno="68" refid="class_transaction_1a7d42563bbe4a16b408dbcbaf813613df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1a7d42563bbe4a16b408dbcbaf813613df" kindref="member">m_TACloseSignal</ref>;</highlight></codeline>
+<codeline lineno="70" refid="class_transaction_1aab337c995879abb44ca3cb75df646ffd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1aab337c995879abb44ca3cb75df646ffd" kindref="member">m_currentSharesCount</ref>;</highlight></codeline>
+<codeline lineno="72" refid="class_transaction_1a7c92a75529ae077fb8d76d4969b61048" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1a7c92a75529ae077fb8d76d4969b61048" kindref="member">m_TAOpenPrice</ref>;</highlight></codeline>
+<codeline lineno="74" refid="class_transaction_1a61b7a25cb9489c3c65aad25b8c4d3d2b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1a61b7a25cb9489c3c65aad25b8c4d3d2b" kindref="member">m_TAClosePrice</ref>;</highlight></codeline>
+<codeline lineno="76" refid="class_transaction_1a067ff7356df3a4bbec5b41d4dbaa5ea4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1a067ff7356df3a4bbec5b41d4dbaa5ea4" kindref="member">m_inPosition</ref>;</highlight></codeline>
+<codeline lineno="78" refid="class_transaction_1ad9aa1638c1d5239def95ea7022165337" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1ad9aa1638c1d5239def95ea7022165337" kindref="member">m_longFlag</ref>;</highlight></codeline>
+<codeline lineno="80" refid="class_transaction_1aad0ee036f4dc0bc615156ac6ee471104" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_transaction_1aad0ee036f4dc0bc615156ac6ee471104" kindref="member">m_closedFlag</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//DOROTHY_TRANSACTION_H</highlight></codeline>
+    </programlisting>
+    <location file="Transaction.h"/>
+  </compounddef>
+</doxygen>

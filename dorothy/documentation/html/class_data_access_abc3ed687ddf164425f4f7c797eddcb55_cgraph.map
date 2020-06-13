@@ -1,0 +1,4 @@
+<map id="DataAccess::GetDbInstance" name="DataAccess::GetDbInstance">
+<area shape="rect" id="node1" title="Static access method to create a singleton DataAccess object." alt="" coords="5,5,196,32"/>
+<area shape="rect" id="node2" href="$class_data_access.html#af99b77ec290d1e723d0540ba9d9a95ba" title="Private constructors to prevent multiple instancing:" alt="" coords="244,5,419,32"/>
+</map>

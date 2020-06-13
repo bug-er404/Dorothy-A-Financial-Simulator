@@ -1,0 +1,13 @@
+<map id="DateTime::checkDateValueRanges" name="DateTime::checkDateValueRanges">
+<area shape="rect" id="node1" title="Function to assert date value ranges." alt="" coords="808,49,991,90"/>
+<area shape="rect" id="node2" href="$class_date_time.html#a75243ae5f1f368ba0d72a9882a934d25" title=" " alt="" coords="617,31,760,57"/>
+<area shape="rect" id="node3" href="$class_date_time.html#adf643f3779756314d8ac2505f84d5703" title=" " alt="" coords="635,81,742,108"/>
+<area shape="rect" id="node4" href="$class_date_time.html#a334c9a427c02a579ad22eb75664cd860" title="General date format parameterized constructor (YYYY MM DD)" alt="" coords="414,5,558,32"/>
+<area shape="rect" id="node5" href="$class_date_time.html#a38c7ae7996e0966e67e13d79866ba409" title="Unary plus operators. (PREFIX)" alt="" coords="204,56,355,83"/>
+<area shape="rect" id="node7" href="$class_date_time.html#afc219149a3d959863c84e3a15530dc54" title="Unary minus operators. (PREFIX)" alt="" coords="208,107,351,133"/>
+<area shape="rect" id="node9" href="$class_date_time.html#aa8a746c7fb47a7034adde3fb83c79dbe" title="Reverse date offset." alt="" coords="403,157,569,184"/>
+<area shape="rect" id="node6" href="$class_date_time.html#a0fe9a32549329c66d6cf58d14ab705df" title="Unary plus operators. (POSTFIX)" alt="" coords="5,56,156,83"/>
+<area shape="rect" id="node8" href="$class_date_time.html#aca232974e8aa4a1608c50f5714a9b961" title="Unary minus operators. (POSTFIX)" alt="" coords="9,107,152,133"/>
+<area shape="rect" id="node10" href="$class_date_time.html#a698ebe694145c3be698ff0a0588b15da" title="Adds a specified number of days to the date." alt="" coords="208,157,351,184"/>
+<area shape="rect" id="node11" href="$class_date_time.html#a2e5295058ae6b112e9bf5b0226456005" title="Subtracts a specified number of days to the date." alt="" coords="210,208,349,235"/>
+</map>

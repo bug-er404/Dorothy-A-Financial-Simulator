@@ -1,0 +1,6 @@
+<map id="DataAccess::DataAccess" name="DataAccess::DataAccess">
+<area shape="rect" id="node1" title="Main class parameterized constructor." alt="" coords="5,31,180,57"/>
+<area shape="rect" id="node2" href="$class_data_access.html#a5ac301f8e12a423d054ec44865e973de" title="Method to load price data for loaded tickers." alt="" coords="235,5,425,32"/>
+<area shape="rect" id="node4" href="$class_data_access.html#a22d1b0fdc94c69e4fd22ab2806c0774c" title="Method to load ticker names from the constituent universe file." alt="" coords="228,56,432,83"/>
+<area shape="rect" id="node3" href="$class_data_access.html#a44f425fb23df421e7b4d5fd1545731ad" title="Method to load trading dates from the refence ticker, IBM." alt="" coords="480,5,684,32"/>
+</map>

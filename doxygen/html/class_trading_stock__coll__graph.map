@@ -1,0 +1,13 @@
+<map id="TradingStock" name="TradingStock">
+<area shape="rect" id="node1" title=" " alt="" coords="578,1171,736,1424"/>
+<area shape="rect" id="node2" title=" " alt="" coords="83,307,143,384"/>
+<area shape="rect" id="node4" href="$class_transaction.html" title=" " alt="" coords="418,612,590,880"/>
+<area shape="rect" id="node11" title=" " alt="" coords="186,904,333,981"/>
+<area shape="rect" id="node3" title=" " alt="" coords="434,1018,619,1095"/>
+<area shape="rect" id="node5" href="$class_date_time.html" title=" " alt="" coords="294,204,450,487"/>
+<area shape="rect" id="node6" title=" " alt="" coords="667,5,706,83"/>
+<area shape="rect" id="node10" title=" " alt="" coords="946,511,1069,588"/>
+<area shape="rect" id="node7" title=" " alt="" coords="623,307,670,384"/>
+<area shape="rect" id="node8" title="STL class." alt="" coords="712,1018,792,1095"/>
+<area shape="rect" id="node9" title="STL class." alt="" coords="695,700,822,792"/>
+</map>

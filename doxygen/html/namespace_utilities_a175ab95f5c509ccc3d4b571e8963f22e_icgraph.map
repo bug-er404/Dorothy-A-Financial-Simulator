@@ -1,0 +1,10 @@
+<map id="Utilities::GetStandardDeviation" name="Utilities::GetStandardDeviation">
+<area shape="rect" id="node1" title="Function to get the standard deviation of a list with doubles." alt="" coords="1281,46,1484,73"/>
+<area shape="rect" id="node2" href="$class_trading_stock.html#a39cc9a02efc5431a4e150b941a9c7df6" title="Calculate daily sharpe ratio for individual stock." alt="" coords="1041,5,1233,47"/>
+<area shape="rect" id="node3" href="$class_simulator.html#a1176c2f39f71a17dd1c9d669d3a46d15" title="Function to calculate sharpe ratio." alt="" coords="1048,71,1227,112"/>
+<area shape="rect" id="node4" href="$class_simulator.html#accf533fb22ca8261dce0830daa5945f1" title="Function to record sharpe ratio to daily statistics file." alt="" coords="800,53,993,79"/>
+<area shape="rect" id="node6" href="$class_simulator.html#a9a703ddcca1a802b3df9a9dc921927ae" title="Main method to run simulation." alt="" coords="327,78,497,105"/>
+<area shape="rect" id="node5" href="$class_simulator.html#ae77749f93581b683330f30726f5aaffb" title="Function to record daily statistics to a file." alt="" coords="545,53,752,79"/>
+<area shape="rect" id="node7" href="$class_simulator.html#ab899d33750e674079de022d269c6bf9c" title="Interface method to start the simulation." alt="" coords="104,78,279,105"/>
+<area shape="rect" id="node8" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,78,56,105"/>
+</map>

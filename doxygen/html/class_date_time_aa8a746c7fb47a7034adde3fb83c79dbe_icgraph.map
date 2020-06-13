@@ -1,0 +1,9 @@
+<map id="DateTime::reverseOffset" name="DateTime::reverseOffset">
+<area shape="rect" id="node1" title="Reverse date offset." alt="" coords="403,81,569,108"/>
+<area shape="rect" id="node2" href="$class_date_time.html#a698ebe694145c3be698ff0a0588b15da" title="Adds a specified number of days to the date." alt="" coords="208,5,351,32"/>
+<area shape="rect" id="node3" href="$class_date_time.html#a38c7ae7996e0966e67e13d79866ba409" title="Unary plus operators. (PREFIX)" alt="" coords="204,56,355,83"/>
+<area shape="rect" id="node5" href="$class_date_time.html#a2e5295058ae6b112e9bf5b0226456005" title="Subtracts a specified number of days to the date." alt="" coords="210,107,349,133"/>
+<area shape="rect" id="node6" href="$class_date_time.html#afc219149a3d959863c84e3a15530dc54" title="Unary minus operators. (PREFIX)" alt="" coords="208,157,351,184"/>
+<area shape="rect" id="node4" href="$class_date_time.html#a0fe9a32549329c66d6cf58d14ab705df" title="Unary plus operators. (POSTFIX)" alt="" coords="5,56,156,83"/>
+<area shape="rect" id="node7" href="$class_date_time.html#aca232974e8aa4a1608c50f5714a9b961" title="Unary minus operators. (POSTFIX)" alt="" coords="9,157,152,184"/>
+</map>

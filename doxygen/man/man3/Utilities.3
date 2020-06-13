@@ -1,0 +1,149 @@
+.TH "Utilities" 3 "Sat Jun 6 2020" "Version Version 1.0" "DOROTHY" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Utilities
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBint\fP \fBRoundOff\fP (double a_value)"
+.br
+.RI "Function to round off value to the lower integral value\&. "
+.ti -1c
+.RI "double \fBGetAverage\fP (std::vector< double > a_list)"
+.br
+.RI "Function to get average of a list with doubles\&. "
+.ti -1c
+.RI "double \fBGetStandardDeviation\fP (std::vector< double > a_list, double a_average)"
+.br
+.RI "Function to get the standard deviation of a list with doubles\&. "
+.ti -1c
+.RI "void \fBtrimBlanks\fP (std::string &a_str)"
+.br
+.RI "Method to trim leading and trailing blanks while reading data\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBUtilities\&.h\fP Namespace with utility functions for the simulator\&.
+.PP
+Created by Salil Maharjan on 5/04/20\&. Copyright © 2020 Salil Maharjan\&. All rights reserved\&. 
+.SH "Function Documentation"
+.PP 
+.SS "double Utilities::GetAverage (std::vector< double > a_list)"
+
+.PP
+Function to get average of a list with doubles\&. \fBUtilities::GetAverage\fP Function to get average of a list with doubles\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_list\fP vector<double> List of doubles 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+double The mean of the list\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/04/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 36 of file Utilities\&.cpp\&.
+.SS "double Utilities::GetStandardDeviation (std::vector< double > a_list, double a_average)"
+
+.PP
+Function to get the standard deviation of a list with doubles\&. \fBUtilities::GetStandardDeviation\fP Function to get the standard deviation of a list with doubles\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_list\fP vector<double> List of doubles\&. 
+.br
+\fIa_average\fP double The mean of the list\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+double The standard deviation of the list\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/04/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 53 of file Utilities\&.cpp\&.
+.SS "\fBint\fP Utilities::RoundOff (double a_value)"
+
+.PP
+Function to round off value to the lower integral value\&. \fBUtilities\&.cpp\fP Implementation of \fBUtilities\&.h\fP\&.
+.PP
+Created by Salil Maharjan on 5/04/20\&. Copyright © 2020 Salil Maharjan\&. All rights reserved\&. \fBUtilities::RoundOff\fP Function to round off value to integer value\&. Uses floor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_value\fP double Value to round off\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int Integral value of a_value left rounded\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/04/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file Utilities\&.cpp\&.
+.SS "void Utilities::trimBlanks (std::string & a_str)"
+
+.PP
+Method to trim leading and trailing blanks while reading data\&. \fBUtilities::trimBlanks\fP Method to trim leading and trailing whitespaces\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_str\fP string Reference to string to trim white spaces\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+4/30/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 73 of file Utilities\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DOROTHY from the source code\&.

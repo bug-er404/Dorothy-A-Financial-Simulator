@@ -1,0 +1,670 @@
+.TH "DateTime" 3 "Sat Jun 6 2020" "Version Version 1.0" "DOROTHY" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DateTime
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <DateTime\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBDAY_OF_WEEK\fP : char { \fBDAY_OF_WEEK::SUNDAY\fP = 0, \fBDAY_OF_WEEK::MONDAY\fP, \fBDAY_OF_WEEK::TUESDAY\fP, \fBDAY_OF_WEEK::WEDNESDAY\fP, \fBDAY_OF_WEEK::THURSDAY\fP, \fBDAY_OF_WEEK::FRIDAY\fP, \fBDAY_OF_WEEK::SATURDAY\fP, \fBDAY_OF_WEEK::UNDEF_DOW\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDateTime\fP ()"
+.br
+.RI "Default constructor\&. "
+.ti -1c
+.RI "\fBDateTime\fP (\fBint\fP a_year, \fBint\fP a_month, \fBint\fP a_day)"
+.br
+.RI "General date format parameterized constructor (YYYY MM DD) "
+.ti -1c
+.RI "\fBDateTime\fP (\fBint\fP a_date)"
+.br
+.RI "Internal date format parameterized constructor\&. "
+.ti -1c
+.RI "\fBDateTime\fP (const \fBDateTime\fP &a_date)"
+.br
+.RI "Copy constructor\&. "
+.ti -1c
+.RI "\fBint\fP \fBGetYear\fP () const"
+.br
+.ti -1c
+.RI "\fBint\fP \fBGetMonth\fP () const"
+.br
+.ti -1c
+.RI "\fBint\fP \fBGetDay\fP () const"
+.br
+.ti -1c
+.RI "\fBint\fP \fBGet\fP () const"
+.br
+.RI "Gets the date as one value\&. "
+.ti -1c
+.RI "void \fBGet\fP (\fBint\fP &a_year, \fBint\fP &a_month, \fBint\fP &a_day) const"
+.br
+.RI "Gets the date as component values\&. "
+.ti -1c
+.RI "std::string \fBGetASCIIDate\fP ()"
+.br
+.RI "Get date as an ASCII string in format 'MM/DD/YYYY'\&. "
+.ti -1c
+.RI "\fBint\fP \fBGetDayOfWeek\fP () const"
+.br
+.RI "Gets the Day of the week as integral value\&. "
+.ti -1c
+.RI "void \fBSet\fP (\fBint\fP a_year, \fBint\fP a_month, \fBint\fP a_day)"
+.br
+.ti -1c
+.RI "void \fBSet\fP (\fBint\fP a_date)"
+.br
+.ti -1c
+.RI "void \fBSet\fP (const \fBDateTime\fP &a_date)"
+.br
+.ti -1c
+.RI "bool \fBcheckDateValueRanges\fP (\fBint\fP a_year, \fBint\fP a_month, \fBint\fP a_day)"
+.br
+.RI "Function to assert date value ranges\&. "
+.ti -1c
+.RI "void \fBSetToday\fP ()"
+.br
+.RI "Record today's local date in this object - uses faked today's date if set\&. "
+.ti -1c
+.RI "void \fBSetActualToday\fP ()"
+.br
+.RI "Record today's local date in this object\&. Does not use faked today's date\&. "
+.ti -1c
+.RI "bool \fBisLeapYear\fP () const"
+.br
+.RI "Determines if the year recorded here is a leap year\&. "
+.ti -1c
+.RI "\fBint\fP \fBgetJulianDay\fP () const"
+.br
+.RI "Gets the Julian day from this date\&. Julian day vary from 0 to 365\&. "
+.ti -1c
+.RI "\fBint\fP \fBCalendarDiffDates\fP (const \fBDateTime\fP &a_nearDate, const \fBDateTime\fP &a_farDate)"
+.br
+.RI "Computes the calendar difference between two date\&. "
+.ti -1c
+.RI "\fBoperator int\fP () const"
+.br
+.RI "Conversion operators\&. "
+.ti -1c
+.RI "\fBDateTime\fP & \fBoperator=\fP (const \fBDateTime\fP &a_date)"
+.br
+.RI "Assignment operators\&. "
+.ti -1c
+.RI "\fBDateTime\fP & \fBoperator=\fP (\fBint\fP a_date)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBoperator\-\fP (const \fBDateTime\fP &a_date)"
+.br
+.RI "Finds the difference between two dates\&. "
+.ti -1c
+.RI "\fBDateTime\fP \fBoperator\-\fP (\fBint\fP a_days)"
+.br
+.RI "Subtracts a specified number of days to the date\&. "
+.ti -1c
+.RI "\fBDateTime\fP \fBoperator+\fP (\fBint\fP a_days)"
+.br
+.RI "Adds a specified number of days to the date\&. "
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBDateTime\fP &a_date)"
+.br
+.RI "Comparison operator to compare two dates: "
+.ti -1c
+.RI "bool \fBoperator==\fP (\fBint\fP a_date)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBDateTime\fP &a_date)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (\fBint\fP a_date)"
+.br
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBDateTime\fP &a_date)"
+.br
+.ti -1c
+.RI "bool \fBoperator<\fP (\fBint\fP a_date)"
+.br
+.ti -1c
+.RI "bool \fBoperator<=\fP (const \fBDateTime\fP &a_date)"
+.br
+.ti -1c
+.RI "bool \fBoperator<=\fP (\fBint\fP a_date)"
+.br
+.ti -1c
+.RI "bool \fBoperator>\fP (const \fBDateTime\fP &a_date)"
+.br
+.ti -1c
+.RI "bool \fBoperator>\fP (\fBint\fP a_date)"
+.br
+.ti -1c
+.RI "bool \fBoperator>=\fP (const \fBDateTime\fP &a_date)"
+.br
+.ti -1c
+.RI "bool \fBoperator>=\fP (\fBint\fP a_date)"
+.br
+.ti -1c
+.RI "\fBDateTime\fP & \fBoperator\-\-\fP ()"
+.br
+.RI "Unary minus operators\&. (PREFIX) "
+.ti -1c
+.RI "\fBDateTime\fP \fBoperator\-\-\fP (\fBint\fP)"
+.br
+.RI "Unary minus operators\&. (POSTFIX) "
+.ti -1c
+.RI "\fBDateTime\fP & \fBoperator++\fP ()"
+.br
+.RI "Unary plus operators\&. (PREFIX) "
+.ti -1c
+.RI "\fBDateTime\fP \fBoperator++\fP (\fBint\fP)"
+.br
+.RI "Unary plus operators\&. (POSTFIX) "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static std::string \fBGetStringDOW\fP (\fBDAY_OF_WEEK\fP a_dow)"
+.br
+.RI "Get day of the week as a string\&. "
+.ti -1c
+.RI "static void \fBsetFakeTodayValue\fP (\fBint\fP a_val)"
+.br
+.RI "Set the fake today value\&. This will be used instead of the real today\&. "
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const \fBint\fP \fBBlankDate\fP = 0"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBint\fP \fBdateOffset\fP (const \fBDateTime\fP &a_date)"
+.br
+.RI "Get the offset from the year 0\&. "
+.ti -1c
+.RI "\fBDateTime\fP \fBreverseOffset\fP (\fBint\fP a_days)"
+.br
+.RI "Reverse date offset\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBint\fP \fBm_date\fP"
+.br
+.RI "Date stored as ( year * 10000 + 100 * month + day ) "
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBint\fP \fBm_FakeTodayValue\fP = 0"
+.br
+.RI "Fake date value of today\&. "
+.ti -1c
+.RI "static \fBint\fP \fBdayPreMonth\fP [13] = { 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365}"
+.br
+.RI "The number of days since the beginning of the year to a given month\&. (non-leap year) "
+.ti -1c
+.RI "static \fBint\fP \fBdaysInMonth\fP [13] = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 }"
+.br
+.RI "The number of days in a month\&. (non-leap year) "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBDateTime\&.h\fP Interface for the \fBDateTime\fP class\&. General date time class\&. Dates represented internally as: ( year * 10000 + 100 * month + day )
+.PP
+Created by Salil Maharjan on 3/22/20\&. Copyright © 2020 Salil Maharjan\&. All rights reserved\&. 
+.PP
+Definition at line 17 of file DateTime\&.h\&.
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBDateTime::DAY_OF_WEEK\fP : \fBchar\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fISUNDAY \fP\fP
+.TP
+\fB\fIMONDAY \fP\fP
+.TP
+\fB\fITUESDAY \fP\fP
+.TP
+\fB\fIWEDNESDAY \fP\fP
+.TP
+\fB\fITHURSDAY \fP\fP
+.TP
+\fB\fIFRIDAY \fP\fP
+.TP
+\fB\fISATURDAY \fP\fP
+.TP
+\fB\fIUNDEF_DOW \fP\fP
+.PP
+Definition at line 58 of file DateTime\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DateTime::DateTime ()\fC [inline]\fP"
+
+.PP
+Default constructor\&. 
+.PP
+Definition at line 26 of file DateTime\&.h\&.
+.SS "DateTime::DateTime (\fBint\fP a_year, \fBint\fP a_month, \fBint\fP a_day)\fC [inline]\fP"
+
+.PP
+General date format parameterized constructor (YYYY MM DD) 
+.PP
+Definition at line 32 of file DateTime\&.h\&.
+.SS "DateTime::DateTime (\fBint\fP a_date)\fC [inline]\fP"
+
+.PP
+Internal date format parameterized constructor\&. 
+.PP
+Definition at line 38 of file DateTime\&.h\&.
+.SS "DateTime::DateTime (const \fBDateTime\fP & a_date)\fC [inline]\fP"
+
+.PP
+Copy constructor\&. 
+.PP
+Definition at line 44 of file DateTime\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBint\fP DateTime::CalendarDiffDates (const \fBDateTime\fP & a_nearDate, const \fBDateTime\fP & a_farDate)\fC [inline]\fP"
+
+.PP
+Computes the calendar difference between two date\&. 
+.PP
+Definition at line 152 of file DateTime\&.h\&.
+.SS "bool DateTime::checkDateValueRanges (\fBint\fP a_year, \fBint\fP a_month, \fBint\fP a_day)"
+
+.PP
+Function to assert date value ranges\&. \fBDateTime::checkDateValueRanges\fP Function to assert date value ranges 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_year\fP int Year 
+.br
+\fIa_month\fP int Month 
+.br
+\fIa_day\fP int Date 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool If passed values mark a valid date\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+3/24/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 68 of file DateTime\&.cpp\&.
+.SS "\fBint\fP DateTime::dateOffset (const \fBDateTime\fP & a_date)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Get the offset from the year 0\&. 
+.PP
+Definition at line 277 of file DateTime\&.h\&.
+.SS "\fBint\fP DateTime::Get () const\fC [inline]\fP"
+
+.PP
+Gets the date as one value\&. 
+.PP
+Definition at line 79 of file DateTime\&.h\&.
+.SS "void DateTime::Get (\fBint\fP & a_year, \fBint\fP & a_month, \fBint\fP & a_day) const\fC [inline]\fP"
+
+.PP
+Gets the date as component values\&. 
+.PP
+Definition at line 82 of file DateTime\&.h\&.
+.SS "std::string DateTime::GetASCIIDate ()\fC [inline]\fP"
+
+.PP
+Get date as an ASCII string in format 'MM/DD/YYYY'\&. 
+.PP
+Definition at line 90 of file DateTime\&.h\&.
+.SS "\fBint\fP DateTime::GetDay () const\fC [inline]\fP"
+
+.PP
+Definition at line 76 of file DateTime\&.h\&.
+.SS "\fBint\fP DateTime::GetDayOfWeek () const\fC [inline]\fP"
+
+.PP
+Gets the Day of the week as integral value\&. 
+.PP
+Definition at line 106 of file DateTime\&.h\&.
+.SS "\fBint\fP DateTime::getJulianDay () const\fC [inline]\fP"
+
+.PP
+Gets the Julian day from this date\&. Julian day vary from 0 to 365\&. 
+.PP
+Definition at line 142 of file DateTime\&.h\&.
+.SS "\fBint\fP DateTime::GetMonth () const\fC [inline]\fP"
+
+.PP
+Definition at line 75 of file DateTime\&.h\&.
+.SS "static std::string DateTime::GetStringDOW (\fBDAY_OF_WEEK\fP a_dow)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Get day of the week as a string\&. 
+.PP
+Definition at line 93 of file DateTime\&.h\&.
+.SS "\fBint\fP DateTime::GetYear () const\fC [inline]\fP"
+
+.PP
+Definition at line 74 of file DateTime\&.h\&.
+.SS "bool DateTime::isLeapYear () const\fC [inline]\fP"
+
+.PP
+Determines if the year recorded here is a leap year\&. 
+.PP
+Definition at line 139 of file DateTime\&.h\&.
+.SS "DateTime::operator \fBint\fP () const\fC [inline]\fP"
+
+.PP
+Conversion operators\&. 
+.PP
+Definition at line 163 of file DateTime\&.h\&.
+.SS "bool DateTime::operator!= (const \fBDateTime\fP & a_date)\fC [inline]\fP"
+
+.PP
+Definition at line 190 of file DateTime\&.h\&.
+.SS "bool DateTime::operator!= (\fBint\fP a_date)\fC [inline]\fP"
+
+.PP
+Definition at line 191 of file DateTime\&.h\&.
+.SS "\fBDateTime\fP DateTime::operator+ (\fBint\fP a_days)\fC [inline]\fP"
+
+.PP
+Adds a specified number of days to the date\&. 
+.PP
+Definition at line 180 of file DateTime\&.h\&.
+.SS "\fBDateTime\fP& DateTime::operator++ ()\fC [inline]\fP"
+
+.PP
+Unary plus operators\&. (PREFIX) 
+.PP
+Definition at line 242 of file DateTime\&.h\&.
+.SS "\fBDateTime\fP DateTime::operator++ (\fBint\fP)\fC [inline]\fP"
+
+.PP
+Unary plus operators\&. (POSTFIX) 
+.PP
+Definition at line 250 of file DateTime\&.h\&.
+.SS "\fBint\fP DateTime::operator\- (const \fBDateTime\fP & a_date)\fC [inline]\fP"
+
+.PP
+Finds the difference between two dates\&. 
+.PP
+Definition at line 174 of file DateTime\&.h\&.
+.SS "\fBDateTime\fP DateTime::operator\- (\fBint\fP a_days)\fC [inline]\fP"
+
+.PP
+Subtracts a specified number of days to the date\&. 
+.PP
+Definition at line 177 of file DateTime\&.h\&.
+.SS "\fBDateTime\fP& DateTime::operator\-\- ()\fC [inline]\fP"
+
+.PP
+Unary minus operators\&. (PREFIX) 
+.PP
+Definition at line 226 of file DateTime\&.h\&.
+.SS "\fBDateTime\fP DateTime::operator\-\- (\fBint\fP)\fC [inline]\fP"
+
+.PP
+Unary minus operators\&. (POSTFIX) 
+.PP
+Definition at line 234 of file DateTime\&.h\&.
+.SS "bool DateTime::operator< (const \fBDateTime\fP & a_date)\fC [inline]\fP"
+
+.PP
+Definition at line 197 of file DateTime\&.h\&.
+.SS "bool DateTime::operator< (\fBint\fP a_date)\fC [inline]\fP"
+
+.PP
+Definition at line 198 of file DateTime\&.h\&.
+.SS "bool DateTime::operator<= (const \fBDateTime\fP & a_date)\fC [inline]\fP"
+
+.PP
+Definition at line 204 of file DateTime\&.h\&.
+.SS "bool DateTime::operator<= (\fBint\fP a_date)\fC [inline]\fP"
+
+.PP
+Definition at line 205 of file DateTime\&.h\&.
+.SS "\fBDateTime\fP& DateTime::operator= (const \fBDateTime\fP & a_date)\fC [inline]\fP"
+
+.PP
+Assignment operators\&. 
+.PP
+Definition at line 166 of file DateTime\&.h\&.
+.SS "\fBDateTime\fP & DateTime::operator= (\fBint\fP a_date)"
+\fBDateTime::operator =\fP Assignment operator overload\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_date\fP \fBDateTime\fP \fBDateTime\fP object to assign\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBDateTime\fP& New \fBDateTime\fP that is assigned\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 132 of file DateTime\&.cpp\&.
+.SS "bool DateTime::operator== (const \fBDateTime\fP & a_date)\fC [inline]\fP"
+
+.PP
+Comparison operator to compare two dates: 
+.PP
+Definition at line 183 of file DateTime\&.h\&.
+.SS "bool DateTime::operator== (\fBint\fP a_date)\fC [inline]\fP"
+
+.PP
+Definition at line 184 of file DateTime\&.h\&.
+.SS "bool DateTime::operator> (const \fBDateTime\fP & a_date)\fC [inline]\fP"
+
+.PP
+Definition at line 211 of file DateTime\&.h\&.
+.SS "bool DateTime::operator> (\fBint\fP a_date)\fC [inline]\fP"
+
+.PP
+Definition at line 212 of file DateTime\&.h\&.
+.SS "bool DateTime::operator>= (const \fBDateTime\fP & a_date)\fC [inline]\fP"
+
+.PP
+Definition at line 218 of file DateTime\&.h\&.
+.SS "bool DateTime::operator>= (\fBint\fP a_date)\fC [inline]\fP"
+
+.PP
+Definition at line 219 of file DateTime\&.h\&.
+.SS "\fBDateTime\fP DateTime::reverseOffset (\fBint\fP a_days)\fC [private]\fP"
+
+.PP
+Reverse date offset\&. \fBDateTime::reverseOffset\fP Reverse date offset 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_days\fP int Number of days to reverse offset\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBDateTime\fP The date after reversing a_days offset\&. 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+Change the return value!
+.PP
+Definition at line 152 of file DateTime\&.cpp\&.
+.SS "void DateTime::Set (const \fBDateTime\fP & a_date)\fC [inline]\fP"
+
+.PP
+Definition at line 119 of file DateTime\&.h\&.
+.SS "void DateTime::Set (\fBint\fP a_date)"
+\fBDateTime::Set\fP Date set function for Internal date format parameterized constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_date\fP int Date passed in internal format YYYYMMDD 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+3/24/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 48 of file DateTime\&.cpp\&.
+.SS "void DateTime::Set (\fBint\fP a_year, \fBint\fP a_month, \fBint\fP a_day)"
+\fBDateTime::Set\fP Date set function for General date format parameterized constructor (YYYY MM DD) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_year\fP int Year 
+.br
+\fIa_month\fP int Month 
+.br
+\fIa_day\fP int Date 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+3/22/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 31 of file DateTime\&.cpp\&.
+.SS "void DateTime::SetActualToday ()"
+
+.PP
+Record today's local date in this object\&. Does not use faked today's date\&. \fBDateTime::SetToday\fP Record today's local date in this object\&. Does not use faked today's date\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 117 of file DateTime\&.cpp\&.
+.SS "static void DateTime::setFakeTodayValue (\fBint\fP a_val)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Set the fake today value\&. This will be used instead of the real today\&. 
+.PP
+Definition at line 125 of file DateTime\&.h\&.
+.SS "void DateTime::SetToday ()"
+
+.PP
+Record today's local date in this object - uses faked today's date if set\&. \fBDateTime::SetToday\fP Record today's local date in this object - uses faked today's date if set\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Salil Maharjan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+5/12/20\&. 
+.RE
+.PP
+
+.PP
+Definition at line 99 of file DateTime\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "const \fBint\fP DateTime::BlankDate = 0\fC [static]\fP"
+
+.PP
+Definition at line 54 of file DateTime\&.h\&.
+.SS "\fBint\fP DateTime::dayPreMonth = { 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365}\fC [static]\fP, \fC [private]\fP"
+
+.PP
+The number of days since the beginning of the year to a given month\&. (non-leap year) 
+.PP
+Definition at line 268 of file DateTime\&.h\&.
+.SS "\fBint\fP DateTime::daysInMonth = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 }\fC [static]\fP, \fC [private]\fP"
+
+.PP
+The number of days in a month\&. (non-leap year) 
+.PP
+Definition at line 270 of file DateTime\&.h\&.
+.SS "\fBint\fP DateTime::m_date\fC [private]\fP"
+
+.PP
+Date stored as ( year * 10000 + 100 * month + day ) 
+.PP
+Definition at line 264 of file DateTime\&.h\&.
+.SS "\fBint\fP DateTime::m_FakeTodayValue = 0\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Fake date value of today\&. \fBDateTime\&.cpp\fP Implementation of DateTime\&.hpp
+.PP
+Created by Salil Maharjan on 3/22/20\&. Copyright © 2020 Salil Maharjan\&. All rights reserved\&. 
+.PP
+Definition at line 266 of file DateTime\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DOROTHY from the source code\&.

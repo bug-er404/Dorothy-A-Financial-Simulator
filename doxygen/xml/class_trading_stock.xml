@@ -1,0 +1,1754 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_trading_stock" kind="class" language="C++" prot="public">
+    <compoundname>TradingStock</compoundname>
+    <includes refid="_trading_stock_8h" local="no">TradingStock.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_trading_stock_1aab3ac7177cab825b96e2e72986934c14" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TradingStock::m_tickerName</definition>
+        <argsstring></argsstring>
+        <name>m_tickerName</name>
+        <briefdescription>
+<para>Ticker name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="127" column="17" bodyfile="TradingStock.h" bodystart="127" bodyend="-1"/>
+        <referencedby refid="class_trading_stock_1a5cf4ad5ac772ed5bd2861097299e08f3" compoundref="_trading_stock_8h" startline="33" endline="33">GetStockName</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_trading_stock_1ab344aad5f77661cbff9339a556a673cb" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double TradingStock::m_availableCapital</definition>
+        <argsstring></argsstring>
+        <name>m_availableCapital</name>
+        <briefdescription>
+<para>Available capital for trading stock. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="129" column="12" bodyfile="TradingStock.h" bodystart="129" bodyend="-1"/>
+        <referencedby refid="class_trading_stock_1aa8181ddc5cc8c9e978393112563bf504" compoundref="_trading_stock_8cpp" startline="118" endline="122">IncreaseCapitalBy</referencedby>
+        <referencedby refid="class_trading_stock_1ae17abba347d59335fc2f7ebb74c5e6aa" compoundref="_trading_stock_8cpp" startline="131" endline="135">DecreaseCapitalBy</referencedby>
+        <referencedby refid="class_trading_stock_1a9d6e882e90f88a6dce91cc6d08f0847a" compoundref="_trading_stock_8h" startline="38" endline="38">GetAvailableCapital</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_trading_stock_1a02736eb71eea26f771c09a574787e414" prot="private" static="no" mutable="no">
+        <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>int TradingStock::m_transactionsTotalCount</definition>
+        <argsstring></argsstring>
+        <name>m_transactionsTotalCount</name>
+        <briefdescription>
+<para>Total transactions count. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="131" column="9" bodyfile="TradingStock.h" bodystart="131" bodyend="-1"/>
+        <referencedby refid="class_trading_stock_1acf37f3142597c43e861aeba34fe7b303" compoundref="_trading_stock_8cpp" startline="26" endline="33">TradingStock</referencedby>
+        <referencedby refid="class_trading_stock_1af0ebb1d62314db9844a05255605fc47a" compoundref="_trading_stock_8cpp" startline="169" endline="173">RecordTransactionsCount</referencedby>
+        <referencedby refid="class_trading_stock_1a610d809a67408a6ba4a23616b071e345" compoundref="_trading_stock_8cpp" startline="594" endline="598">GetTransactionCount</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_trading_stock_1abdba716e97be8c2a0ba28ddbc5cad9c2" prot="private" static="no" mutable="no">
+        <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+        <definition>int TradingStock::m_transactionCounter</definition>
+        <argsstring></argsstring>
+        <name>m_transactionCounter</name>
+        <briefdescription>
+<para>Current complete transaction counter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="133" column="9" bodyfile="TradingStock.h" bodystart="133" bodyend="-1"/>
+        <referencedby refid="class_trading_stock_1acf37f3142597c43e861aeba34fe7b303" compoundref="_trading_stock_8cpp" startline="26" endline="33">TradingStock</referencedby>
+        <referencedby refid="class_trading_stock_1a610d809a67408a6ba4a23616b071e345" compoundref="_trading_stock_8cpp" startline="594" endline="598">GetTransactionCount</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_trading_stock_1a361b06a4129ef77652f24bbf53dbaba3" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double TradingStock::m_totalSharesCount</definition>
+        <argsstring></argsstring>
+        <name>m_totalSharesCount</name>
+        <briefdescription>
+<para>Total shares held for stock. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="135" column="12" bodyfile="TradingStock.h" bodystart="135" bodyend="-1"/>
+        <referencedby refid="class_trading_stock_1acf37f3142597c43e861aeba34fe7b303" compoundref="_trading_stock_8cpp" startline="26" endline="33">TradingStock</referencedby>
+        <referencedby refid="class_trading_stock_1abf15f389461393974e58d973a7a4f593" compoundref="_trading_stock_8cpp" startline="46" endline="53">SellShares</referencedby>
+        <referencedby refid="class_trading_stock_1a8b890a05cb0536bbca53e6c341196158" compoundref="_trading_stock_8cpp" startline="63" endline="70">BuyShares</referencedby>
+        <referencedby refid="class_trading_stock_1a6dd461322fe1bf432705e4be521654af" compoundref="_trading_stock_8cpp" startline="92" endline="96">IncreaseSharesBy</referencedby>
+        <referencedby refid="class_trading_stock_1a32fbb2c7467bdd9351875549c86c1790" compoundref="_trading_stock_8cpp" startline="105" endline="109">DecreaseSharesBy</referencedby>
+        <referencedby refid="class_trading_stock_1aaa530618eafb6d8ce09bfb08c0080e3e" compoundref="_trading_stock_8h" startline="37" endline="37">GetTotalShares</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_trading_stock_1a31f327f15d57d007c94454402fbd712f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TradingStock::m_longPosFlag</definition>
+        <argsstring></argsstring>
+        <name>m_longPosFlag</name>
+        <briefdescription>
+<para>Long position flag. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="137" column="10" bodyfile="TradingStock.h" bodystart="137" bodyend="-1"/>
+        <referencedby refid="class_trading_stock_1acf37f3142597c43e861aeba34fe7b303" compoundref="_trading_stock_8cpp" startline="26" endline="33">TradingStock</referencedby>
+        <referencedby refid="class_trading_stock_1ac32c8930adc0a8ad8611209ea9cf0fe8" compoundref="_trading_stock_8cpp" startline="342" endline="359">UpdateStockPosition</referencedby>
+        <referencedby refid="class_trading_stock_1a0f34b4c03fc00907a9ab21c76450ca6f" compoundref="_trading_stock_8h" startline="34" endline="34">IsLong</referencedby>
+        <referencedby refid="class_trading_stock_1a0b8e6cd751ccac4691b33e9b3a50f8d1" compoundref="_trading_stock_8h" startline="63" endline="63">SetLong</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_trading_stock_1ad25663655bd3c1f1683464766f18f90c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TradingStock::m_shortPosFlag</definition>
+        <argsstring></argsstring>
+        <name>m_shortPosFlag</name>
+        <briefdescription>
+<para>Short position flag. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="139" column="10" bodyfile="TradingStock.h" bodystart="139" bodyend="-1"/>
+        <referencedby refid="class_trading_stock_1acf37f3142597c43e861aeba34fe7b303" compoundref="_trading_stock_8cpp" startline="26" endline="33">TradingStock</referencedby>
+        <referencedby refid="class_trading_stock_1ac32c8930adc0a8ad8611209ea9cf0fe8" compoundref="_trading_stock_8cpp" startline="342" endline="359">UpdateStockPosition</referencedby>
+        <referencedby refid="class_trading_stock_1a70adc544aeb365d69f4dfa3a99ac3d18" compoundref="_trading_stock_8h" startline="35" endline="35">IsShort</referencedby>
+        <referencedby refid="class_trading_stock_1a1e3d0dc8a813cf51bf10dd7cc1ca8175" compoundref="_trading_stock_8h" startline="64" endline="64">SetShort</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_trading_stock_1a84107772ee8962d8d20ff5b69a65cc22" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_transaction" kindref="compound">Transaction</ref> * &gt;</type>
+        <definition>std::vector&lt;Transaction*&gt; TradingStock::m_transactions</definition>
+        <argsstring></argsstring>
+        <name>m_transactions</name>
+        <briefdescription>
+<para>Records all transactions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="147" column="17" bodyfile="TradingStock.h" bodystart="147" bodyend="-1"/>
+        <referencedby refid="class_trading_stock_1a4398bf190fdf2e8f089e929b60fe2e6d" compoundref="_trading_stock_8cpp" startline="197" endline="200">OpenPosition</referencedby>
+        <referencedby refid="class_trading_stock_1a60478a78a694204f99b6ac01e5f61258" compoundref="_trading_stock_8cpp" startline="215" endline="247">CloseLongPositions</referencedby>
+        <referencedby refid="class_trading_stock_1a32ad16346c6c9bf2ffd9cc6a68f01325" compoundref="_trading_stock_8cpp" startline="262" endline="294">CloseShortPositions</referencedby>
+        <referencedby refid="class_trading_stock_1aec7895ca3d924226dc25ef2d961ed181" compoundref="_trading_stock_8cpp" startline="304" endline="314">CheckShortSignal</referencedby>
+        <referencedby refid="class_trading_stock_1a8610312df44fd64d9ff6fc4b7057b0b4" compoundref="_trading_stock_8cpp" startline="324" endline="334">CheckLongSignal</referencedby>
+        <referencedby refid="class_trading_stock_1ac32c8930adc0a8ad8611209ea9cf0fe8" compoundref="_trading_stock_8cpp" startline="342" endline="359">UpdateStockPosition</referencedby>
+        <referencedby refid="class_trading_stock_1aad5057092b58a0ed625be05cfcef3c3e" compoundref="_trading_stock_8cpp" startline="371" endline="427">CloseStalePositions</referencedby>
+        <referencedby refid="class_trading_stock_1ac87efd94107349785d32cdf7ea6541d7" compoundref="_trading_stock_8cpp" startline="486" endline="498">GetShortSharesHeld</referencedby>
+        <referencedby refid="class_trading_stock_1a7fe5dbc6b3d6bf08c8b1520cf669a9ca" compoundref="_trading_stock_8cpp" startline="507" endline="519">GetLongSharesHeld</referencedby>
+        <referencedby refid="class_trading_stock_1a4468ad7c3e2addaccb00619e36db1540" compoundref="_trading_stock_8cpp" startline="528" endline="540">GetShortCapital</referencedby>
+        <referencedby refid="class_trading_stock_1a96bb13205b822d35fbbdcc6c21a1d5a9" compoundref="_trading_stock_8cpp" startline="549" endline="561">GetLongCapital</referencedby>
+        <referencedby refid="class_trading_stock_1ae5b6f96bb1b51aa1d0e5144eeaf7fea1" compoundref="_trading_stock_8cpp" startline="570" endline="585">GetClosedTransactions</referencedby>
+        <referencedby refid="class_trading_stock_1a2942da99da8b25978168083c5e29be72" compoundref="_trading_stock_8cpp" startline="610" endline="614">newTradingDay</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_trading_stock_1a5287c59a981bbfc50f275c741718b893" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; TradingStock::m_signalActivityRecord</definition>
+        <argsstring></argsstring>
+        <name>m_signalActivityRecord</name>
+        <briefdescription>
+<para>Records daily signals. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="149" column="17" bodyfile="TradingStock.h" bodystart="149" bodyend="-1"/>
+        <referencedby refid="class_trading_stock_1abe36e5075cacda88997a32e5f4923ee6" compoundref="_trading_stock_8cpp" startline="79" endline="83">RecordSignal</referencedby>
+        <referencedby refid="class_trading_stock_1a3f01e1cee2b7b6ae685351266850a723" compoundref="_trading_stock_8h" startline="36" endline="36">GetSignalRecord</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_trading_stock_1a2182f57e853ec0c69a7051f1c36bf56b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; TradingStock::m_capitalActivityRecord</definition>
+        <argsstring></argsstring>
+        <name>m_capitalActivityRecord</name>
+        <briefdescription>
+<para>Records daily capital activities. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="151" column="17" bodyfile="TradingStock.h" bodystart="151" bodyend="-1"/>
+        <referencedby refid="class_trading_stock_1aa8181ddc5cc8c9e978393112563bf504" compoundref="_trading_stock_8cpp" startline="118" endline="122">IncreaseCapitalBy</referencedby>
+        <referencedby refid="class_trading_stock_1ae17abba347d59335fc2f7ebb74c5e6aa" compoundref="_trading_stock_8cpp" startline="131" endline="135">DecreaseCapitalBy</referencedby>
+        <referencedby refid="class_trading_stock_1ab9b7d80cfd3dc2bcbc6ac9ab52afae08" compoundref="_trading_stock_8cpp" startline="436" endline="447">GetInvestedCapital</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_trading_stock_1a0b6f6119524b706ebcde2578c7a692d2" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; TradingStock::m_shareActivityRecord</definition>
+        <argsstring></argsstring>
+        <name>m_shareActivityRecord</name>
+        <briefdescription>
+<para>Records daily position changes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="153" column="17" bodyfile="TradingStock.h" bodystart="153" bodyend="-1"/>
+        <referencedby refid="class_trading_stock_1abf15f389461393974e58d973a7a4f593" compoundref="_trading_stock_8cpp" startline="46" endline="53">SellShares</referencedby>
+        <referencedby refid="class_trading_stock_1a8b890a05cb0536bbca53e6c341196158" compoundref="_trading_stock_8cpp" startline="63" endline="70">BuyShares</referencedby>
+        <referencedby refid="class_trading_stock_1a6dd461322fe1bf432705e4be521654af" compoundref="_trading_stock_8cpp" startline="92" endline="96">IncreaseSharesBy</referencedby>
+        <referencedby refid="class_trading_stock_1a32fbb2c7467bdd9351875549c86c1790" compoundref="_trading_stock_8cpp" startline="105" endline="109">DecreaseSharesBy</referencedby>
+        <referencedby refid="class_trading_stock_1a6a1cbdd1ce85e26c7bd4e7c46b584c07" compoundref="_trading_stock_8h" startline="43" endline="43">GetLatestShareActivity</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_trading_stock_1a73d378cbffc5da8e87f91125c63391ed" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; TradingStock::m_dailyPNLRecord</definition>
+        <argsstring></argsstring>
+        <name>m_dailyPNLRecord</name>
+        <briefdescription>
+<para>Records daily PNL. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="155" column="17" bodyfile="TradingStock.h" bodystart="155" bodyend="-1"/>
+        <referencedby refid="class_trading_stock_1a82ea8bcd2b94eef82bb100c929c519e0" compoundref="_trading_stock_8cpp" startline="145" endline="160">RecordPNL</referencedby>
+        <referencedby refid="class_trading_stock_1aad5057092b58a0ed625be05cfcef3c3e" compoundref="_trading_stock_8cpp" startline="371" endline="427">CloseStalePositions</referencedby>
+        <referencedby refid="class_trading_stock_1aff216b0773772c62708b2ede2b4263de" compoundref="_trading_stock_8h" startline="39" endline="39">GetDailyPnL</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_trading_stock_1ad19aabe8f6955c24479f381f82a1ebb2" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; TradingStock::m_dailyReturnRecord</definition>
+        <argsstring></argsstring>
+        <name>m_dailyReturnRecord</name>
+        <briefdescription>
+<para>Records daily rate of return (ROR) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="157" column="17" bodyfile="TradingStock.h" bodystart="157" bodyend="-1"/>
+        <referencedby refid="class_trading_stock_1a08f0c522a18efec82f4c272e0d03fe7c" compoundref="_trading_stock_8cpp" startline="182" endline="185">RecordDailyReturn</referencedby>
+        <referencedby refid="class_trading_stock_1aad5057092b58a0ed625be05cfcef3c3e" compoundref="_trading_stock_8cpp" startline="371" endline="427">CloseStalePositions</referencedby>
+        <referencedby refid="class_trading_stock_1a39cc9a02efc5431a4e150b941a9c7df6" compoundref="_trading_stock_8cpp" startline="456" endline="463">CalculateDailySharpeRatio</referencedby>
+        <referencedby refid="class_trading_stock_1a3c5d34b2014664070cd7f0fd1c8cdf50" compoundref="_trading_stock_8h" startline="40" endline="40">GetDailyROR</referencedby>
+        <referencedby refid="class_trading_stock_1a37b5fb9d2c04a236069dfe31eeba7845" compoundref="_trading_stock_8h" startline="42" endline="42">GetROR</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_trading_stock_1a4b62a7f5eae82a2e14957c167fdd0a0a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; TradingStock::m_cumulativePNLRecord</definition>
+        <argsstring></argsstring>
+        <name>m_cumulativePNLRecord</name>
+        <briefdescription>
+<para>Records daily cumulative PNL. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="159" column="17" bodyfile="TradingStock.h" bodystart="159" bodyend="-1"/>
+        <referencedby refid="class_trading_stock_1a82ea8bcd2b94eef82bb100c929c519e0" compoundref="_trading_stock_8cpp" startline="145" endline="160">RecordPNL</referencedby>
+        <referencedby refid="class_trading_stock_1aad5057092b58a0ed625be05cfcef3c3e" compoundref="_trading_stock_8cpp" startline="371" endline="427">CloseStalePositions</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_trading_stock_1aafa0593383e1f7afc886846b1d4873cd" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref> &gt;</type>
+        <definition>std::vector&lt;int&gt; TradingStock::m_TransactionsCountRecord</definition>
+        <argsstring></argsstring>
+        <name>m_TransactionsCountRecord</name>
+        <briefdescription>
+<para>Records daily transaction counts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="161" column="17" bodyfile="TradingStock.h" bodystart="161" bodyend="-1"/>
+        <referencedby refid="class_trading_stock_1af0ebb1d62314db9844a05255605fc47a" compoundref="_trading_stock_8cpp" startline="169" endline="173">RecordTransactionsCount</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_trading_stock_1a649821526ca9021bd4cfd6b8b5d70842" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; TradingStock::m_sharpeRatioRecord</definition>
+        <argsstring></argsstring>
+        <name>m_sharpeRatioRecord</name>
+        <briefdescription>
+<para>Records daily sharpe ratio. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="163" column="17" bodyfile="TradingStock.h" bodystart="163" bodyend="-1"/>
+        <referencedby refid="class_trading_stock_1a39cc9a02efc5431a4e150b941a9c7df6" compoundref="_trading_stock_8cpp" startline="456" endline="463">CalculateDailySharpeRatio</referencedby>
+        <referencedby refid="class_trading_stock_1a9a33d27b1cf6c190fa2bd1042a7a0ac7" compoundref="_trading_stock_8cpp" startline="471" endline="477">GetSharpeToday</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_trading_stock_1acf37f3142597c43e861aeba34fe7b303" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TradingStock::TradingStock</definition>
+        <argsstring>(std::string a_tickerName, double a_startingCapital)</argsstring>
+        <name>TradingStock</name>
+        <param>
+          <type>std::string</type>
+          <declname>a_tickerName</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_startingCapital</declname>
+        </param>
+        <briefdescription>
+<para>Class parameterized constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="_trading_stock_8cpp" kindref="compound">TradingStock.cpp</ref> Implementation of <ref refid="_trading_stock_8h" kindref="compound">TradingStock.h</ref></para>
+<para>Created by Salil Maharjan on 05/03/20. Copyright © 2020 Salil Maharjan. All rights reserved. <ref refid="class_trading_stock_1acf37f3142597c43e861aeba34fe7b303" kindref="member">TradingStock::TradingStock</ref> Class parameterized constructor to create a trading stock object. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_tickerName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string Trading stock&apos;s ticker name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_startingCapital</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double Initial capital to invest for the stock. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="27" column="5" bodyfile="TradingStock.cpp" bodystart="26" bodyend="33"/>
+        <references refid="class_trading_stock_1a31f327f15d57d007c94454402fbd712f" compoundref="_trading_stock_8h" startline="137">m_longPosFlag</references>
+        <references refid="class_trading_stock_1ad25663655bd3c1f1683464766f18f90c" compoundref="_trading_stock_8h" startline="139">m_shortPosFlag</references>
+        <references refid="class_trading_stock_1a361b06a4129ef77652f24bbf53dbaba3" compoundref="_trading_stock_8h" startline="135">m_totalSharesCount</references>
+        <references refid="class_trading_stock_1abdba716e97be8c2a0ba28ddbc5cad9c2" compoundref="_trading_stock_8h" startline="133">m_transactionCounter</references>
+        <references refid="class_trading_stock_1a02736eb71eea26f771c09a574787e414" compoundref="_trading_stock_8h" startline="131">m_transactionsTotalCount</references>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a5cf4ad5ac772ed5bd2861097299e08f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string</type>
+        <definition>const std::string TradingStock::GetStockName</definition>
+        <argsstring>()</argsstring>
+        <name>GetStockName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="33" column="23" bodyfile="TradingStock.h" bodystart="33" bodyend="33"/>
+        <references refid="class_trading_stock_1aab3ac7177cab825b96e2e72986934c14" compoundref="_trading_stock_8h" startline="127">m_tickerName</references>
+        <referencedby refid="class_simulator_1a56638656f8e85aec70ba6c2680025279" compoundref="_simulator_8cpp" startline="704" endline="721">Simulator::recordTransaction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a0f34b4c03fc00907a9ab21c76450ca6f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const bool</type>
+        <definition>const bool TradingStock::IsLong</definition>
+        <argsstring>()</argsstring>
+        <name>IsLong</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="34" column="16" bodyfile="TradingStock.h" bodystart="34" bodyend="34"/>
+        <references refid="class_trading_stock_1a31f327f15d57d007c94454402fbd712f" compoundref="_trading_stock_8h" startline="137">m_longPosFlag</references>
+        <referencedby refid="class_simulator_1adc8821db9e85da458f9a6e8b1912ac86" compoundref="_simulator_8cpp" startline="485" endline="548">Simulator::makeTrade</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a70adc544aeb365d69f4dfa3a99ac3d18" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const bool</type>
+        <definition>const bool TradingStock::IsShort</definition>
+        <argsstring>()</argsstring>
+        <name>IsShort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="35" column="16" bodyfile="TradingStock.h" bodystart="35" bodyend="35"/>
+        <references refid="class_trading_stock_1ad25663655bd3c1f1683464766f18f90c" compoundref="_trading_stock_8h" startline="139">m_shortPosFlag</references>
+        <referencedby refid="class_simulator_1adc8821db9e85da458f9a6e8b1912ac86" compoundref="_simulator_8cpp" startline="485" endline="548">Simulator::makeTrade</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a3f01e1cee2b7b6ae685351266850a723" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; double &gt;</type>
+        <definition>const std::vector&lt;double&gt; TradingStock::GetSignalRecord</definition>
+        <argsstring>()</argsstring>
+        <name>GetSignalRecord</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="36" column="23" bodyfile="TradingStock.h" bodystart="36" bodyend="36"/>
+        <references refid="class_trading_stock_1a5287c59a981bbfc50f275c741718b893" compoundref="_trading_stock_8h" startline="149">m_signalActivityRecord</references>
+        <referencedby refid="class_simulator_1adc8821db9e85da458f9a6e8b1912ac86" compoundref="_simulator_8cpp" startline="485" endline="548">Simulator::makeTrade</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1aaa530618eafb6d8ce09bfb08c0080e3e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double</type>
+        <definition>const double TradingStock::GetTotalShares</definition>
+        <argsstring>()</argsstring>
+        <name>GetTotalShares</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="37" column="18" bodyfile="TradingStock.h" bodystart="37" bodyend="37"/>
+        <references refid="class_trading_stock_1a361b06a4129ef77652f24bbf53dbaba3" compoundref="_trading_stock_8h" startline="135">m_totalSharesCount</references>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a9d6e882e90f88a6dce91cc6d08f0847a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double</type>
+        <definition>const double TradingStock::GetAvailableCapital</definition>
+        <argsstring>()</argsstring>
+        <name>GetAvailableCapital</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="38" column="18" bodyfile="TradingStock.h" bodystart="38" bodyend="38"/>
+        <references refid="class_trading_stock_1ab344aad5f77661cbff9339a556a673cb" compoundref="_trading_stock_8h" startline="129">m_availableCapital</references>
+        <referencedby refid="class_simulator_1a4dbbe2a4cbd784dff5a9bdc4ee913b08" compoundref="_simulator_8cpp" startline="559" endline="562">Simulator::hasEnoughCapital</referencedby>
+        <referencedby refid="class_simulator_1ad24c99fbfd5808aba7f5c9de11cc23f0" compoundref="_simulator_8cpp" startline="588" endline="620">Simulator::openPositions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1aff216b0773772c62708b2ede2b4263de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double</type>
+        <definition>const double TradingStock::GetDailyPnL</definition>
+        <argsstring>()</argsstring>
+        <name>GetDailyPnL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="39" column="18" bodyfile="TradingStock.h" bodystart="39" bodyend="39"/>
+        <references refid="class_trading_stock_1a73d378cbffc5da8e87f91125c63391ed" compoundref="_trading_stock_8h" startline="155">m_dailyPNLRecord</references>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a3c5d34b2014664070cd7f0fd1c8cdf50" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double</type>
+        <definition>const double TradingStock::GetDailyROR</definition>
+        <argsstring>()</argsstring>
+        <name>GetDailyROR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="40" column="18" bodyfile="TradingStock.h" bodystart="40" bodyend="40"/>
+        <references refid="class_trading_stock_1ad19aabe8f6955c24479f381f82a1ebb2" compoundref="_trading_stock_8h" startline="157">m_dailyReturnRecord</references>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a37b5fb9d2c04a236069dfe31eeba7845" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; double &gt;</type>
+        <definition>const std::vector&lt;double&gt; TradingStock::GetROR</definition>
+        <argsstring>()</argsstring>
+        <name>GetROR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="42" column="23" bodyfile="TradingStock.h" bodystart="42" bodyend="42"/>
+        <references refid="class_trading_stock_1ad19aabe8f6955c24479f381f82a1ebb2" compoundref="_trading_stock_8h" startline="157">m_dailyReturnRecord</references>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a6a1cbdd1ce85e26c7bd4e7c46b584c07" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double</type>
+        <definition>const double TradingStock::GetLatestShareActivity</definition>
+        <argsstring>()</argsstring>
+        <name>GetLatestShareActivity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="43" column="18" bodyfile="TradingStock.h" bodystart="43" bodyend="43"/>
+        <references refid="class_trading_stock_1a0b6f6119524b706ebcde2578c7a692d2" compoundref="_trading_stock_8h" startline="153">m_shareActivityRecord</references>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a9a33d27b1cf6c190fa2bd1042a7a0ac7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const double</type>
+        <definition>const double TradingStock::GetSharpeToday</definition>
+        <argsstring>()</argsstring>
+        <name>GetSharpeToday</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1a9a33d27b1cf6c190fa2bd1042a7a0ac7" kindref="member">TradingStock::GetSharpeToday</ref> Accessor method to get the Sharpe ratio of the current day of an individual stock. <simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="44" column="18" bodyfile="TradingStock.cpp" bodystart="471" bodyend="477"/>
+        <references refid="class_trading_stock_1a649821526ca9021bd4cfd6b8b5d70842" compoundref="_trading_stock_8h" startline="163">m_sharpeRatioRecord</references>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a610d809a67408a6ba4a23616b071e345" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double TradingStock::GetTransactionCount</definition>
+        <argsstring>()</argsstring>
+        <name>GetTransactionCount</name>
+        <briefdescription>
+<para>Method to get current completed transaction count (Does not consider incomplete transactions.) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1a610d809a67408a6ba4a23616b071e345" kindref="member">TradingStock::GetTransactionCount</ref> Function to get current closed transaction counter. <simplesect kind="return"><para>double Number of current completed transactions. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="46" column="12" bodyfile="TradingStock.cpp" bodystart="594" bodyend="598"/>
+        <references refid="class_trading_stock_1abdba716e97be8c2a0ba28ddbc5cad9c2" compoundref="_trading_stock_8h" startline="133">m_transactionCounter</references>
+        <references refid="class_trading_stock_1a02736eb71eea26f771c09a574787e414" compoundref="_trading_stock_8h" startline="131">m_transactionsTotalCount</references>
+        <referencedby refid="class_simulator_1a56638656f8e85aec70ba6c2680025279" compoundref="_simulator_8cpp" startline="704" endline="721">Simulator::recordTransaction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1ac87efd94107349785d32cdf7ea6541d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const double</type>
+        <definition>const double TradingStock::GetShortSharesHeld</definition>
+        <argsstring>()</argsstring>
+        <name>GetShortSharesHeld</name>
+        <briefdescription>
+<para>Method to get short shares held. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1ac87efd94107349785d32cdf7ea6541d7" kindref="member">TradingStock::GetShortSharesHeld</ref> Accessor method to get short shares held in the trading stock. <simplesect kind="return"><para>double Number of short positions held. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="48" column="18" bodyfile="TradingStock.cpp" bodystart="486" bodyend="498"/>
+        <references refid="_c_make_cache_8txt_1a7e98b8a17c0aad30ba64d47b74e2a6c1" compoundref="_c_make_cache_8txt" startline="299">i</references>
+        <references refid="class_trading_stock_1a84107772ee8962d8d20ff5b69a65cc22" compoundref="_trading_stock_8h" startline="147">m_transactions</references>
+        <referencedby refid="class_simulator_1ad24c99fbfd5808aba7f5c9de11cc23f0" compoundref="_simulator_8cpp" startline="588" endline="620">Simulator::openPositions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a7fe5dbc6b3d6bf08c8b1520cf669a9ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const double</type>
+        <definition>const double TradingStock::GetLongSharesHeld</definition>
+        <argsstring>()</argsstring>
+        <name>GetLongSharesHeld</name>
+        <briefdescription>
+<para>Method to get long shares held. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1a7fe5dbc6b3d6bf08c8b1520cf669a9ca" kindref="member">TradingStock::GetLongSharesHeld</ref> Accessor method to get long shares held in the trading stock. <simplesect kind="return"><para>double Number of short positions held. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="50" column="18" bodyfile="TradingStock.cpp" bodystart="507" bodyend="519"/>
+        <references refid="_c_make_cache_8txt_1a7e98b8a17c0aad30ba64d47b74e2a6c1" compoundref="_c_make_cache_8txt" startline="299">i</references>
+        <references refid="class_trading_stock_1a84107772ee8962d8d20ff5b69a65cc22" compoundref="_trading_stock_8h" startline="147">m_transactions</references>
+        <referencedby refid="class_simulator_1ad24c99fbfd5808aba7f5c9de11cc23f0" compoundref="_simulator_8cpp" startline="588" endline="620">Simulator::openPositions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1ae5b6f96bb1b51aa1d0e5144eeaf7fea1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="class_transaction" kindref="compound">Transaction</ref> * &gt;</type>
+        <definition>std::vector&lt; Transaction * &gt; TradingStock::GetClosedTransactions</definition>
+        <argsstring>()</argsstring>
+        <name>GetClosedTransactions</name>
+        <briefdescription>
+<para>Method to get closed transactions and remove them from memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1ae5b6f96bb1b51aa1d0e5144eeaf7fea1" kindref="member">TradingStock::GetClosedTransactions</ref> Method to get closed transactions. Once returned, they are removed from the record. <simplesect kind="return"><para>double Total capital in long positions. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="52" column="17" bodyfile="TradingStock.cpp" bodystart="570" bodyend="585"/>
+        <references refid="_c_make_cache_8txt_1a7e98b8a17c0aad30ba64d47b74e2a6c1" compoundref="_c_make_cache_8txt" startline="299">i</references>
+        <references refid="class_trading_stock_1a84107772ee8962d8d20ff5b69a65cc22" compoundref="_trading_stock_8h" startline="147">m_transactions</references>
+        <referencedby refid="class_simulator_1a56638656f8e85aec70ba6c2680025279" compoundref="_simulator_8cpp" startline="704" endline="721">Simulator::recordTransaction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a4468ad7c3e2addaccb00619e36db1540" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const double</type>
+        <definition>const double TradingStock::GetShortCapital</definition>
+        <argsstring>()</argsstring>
+        <name>GetShortCapital</name>
+        <briefdescription>
+<para>Method to get short capital in investment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1a4468ad7c3e2addaccb00619e36db1540" kindref="member">TradingStock::GetShortCapital</ref> Accessor method to get capital invested in short positions in trading stock. <simplesect kind="return"><para>double Total capital in short positions. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="54" column="18" bodyfile="TradingStock.cpp" bodystart="528" bodyend="540"/>
+        <references refid="_c_make_cache_8txt_1a7e98b8a17c0aad30ba64d47b74e2a6c1" compoundref="_c_make_cache_8txt" startline="299">i</references>
+        <references refid="class_trading_stock_1a84107772ee8962d8d20ff5b69a65cc22" compoundref="_trading_stock_8h" startline="147">m_transactions</references>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a96bb13205b822d35fbbdcc6c21a1d5a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const double</type>
+        <definition>const double TradingStock::GetLongCapital</definition>
+        <argsstring>()</argsstring>
+        <name>GetLongCapital</name>
+        <briefdescription>
+<para>Method to get long capital in investment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1a96bb13205b822d35fbbdcc6c21a1d5a9" kindref="member">TradingStock::GetLongCapital</ref> Accessor method to get capital invested in long positions in trading stock. <simplesect kind="return"><para>double Total capital in long positions. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="56" column="18" bodyfile="TradingStock.cpp" bodystart="549" bodyend="561"/>
+        <references refid="_c_make_cache_8txt_1a7e98b8a17c0aad30ba64d47b74e2a6c1" compoundref="_c_make_cache_8txt" startline="299">i</references>
+        <references refid="class_trading_stock_1a84107772ee8962d8d20ff5b69a65cc22" compoundref="_trading_stock_8h" startline="147">m_transactions</references>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a0b8e6cd751ccac4691b33e9b3a50f8d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TradingStock::SetLong</definition>
+        <argsstring>(bool a_long)</argsstring>
+        <name>SetLong</name>
+        <param>
+          <type>bool</type>
+          <declname>a_long</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="63" column="10" bodyfile="TradingStock.h" bodystart="63" bodyend="63"/>
+        <references refid="class_trading_stock_1a31f327f15d57d007c94454402fbd712f" compoundref="_trading_stock_8h" startline="137">m_longPosFlag</references>
+        <referencedby refid="class_simulator_1ad24c99fbfd5808aba7f5c9de11cc23f0" compoundref="_simulator_8cpp" startline="588" endline="620">Simulator::openPositions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a1e3d0dc8a813cf51bf10dd7cc1ca8175" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TradingStock::SetShort</definition>
+        <argsstring>(bool a_short)</argsstring>
+        <name>SetShort</name>
+        <param>
+          <type>bool</type>
+          <declname>a_short</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="64" column="10" bodyfile="TradingStock.h" bodystart="64" bodyend="64"/>
+        <references refid="class_trading_stock_1ad25663655bd3c1f1683464766f18f90c" compoundref="_trading_stock_8h" startline="139">m_shortPosFlag</references>
+        <referencedby refid="class_simulator_1ad24c99fbfd5808aba7f5c9de11cc23f0" compoundref="_simulator_8cpp" startline="588" endline="620">Simulator::openPositions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a6dd461322fe1bf432705e4be521654af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TradingStock::IncreaseSharesBy</definition>
+        <argsstring>(double a_share)</argsstring>
+        <name>IncreaseSharesBy</name>
+        <param>
+          <type>double</type>
+          <declname>a_share</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1a6dd461322fe1bf432705e4be521654af" kindref="member">TradingStock::IncreaseSharesBy</ref> Function to increase shares owned in the stock. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_share</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double Number of shares to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="65" column="10" bodyfile="TradingStock.cpp" bodystart="92" bodyend="96"/>
+        <references refid="class_trading_stock_1a0b6f6119524b706ebcde2578c7a692d2" compoundref="_trading_stock_8h" startline="153">m_shareActivityRecord</references>
+        <references refid="class_trading_stock_1a361b06a4129ef77652f24bbf53dbaba3" compoundref="_trading_stock_8h" startline="135">m_totalSharesCount</references>
+        <referencedby refid="class_simulator_1a4238ab87912e40d99cad5deb558e3a96" compoundref="_simulator_8cpp" startline="571" endline="577">Simulator::recordNoActivity</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a32fbb2c7467bdd9351875549c86c1790" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TradingStock::DecreaseSharesBy</definition>
+        <argsstring>(double a_share)</argsstring>
+        <name>DecreaseSharesBy</name>
+        <param>
+          <type>double</type>
+          <declname>a_share</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1a32fbb2c7467bdd9351875549c86c1790" kindref="member">TradingStock::DecreaseSharesBy</ref> Function to decrease shares owned in the stock. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_share</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double Number of shares to remove. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="66" column="10" bodyfile="TradingStock.cpp" bodystart="105" bodyend="109"/>
+        <references refid="class_trading_stock_1a0b6f6119524b706ebcde2578c7a692d2" compoundref="_trading_stock_8h" startline="153">m_shareActivityRecord</references>
+        <references refid="class_trading_stock_1a361b06a4129ef77652f24bbf53dbaba3" compoundref="_trading_stock_8h" startline="135">m_totalSharesCount</references>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1aa8181ddc5cc8c9e978393112563bf504" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TradingStock::IncreaseCapitalBy</definition>
+        <argsstring>(double a_share)</argsstring>
+        <name>IncreaseCapitalBy</name>
+        <param>
+          <type>double</type>
+          <declname>a_share</declname>
+          <defname>a_capital</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1aa8181ddc5cc8c9e978393112563bf504" kindref="member">TradingStock::IncreaseCapitalBy</ref> Function to increase available capital in the stock and record it. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_capital</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double Capital to increase. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="67" column="10" bodyfile="TradingStock.cpp" bodystart="118" bodyend="122"/>
+        <references refid="class_trading_stock_1ab344aad5f77661cbff9339a556a673cb" compoundref="_trading_stock_8h" startline="129">m_availableCapital</references>
+        <references refid="class_trading_stock_1a2182f57e853ec0c69a7051f1c36bf56b" compoundref="_trading_stock_8h" startline="151">m_capitalActivityRecord</references>
+        <referencedby refid="class_simulator_1a4238ab87912e40d99cad5deb558e3a96" compoundref="_simulator_8cpp" startline="571" endline="577">Simulator::recordNoActivity</referencedby>
+        <referencedby refid="class_trading_stock_1abf15f389461393974e58d973a7a4f593" compoundref="_trading_stock_8cpp" startline="46" endline="53">SellShares</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1ae17abba347d59335fc2f7ebb74c5e6aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TradingStock::DecreaseCapitalBy</definition>
+        <argsstring>(double a_share)</argsstring>
+        <name>DecreaseCapitalBy</name>
+        <param>
+          <type>double</type>
+          <declname>a_share</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1ae17abba347d59335fc2f7ebb74c5e6aa" kindref="member">TradingStock::DecreaseCapitalBy</ref> Function to decrease available capital in the stock and record it. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_capital</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double Capital to decrease. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="68" column="10" bodyfile="TradingStock.cpp" bodystart="131" bodyend="135"/>
+        <references refid="class_trading_stock_1ab344aad5f77661cbff9339a556a673cb" compoundref="_trading_stock_8h" startline="129">m_availableCapital</references>
+        <references refid="class_trading_stock_1a2182f57e853ec0c69a7051f1c36bf56b" compoundref="_trading_stock_8h" startline="151">m_capitalActivityRecord</references>
+        <referencedby refid="class_trading_stock_1a8b890a05cb0536bbca53e6c341196158" compoundref="_trading_stock_8cpp" startline="63" endline="70">BuyShares</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1abf15f389461393974e58d973a7a4f593" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TradingStock::SellShares</definition>
+        <argsstring>(double a_shares, double a_price)</argsstring>
+        <name>SellShares</name>
+        <param>
+          <type>double</type>
+          <declname>a_shares</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_price</declname>
+        </param>
+        <briefdescription>
+<para>Method to sell shares. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1abf15f389461393974e58d973a7a4f593" kindref="member">TradingStock::SellShares</ref> Method to sell shares. Updates capital and record variables. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_shares</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double Number of shares to sell. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_price</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double Price at which to sell shares. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="76" column="10" bodyfile="TradingStock.cpp" bodystart="46" bodyend="53"/>
+        <references refid="class_trading_stock_1aa8181ddc5cc8c9e978393112563bf504" compoundref="_trading_stock_8cpp" startline="118" endline="122">IncreaseCapitalBy</references>
+        <references refid="class_trading_stock_1a0b6f6119524b706ebcde2578c7a692d2" compoundref="_trading_stock_8h" startline="153">m_shareActivityRecord</references>
+        <references refid="class_trading_stock_1a361b06a4129ef77652f24bbf53dbaba3" compoundref="_trading_stock_8h" startline="135">m_totalSharesCount</references>
+        <referencedby refid="class_simulator_1a20a56ab01d34b348fe22129caa44df09" compoundref="_simulator_8cpp" startline="631" endline="658">Simulator::closePositions</referencedby>
+        <referencedby refid="class_trading_stock_1aad5057092b58a0ed625be05cfcef3c3e" compoundref="_trading_stock_8cpp" startline="371" endline="427">CloseStalePositions</referencedby>
+        <referencedby refid="class_simulator_1ad24c99fbfd5808aba7f5c9de11cc23f0" compoundref="_simulator_8cpp" startline="588" endline="620">Simulator::openPositions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a8b890a05cb0536bbca53e6c341196158" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TradingStock::BuyShares</definition>
+        <argsstring>(double a_shares, double a_price)</argsstring>
+        <name>BuyShares</name>
+        <param>
+          <type>double</type>
+          <declname>a_shares</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_price</declname>
+        </param>
+        <briefdescription>
+<para>Method to buys shares. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1a8b890a05cb0536bbca53e6c341196158" kindref="member">TradingStock::BuyShares</ref> Method to buy shares. Updates capital and record variables. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_shares</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double Number of shares to buy. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_price</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double Price at which to buy shares. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="79" column="10" bodyfile="TradingStock.cpp" bodystart="63" bodyend="70"/>
+        <references refid="class_trading_stock_1ae17abba347d59335fc2f7ebb74c5e6aa" compoundref="_trading_stock_8cpp" startline="131" endline="135">DecreaseCapitalBy</references>
+        <references refid="class_trading_stock_1a0b6f6119524b706ebcde2578c7a692d2" compoundref="_trading_stock_8h" startline="153">m_shareActivityRecord</references>
+        <references refid="class_trading_stock_1a361b06a4129ef77652f24bbf53dbaba3" compoundref="_trading_stock_8h" startline="135">m_totalSharesCount</references>
+        <referencedby refid="class_simulator_1a20a56ab01d34b348fe22129caa44df09" compoundref="_simulator_8cpp" startline="631" endline="658">Simulator::closePositions</referencedby>
+        <referencedby refid="class_trading_stock_1aad5057092b58a0ed625be05cfcef3c3e" compoundref="_trading_stock_8cpp" startline="371" endline="427">CloseStalePositions</referencedby>
+        <referencedby refid="class_simulator_1ad24c99fbfd5808aba7f5c9de11cc23f0" compoundref="_simulator_8cpp" startline="588" endline="620">Simulator::openPositions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1aad5057092b58a0ed625be05cfcef3c3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TradingStock::CloseStalePositions</definition>
+        <argsstring>(int a_dayLimit, DateTime *a_date, double a_signal, double a_price)</argsstring>
+        <name>CloseStalePositions</name>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+          <declname>a_dayLimit</declname>
+        </param>
+        <param>
+          <type><ref refid="class_date_time" kindref="compound">DateTime</ref> *</type>
+          <declname>a_date</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_signal</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_price</declname>
+        </param>
+        <briefdescription>
+<para>Method to close positions that exceed maximum days limit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1aad5057092b58a0ed625be05cfcef3c3e" kindref="member">TradingStock::CloseStalePositions</ref> Method to close positions that exceed maximum days limit. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_dayLimit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int Maximum days in position limit. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_date</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DateTime* Today&apos;s date. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_signal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double Current day&apos;s signal. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_price</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double Current price of shares. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="82" column="10" bodyfile="TradingStock.cpp" bodystart="371" bodyend="427"/>
+        <references refid="class_trading_stock_1a8b890a05cb0536bbca53e6c341196158" compoundref="_trading_stock_8cpp" startline="63" endline="70">BuyShares</references>
+        <references refid="_c_make_cache_8txt_1a7e98b8a17c0aad30ba64d47b74e2a6c1" compoundref="_c_make_cache_8txt" startline="299">i</references>
+        <references refid="class_trading_stock_1a4b62a7f5eae82a2e14957c167fdd0a0a" compoundref="_trading_stock_8h" startline="159">m_cumulativePNLRecord</references>
+        <references refid="class_trading_stock_1a73d378cbffc5da8e87f91125c63391ed" compoundref="_trading_stock_8h" startline="155">m_dailyPNLRecord</references>
+        <references refid="class_trading_stock_1ad19aabe8f6955c24479f381f82a1ebb2" compoundref="_trading_stock_8h" startline="157">m_dailyReturnRecord</references>
+        <references refid="class_trading_stock_1a84107772ee8962d8d20ff5b69a65cc22" compoundref="_trading_stock_8h" startline="147">m_transactions</references>
+        <references refid="class_trading_stock_1af0ebb1d62314db9844a05255605fc47a" compoundref="_trading_stock_8cpp" startline="169" endline="173">RecordTransactionsCount</references>
+        <references refid="class_trading_stock_1abf15f389461393974e58d973a7a4f593" compoundref="_trading_stock_8cpp" startline="46" endline="53">SellShares</references>
+        <references refid="class_trading_stock_1ac32c8930adc0a8ad8611209ea9cf0fe8" compoundref="_trading_stock_8cpp" startline="342" endline="359">UpdateStockPosition</references>
+        <referencedby refid="class_simulator_1adc8821db9e85da458f9a6e8b1912ac86" compoundref="_simulator_8cpp" startline="485" endline="548">Simulator::makeTrade</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a4398bf190fdf2e8f089e929b60fe2e6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TradingStock::OpenPosition</definition>
+        <argsstring>(DateTime *a_date, double a_signal, double a_share, double a_price)</argsstring>
+        <name>OpenPosition</name>
+        <param>
+          <type><ref refid="class_date_time" kindref="compound">DateTime</ref> *</type>
+          <declname>a_date</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_signal</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_share</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_price</declname>
+        </param>
+        <briefdescription>
+<para>Method to open a position for the trading stock. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1a4398bf190fdf2e8f089e929b60fe2e6d" kindref="member">TradingStock::OpenPosition</ref> Open a new position for the trading stock. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_date</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DateTime* Today&apos;s date. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_signal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double Current day&apos;s signal. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_share</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double Number of shares to open. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_price</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double Price of shares at the time of opening. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="85" column="10" bodyfile="TradingStock.cpp" bodystart="197" bodyend="200"/>
+        <references refid="class_trading_stock_1a84107772ee8962d8d20ff5b69a65cc22" compoundref="_trading_stock_8h" startline="147">m_transactions</references>
+        <referencedby refid="class_simulator_1ad24c99fbfd5808aba7f5c9de11cc23f0" compoundref="_simulator_8cpp" startline="588" endline="620">Simulator::openPositions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a60478a78a694204f99b6ac01e5f61258" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double TradingStock::CloseLongPositions</definition>
+        <argsstring>(DateTime *a_date, double a_signal, double a_price, double &amp;a_investedCaptial, double &amp;a_numOfShares)</argsstring>
+        <name>CloseLongPositions</name>
+        <param>
+          <type><ref refid="class_date_time" kindref="compound">DateTime</ref> *</type>
+          <declname>a_date</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_signal</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_price</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>a_investedCaptial</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>a_numOfShares</declname>
+        </param>
+        <briefdescription>
+<para>Method to close all long positions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1a60478a78a694204f99b6ac01e5f61258" kindref="member">TradingStock::CloseLongPositions</ref> Method to close profiting long positions. Returns profit/loss generated from closing long positions. Updates invested capital in closing long positions and number of long positions that are variables passed by reference. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_date</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DateTime* Today&apos;s date. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_signal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double Current day&apos;s signal. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_price</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double Price of shares at the time of closing. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_investedCaptial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double&amp; Invested capital placeholder to return the invested capital in long positions. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_numOfShares</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double&amp; Placeholder to return number of shares in long position that were closed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double Profit or loss generated from closing long positions. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="88" column="12" bodyfile="TradingStock.cpp" bodystart="215" bodyend="247"/>
+        <references refid="_c_make_cache_8txt_1a7e98b8a17c0aad30ba64d47b74e2a6c1" compoundref="_c_make_cache_8txt" startline="299">i</references>
+        <references refid="class_trading_stock_1a84107772ee8962d8d20ff5b69a65cc22" compoundref="_trading_stock_8h" startline="147">m_transactions</references>
+        <references refid="class_trading_stock_1af0ebb1d62314db9844a05255605fc47a" compoundref="_trading_stock_8cpp" startline="169" endline="173">RecordTransactionsCount</references>
+        <referencedby refid="class_simulator_1a20a56ab01d34b348fe22129caa44df09" compoundref="_simulator_8cpp" startline="631" endline="658">Simulator::closePositions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a32ad16346c6c9bf2ffd9cc6a68f01325" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double TradingStock::CloseShortPositions</definition>
+        <argsstring>(DateTime *a_date, double a_signal, double a_price, double &amp;a_investedCaptial, double &amp;a_numOfShares)</argsstring>
+        <name>CloseShortPositions</name>
+        <param>
+          <type><ref refid="class_date_time" kindref="compound">DateTime</ref> *</type>
+          <declname>a_date</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_signal</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_price</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>a_investedCaptial</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>a_numOfShares</declname>
+        </param>
+        <briefdescription>
+<para>Method to close all short positions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1a32ad16346c6c9bf2ffd9cc6a68f01325" kindref="member">TradingStock::CloseShortPositions</ref> Method to close profiting short positions. Returns profit/loss generated from closing short positions. Updates invested capital in closing short positions and number of short positions that are variables passed by reference. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_date</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DateTime* Today&apos;s date. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_signal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double Current day&apos;s signal. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_price</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double Price of shares at the time of closing. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_investedCaptial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double&amp; Invested capital placeholder to return the invested capital in long positions. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_numOfShares</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double&amp; Placeholder to return number of shares in long position that were closed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double Profit or loss generated from closing long positions. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="91" column="12" bodyfile="TradingStock.cpp" bodystart="262" bodyend="294"/>
+        <references refid="_c_make_cache_8txt_1a7e98b8a17c0aad30ba64d47b74e2a6c1" compoundref="_c_make_cache_8txt" startline="299">i</references>
+        <references refid="class_trading_stock_1a84107772ee8962d8d20ff5b69a65cc22" compoundref="_trading_stock_8h" startline="147">m_transactions</references>
+        <references refid="class_trading_stock_1af0ebb1d62314db9844a05255605fc47a" compoundref="_trading_stock_8cpp" startline="169" endline="173">RecordTransactionsCount</references>
+        <referencedby refid="class_simulator_1a20a56ab01d34b348fe22129caa44df09" compoundref="_simulator_8cpp" startline="631" endline="658">Simulator::closePositions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1aec7895ca3d924226dc25ef2d961ed181" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TradingStock::CheckShortSignal</definition>
+        <argsstring>(double a_price)</argsstring>
+        <name>CheckShortSignal</name>
+        <param>
+          <type>double</type>
+          <declname>a_price</declname>
+        </param>
+        <briefdescription>
+<para>Method to check if signal is profitable for short positions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1aec7895ca3d924226dc25ef2d961ed181" kindref="member">TradingStock::CheckShortSignal</ref> Method to check if signal is profitable for short positions. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_price</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double Current price of shares. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool If signal will be profitable. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="94" column="10" bodyfile="TradingStock.cpp" bodystart="304" bodyend="314"/>
+        <references refid="_c_make_cache_8txt_1a7e98b8a17c0aad30ba64d47b74e2a6c1" compoundref="_c_make_cache_8txt" startline="299">i</references>
+        <references refid="class_trading_stock_1a84107772ee8962d8d20ff5b69a65cc22" compoundref="_trading_stock_8h" startline="147">m_transactions</references>
+        <referencedby refid="class_simulator_1adc8821db9e85da458f9a6e8b1912ac86" compoundref="_simulator_8cpp" startline="485" endline="548">Simulator::makeTrade</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a8610312df44fd64d9ff6fc4b7057b0b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TradingStock::CheckLongSignal</definition>
+        <argsstring>(double a_price)</argsstring>
+        <name>CheckLongSignal</name>
+        <param>
+          <type>double</type>
+          <declname>a_price</declname>
+        </param>
+        <briefdescription>
+<para>Method to check if signal is profitable for long positions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1a8610312df44fd64d9ff6fc4b7057b0b4" kindref="member">TradingStock::CheckLongSignal</ref> Method to check if signal is profitable for long positions. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_price</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double Current price of shares. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool If signal will be profitable. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="97" column="10" bodyfile="TradingStock.cpp" bodystart="324" bodyend="334"/>
+        <references refid="_c_make_cache_8txt_1a7e98b8a17c0aad30ba64d47b74e2a6c1" compoundref="_c_make_cache_8txt" startline="299">i</references>
+        <references refid="class_trading_stock_1a84107772ee8962d8d20ff5b69a65cc22" compoundref="_trading_stock_8h" startline="147">m_transactions</references>
+        <referencedby refid="class_simulator_1adc8821db9e85da458f9a6e8b1912ac86" compoundref="_simulator_8cpp" startline="485" endline="548">Simulator::makeTrade</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1ac32c8930adc0a8ad8611209ea9cf0fe8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TradingStock::UpdateStockPosition</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateStockPosition</name>
+        <briefdescription>
+<para>Method to update long/short position status of the trading stock. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1ac32c8930adc0a8ad8611209ea9cf0fe8" kindref="member">TradingStock::UpdateStockPosition</ref> Method to update long/short position flags of the trading stock. <simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="100" column="10" bodyfile="TradingStock.cpp" bodystart="342" bodyend="359"/>
+        <references refid="_c_make_cache_8txt_1a7e98b8a17c0aad30ba64d47b74e2a6c1" compoundref="_c_make_cache_8txt" startline="299">i</references>
+        <references refid="class_trading_stock_1a31f327f15d57d007c94454402fbd712f" compoundref="_trading_stock_8h" startline="137">m_longPosFlag</references>
+        <references refid="class_trading_stock_1ad25663655bd3c1f1683464766f18f90c" compoundref="_trading_stock_8h" startline="139">m_shortPosFlag</references>
+        <references refid="class_trading_stock_1a84107772ee8962d8d20ff5b69a65cc22" compoundref="_trading_stock_8h" startline="147">m_transactions</references>
+        <referencedby refid="class_simulator_1a20a56ab01d34b348fe22129caa44df09" compoundref="_simulator_8cpp" startline="631" endline="658">Simulator::closePositions</referencedby>
+        <referencedby refid="class_trading_stock_1aad5057092b58a0ed625be05cfcef3c3e" compoundref="_trading_stock_8cpp" startline="371" endline="427">CloseStalePositions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1abe36e5075cacda88997a32e5f4923ee6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TradingStock::RecordSignal</definition>
+        <argsstring>(double a_signal)</argsstring>
+        <name>RecordSignal</name>
+        <param>
+          <type>double</type>
+          <declname>a_signal</declname>
+        </param>
+        <briefdescription>
+<para>Record day&apos;s signal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1abe36e5075cacda88997a32e5f4923ee6" kindref="member">TradingStock::RecordSignal</ref> Function to record the trading day signal and update the days in position of the stocks held. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_signal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double Day&apos;s trading signal. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="104" column="10" bodyfile="TradingStock.cpp" bodystart="79" bodyend="83"/>
+        <references refid="class_trading_stock_1a5287c59a981bbfc50f275c741718b893" compoundref="_trading_stock_8h" startline="149">m_signalActivityRecord</references>
+        <references refid="class_trading_stock_1a2942da99da8b25978168083c5e29be72" compoundref="_trading_stock_8cpp" startline="610" endline="614">newTradingDay</references>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a82ea8bcd2b94eef82bb100c929c519e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TradingStock::RecordPNL</definition>
+        <argsstring>(double a_pnl, double a_investedCapital)</argsstring>
+        <name>RecordPNL</name>
+        <param>
+          <type>double</type>
+          <declname>a_pnl</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_investedCapital</declname>
+        </param>
+        <briefdescription>
+<para>Record day&apos;s PNL. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1a82ea8bcd2b94eef82bb100c929c519e0" kindref="member">TradingStock::RecordPNL</ref> Records PNL and calls RecordDailyReturn to record ROR. (coupled functions) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_pnl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double Profit or loss for the day. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_investedCapital</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double Invested capital in the position generating profit or loss. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="106" column="10" bodyfile="TradingStock.cpp" bodystart="145" bodyend="160"/>
+        <references refid="class_trading_stock_1a4b62a7f5eae82a2e14957c167fdd0a0a" compoundref="_trading_stock_8h" startline="159">m_cumulativePNLRecord</references>
+        <references refid="class_trading_stock_1a73d378cbffc5da8e87f91125c63391ed" compoundref="_trading_stock_8h" startline="155">m_dailyPNLRecord</references>
+        <references refid="class_trading_stock_1a08f0c522a18efec82f4c272e0d03fe7c" compoundref="_trading_stock_8cpp" startline="182" endline="185">RecordDailyReturn</references>
+        <referencedby refid="class_simulator_1a20a56ab01d34b348fe22129caa44df09" compoundref="_simulator_8cpp" startline="631" endline="658">Simulator::closePositions</referencedby>
+        <referencedby refid="class_simulator_1adc8821db9e85da458f9a6e8b1912ac86" compoundref="_simulator_8cpp" startline="485" endline="548">Simulator::makeTrade</referencedby>
+        <referencedby refid="class_simulator_1a4238ab87912e40d99cad5deb558e3a96" compoundref="_simulator_8cpp" startline="571" endline="577">Simulator::recordNoActivity</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1af0ebb1d62314db9844a05255605fc47a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TradingStock::RecordTransactionsCount</definition>
+        <argsstring>(int a_count)</argsstring>
+        <name>RecordTransactionsCount</name>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a1cb0c2afe2f6ed3001e79e875440ed60" kindref="member">int</ref></type>
+          <declname>a_count</declname>
+        </param>
+        <briefdescription>
+<para>Record day&apos;s number of transactions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1af0ebb1d62314db9844a05255605fc47a" kindref="member">TradingStock::RecordTransactionsCount</ref> Record daily transaction count. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int Daily transactions count. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="108" column="10" bodyfile="TradingStock.cpp" bodystart="169" bodyend="173"/>
+        <references refid="class_trading_stock_1aafa0593383e1f7afc886846b1d4873cd" compoundref="_trading_stock_8h" startline="161">m_TransactionsCountRecord</references>
+        <references refid="class_trading_stock_1a02736eb71eea26f771c09a574787e414" compoundref="_trading_stock_8h" startline="131">m_transactionsTotalCount</references>
+        <referencedby refid="class_trading_stock_1a60478a78a694204f99b6ac01e5f61258" compoundref="_trading_stock_8cpp" startline="215" endline="247">CloseLongPositions</referencedby>
+        <referencedby refid="class_trading_stock_1a32ad16346c6c9bf2ffd9cc6a68f01325" compoundref="_trading_stock_8cpp" startline="262" endline="294">CloseShortPositions</referencedby>
+        <referencedby refid="class_trading_stock_1aad5057092b58a0ed625be05cfcef3c3e" compoundref="_trading_stock_8cpp" startline="371" endline="427">CloseStalePositions</referencedby>
+        <referencedby refid="class_simulator_1a4238ab87912e40d99cad5deb558e3a96" compoundref="_simulator_8cpp" startline="571" endline="577">Simulator::recordNoActivity</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a08f0c522a18efec82f4c272e0d03fe7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TradingStock::RecordDailyReturn</definition>
+        <argsstring>(double a_amount)</argsstring>
+        <name>RecordDailyReturn</name>
+        <param>
+          <type>double</type>
+          <declname>a_amount</declname>
+        </param>
+        <briefdescription>
+<para>Recard day&apos;s daily return. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1a08f0c522a18efec82f4c272e0d03fe7c" kindref="member">TradingStock::RecordDailyReturn</ref> Record daily rate of return (ROR). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_amount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double Daily ROR. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="110" column="10" bodyfile="TradingStock.cpp" bodystart="182" bodyend="185"/>
+        <references refid="class_trading_stock_1ad19aabe8f6955c24479f381f82a1ebb2" compoundref="_trading_stock_8h" startline="157">m_dailyReturnRecord</references>
+        <referencedby refid="class_trading_stock_1a82ea8bcd2b94eef82bb100c929c519e0" compoundref="_trading_stock_8cpp" startline="145" endline="160">RecordPNL</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1ab9b7d80cfd3dc2bcbc6ac9ab52afae08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double TradingStock::GetInvestedCapital</definition>
+        <argsstring>()</argsstring>
+        <name>GetInvestedCapital</name>
+        <briefdescription>
+<para>Get latest committed capital in an investment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1ab9b7d80cfd3dc2bcbc6ac9ab52afae08" kindref="member">TradingStock::GetInvestedCapital</ref> Get latest committed capital in an investment <simplesect kind="return"><para>double Latest committed capital activity. </para>
+</simplesect>
+<simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="114" column="12" bodyfile="TradingStock.cpp" bodystart="436" bodyend="447"/>
+        <references refid="class_trading_stock_1a2182f57e853ec0c69a7051f1c36bf56b" compoundref="_trading_stock_8h" startline="151">m_capitalActivityRecord</references>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a39cc9a02efc5431a4e150b941a9c7df6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TradingStock::CalculateDailySharpeRatio</definition>
+        <argsstring>()</argsstring>
+        <name>CalculateDailySharpeRatio</name>
+        <briefdescription>
+<para>Calculate daily sharpe ratio for individual stock. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1a39cc9a02efc5431a4e150b941a9c7df6" kindref="member">TradingStock::CalculateDailySharpeRatio</ref> Calculate daily sharpe ratio for individual stock. Can be used to get individual stock&apos;s Sharpe ratio instead of the complete model&apos;s Sharpe. <simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="116" column="10" bodyfile="TradingStock.cpp" bodystart="456" bodyend="463"/>
+        <references refid="namespace_utilities_1a80b350cec72abbcf34ad7e28405d531c" compoundref="_utilities_8cpp" startline="36" endline="42">Utilities::GetAverage</references>
+        <references refid="namespace_utilities_1a175ab95f5c509ccc3d4b571e8963f22e" compoundref="_utilities_8cpp" startline="53" endline="64">Utilities::GetStandardDeviation</references>
+        <references refid="class_trading_stock_1ad19aabe8f6955c24479f381f82a1ebb2" compoundref="_trading_stock_8h" startline="157">m_dailyReturnRecord</references>
+        <references refid="class_trading_stock_1a649821526ca9021bd4cfd6b8b5d70842" compoundref="_trading_stock_8h" startline="163">m_sharpeRatioRecord</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_trading_stock_1a3ebff0c1f91ab2f961b9665c2865b74f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TradingStock::TradingStock</definition>
+        <argsstring>()=default</argsstring>
+        <name>TradingStock</name>
+        <briefdescription>
+<para>Private default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="120" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trading_stock_1a2942da99da8b25978168083c5e29be72" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TradingStock::newTradingDay</definition>
+        <argsstring>()</argsstring>
+        <name>newTradingDay</name>
+        <briefdescription>
+<para>Method to update days in position of all held shares. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_trading_stock_1a2942da99da8b25978168083c5e29be72" kindref="member">TradingStock::newTradingDay</ref> Method to update days in position of all held shares <simplesect kind="author"><para>Salil Maharjan </para>
+</simplesect>
+<simplesect kind="date"><para>5/14/20. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TradingStock.h" line="170" column="10" bodyfile="TradingStock.cpp" bodystart="610" bodyend="614"/>
+        <references refid="_c_make_cache_8txt_1a7e98b8a17c0aad30ba64d47b74e2a6c1" compoundref="_c_make_cache_8txt" startline="299">i</references>
+        <references refid="class_trading_stock_1a84107772ee8962d8d20ff5b69a65cc22" compoundref="_trading_stock_8h" startline="147">m_transactions</references>
+        <referencedby refid="class_trading_stock_1abe36e5075cacda88997a32e5f4923ee6" compoundref="_trading_stock_8cpp" startline="79" endline="83">RecordSignal</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="_trading_stock_8h" kindref="compound">TradingStock.h</ref> Class that handles the investment portfolio of a trading stock in the simulator. Handles trading details for each ticker used in the simulator.</para>
+<para>Created by Salil Maharjan on 05/03/20. Copyright © 2020 Salil Maharjan. All rights reserved. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5">
+        <label>DateTime</label>
+        <link refid="class_date_time"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-m_date</edgelabel>
+          <edgelabel>-dayPreMonth</edgelabel>
+          <edgelabel>-m_FakeTodayValue</edgelabel>
+          <edgelabel>-daysInMonth</edgelabel>
+          <edgelabel>+BlankDate</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::vector&lt; Transaction * &gt;</label>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>std::vector&lt; double &gt;</label>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="6">
+        <label>int</label>
+      </node>
+      <node id="2">
+        <label>double</label>
+      </node>
+      <node id="1">
+        <label>TradingStock</label>
+        <link refid="class_trading_stock"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-m_availableCapital</edgelabel>
+          <edgelabel>-m_totalSharesCount</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-m_transactions</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-m_transactionCounter</edgelabel>
+          <edgelabel>-m_transactionsTotalCount</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-m_shortPosFlag</edgelabel>
+          <edgelabel>-m_longPosFlag</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-m_tickerName</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-m_TransactionsCountRecord</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-m_cumulativePNLRecord</edgelabel>
+          <edgelabel>-m_shareActivityRecord</edgelabel>
+          <edgelabel>-m_sharpeRatioRecord</edgelabel>
+          <edgelabel>-m_capitalActivityRecord</edgelabel>
+          <edgelabel>-m_signalActivityRecord</edgelabel>
+          <edgelabel>-m_dailyPNLRecord</edgelabel>
+          <edgelabel>-m_dailyReturnRecord</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Transaction</label>
+        <link refid="class_transaction"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-m_currentSharesCount</edgelabel>
+          <edgelabel>-m_TACloseSignal</edgelabel>
+          <edgelabel>-m_TAOpenPrice</edgelabel>
+          <edgelabel>-m_TAOpenSignal</edgelabel>
+          <edgelabel>-m_TAClosePrice</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-m_TAOpenDate</edgelabel>
+          <edgelabel>-m_TACloseDate</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-m_inPosition</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-m_closedFlag</edgelabel>
+          <edgelabel>-m_longFlag</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>bool</label>
+      </node>
+      <node id="10">
+        <label>std::vector&lt; int &gt;</label>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>std::string</label>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="TradingStock.h" line="18" column="1" bodyfile="TradingStock.h" bodystart="19" bodyend="171"/>
+    <listofallmembers>
+      <member refid="class_trading_stock_1a8b890a05cb0536bbca53e6c341196158" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>BuyShares</name></member>
+      <member refid="class_trading_stock_1a39cc9a02efc5431a4e150b941a9c7df6" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>CalculateDailySharpeRatio</name></member>
+      <member refid="class_trading_stock_1a8610312df44fd64d9ff6fc4b7057b0b4" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>CheckLongSignal</name></member>
+      <member refid="class_trading_stock_1aec7895ca3d924226dc25ef2d961ed181" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>CheckShortSignal</name></member>
+      <member refid="class_trading_stock_1a60478a78a694204f99b6ac01e5f61258" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>CloseLongPositions</name></member>
+      <member refid="class_trading_stock_1a32ad16346c6c9bf2ffd9cc6a68f01325" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>CloseShortPositions</name></member>
+      <member refid="class_trading_stock_1aad5057092b58a0ed625be05cfcef3c3e" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>CloseStalePositions</name></member>
+      <member refid="class_trading_stock_1ae17abba347d59335fc2f7ebb74c5e6aa" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>DecreaseCapitalBy</name></member>
+      <member refid="class_trading_stock_1a32fbb2c7467bdd9351875549c86c1790" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>DecreaseSharesBy</name></member>
+      <member refid="class_trading_stock_1a9d6e882e90f88a6dce91cc6d08f0847a" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>GetAvailableCapital</name></member>
+      <member refid="class_trading_stock_1ae5b6f96bb1b51aa1d0e5144eeaf7fea1" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>GetClosedTransactions</name></member>
+      <member refid="class_trading_stock_1aff216b0773772c62708b2ede2b4263de" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>GetDailyPnL</name></member>
+      <member refid="class_trading_stock_1a3c5d34b2014664070cd7f0fd1c8cdf50" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>GetDailyROR</name></member>
+      <member refid="class_trading_stock_1ab9b7d80cfd3dc2bcbc6ac9ab52afae08" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>GetInvestedCapital</name></member>
+      <member refid="class_trading_stock_1a6a1cbdd1ce85e26c7bd4e7c46b584c07" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>GetLatestShareActivity</name></member>
+      <member refid="class_trading_stock_1a96bb13205b822d35fbbdcc6c21a1d5a9" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>GetLongCapital</name></member>
+      <member refid="class_trading_stock_1a7fe5dbc6b3d6bf08c8b1520cf669a9ca" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>GetLongSharesHeld</name></member>
+      <member refid="class_trading_stock_1a37b5fb9d2c04a236069dfe31eeba7845" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>GetROR</name></member>
+      <member refid="class_trading_stock_1a9a33d27b1cf6c190fa2bd1042a7a0ac7" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>GetSharpeToday</name></member>
+      <member refid="class_trading_stock_1a4468ad7c3e2addaccb00619e36db1540" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>GetShortCapital</name></member>
+      <member refid="class_trading_stock_1ac87efd94107349785d32cdf7ea6541d7" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>GetShortSharesHeld</name></member>
+      <member refid="class_trading_stock_1a3f01e1cee2b7b6ae685351266850a723" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>GetSignalRecord</name></member>
+      <member refid="class_trading_stock_1a5cf4ad5ac772ed5bd2861097299e08f3" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>GetStockName</name></member>
+      <member refid="class_trading_stock_1aaa530618eafb6d8ce09bfb08c0080e3e" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>GetTotalShares</name></member>
+      <member refid="class_trading_stock_1a610d809a67408a6ba4a23616b071e345" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>GetTransactionCount</name></member>
+      <member refid="class_trading_stock_1aa8181ddc5cc8c9e978393112563bf504" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>IncreaseCapitalBy</name></member>
+      <member refid="class_trading_stock_1a6dd461322fe1bf432705e4be521654af" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>IncreaseSharesBy</name></member>
+      <member refid="class_trading_stock_1a0f34b4c03fc00907a9ab21c76450ca6f" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>IsLong</name></member>
+      <member refid="class_trading_stock_1a70adc544aeb365d69f4dfa3a99ac3d18" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>IsShort</name></member>
+      <member refid="class_trading_stock_1ab344aad5f77661cbff9339a556a673cb" prot="private" virt="non-virtual"><scope>TradingStock</scope><name>m_availableCapital</name></member>
+      <member refid="class_trading_stock_1a2182f57e853ec0c69a7051f1c36bf56b" prot="private" virt="non-virtual"><scope>TradingStock</scope><name>m_capitalActivityRecord</name></member>
+      <member refid="class_trading_stock_1a4b62a7f5eae82a2e14957c167fdd0a0a" prot="private" virt="non-virtual"><scope>TradingStock</scope><name>m_cumulativePNLRecord</name></member>
+      <member refid="class_trading_stock_1a73d378cbffc5da8e87f91125c63391ed" prot="private" virt="non-virtual"><scope>TradingStock</scope><name>m_dailyPNLRecord</name></member>
+      <member refid="class_trading_stock_1ad19aabe8f6955c24479f381f82a1ebb2" prot="private" virt="non-virtual"><scope>TradingStock</scope><name>m_dailyReturnRecord</name></member>
+      <member refid="class_trading_stock_1a31f327f15d57d007c94454402fbd712f" prot="private" virt="non-virtual"><scope>TradingStock</scope><name>m_longPosFlag</name></member>
+      <member refid="class_trading_stock_1a0b6f6119524b706ebcde2578c7a692d2" prot="private" virt="non-virtual"><scope>TradingStock</scope><name>m_shareActivityRecord</name></member>
+      <member refid="class_trading_stock_1a649821526ca9021bd4cfd6b8b5d70842" prot="private" virt="non-virtual"><scope>TradingStock</scope><name>m_sharpeRatioRecord</name></member>
+      <member refid="class_trading_stock_1ad25663655bd3c1f1683464766f18f90c" prot="private" virt="non-virtual"><scope>TradingStock</scope><name>m_shortPosFlag</name></member>
+      <member refid="class_trading_stock_1a5287c59a981bbfc50f275c741718b893" prot="private" virt="non-virtual"><scope>TradingStock</scope><name>m_signalActivityRecord</name></member>
+      <member refid="class_trading_stock_1aab3ac7177cab825b96e2e72986934c14" prot="private" virt="non-virtual"><scope>TradingStock</scope><name>m_tickerName</name></member>
+      <member refid="class_trading_stock_1a361b06a4129ef77652f24bbf53dbaba3" prot="private" virt="non-virtual"><scope>TradingStock</scope><name>m_totalSharesCount</name></member>
+      <member refid="class_trading_stock_1abdba716e97be8c2a0ba28ddbc5cad9c2" prot="private" virt="non-virtual"><scope>TradingStock</scope><name>m_transactionCounter</name></member>
+      <member refid="class_trading_stock_1a84107772ee8962d8d20ff5b69a65cc22" prot="private" virt="non-virtual"><scope>TradingStock</scope><name>m_transactions</name></member>
+      <member refid="class_trading_stock_1aafa0593383e1f7afc886846b1d4873cd" prot="private" virt="non-virtual"><scope>TradingStock</scope><name>m_TransactionsCountRecord</name></member>
+      <member refid="class_trading_stock_1a02736eb71eea26f771c09a574787e414" prot="private" virt="non-virtual"><scope>TradingStock</scope><name>m_transactionsTotalCount</name></member>
+      <member refid="class_trading_stock_1a2942da99da8b25978168083c5e29be72" prot="private" virt="non-virtual"><scope>TradingStock</scope><name>newTradingDay</name></member>
+      <member refid="class_trading_stock_1a4398bf190fdf2e8f089e929b60fe2e6d" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>OpenPosition</name></member>
+      <member refid="class_trading_stock_1a08f0c522a18efec82f4c272e0d03fe7c" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>RecordDailyReturn</name></member>
+      <member refid="class_trading_stock_1a82ea8bcd2b94eef82bb100c929c519e0" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>RecordPNL</name></member>
+      <member refid="class_trading_stock_1abe36e5075cacda88997a32e5f4923ee6" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>RecordSignal</name></member>
+      <member refid="class_trading_stock_1af0ebb1d62314db9844a05255605fc47a" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>RecordTransactionsCount</name></member>
+      <member refid="class_trading_stock_1abf15f389461393974e58d973a7a4f593" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>SellShares</name></member>
+      <member refid="class_trading_stock_1a0b8e6cd751ccac4691b33e9b3a50f8d1" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>SetLong</name></member>
+      <member refid="class_trading_stock_1a1e3d0dc8a813cf51bf10dd7cc1ca8175" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>SetShort</name></member>
+      <member refid="class_trading_stock_1acf37f3142597c43e861aeba34fe7b303" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>TradingStock</name></member>
+      <member refid="class_trading_stock_1a3ebff0c1f91ab2f961b9665c2865b74f" prot="private" virt="non-virtual"><scope>TradingStock</scope><name>TradingStock</name></member>
+      <member refid="class_trading_stock_1ac32c8930adc0a8ad8611209ea9cf0fe8" prot="public" virt="non-virtual"><scope>TradingStock</scope><name>UpdateStockPosition</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

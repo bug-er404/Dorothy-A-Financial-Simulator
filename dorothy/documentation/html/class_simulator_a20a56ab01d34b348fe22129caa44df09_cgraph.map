@@ -1,0 +1,17 @@
+<map id="Simulator::closePositions" name="Simulator::closePositions">
+<area shape="rect" id="node1" title="Close positions for a trading stock." alt="" coords="5,180,176,207"/>
+<area shape="rect" id="node2" href="$class_trading_stock.html#a8b890a05cb0536bbca53e6c341196158" title="Method to buys shares." alt="" coords="250,8,421,35"/>
+<area shape="rect" id="node4" href="$class_trading_stock.html#a60478a78a694204f99b6ac01e5f61258" title="Method to close all long positions." alt="" coords="224,63,447,89"/>
+<area shape="rect" id="node6" href="$class_trading_stock.html#a32ad16346c6c9bf2ffd9cc6a68f01325" title="Method to close all short positions." alt="" coords="249,114,421,155"/>
+<area shape="rect" id="node7" href="$class_trading_stock.html#a82ea8bcd2b94eef82bb100c929c519e0" title="Record day&#39;s PNL." alt="" coords="248,180,423,207"/>
+<area shape="rect" id="node9" href="$class_simulator.html#a56638656f8e85aec70ba6c2680025279" title="Function to record transactions to a file." alt="" coords="241,231,430,257"/>
+<area shape="rect" id="node13" href="$class_trading_stock.html#abf15f389461393974e58d973a7a4f593" title="Method to sell shares." alt="" coords="250,281,421,308"/>
+<area shape="rect" id="node15" href="$class_trading_stock.html#ac32c8930adc0a8ad8611209ea9cf0fe8" title="Method to update long/short position status of the trading stock." alt="" coords="244,333,427,374"/>
+<area shape="rect" id="node3" href="$class_trading_stock.html#ae17abba347d59335fc2f7ebb74c5e6aa" title=" " alt="" coords="507,5,727,32"/>
+<area shape="rect" id="node5" href="$class_trading_stock.html#af0ebb1d62314db9844a05255605fc47a" title="Record day&#39;s number of transactions." alt="" coords="505,57,729,98"/>
+<area shape="rect" id="node8" href="$class_trading_stock.html#a08f0c522a18efec82f4c272e0d03fe7c" title="Recard day&#39;s daily return." alt="" coords="527,122,706,163"/>
+<area shape="rect" id="node10" href="$class_trading_stock.html#ae5b6f96bb1b51aa1d0e5144eeaf7fea1" title="Method to get closed transactions and remove them from memory." alt="" coords="495,188,739,215"/>
+<area shape="rect" id="node11" href="$class_trading_stock.html#a5cf4ad5ac772ed5bd2861097299e08f3" title=" " alt="" coords="518,239,715,265"/>
+<area shape="rect" id="node12" href="$class_trading_stock.html#a610d809a67408a6ba4a23616b071e345" title="Method to get current completed transaction count (Does not consider incomplete transactions...." alt="" coords="519,290,715,331"/>
+<area shape="rect" id="node14" href="$class_trading_stock.html#aa8181ddc5cc8c9e978393112563bf504" title=" " alt="" coords="509,356,724,383"/>
+</map>

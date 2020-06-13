@@ -1,0 +1,9 @@
+<map id="DateTime::operator&#45;" name="DateTime::operator&#45;">
+<area shape="rect" id="node1" title="Subtracts a specified number of days to the date." alt="" coords="5,33,144,60"/>
+<area shape="rect" id="node2" href="$class_date_time.html#af3cc0803ee4678e9394ba24579d58ac9" title="Get the offset from the year 0." alt="" coords="201,7,349,33"/>
+<area shape="rect" id="node5" href="$class_date_time.html#aa8a746c7fb47a7034adde3fb83c79dbe" title="Reverse date offset." alt="" coords="192,59,359,85"/>
+<area shape="rect" id="node3" href="$class_date_time.html#afcf11d770052d54bb91618db6a4e7223" title="Gets the Julian day from this date. Julian day vary from 0 to 365." alt="" coords="407,7,569,33"/>
+<area shape="rect" id="node4" href="$class_date_time.html#a3ca8a7d66ec814441db980816cf1ab4c" title="Determines if the year recorded here is a leap year." alt="" coords="633,5,784,32"/>
+<area shape="rect" id="node6" href="$class_date_time.html#adf643f3779756314d8ac2505f84d5703" title=" " alt="" coords="435,60,541,87"/>
+<area shape="rect" id="node7" href="$class_date_time.html#ae489fe891bb77431da24459e5cca394b" title="Function to assert date value ranges." alt="" coords="617,57,800,98"/>
+</map>

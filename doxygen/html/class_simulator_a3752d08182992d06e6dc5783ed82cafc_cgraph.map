@@ -1,0 +1,4 @@
+<map id="Simulator::initializeTradingTickers" name="Simulator::initializeTradingTickers">
+<area shape="rect" id="node1" title="Initialize stocks that the simulator will be trading." alt="" coords="5,5,180,47"/>
+<area shape="rect" id="node2" href="$class_data_access.html#a3192674ca52329b3db8f0a5f3c0e9141" title="Get constituent names in the universe." alt="" coords="228,13,403,39"/>
+</map>
